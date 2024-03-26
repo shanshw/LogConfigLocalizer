@@ -1,0 +1,29 @@
+,name,value,description
+0,yarn.client.nodemanager-connect.max-wait-ms,0,<missing>
+1,yarn.nodemanager.local-cache.max-files-per-directory,8192,
+2,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+3,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+4,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+5,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+6,yarn.app.attempt.diagnostics.limit.kc,64,
+7,dfs.namenode.accesstime.precision,3600000,"The access time for HDFS file is precise upto this value. 
+               The default value is 1 hour. Setting a value of 0 disables
+               access times for HDFS."
+8,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+9,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."

@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.
+2,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+3,mapreduce.job.speculative.minimum-allowed-tasks,10,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."
+4,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+5,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+6,yarn.resourcemanager.placement-constraints.retry-attempts,3,
+7,yarn.resourcemanager.application.max-tags,10,
+8,yarn.scheduler.configuration.leveldb-store.compaction-interval-secs,86400,
+9,fs.s3a.attempts.maximum,20,How many times we should retry commands on transient errors.

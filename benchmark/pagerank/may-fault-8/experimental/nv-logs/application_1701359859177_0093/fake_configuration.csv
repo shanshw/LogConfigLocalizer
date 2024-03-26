@@ -1,0 +1,28 @@
+,name,value,description
+0,mapreduce.job.running.reduce.limit,-0.76620615,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+1,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+2,yarn.client.nodemanager-connect.retry-interval-ms,10000,
+3,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+4,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,
+5,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+6,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+7,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+8,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+9,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."

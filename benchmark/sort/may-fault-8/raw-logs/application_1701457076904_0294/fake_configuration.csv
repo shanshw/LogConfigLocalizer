@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-1621225343,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.merge.inmem.threshold,1000,"The threshold, in terms of the number of files
+  for the in-memory merge process. When we accumulate threshold number of files
+  we initiate the in-memory merge and spill to disk. A value of 0 or less than
+  0 indicates we want to DON'T have any threshold and instead depend only on
+  the ramfs's memory consumption to trigger the merge."
+2,yarn.client.nodemanager-connect.max-wait-ms,180000,
+3,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+4,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+5,yarn.timeline-service.entity-group-fs-store.leveldb-cache-read-cache-size,10485760,
+6,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+7,dfs.qjournal.write-txns.timeout.ms,20000,"Write timeout in milliseconds when writing to a quorum of remote
+    journals."
+8,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+9,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"

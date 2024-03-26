@@ -1,0 +1,26 @@
+,name,value,description
+0,hadoop.security.groups.cache.background.reload.threads,nNHiT,"Only relevant if hadoop.security.groups.cache.background.reload is true.
+    Controls the number of concurrent background user->group cache entry
+    refreshes. Pending refresh requests beyond this value are queued and
+    processed when a thread is free."
+1,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+2,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+3,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+4,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+5,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+6,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+7,dfs.client.failover.connection.retries,0,"Expert only. Indicates the number of retries a failover IPC client
+    will make to establish a server connection."
+8,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+9,yarn.sharedcache.nm.uploader.replication.factor,10,

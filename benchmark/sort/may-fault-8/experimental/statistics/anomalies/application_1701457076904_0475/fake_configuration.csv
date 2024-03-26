@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.client.fd-flush-interval-secs,10,
+2,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+3,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+4,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+5,dfs.namenode.edit.log.autoroll.check.interval.ms,300000,"How often an active namenode will check if it needs to roll its edit log,
+    in milliseconds."
+6,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."
+7,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+8,yarn.log-aggregation.debug.filesize,104857600,
+9,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.

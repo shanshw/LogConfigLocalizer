@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,-62709662,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,
+2,dfs.disk.balancer.plan.threshold.percent,10,"The percentage threshold value for volume Data Density in a plan.
+      If the absolute value of volume Data Density which is out of
+      threshold value in a node, it means that the volumes corresponding to
+      the disks should do the balancing in the plan. The default value is 10."
+3,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+4,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+5,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+6,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+7,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,
+8,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+9,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache

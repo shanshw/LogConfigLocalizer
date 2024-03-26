@@ -1,0 +1,141 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This value should not be 0 as it represents the number of bytes per checksum.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.ec.reconstruct.write.bandwidthPerSec</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>file.bytes-per-checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>512</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'file.bytes-per-checksum' is set to 512, which is a valid value. However, it is related to the checksum error in the log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.webhdfs.ugi.expire.after.access</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>600000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.node-attributes.provider.fetch-timeout-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1200000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.webhdfs.netty.high.watermark</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>65535</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+                var reportItem7 = document.createElement("div");
+                reportItem7.innerHTML = `
+                    <strong>[No.7]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.shuffle.port</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>13562</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem7);
+            
+                var reportItem8 = document.createElement("div");
+                reportItem8.innerHTML = `
+                    <strong>[No.8]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.minicluster.yarn.nodemanager.resource.memory-mb</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4096</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem8);
+            
+                var reportItem9 = document.createElement("div");
+                reportItem9.innerHTML = `
+                    <strong>[No.9]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.seqfile.compress.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1000000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem9);
+            
+                var reportItem10 = document.createElement("div");
+                reportItem10.innerHTML = `
+                    <strong>[No.10]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.reader.remote.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>512</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not relevant to the given log content.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem10);
+            
+    </script>
+    </body>
+    </html>
+    

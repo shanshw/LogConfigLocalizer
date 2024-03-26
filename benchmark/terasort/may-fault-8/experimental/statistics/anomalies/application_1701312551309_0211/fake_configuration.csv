@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,472008331,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.attempt.diagnostics.limit.kc,64,
+2,hadoop.security.group.mapping.ldap.directory.search.timeout,10000,"The attribute applied to the LDAP SearchControl properties to set a
+    maximum time limit when searching and awaiting a result.
+    Set to 0 if infinite wait period is desired.
+    Default is 10 seconds. Units in milliseconds."
+3,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+4,yarn.nodemanager.log.deletion-threads-count,4,
+5,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."
+6,yarn.resourcemanager.fs.state-store.num-retries,0,
+7,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+8,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+9,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."

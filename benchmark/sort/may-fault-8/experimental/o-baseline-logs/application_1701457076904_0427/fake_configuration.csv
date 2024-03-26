@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.epoch.range,0,
+2,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,
+3,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+4,yarn.timeline-service.app-aggregation-interval-secs,15,
+5,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+6,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+7,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,file.replication,1,Replication factor
+9,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."

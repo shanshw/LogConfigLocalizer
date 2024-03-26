@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a non-zero value to ensure proper checksum calculation.
+
+name:yarn.resourcemanager.placement-constraints.retry-attempts
+value:3
+relevant log:<missing>
+explanation:Although there is no direct log pointing to this configuration, the value of 'yarn.resourcemanager.placement-constraints.retry-attempts' might be too low. If the system fails to place the resources in the first few attempts, it might cause errors or inefficiencies in the system.
+
+name:dfs.client.write.byte-array-manager.count-limit
+value:2048
+relevant log:<missing>
+explanation:Although there is no direct log pointing to this configuration, the value of 'dfs.client.write.byte-array-manager.count-limit' might be too low. If the system needs to handle more arrays than this limit, it might cause errors or inefficiencies in the system.

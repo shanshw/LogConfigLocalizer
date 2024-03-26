@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the number of bytes per checksum is set to 0, which is causing an Invalid checksum type error. This value should be greater than 0 to ensure proper checksum calculation.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.snapshot.skiplist.max.levels</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the maximum number of skip levels in the snapshot diff list is set to 0. This could potentially cause issues with snapshot operations, although it's not directly related to the current error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>nfs.wtmax</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1048576</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the maximum size of a WRITE request in the NFS gateway is set to a high value. While this is not directly causing the current error, it could potentially cause issues with large WRITE requests.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

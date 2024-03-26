@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-870148,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.application.max-tag.length,100,
+2,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+3,dfs.disk.balancer.block.tolerance.percent,10,"When a disk balancer copy operation is proceeding, the datanode is still
+      active. So it might not be possible to move the exactly specified
+      amount of data. So tolerance allows us to define a percentage which
+      defines a good enough move."
+4,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+5,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+6,yarn.client.failover-retries-on-socket-timeouts,0,
+7,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+8,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+9,yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,

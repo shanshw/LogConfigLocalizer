@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.
+2,dfs.client.retry.times.get-last-block-length,3,Number of retries for calls to fetchLocatedBlocksAndGetLastBlockLength().
+3,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+4,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+5,dfs.client.slow.io.warning.threshold.ms,30000,"The threshold in milliseconds at which we will log a slow
+    io warning in a dfsclient. By default, this parameter is set to 30000
+    milliseconds (30 seconds)."
+6,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+7,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+8,hadoop.security.groups.cache.warn.after.ms,5000,"If looking up a single user to group takes longer than this amount of
+    milliseconds, we will log a warning message."
+9,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.

@@ -1,0 +1,36 @@
+,name,value,description
+0,dfs.client.socketcache.capacity,-1960514541,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+1,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+2,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+3,yarn.cluster.max-application-priority,0,
+4,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+5,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,
+6,dfs.client.cached.conn.retry,3,"The number of times the HDFS client will pull a socket from the
+   cache.  Once this number is exceeded, the client will try to create a new
+   socket."
+7,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+8,mapreduce.job.counters.max,120,The max number of user counters allowed per job.
+9,dfs.balancer.getBlocks.min-block-size,10485760,"Minimum block threshold size in bytes to ignore when fetching a source's
+    block list."

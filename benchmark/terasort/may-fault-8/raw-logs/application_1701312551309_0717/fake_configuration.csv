@@ -1,0 +1,19 @@
+,name,value,description
+0,mapreduce.task.io.sort.factor,S78U9,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+1,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,
+2,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+3,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+4,yarn.cluster.max-application-priority,0,
+5,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+6,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+7,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+8,dfs.namenode.maintenance.replication.min,1,Minimal live block replication in existence of maintenance mode.
+9,dfs.namenode.replication.min,1,Minimal block replication.

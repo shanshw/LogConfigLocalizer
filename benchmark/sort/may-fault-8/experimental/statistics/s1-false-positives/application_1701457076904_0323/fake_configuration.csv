@@ -1,0 +1,28 @@
+,name,value,description
+0,fs.s3a.list.version,,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+1,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+2,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+3,hadoop.hdfs.configuration.version,1,version of this configuration file
+4,dfs.namenode.replication.min,1,Minimal block replication.
+5,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+6,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+7,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+8,mapreduce.job.cache.limit.max-resources,0,"The maximum number of resources a map reduce job is allowed to
+    submit for localization via files, libjars, archives, and jobjar command
+    line arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+9,ha.health-monitor.check-interval.ms,1000,How often to check the service.

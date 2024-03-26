@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+2,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+3,yarn.timeline-service.client.retry-interval-ms,1000,
+4,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+5,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+6,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+7,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+8,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+9,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port

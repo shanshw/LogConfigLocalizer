@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a non-zero value to ensure proper checksum calculation.
+
+name:dfs.namenode.reconstruction.pending.timeout-sec
+value:300
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.namenode.reconstruction.pending.timeout-sec' is set to 300 seconds. This might be causing the system to timeout before the checksum can be calculated. Increasing this value might resolve the issue.
+
+name:ipc.client.connect.max.retries.on.timeouts
+value:45
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'ipc.client.connect.max.retries.on.timeouts' is set to 45. This might be causing the system to retry connection establishment on socket timeout, which could be contributing to the checksum error. Reducing this value might resolve the issue.

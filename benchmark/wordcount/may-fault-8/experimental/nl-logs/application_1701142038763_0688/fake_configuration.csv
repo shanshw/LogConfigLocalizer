@@ -1,0 +1,23 @@
+,name,value,description
+0,yarn.app.mapreduce.shuffle.log.backups,0.91704524,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+1,dfs.datanode.cached-dfsused.check.interval.ms,600000,"The interval check time of loading DU_CACHE_FILE in each volume.
+    When the cluster doing the rolling upgrade operations, it will
+    usually lead dfsUsed cache file of each volume expired and redo the
+    du operations in datanode and that makes datanode start slowly. Adjust
+    this property can make cache file be available for the time as you want."
+2,dfs.namenode.lease-recheck-interval-ms,2000,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+3,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+4,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+5,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+6,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap
+7,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+8,yarn.resourcemanager.fs.state-store.num-retries,0,
+9,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."

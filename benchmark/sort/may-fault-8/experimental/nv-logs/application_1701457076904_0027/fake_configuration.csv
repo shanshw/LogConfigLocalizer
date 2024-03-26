@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-1602604112,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.end-notification.max.retry.interval,5000,"The maximum amount of time (in milliseconds) to wait before
+     retrying job end notification. Cluster administrators can set this to
+     limit how long the Application Master waits before exiting. Must be marked
+     as final to prevent users from overriding this."
+2,mapreduce.jobhistory.intermediate-user-done-dir.permissions,770,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+3,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+4,yarn.resourcemanager.admin.client.thread-count,1,
+5,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+6,yarn.nodemanager.localizer.cache.cleanup.interval-ms,600000,
+7,ftp.client-write-packet-size,65536,Packet size for clients to write
+8,dfs.client.socket-timeout,60000,Default timeout value in milliseconds for all sockets.
+9,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."

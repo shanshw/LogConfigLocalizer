@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,356031737,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+2,yarn.timeline-service.handler-thread-count,10,
+3,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+4,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+5,dfs.disk.balancer.max.disk.errors,5,"During a block move from a source to destination disk, we might
+      encounter various errors. This defines how many errors we can tolerate
+      before we declare a move between 2 disks (or a step) has failed."
+6,dfs.client.failover.sleep.base.millis,500,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least dfs.client.failover.sleep.base.millis
+    milliseconds. And so on."
+7,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache
+8,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+9,yarn.dispatcher.drain-events.timeout,300000,

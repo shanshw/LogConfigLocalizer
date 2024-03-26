@@ -1,0 +1,29 @@
+,name,value,description
+0,mapreduce.task.merge.progress.records,BfchI,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+1,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+2,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+3,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+4,yarn.timeline-service.client.fd-clean-interval-secs,60,
+5,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+6,mapreduce.job.local-fs.single-disk-limit.check.interval-ms,5000,Interval of disk limit check to run in ms.
+7,yarn.nodemanager.node-labels.resync-interval-ms,120000,
+8,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+9,yarn.timeline-service.handler-thread-count,10,

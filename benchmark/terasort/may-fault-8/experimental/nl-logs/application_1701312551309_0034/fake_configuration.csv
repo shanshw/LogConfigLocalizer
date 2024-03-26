@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.client.failover-retries,0,
+2,dfs.ls.limit,1000,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+3,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+4,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+5,dfs.datanode.min.outlier.detection.nodes,10,Minimum number of nodes to run outlier detection.
+6,dfs.mover.retry.max.attempts,10,"The maximum number of retries before the mover consider the
+    move failed."
+7,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+8,hadoop.security.group.mapping.ldap.directory.search.timeout,10000,"The attribute applied to the LDAP SearchControl properties to set a
+    maximum time limit when searching and awaiting a result.
+    Set to 0 if infinite wait period is desired.
+    Default is 10 seconds. Units in milliseconds."
+9,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."

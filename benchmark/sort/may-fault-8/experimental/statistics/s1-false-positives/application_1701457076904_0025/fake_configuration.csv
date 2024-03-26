@@ -1,0 +1,23 @@
+,name,value,description
+0,ipc.[port_number].decay-scheduler.period-ms,,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+1,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache
+2,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+3,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.
+4,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+5,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+6,yarn.resourcemanager.zk-delegation-token-node.split-index,0,
+7,dfs.datanode.max.disks.to.report,5,"Number of disks to include in JSON report per operation. We will return
+    disks with the highest latency."
+8,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+9,mapreduce.jobhistory.datestring.cache.size,200000,"Size of the date string cache. Effects the number of directories
+  which will be scanned to find a job."

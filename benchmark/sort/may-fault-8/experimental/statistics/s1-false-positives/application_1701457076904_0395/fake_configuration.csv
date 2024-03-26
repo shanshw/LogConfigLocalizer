@@ -1,0 +1,20 @@
+,name,value,description
+0,dfs.datanode.slowdisk.low.threshold.ms,1002208006,Threshold in milliseconds below which a disk is definitely not slow.
+1,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.
+2,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+3,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,yarn.resourcemanager.placement-constraints.scheduler.pool-size,1,
+5,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.
+6,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.
+7,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+8,nfs.mountd.port,4242,Specify the port number used by Hadoop mount daemon.
+9,yarn.timeline-service.entity-group-fs-store.app-cache-size,10,

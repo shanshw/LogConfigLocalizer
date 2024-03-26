@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.admin.client.thread-count,1,
+2,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.batch-size,1000,
+3,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+4,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+5,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+6,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+7,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"
+8,dfs.client.write.byte-array-manager.count-threshold,128,"The count threshold for each array length so that a manager is created only after the
+    allocation count exceeds the threshold. In other words, the particular array length
+    is not managed until the allocation count exceeds the threshold."
+9,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.

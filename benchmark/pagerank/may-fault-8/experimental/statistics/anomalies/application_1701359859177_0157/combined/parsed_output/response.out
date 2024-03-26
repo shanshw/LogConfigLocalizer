@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a non-zero value to ensure proper checksum calculation.
+
+name:mapreduce.task.stuck.timeout-ms
+value:600000
+relevant log:1-ERROR	Task: attempt_1701359859177_0157_r_000001_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'mapreduce.task.stuck.timeout-ms' is set to 600000ms. This could be causing tasks to timeout and fail if they are not able to complete within this time frame. Increasing this value could potentially resolve the issue.
+
+name:dfs.namenode.max.extra.edits.segments.retained
+value:10000
+relevant log:1-ERROR	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+explanation:The configuration option 'dfs.namenode.max.extra.edits.segments.retained' is set to 10000. This could be causing the NullPointerException error in the JobHistoryEventHandler service. Reducing this value could potentially resolve the issue.

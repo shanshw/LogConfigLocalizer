@@ -1,0 +1,78 @@
+,name,value,description
+0,mapreduce.fileoutputcommitter.algorithm.version,0.79747874,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+1,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+2,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+3,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+4,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+5,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."
+6,dfs.namenode.quota.init-threads,12,"The number of concurrent threads to be used in quota initialization. The
+    speed of quota initialization also affects the namenode fail-over latency.
+    If the size of name space is big, try increasing this to 16 or higher."
+7,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+8,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+9,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."

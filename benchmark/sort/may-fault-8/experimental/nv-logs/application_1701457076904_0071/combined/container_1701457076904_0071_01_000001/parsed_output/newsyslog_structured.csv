@@ -1,0 +1,14 @@
+LineId,Date,Time,Pid,Level,Component,Content,EventId,EventTemplate,ParameterList
+1,2023-12-02,04:36:17,030,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Created MRAppMaster for application appattempt_1701457076904_0071_000001,19b75bb3,Created MRAppMaster for application appattempt_<*>_<*>_<*>,"['1701457076904', '0071_000001']"
+2,2023-12-02,04:36:17,286,INFO,[main] org.apache.hadoop.security.SecurityUtil,Updating Configuration,b6c60981,Updating Configuration,[]
+3,2023-12-02,04:36:17,287,ERROR,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""0.7357608""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:114)
+	at org.apache.hadoop.security.SecurityUtil.setConfiguration(SecurityUtil.java:99)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1737)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+",07cf45ab,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""<*>.<*>"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:<*>) at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:<*>) at org.apache.hadoop.security.SecurityUtil.setConfiguration(SecurityUtil.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>)","['0.7357608', '65', '652', '770', '1534', '114', '99', '1737', '1691']"
+4,2023-12-02,04:36:17,292,INFO,[main] org.apache.hadoop.util.ExitUtil,"Exiting with status 1: java.lang.NumberFormatException: For input string: ""0.7357608""",f2dc02db,"Exiting with status <*>: java.lang.NumberFormatException: For input string: ""<*>.<*>""","['1', '0.7357608']"

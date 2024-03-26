@@ -1,0 +1,31 @@
+,name,value,description
+0,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,,<missing>
+1,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,
+2,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+3,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+4,yarn.resourcemanager.delegation.key.update-interval,86400000,
+5,yarn.app.mapreduce.shuffle.log.backups,0,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+6,yarn.nodemanager.log.deletion-threads-count,4,
+7,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+8,fs.du.interval,600000,File space usage statistics refresh interval in msec.
+9,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,

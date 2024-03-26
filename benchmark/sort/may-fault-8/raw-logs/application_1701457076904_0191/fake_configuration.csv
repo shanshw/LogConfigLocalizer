@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."
+2,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+3,yarn.nodemanager.node-attributes.provider.fetch-interval-ms,600000,
+4,dfs.block.invalidate.limit,1000,"The maximum number of invalidate blocks sent by namenode to a datanode
+    per heartbeat deletion command. This property works with
+    ""dfs.namenode.invalidate.work.pct.per.iteration"" to throttle block
+    deletions."
+5,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+6,yarn.sharedcache.nm.uploader.replication.factor,10,
+7,dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,The maximum delay (unit is ms) before retrying locateFollowingBlock.
+8,yarn.resourcemanager.application.max-tag.length,100,
+9,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."

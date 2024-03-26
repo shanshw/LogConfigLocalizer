@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."
+2,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+3,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+4,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+5,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+6,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+7,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+8,dfs.qjournal.new-epoch.timeout.ms,120000,"Timeout in milliseconds when getting an epoch number for write
+    access to JournalNodes."
+9,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.

@@ -1,0 +1,37 @@
+,name,value,description
+0,io.bytes.per.checksum,235618695,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."
+2,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.
+3,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+4,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+5,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+6,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+7,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+8,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+9,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.

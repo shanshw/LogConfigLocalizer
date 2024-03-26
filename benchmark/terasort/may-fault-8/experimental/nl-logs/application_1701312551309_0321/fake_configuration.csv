@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,891744574,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+2,yarn.dispatcher.drain-events.timeout,300000,
+3,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+4,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+5,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.
+6,ipc.ping.interval,60000,"Timeout on waiting response from server, in milliseconds.
+  The client will send ping when the interval is passed without receiving bytes,
+  if ipc.client.ping is set to true."
+7,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+8,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.
+9,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,

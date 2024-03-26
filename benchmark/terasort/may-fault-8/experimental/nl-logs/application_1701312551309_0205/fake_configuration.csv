@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+2,yarn.resourcemanager.nm-container-queuing.min-queue-wait-time-ms,10,
+3,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+4,yarn.timeline-service.generic-application-history.max-applications,10000,
+5,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."
+6,dfs.qjournal.finalize-segment.timeout.ms,120000,"Quorum timeout in milliseconds during finalizing for a specific
+    segment."
+7,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+8,file.blocksize,67108864,Block size
+9,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."

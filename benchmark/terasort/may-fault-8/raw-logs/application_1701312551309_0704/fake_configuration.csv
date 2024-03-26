@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,1647450755,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.map.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each map task."
+2,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+3,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+4,yarn.scheduler.configuration.store.max-logs,1000,
+5,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+6,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+7,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+8,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+9,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."

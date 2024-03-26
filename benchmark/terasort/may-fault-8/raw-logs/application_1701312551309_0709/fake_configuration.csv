@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,-2001296879,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+2,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+3,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+4,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."
+5,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+6,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."
+7,dfs.namenode.checkpoint.txns,1000000,"The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired."
+8,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."
+9,dfs.namenode.resource.check.interval,5000,"The interval in milliseconds at which the NameNode resource checker runs.
+    The checker calculates the number of the NameNode storage volumes whose
+    available spaces are more than dfs.namenode.resource.du.reserved, and
+    enters safemode if the number becomes lower than the minimum value
+    specified by dfs.namenode.resource.checked.volumes.minimum."

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:ipc.server.max.connections
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'ipc.server.max.connections' is set to 0 which might be causing the server to not accept any connections. This configuration should be set to a valid non-zero value.
+
+name:yarn.nodemanager.localizer.fetch.thread-count
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.nodemanager.localizer.fetch.thread-count' is missing which might be causing the server to not properly handle the threads. This configuration should be set to a valid value.

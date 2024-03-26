@@ -1,0 +1,117 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.read.shortcircuit.streams.cache.expiry.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>155535518</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.resource.checked.volumes.minimum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.path.based.cache.refresh.interval.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nm.liveness-monitor.expiry-interval-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>600000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.name.cache.threshold</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	threshold</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.edekcacheloader.initial.delay.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>3000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+                var reportItem7 = document.createElement("div");
+                reportItem7.innerHTML = `
+                    <strong>[No.7]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.file.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4096</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem7);
+            
+                var reportItem8 = document.createElement("div");
+                reportItem8.innerHTML = `
+                    <strong>[No.8]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.snapshot.skiplist.max.levels</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 155535518, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem8);
+            
+    </script>
+    </body>
+    </html>
+    

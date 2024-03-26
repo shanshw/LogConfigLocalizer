@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,-232574920,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+2,mapreduce.ifile.readahead.bytes,4194304,Configuration key to set the IFile readahead length in bytes.
+3,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+4,dfs.datanode.restart.replica.expiration,50,"During shutdown for restart, the amount of time in seconds budgeted for
+    datanode restart."
+5,yarn.log-aggregation-status.time-out.ms,600000,
+6,yarn.resourcemanager.delegation-token.max-conf-size-bytes,12800,
+7,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+8,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+9,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."

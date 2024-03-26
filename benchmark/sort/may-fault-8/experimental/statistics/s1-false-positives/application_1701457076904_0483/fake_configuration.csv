@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.container.liveness-monitor.interval-ms,600000,
+2,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+3,hadoop.security.groups.cache.secs,300,"This is the config controlling the validity of the entries in the cache
+    containing the user->group mapping. When this duration has expired,
+    then the implementation of the group mapping provider is invoked to get
+    the groups of the user and then cached back."
+4,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+5,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+6,mapreduce.task.skip.start.attempts,2,"The number of Task attempts AFTER which skip mode
+    will be kicked off. When skip mode is kicked off, the
+    tasks reports the range of records which it will process
+    next, to the MR ApplicationMaster. So that on failures, the MR AM
+    knows which ones are possibly the bad records. On further executions,
+    those are skipped."
+7,yarn.nm.liveness-monitor.expiry-interval-ms,600000,
+8,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+9,dfs.datanode.du.reserved,0,"Reserved space in bytes per volume. Always leave this much space free for non dfs use.
+      Specific storage type based reservation is also supported. The property can be followed with
+      corresponding storage types ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+      For example, reserved space for RAM_DISK storage can be configured using property
+      'dfs.datanode.du.reserved.ram_disk'. If specific storage type reservation is not configured
+      then dfs.datanode.du.reserved will be used. Support multiple size unit suffix(case insensitive),
+      as described in dfs.blocksize.
+      Note: In case of using tune2fs to set reserved-blocks-percentage, or other filesystem tools,
+      then you can possibly run into out of disk errors because hadoop will not check those
+      external tool configurations."

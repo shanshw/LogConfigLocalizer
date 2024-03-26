@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,1402281378,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+2,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+3,dfs.default.chunk.view.size,32768,The number of bytes to view for a file on the browser.
+4,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+5,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.batch-size,1000,
+6,dfs.blockreport.incremental.intervalMsec,0,"If set to a positive integer, the value in ms to wait between sending
+    incremental block reports from the Datanode to the Namenode."
+7,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."
+8,mapreduce.job.speculative.retry-after-no-speculate,1000,"The waiting time(ms) to do next round of speculation
+  if there is no task speculated in this round."
+9,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.

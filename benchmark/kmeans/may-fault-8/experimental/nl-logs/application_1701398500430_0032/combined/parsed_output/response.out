@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+
+name:dfs.client.block.write.locateFollowingBlock.retries
+value:5
+relevant log:1-ERROR	Task: attempt_1701398500430_0032_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.block.write.locateFollowingBlock.retries' is set to 5. This configuration is related to HDFS writes and could be causing the Invalid checksum type error. Increasing the number of retries might help to avoid this error.
+
+name:dfs.client.retry.window.base
+value:3000
+relevant log:1-ERROR	Task: attempt_1701398500430_0032_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.retry.window.base' is set to 3000. This configuration is related to DFSClient retries and could be causing the Invalid checksum type error. Increasing the base time window might help to avoid this error.

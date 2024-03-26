@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:dfs.client.block.write.retries
+value:3
+relevant log:1-ERROR	Task: attempt_1701312551309_0221_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.block.write.retries' is set to 3. This indicates that the system will attempt to write blocks to the data nodes 3 times before signaling failure to the application. The error log suggests that these retries may be failing due to an invalid checksum type.
+
+name:dfs.encrypt.data.transfer.cipher.key.bitlength
+value:128
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.encrypt.data.transfer.cipher.key.bitlength' is set to 128. This option determines the key bitlength negotiated by dfsclient and datanode for encryption. The error log suggests that there may be an issue with the encryption process, possibly related to the checksum error.

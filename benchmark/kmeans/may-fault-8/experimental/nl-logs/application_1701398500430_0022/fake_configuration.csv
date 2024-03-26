@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+2,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+3,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+4,ipc.client.connection.maxidletime,10000,"The maximum time in msec after which a client will bring down the
+               connection to the server."
+5,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+6,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+7,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."
+8,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.
+9,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."

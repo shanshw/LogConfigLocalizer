@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,960512577,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.sharedcache.cleaner.initial-delay-mins,10,
+2,dfs.datanode.data.transfer.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for transfering block when
+      BlockConstructionStage is
+      PIPELINE_SETUP_CREATE and clientName is empty.
+      When the bandwidth value is zero, there is no limit."
+3,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+4,yarn.scheduler.minimum-allocation-mb,1024,
+5,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+6,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+7,fs.s3a.executor.capacity,16,"The maximum number of submitted tasks which is a single
+    operation (e.g. rename(), delete()) may submit simultaneously for
+    execution -excluding the IO-heavy block uploads, whose capacity
+    is set in ""fs.s3a.fast.upload.active.blocks""
+
+    All tasks are submitted to the shared thread pool whose size is
+    set in ""fs.s3a.threads.max""; the value of capacity should be less than that
+    of the thread pool itself, as the goal is to stop a single operation
+    from overloading that thread pool."
+8,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+9,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.

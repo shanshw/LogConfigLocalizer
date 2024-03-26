@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+2,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+3,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+4,yarn.scheduler.minimum-allocation-mb,1024,
+5,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+6,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+7,yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,
+8,mapreduce.ifile.readahead.bytes,4194304,Configuration key to set the IFile readahead length in bytes.
+9,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."

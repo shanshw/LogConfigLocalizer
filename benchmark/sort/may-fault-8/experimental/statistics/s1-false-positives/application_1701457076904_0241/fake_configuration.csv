@@ -1,0 +1,38 @@
+,name,value,description
+0,yarn.app.mapreduce.client.job.max-retries,0,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+1,mapreduce.input.fileinputformat.list-status.num-threads,1,"The number of threads to use to list and fetch block locations
+  for the specified input paths. Note: multiple threads should not be used
+  if a custom non thread-safe path filter is used."
+2,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+3,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+4,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+5,dfs.cachereport.intervalMsec,10000,"Determines cache reporting interval in milliseconds.  After this amount of
+    time, the DataNode sends a full report of its cache state to the NameNode.
+    The NameNode uses the cache report to update its map of cached blocks to
+    DataNode locations.
+
+    This configuration has no effect if in-memory caching has been disabled by
+    setting dfs.datanode.max.locked.memory to 0 (which is the default).
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+6,dfs.namenode.top.num.users,10,Number of top users returned by the top tool
+7,mapreduce.task.combine.progress.records,10000,"The number of records to process during combine output collection
+   before sending a progress notification."
+8,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+9,yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms,1000,

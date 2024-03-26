@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1012936192,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+2,yarn.app.mapreduce.shuffle.log.backups,0,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+3,yarn.timeline-service.app-collector.linger-period.ms,60000,
+4,yarn.resourcemanager.nodemanagers.heartbeat-interval-ms,1000,
+5,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+6,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."
+7,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+8,ipc.client.connection.maxidletime,10000,"The maximum time in msec after which a client will bring down the
+               connection to the server."
+9,yarn.nodemanager.delete.thread-count,4,

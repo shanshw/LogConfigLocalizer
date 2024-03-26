@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-957067377,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.qjournal.write-txns.timeout.ms,20000,"Write timeout in milliseconds when writing to a quorum of remote
+    journals."
+2,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.
+3,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+4,yarn.resourcemanager.zk-appid-node.split-index,0,
+5,dfs.client.write.byte-array-manager.count-threshold,128,"The count threshold for each array length so that a manager is created only after the
+    allocation count exceeds the threshold. In other words, the particular array length
+    is not managed until the allocation count exceeds the threshold."
+6,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+7,yarn.timeline-service.client.retry-interval-ms,1000,
+8,yarn.resourcemanager.amlauncher.thread-count,50,
+9,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."

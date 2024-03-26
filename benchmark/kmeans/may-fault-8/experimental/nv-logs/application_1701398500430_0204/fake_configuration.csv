@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+2,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+3,dfs.ha.zkfc.nn.http.timeout.ms,20000,"The HTTP connection and read timeout value (unit is ms ) when DFS ZKFC
+    tries to get local NN thread dump after local NN becomes
+    SERVICE_NOT_RESPONDING or SERVICE_UNHEALTHY.
+    If it is set to zero, DFS ZKFC won't get local NN thread dump."
+4,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+5,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+6,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+7,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+8,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+9,mapreduce.reduce.shuffle.retry-delay.max.ms,60000,"The maximum number of ms the reducer will delay before retrying
+  to download map data."

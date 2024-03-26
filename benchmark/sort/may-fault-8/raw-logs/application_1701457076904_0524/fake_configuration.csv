@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,990894497,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+2,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+3,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+4,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+5,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+6,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+7,yarn.resourcemanager.history-writer.multi-threaded-dispatcher.pool-size,10,
+8,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+9,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,

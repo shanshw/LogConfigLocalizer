@@ -1,0 +1,18 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+2,yarn.nodemanager.container-retry-minimum-interval-ms,1000,
+3,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+4,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+5,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+6,dfs.client.write.byte-array-manager.count-limit,2048,The maximum number of arrays allowed for each array length.
+7,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+8,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+9,dfs.qjournal.write-txns.timeout.ms,20000,"Write timeout in milliseconds when writing to a quorum of remote
+    journals."

@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+2,dfs.ls.limit,1000,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+3,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."
+4,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.interval-seconds,60,
+5,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+6,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+7,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+8,yarn.nodemanager.collector-service.thread-count,5,
+9,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,

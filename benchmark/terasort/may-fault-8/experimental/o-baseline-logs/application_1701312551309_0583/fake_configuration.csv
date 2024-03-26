@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1097680759,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+2,yarn.cluster.max-application-priority,0,
+3,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+4,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."
+5,yarn.client.nodemanager-connect.max-wait-ms,180000,
+6,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."
+7,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+8,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+9,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."

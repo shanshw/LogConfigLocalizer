@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,1055279211,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."
+2,yarn.resourcemanager.container.liveness-monitor.interval-ms,600000,
+3,fs.ftp.timeout,0,FTP filesystem's timeout in seconds.
+4,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+5,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+6,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+7,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+8,mapreduce.reduce.shuffle.parallelcopies,5,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."
+9,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."

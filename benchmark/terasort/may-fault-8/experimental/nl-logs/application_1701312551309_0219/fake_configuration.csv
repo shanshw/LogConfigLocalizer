@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,file.client-write-packet-size,65536,Packet size for clients to write
+2,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+3,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+4,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+5,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+6,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+7,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+8,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+9,yarn.timeline-service.writer.async.queue.capacity,100,

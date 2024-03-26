@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,-2014100191,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.log.retain-seconds,10800,
+2,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+3,yarn.nodemanager.container.stderr.tail.bytes,4096,
+4,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+5,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+6,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+7,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+8,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+9,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."

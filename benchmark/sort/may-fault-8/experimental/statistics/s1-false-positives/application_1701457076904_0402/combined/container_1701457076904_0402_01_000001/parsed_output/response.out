@@ -1,0 +1,14 @@
+name:dfs.datanode.cache.revocation.timeout.ms
+value:-0.7346693
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0402_m_000009
+explanation:The negative value for this configuration is invalid. It controls how long the DataNode will wait for the client to release a replica that it is reading without checksums. The negative value might cause the DataNode to behave unexpectedly.
+
+name:mapreduce.job.cache.limit.max-resources-mb
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0402_m_000009
+explanation:The value of this configuration is set to 0, which means there is no limit for the maximum size a map reduce job is allowed to submit for localization. This could potentially lead to resource exhaustion if a job submits a large amount of data for localization.
+
+name:dfs.datanode.failed.volumes.tolerated
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0402_m_000009
+explanation:The value of this configuration is set to 0, which means any volume failure will cause a datanode to shutdown. This could potentially lead to service interruption if there is any volume failure.

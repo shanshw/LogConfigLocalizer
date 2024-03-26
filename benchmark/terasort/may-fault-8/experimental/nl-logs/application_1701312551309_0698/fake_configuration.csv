@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+2,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."
+3,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+4,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+5,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+6,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+7,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+8,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.
+9,yarn.router.pipeline.cache-max-size,25,

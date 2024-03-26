@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+2,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+3,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+4,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+5,mapreduce.shuffle.pathcache.concurrency-level,16,"Uses the concurrency level to create a fixed number of hashtable
+    segments, each governed by its own write lock."
+6,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+7,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+8,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+9,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.

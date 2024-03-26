@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.write.byte-array-manager.count-limit,2048,The maximum number of arrays allowed for each array length.
+2,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+3,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+4,dfs.namenode.num.extra.edits.retained,1000000,"The number of extra transactions which should be retained
+  beyond what is minimally necessary for a NN restart.
+  It does not translate directly to file's age, or the number of files kept,
+  but to the number of transactions (here ""edits"" means transactions).
+  One edit file may contain several transactions (edits).
+  During checkpoint, NameNode will identify the total number of edits to retain as extra by
+  checking the latest checkpoint transaction value, subtracted by the value of this property.
+  Then, it scans edits files to identify the older ones that don't include the computed range of
+  retained transactions that are to be kept around, and purges them subsequently.
+  The retainment can be useful for audit purposes or for an HA setup where a remote Standby Node may have
+  been offline for some time and need to have a longer backlog of retained
+  edits in order to start again.
+  Typically each edit is on the order of a few hundred bytes, so the default
+  of 1 million edits should be on the order of hundreds of MBs or low GBs.
+
+  NOTE: Fewer extra edits may be retained than value specified for this setting
+  if doing so would mean that more segments would be retained than the number
+  configured by dfs.namenode.max.extra.edits.segments.retained."
+5,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+6,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+7,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+8,mapreduce.jobhistory.max-age-ms,604800000,"Job history files older than this many milliseconds will
+  be deleted when the history cleaner runs. Defaults to 604800000 (1 week)."
+9,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."

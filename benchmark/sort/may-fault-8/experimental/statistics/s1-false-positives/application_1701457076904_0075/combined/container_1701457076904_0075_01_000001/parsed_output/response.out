@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.client.thread-count
+value:-540112311
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0075_m_000009
+explanation:The negative value for the thread-count is likely causing issues with task speculation in the ResourceManager. Thread count should be a positive integer.
+
+name:dfs.client.deadnode.detection.probe.deadnode.interval.ms
+value:60000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0075_m_000009
+explanation:The interval for probing dead node behavior might be too long, causing delays in detecting and handling failed tasks.
+
+name:mapreduce.jobhistory.joblist.cache.size
+value:20000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0075_m_000009
+explanation:The size of the job list cache might be too large, causing memory issues and affecting task speculation.

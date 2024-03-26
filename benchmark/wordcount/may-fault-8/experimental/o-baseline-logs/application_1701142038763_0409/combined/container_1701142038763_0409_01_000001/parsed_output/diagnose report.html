@@ -1,0 +1,69 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.client.nodemanager-connect.max-wait-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-0.17853415</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Container launch failed for container_1701142038763_0409_01_000006 : java.lang.NumberFormatException: For input string: "-0.17853415"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.http.internal-proxy.port</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Container launch failed for container_1701142038763_0409_01_000006 : java.lang.NumberFormatException: For input string: "-0.17853415"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.client.nodemanager-connect.max-wait-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-0.17853415</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0409_m_000002_0: Container launch failed for container_1701142038763_0409_01_000006 : java.lang.NumberFormatException: For input string: "-0.17853415"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.http.internal-proxy.port</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0409_m_000002_0: Container launch failed for container_1701142038763_0409_01_000006 : java.lang.NumberFormatException: For input string: "-0.17853415"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+    </script>
+    </body>
+    </html>
+    

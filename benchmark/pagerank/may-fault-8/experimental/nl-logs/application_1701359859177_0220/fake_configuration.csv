@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-1480569782,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+2,dfs.namenode.max.extra.edits.segments.retained,10000,"The maximum number of extra edit log segments which should be retained
+  beyond what is minimally necessary for a NN restart. When used in conjunction with
+  dfs.namenode.num.extra.edits.retained, this configuration property serves to cap
+  the number of extra edits files to a reasonable value."
+3,yarn.nodemanager.container-manager.thread-count,20,
+4,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+5,dfs.storage.policy.satisfier.retry.max.attempts,3,"Max retry to satisfy the block storage policy. After this retry block will be removed
+    from the movement needed queue."
+6,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+7,yarn.scheduler.configuration.store.max-logs,1000,
+8,yarn.nodemanager.amrmproxy.client.thread-count,25,
+9,dfs.client.block.write.retries,3,"The number of retries for writing blocks to the data nodes, 
+  before we signal failure to the application."

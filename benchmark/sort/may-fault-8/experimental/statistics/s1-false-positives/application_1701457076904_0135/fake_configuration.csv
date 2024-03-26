@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+2,dfs.client.hedged.read.threadpool.size,0,"Support 'hedged' reads in DFSClient. To enable this feature, set the parameter
+    to a positive number. The threadpool size is how many threads to dedicate
+    to the running of these 'hedged', concurrent reads in your client."
+3,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+4,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.
+5,yarn.scheduler.minimum-allocation-vcores,1,
+6,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.
+7,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+8,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+9,yarn.resourcemanager.connect.retry-interval.ms,30000,

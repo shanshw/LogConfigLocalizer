@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:yarn.app.mapreduce.am.container.log.limit.kb
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.app.mapreduce.am.container.log.limit.kb' is set to 0, which might be causing issues with logging. This option should be set to a value larger than 0 to ensure proper logging.
+
+name:dfs.datanode.cache.revocation.timeout.ms
+value:900000
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.datanode.cache.revocation.timeout.ms' is set to a high value, which might be causing issues with cache eviction. This option should be set to a lower value to ensure timely cache eviction.

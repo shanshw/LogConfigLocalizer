@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,235618695,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+2,yarn.nodemanager.node-labels.resync-interval-ms,120000,
+3,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+4,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+5,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+6,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+7,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+8,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+9,yarn.resourcemanager.placement-constraints.algorithm.pool-size,1,

@@ -1,0 +1,33 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>BPRGv</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "BPRGv"</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'hadoop.security.groups.negative-cache.secs' is expected to be a numerical value representing the expiration time for entries in the negative user-to-group mapping caching. However, the current value is 'BPRGv', which is not a valid numerical value and has caused a NumberFormatException. This is the most likely root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+    </script>
+    </body>
+    </html>
+    

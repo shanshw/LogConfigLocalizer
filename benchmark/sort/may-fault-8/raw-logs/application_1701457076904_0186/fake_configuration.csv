@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+2,yarn.timeline-service.app-collector.linger-period.ms,60000,
+3,fs.s3a.paging.maximum,5000,"How many keys to request from S3 when doing
+     directory listings at a time."
+4,yarn.dispatcher.print-events-info.threshold,5000,
+5,yarn.sharedcache.nm.uploader.replication.factor,10,
+6,yarn.resourcemanager.activities-manager.app-activities.max-queue-length,100,
+7,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,yarn.sharedcache.client-server.thread-count,50,
+9,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1669679292
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. This configuration should be adjusted to a smaller value.
+
+name:yarn.client.max-cached-nodemanagers-proxies
+value:0
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of yarn.client.max-cached-nodemanagers-proxies is set to 0, which means no node manager proxies are cached. This could lead to excessive creation and destruction of proxies, causing memory issues.
+
+name:dfs.datanode.ec.reconstruction.threads
+value:8
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.datanode.ec.reconstruction.threads is set to 8, which may cause high memory usage if the system does not have enough resources. This configuration should be adjusted according to the system's capacity.

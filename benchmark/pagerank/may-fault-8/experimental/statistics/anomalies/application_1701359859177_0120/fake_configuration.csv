@@ -1,0 +1,21 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.connect.timeout,YIDzB,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+1,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+2,yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,
+3,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+4,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+5,datanode.https.port,50475,HTTPS port for DataNode.
+6,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+7,dfs.namenode.accesstime.precision,3600000,"The access time for HDFS file is precise upto this value. 
+               The default value is 1 hour. Setting a value of 0 disables
+               access times for HDFS."
+8,fs.s3a.paging.maximum,5000,"How many keys to request from S3 when doing
+     directory listings at a time."
+9,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."

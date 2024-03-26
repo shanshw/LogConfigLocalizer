@@ -1,0 +1,26 @@
+ls -l:
+total 36
+lrwxrwxrwx 1 root root   66 Nov 30 14:32 _partition.lst -> /home/hadoop3/hadoop/tmp/nm-local-dir/filecache/318/_partition.lst
+-rw-r--r-- 1 root root  129 Nov 30 14:32 container_tokens
+-rwx------ 1 root root  755 Nov 30 14:32 default_container_executor.sh
+-rwx------ 1 root root  700 Nov 30 14:32 default_container_executor_session.sh
+lrwxrwxrwx 1 root root  113 Nov 30 14:32 job.jar -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701312551309_0306/filecache/10/job.jar
+lrwxrwxrwx 1 root root  113 Nov 30 14:32 job.xml -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701312551309_0306/filecache/11/job.xml
+-rwx------ 1 root root 6080 Nov 30 14:32 launch_container.sh
+drwx--x--- 2 root root 4096 Nov 30 14:32 tmp
+find -L . -maxdepth 5 -ls:
+301469105      4 drwx--x---   3 root     root         4096 Nov 30 14:32 .
+301469048    236 -r-x------   1 root     root       237869 Nov 30 14:32 ./job.xml
+301469143      4 -rw-r--r--   1 root     root          129 Nov 30 14:32 ./container_tokens
+301469160      4 -rw-r--r--   1 root     root           16 Nov 30 14:32 ./.default_container_executor_session.sh.crc
+301469159      4 -rwx------   1 root     root          700 Nov 30 14:32 ./default_container_executor_session.sh
+301469161      4 -rwx------   1 root     root          755 Nov 30 14:32 ./default_container_executor.sh
+301469172      4 -rw-r--r--   1 root     root           16 Nov 30 14:32 ./.default_container_executor.sh.crc
+301469021      0 -r-xr-xr-x   1 root     root            0 Nov 30 14:32 ./_partition.lst
+301469018      4 drwx------   2 root     root         4096 Nov 30 14:32 ./job.jar
+301469046    276 -r-x------   1 root     root       280486 Nov 30 14:32 ./job.jar/job.jar
+301469157      8 -rwx------   1 root     root         6080 Nov 30 14:32 ./launch_container.sh
+301469158      4 -rw-r--r--   1 root     root           56 Nov 30 14:32 ./.launch_container.sh.crc
+301469115      4 drwx--x---   2 root     root         4096 Nov 30 14:32 ./tmp
+301469156      4 -rw-r--r--   1 root     root           12 Nov 30 14:32 ./.container_tokens.crc
+broken symlinks(find -L . -maxdepth 5 -type l -ls):

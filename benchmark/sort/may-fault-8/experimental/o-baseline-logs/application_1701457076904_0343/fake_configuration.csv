@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,-870148,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+2,dfs.balancer.movedWinWidth,5400000,"Window of time in ms for the HDFS balancer tracking blocks and its
+    locations."
+3,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+4,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+5,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+6,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+7,mapreduce.job.running.map.limit,0,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+8,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+9,dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,Datanode striped read timeout in milliseconds.

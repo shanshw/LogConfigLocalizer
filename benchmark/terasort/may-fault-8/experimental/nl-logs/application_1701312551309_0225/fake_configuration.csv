@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+2,mapreduce.job.counters.max,120,The max number of user counters allowed per job.
+3,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+4,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.
+5,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+6,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+7,mapreduce.jobhistory.intermediate-user-done-dir.permissions,770,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+8,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+9,file.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  file.stream-buffer-size"

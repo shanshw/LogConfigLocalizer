@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,0,"1-Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null",The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+dfs.namenode.stale.datanode.interval,30000,1-1 failures on node ed761ad59d44,"The configuration 'dfs.namenode.stale.datanode.interval' is set to 30000 milliseconds. This might be causing the node to be marked as stale too quickly, leading to failures."
+dfs.namenode.resource.du.reserved,104857600,1-Exiting with status 1: java.lang.NullPointerException,The configuration 'dfs.namenode.resource.du.reserved' is set to 104857600 bytes. This might be causing the NullPointerException due to insufficient reserved space for the NameNode storage directory.

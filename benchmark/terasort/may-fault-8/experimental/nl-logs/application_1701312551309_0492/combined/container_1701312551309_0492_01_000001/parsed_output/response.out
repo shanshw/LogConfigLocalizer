@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1626368326
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.
+
+name:yarn.resourcemanager.leveldb-state-store.compaction-interval-secs
+value:3600
+relevant log:<missing>
+explanation: The description of this configuration is missing, which may cause unexpected behavior of the system.
+
+name:dfs.namenode.handler.count
+value:10
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The number of Namenode RPC server threads that listen to requests from clients is set to 10. If the number of requests exceeds the handling capacity of these threads, it may cause the system to run out of memory.

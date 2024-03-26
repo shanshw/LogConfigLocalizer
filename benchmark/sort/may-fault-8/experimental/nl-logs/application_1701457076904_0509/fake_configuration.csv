@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+2,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+3,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+4,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+5,fs.s3a.threads.keepalivetime,60,"Number of seconds a thread can be idle before being
+    terminated."
+6,mapreduce.task.skip.start.attempts,2,"The number of Task attempts AFTER which skip mode
+    will be kicked off. When skip mode is kicked off, the
+    tasks reports the range of records which it will process
+    next, to the MR ApplicationMaster. So that on failures, the MR AM
+    knows which ones are possibly the bad records. On further executions,
+    those are skipped."
+7,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+8,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.
+9,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.

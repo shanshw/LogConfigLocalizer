@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.scheduler.maximum-allocation-mb,8192,
+2,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+3,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+4,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+5,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+6,dfs.datanode.network.counts.cache.max.size,2147483647,"The maximum number of entries the datanode per-host network error
+    count cache may contain."
+7,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"
+8,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+9,dfs.client.write.max-packets-in-flight,80,The maximum number of DFSPackets allowed in flight.

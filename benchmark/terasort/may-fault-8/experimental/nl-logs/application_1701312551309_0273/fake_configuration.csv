@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1178416143,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+2,hadoop.security.groups.cache.warn.after.ms,5000,"If looking up a single user to group takes longer than this amount of
+    milliseconds, we will log a warning message."
+3,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."
+4,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+5,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+6,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+7,fs.s3a.max.total.tasks,32,"The number of operations which can be queued for execution.
+  This is in addition to the number of active threads in fs.s3a.threads.max."
+8,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."
+9,yarn.resourcemanager.connect.max-wait.ms,900000,

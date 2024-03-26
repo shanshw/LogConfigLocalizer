@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+2,yarn.resourcemanager.nodemanagers.heartbeat-interval-ms,1000,
+3,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."
+4,yarn.resourcemanager.zk-appid-node.split-index,0,
+5,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+6,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+7,dfs.datanode.cached-dfsused.check.interval.ms,600000,"The interval check time of loading DU_CACHE_FILE in each volume.
+    When the cluster doing the rolling upgrade operations, it will
+    usually lead dfsUsed cache file of each volume expired and redo the
+    du operations in datanode and that makes datanode start slowly. Adjust
+    this property can make cache file be available for the time as you want."
+8,yarn.resourcemanager.max-completed-applications,1000,
+9,yarn.client.nodemanager-connect.retry-interval-ms,10000,

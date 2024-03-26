@@ -1,0 +1,29 @@
+,name,value,description
+0,dfs.client.mmap.retry.timeout.ms,0,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+1,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+2,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+3,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+4,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.
+5,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+6,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,
+7,yarn.sharedcache.cleaner.initial-delay-mins,10,
+8,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+9,mapreduce.am.max-attempts,2,"The maximum number of application attempts. It is a
+  application-specific setting. It should not be larger than the global number
+  set by resourcemanager. Otherwise, it will be override. The default number is
+  set to 2, to allow at least one retry for AM."

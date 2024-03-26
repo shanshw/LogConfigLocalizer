@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+2,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+3,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+4,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+5,yarn.timeline-service.writer.flush-interval-seconds,60,
+6,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+7,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+8,mapreduce.shuffle.max.connections,0,"Max allowed connections for the shuffle.  Set to 0 (zero)
+               to indicate no limit on the number of connections."
+9,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.

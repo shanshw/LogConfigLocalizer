@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'io.bytes.per.checksum' is set to 0 which is causing an invalid checksum type error. This option should be set to a value larger than 0 and not larger than io.file.buffer.size.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.max.slowdisks.to.exclude</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'dfs.datanode.max.slowdisks.to.exclude' is set to 0 which might be causing slow disk performance. This option should be set to a value larger than 0 to exclude slow disks when choosing volume.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.ec.policies.max.cellsize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4194304</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'dfs.namenode.ec.policies.max.cellsize' is set to a high value which might be causing memory issues. This option should be set to a lower value to avoid memory overflow.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

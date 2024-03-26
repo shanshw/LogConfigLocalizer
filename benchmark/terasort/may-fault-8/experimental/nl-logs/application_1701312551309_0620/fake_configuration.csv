@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-1993639577,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.snapshot.skiplist.max.levels,0,"Maximum no of the skip levels to be maintained in the skip list for
+    storing directory snapshot diffs. By default, it is set to 0 and a linear
+    list will be used to store the directory snapshot diffs."
+2,dfs.client.hedged.read.threadpool.size,0,"Support 'hedged' reads in DFSClient. To enable this feature, set the parameter
+    to a positive number. The threadpool size is how many threads to dedicate
+    to the running of these 'hedged', concurrent reads in your client."
+3,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+4,mapreduce.shuffle.max.connections,0,"Max allowed connections for the shuffle.  Set to 0 (zero)
+               to indicate no limit on the number of connections."
+5,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+6,yarn.nodemanager.health-checker.timeout-ms,1200000,
+7,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+8,yarn.resourcemanager.connect.max-wait.ms,900000,
+9,dfs.namenode.fs-limits.max-directory-items,1048576,"Defines the maximum number of items that a directory may
+      contain. Cannot set the property to a value less than 1 or more than
+      6400000."

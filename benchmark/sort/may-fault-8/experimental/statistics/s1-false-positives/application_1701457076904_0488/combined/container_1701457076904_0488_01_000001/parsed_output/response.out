@@ -1,0 +1,14 @@
+name:mapreduce.map.skip.maxrecords
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0488_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to bad records in the mapper. The configuration option 'mapreduce.map.skip.maxrecords' is set to 0, which means the feature of detection/skipping of bad records is turned off. This could be the root cause of the issue.
+
+name:dfs.balancer.dispatcherThreads
+value:200
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0488_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to an imbalance in the distribution of data across nodes. The configuration option 'dfs.balancer.dispatcherThreads' is set to 200, which might be too high and could be causing an overload in the system.
+
+name:yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms
+value:1000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0488_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to issues with the resource manager's node sorting interval. The configuration option 'yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms' is set to 1000ms, which might be too short and could be causing frequent reordering of nodes.

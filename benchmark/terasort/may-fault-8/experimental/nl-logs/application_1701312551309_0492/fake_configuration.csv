@@ -1,0 +1,37 @@
+,name,value,description
+0,io.bytes.per.checksum,1626368326,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+2,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+3,dfs.namenode.replication.min,1,Minimal block replication.
+4,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+5,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+6,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+7,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+8,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+9,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."

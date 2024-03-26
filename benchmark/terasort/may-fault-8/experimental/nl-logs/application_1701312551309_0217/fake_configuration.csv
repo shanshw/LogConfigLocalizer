@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.log.retain-seconds,10800,
+2,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+3,yarn.resourcemanager.proxy.connection.timeout,60000,
+4,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+5,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+6,yarn.sharedcache.cleaner.resource-sleep-ms,0,
+7,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+8,dfs.qjournal.write-txns.timeout.ms,20000,"Write timeout in milliseconds when writing to a quorum of remote
+    journals."
+9,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."

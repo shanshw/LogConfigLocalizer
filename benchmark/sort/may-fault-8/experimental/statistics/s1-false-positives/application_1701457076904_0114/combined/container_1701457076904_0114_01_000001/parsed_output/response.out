@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.fs.state-store.retry-interval-ms
+value:6GHFX
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0114_m_000008
+explanation:The value of this configuration option is not a valid integer, which may cause errors when the system tries to interpret it as a retry interval in milliseconds.
+
+name:yarn.client.failover-retries-on-socket-timeouts
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0114_m_000008
+explanation:The value of this configuration option is set to 0, which means that no retries will be attempted on socket timeouts. This could lead to failures in the system if a socket timeout occurs.
+
+name:mapreduce.job.reducer.preempt.delay.sec
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0114_m_000008
+explanation:The value of this configuration option is set to 0, which means that the reducer is preempted as soon as lack of headroom is detected. This could lead to premature preemption of reducers, affecting the performance of the system.

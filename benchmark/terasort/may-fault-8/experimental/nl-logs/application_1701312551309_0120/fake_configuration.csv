@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.dispatcher.drain-events.timeout,300000,
+2,dfs.datanode.available-space-volume-choosing-policy.balanced-space-threshold,10737418240,"Only used when the dfs.datanode.fsdataset.volume.choosing.policy is set to
+    org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy.
+    This setting controls how much DN volumes are allowed to differ in terms of
+    bytes of free disk space before they are considered imbalanced. If the free
+    space of all the volumes are within this range of each other, the volumes
+    will be considered balanced and block assignments will be done on a pure
+    round robin basis. Support multiple size unit suffix(case insensitive), as
+    described in dfs.blocksize."
+3,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+4,yarn.nodemanager.resource-monitor.interval-ms,3000,
+5,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+6,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+7,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+8,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+9,mapreduce.jobhistory.max-age-ms,604800000,"Job history files older than this many milliseconds will
+  be deleted when the history cleaner runs. Defaults to 604800000 (1 week)."

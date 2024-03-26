@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an invalid checksum type. The configuration 'io.bytes.per.checksum' is set to 0, which might be causing this issue as it is related to checksum calculation. The value should be greater than 0.
+
+name:yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb
+value:<missing>
+relevant log:<missing>
+explanation: The configuration 'yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb' is missing a value. This could potentially cause issues as it is related to the disk health check, which is crucial for the system's performance and stability.
+
+name:yarn.timeline-service.leveldb-timeline-store.read-cache-size
+value:104857600
+relevant log:<missing>
+explanation: Although there is no direct error log related to this configuration, the 'yarn.timeline-service.leveldb-timeline-store.read-cache-size' might be a potential cause of issues. It is related to the read cache size of the timeline service, which could affect the performance if not set properly.

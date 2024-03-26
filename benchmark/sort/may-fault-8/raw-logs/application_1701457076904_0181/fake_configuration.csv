@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-877495085,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.resource.check.interval,5000,"The interval in milliseconds at which the NameNode resource checker runs.
+    The checker calculates the number of the NameNode storage volumes whose
+    available spaces are more than dfs.namenode.resource.du.reserved, and
+    enters safemode if the number becomes lower than the minimum value
+    specified by dfs.namenode.resource.checked.volumes.minimum."
+2,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+3,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+4,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+5,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."
+6,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+7,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+8,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+9,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."

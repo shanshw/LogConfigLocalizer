@@ -1,0 +1,37 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+2,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+3,yarn.resourcemanager.nodemanager-connect-retries,10,
+4,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,
+5,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+6,dfs.qjournal.finalize-segment.timeout.ms,120000,"Quorum timeout in milliseconds during finalizing for a specific
+    segment."
+7,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+8,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+9,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."

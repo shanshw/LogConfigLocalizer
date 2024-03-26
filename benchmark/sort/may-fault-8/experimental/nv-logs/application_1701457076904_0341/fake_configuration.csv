@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,-1010281526,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+2,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+3,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+4,yarn.nodemanager.container.stderr.tail.bytes,4096,
+5,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+6,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+7,dfs.qjournal.http.open.timeout.ms,60000,"Timeout in milliseconds when open a new HTTP connection to remote
+    journals."
+8,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+9,yarn.dispatcher.print-events-info.threshold,5000,

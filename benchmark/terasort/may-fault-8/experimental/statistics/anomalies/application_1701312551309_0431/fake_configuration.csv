@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1477795887,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.entity-group-fs-store.app-cache-size,10,
+2,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+3,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+4,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+5,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+6,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,
+7,hadoop.security.groups.cache.secs,300,"This is the config controlling the validity of the entries in the cache
+    containing the user->group mapping. When this duration has expired,
+    then the implementation of the group mapping provider is invoked to get
+    the groups of the user and then cached back."
+8,dfs.namenode.fs-limits.max-directory-items,1048576,"Defines the maximum number of items that a directory may
+      contain. Cannot set the property to a value less than 1 or more than
+      6400000."
+9,hadoop.http.idle_timeout.ms,60000,NN/JN/DN Server connection timeout in milliseconds.

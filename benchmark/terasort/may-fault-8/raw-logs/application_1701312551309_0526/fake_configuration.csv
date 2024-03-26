@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,132683589,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.delegation.token.renew-interval,86400000,The renewal interval for delegation token in milliseconds.
+2,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."
+3,yarn.resourcemanager.scheduler.client.thread-count,50,
+4,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+5,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+6,yarn.nodemanager.container.stderr.tail.bytes,4096,
+7,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+8,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap
+9,ftp.blocksize,67108864,Block size

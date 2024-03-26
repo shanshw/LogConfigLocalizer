@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+2,yarn.nodemanager.localizer.client.thread-count,5,
+3,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+4,yarn.resourcemanager.application.max-tags,10,
+5,mapreduce.job.cache.limit.max-resources,0,"The maximum number of resources a map reduce job is allowed to
+    submit for localization via files, libjars, archives, and jobjar command
+    line arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+6,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+7,yarn.sharedcache.admin.thread-count,1,
+8,yarn.router.interceptor.user.threadpool-size,5,
+9,dfs.datanode.slowpeer.low.threshold.ms,5,Threshold in milliseconds below which a DataNode is definitely not slow.

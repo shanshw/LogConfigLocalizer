@@ -1,0 +1,118 @@
+2023-11-30 17:45:34,517 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701312551309_0600_000002
+2023-11-30 17:45:34,611 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-30 17:45:34,647 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-30 17:45:34,740 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 600 cluster_timestamp: 1701312551309 } attemptId: 2 } keyId: -2063349378)]
+2023-11-30 17:45:34,766 INFO [main] org.apache.hadoop.conf.Configuration: found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml
+2023-11-30 17:45:34,775 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-30 17:45:34,776 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-30 17:45:34,803 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-30 17:45:34,804 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-30 17:45:34,804 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-30 17:45:35,144 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2023-11-30 17:45:35,171 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITED
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: Error while initializing
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:368)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.io.IOException: DestHost:destPort 2f08f873c798:9000 , LocalHost:localPort 2f08f873c798/192.161.20.17:0. Failed on local exception: java.io.IOException: Couldn't set up IO streams: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:930)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:905)
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1571)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1513)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1410)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy14.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:966)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:433)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:166)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:158)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:96)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:362)
+	at com.sun.proxy.$Proxy15.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1739)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1829)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1826)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1841)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1862)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:317)
+	... 7 more
+Caused by: java.io.IOException: Couldn't set up IO streams: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:834)
+	at org.apache.hadoop.ipc.Client$Connection.access$3800(Client.java:347)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1632)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1457)
+	... 29 more
+Caused by: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:581)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:652)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:773)
+	... 32 more
+2023-11-30 17:45:35,174 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: Error while initializing
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:368)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.io.IOException: DestHost:destPort 2f08f873c798:9000 , LocalHost:localPort 2f08f873c798/192.161.20.17:0. Failed on local exception: java.io.IOException: Couldn't set up IO streams: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:930)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:905)
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1571)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1513)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1410)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy14.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:966)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:433)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:166)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:158)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:96)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:362)
+	at com.sun.proxy.$Proxy15.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1739)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1829)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1826)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1841)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1862)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:317)
+	... 7 more
+Caused by: java.io.IOException: Couldn't set up IO streams: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:834)
+	at org.apache.hadoop.ipc.Client$Connection.access$3800(Client.java:347)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1632)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1457)
+	... 29 more
+Caused by: java.lang.IllegalArgumentException: Illegal argument for connect()
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:581)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:652)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:773)
+	... 32 more
+2023-11-30 17:45:35,175 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: Error while initializing

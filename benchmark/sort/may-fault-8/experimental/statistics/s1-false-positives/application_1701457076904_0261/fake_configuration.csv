@@ -1,0 +1,28 @@
+,name,value,description
+0,hadoop.http.idle_timeout.ms,,NN/JN/DN Server connection timeout in milliseconds.
+1,datanode.https.port,50475,HTTPS port for DataNode.
+2,yarn.resourcemanager.scheduler.client.thread-count,50,
+3,mapreduce.job.end-notification.retry.interval,1000,"The number of milliseconds the submitter of the job wants to
+    wait before job end notification is retried if it fails. This is capped by
+    mapreduce.job.end-notification.max.retry.interval"
+4,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+5,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+6,yarn.dispatcher.drain-events.timeout,300000,
+7,yarn.timeline-service.client.retry-interval-ms,1000,
+8,dfs.ha.tail-edits.namenode-retries,3,Number of retries to use when contacting the namenode when tailing the log.
+9,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."

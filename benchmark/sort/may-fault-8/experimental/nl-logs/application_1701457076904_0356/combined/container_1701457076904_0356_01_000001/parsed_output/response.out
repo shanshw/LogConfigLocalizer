@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:mapreduce.job.running.reduce.limit
+value:0
+relevant log:1-ERROR	Task: attempt_1701457076904_0356_r_000001_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'mapreduce.job.running.reduce.limit' is set to 0 which might be causing the task to exit prematurely. This configuration should be set to a valid non-zero value.
+
+name:dfs.client.write.byte-array-manager.count-limit
+value:2048
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.write.byte-array-manager.count-limit' is set to 2048 which might be causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.

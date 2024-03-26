@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+2,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+3,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+4,yarn.resourcemanager.amlauncher.thread-count,50,
+5,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+6,yarn.resourcemanager.nm-container-queuing.min-queue-wait-time-ms,10,
+7,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+8,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+9,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."

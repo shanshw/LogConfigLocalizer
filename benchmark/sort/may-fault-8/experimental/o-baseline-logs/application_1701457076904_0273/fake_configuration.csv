@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,1945316425,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+2,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+3,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+4,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+5,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+6,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+7,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+8,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+9,yarn.app.attempt.diagnostics.limit.kc,64,

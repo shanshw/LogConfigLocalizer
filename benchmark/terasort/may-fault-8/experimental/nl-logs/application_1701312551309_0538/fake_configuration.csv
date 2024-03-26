@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.attempt.diagnostics.limit.kc,64,
+2,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+3,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+4,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+5,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+6,yarn.client.max-cached-nodemanagers-proxies,0,
+7,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."
+8,yarn.nodemanager.container.stderr.tail.bytes,4096,
+9,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."

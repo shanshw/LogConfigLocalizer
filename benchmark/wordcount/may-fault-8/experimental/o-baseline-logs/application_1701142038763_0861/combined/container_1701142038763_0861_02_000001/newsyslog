@@ -1,0 +1,104 @@
+2023-11-29 04:46:35,205 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701142038763_0861_000002
+2023-11-29 04:46:35,321 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-29 04:46:35,356 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-29 04:46:35,454 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 861 cluster_timestamp: 1701142038763 } attemptId: 2 } keyId: -857926061)]
+2023-11-29 04:46:35,482 INFO [main] org.apache.hadoop.conf.Configuration: found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml
+2023-11-29 04:46:35,491 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-29 04:46:35,492 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-29 04:46:35,518 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-29 04:46:35,519 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-29 04:46:35,519 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-29 04:46:35,891 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2023-11-29 04:46:36,001 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2023-11-29 04:46:36,001 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2023-11-29 04:46:36,002 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2023-11-29 04:46:36,002 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2023-11-29 04:46:36,002 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2023-11-29 04:46:36,005 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Can't make a speculator -- check yarn.app.mapreduce.am.job.speculator.class
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:837)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createSpeculator(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:461)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.NumberFormatException: For input string: "0.7148415"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:179)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:116)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:112)
+	... 16 more
+2023-11-29 04:46:36,008 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITED
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:851)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createSpeculator(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:461)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:837)
+	... 11 more
+Caused by: java.lang.NumberFormatException: For input string: "0.7148415"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:179)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:116)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:112)
+	... 16 more
+2023-11-29 04:46:36,009 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:851)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createSpeculator(MRAppMaster.java:825)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:461)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$4.call(MRAppMaster.java:837)
+	... 11 more
+Caused by: java.lang.NumberFormatException: For input string: "0.7148415"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:179)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:116)
+	at org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator.<init>(DefaultSpeculator.java:112)
+	... 16 more
+2023-11-29 04:46:36,009 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.reflect.InvocationTargetException

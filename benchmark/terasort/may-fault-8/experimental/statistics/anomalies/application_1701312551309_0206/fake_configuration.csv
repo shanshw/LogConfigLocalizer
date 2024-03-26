@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,-2011703438,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."
+2,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+3,yarn.scheduler.configuration.leveldb-store.compaction-interval-secs,86400,
+4,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.interval-seconds,60,
+5,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.
+6,yarn.app.mapreduce.client-am.ipc.max-retries,3,"The number of client retries to the AM - before reconnecting
+    to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries to be used during
+    reconnecting to the RM and fetching Application Status."
+7,dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,Datanode striped read timeout in milliseconds.
+8,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+9,dfs.storage.policy.satisfier.max.outstanding.paths,10000,"Defines the maximum number of paths to satisfy that can be queued up in the
+    Satisfier call queue in a period of time. Default value is 10000."

@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+2,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+3,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+4,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+5,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+6,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+7,tfile.fs.input.buffer.size,262144,Buffer size used for FSDataInputStream in bytes.
+8,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.
+9,dfs.namenode.replication.work.multiplier.per.iteration,2,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    parallel at a DN, for replication, when such a command list is being
+    sent over a DN heartbeat by the NN. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately for, per DN heartbeat. This number can be any positive,
+    non-zero integer."

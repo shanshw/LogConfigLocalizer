@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This configuration should be set to a non-zero value to ensure proper checksum calculation.
+
+name:dfs.http.client.retry.max.attempts
+value:10
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.http.client.retry.max.attempts' is set to 10. This could be causing the system to retry failed operations too many times, leading to errors. Reducing this value may help to mitigate the issue.
+
+name:dfs.namenode.delegation.key.update-interval
+value:86400000
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.namenode.delegation.key.update-interval' is set to a large value. This could be causing delays in the update of the delegation key, leading to errors. Reducing this value may help to mitigate the issue.

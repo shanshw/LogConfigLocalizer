@@ -1,0 +1,27 @@
+,name,value,description
+0,dfs.namenode.decommission.max.concurrent.tracked.nodes,-0.24363297,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+1,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."
+2,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+3,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+4,dfs.qjournal.start-segment.timeout.ms,20000,Quorum timeout in milliseconds for starting a log segment.
+5,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size,500,
+6,dfs.ha.tail-edits.namenode-retries,3,Number of retries to use when contacting the namenode when tailing the log.
+7,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+8,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."
+9,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."

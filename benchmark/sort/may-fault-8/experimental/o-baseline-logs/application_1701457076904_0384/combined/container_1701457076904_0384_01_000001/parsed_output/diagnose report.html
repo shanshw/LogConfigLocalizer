@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.cache.background.reload.threads</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>nNHiT</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "nNHiT"</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'hadoop.security.groups.cache.background.reload.threads' is expected to be an integer value. However, the current value 'nNHiT' is not a valid integer, which causes a NumberFormatException. This is the most likely root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.ha.tail-edits.rolledits.timeout</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>60</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>Although there is no direct error message related to this configuration, the timeout setting for rollEdits RPC on Active NN could potentially cause issues if the operation takes longer than the set timeout.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.disk-health-checker.interval-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>120000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>There is no direct error message related to this configuration. However, the disk health checker interval could potentially cause issues if the disk health check takes longer than the set interval.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,249 @@
+2023-11-29 07:19:21,297 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701142038763_1196_000002
+2023-11-29 07:19:21,401 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-29 07:19:21,443 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-29 07:19:21,560 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 1196 cluster_timestamp: 1701142038763 } attemptId: 2 } keyId: -857926061)]
+2023-11-29 07:19:21,589 INFO [main] org.apache.hadoop.conf.Configuration: found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml
+2023-11-29 07:19:21,601 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-29 07:19:21,602 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-29 07:19:21,628 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-29 07:19:21,629 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-29 07:19:21,629 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-29 07:19:22,033 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2023-11-29 07:19:22,147 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2023-11-29 07:19:22,148 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2023-11-29 07:19:22,148 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2023-11-29 07:19:22,149 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2023-11-29 07:19:22,149 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2023-11-29 07:19:22,153 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+2023-11-29 07:19:22,153 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+2023-11-29 07:19:22,154 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+2023-11-29 07:19:22,174 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 07:19:22,187 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 07:19:22,198 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 07:19:22,206 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Emitting job history data to the timeline server is not enabled
+2023-11-29 07:19:22,208 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Attempting to recover.
+2023-11-29 07:19:22,219 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 07:19:22,220 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Previous history file is at hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+2023-11-29 07:19:22,232 WARN [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Unable to parse prior job history, aborting recovery
+java.io.FileNotFoundException: File does not exist: /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:86)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:76)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getBlockLocations(FSDirStatAndListingOp.java:156)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2124)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:770)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:460)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:121)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:88)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:902)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:889)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:878)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1046)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$4.doCall(DistributedFileSystem.java:343)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$4.doCall(DistributedFileSystem.java:339)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:356)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:997)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.getPreviousJobHistoryStream(MRAppMaster.java:1427)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.parsePreviousJobHistory(MRAppMaster.java:1431)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.processRecovery(MRAppMaster.java:1333)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceStart(MRAppMaster.java:1221)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1761)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): File does not exist: /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:86)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:76)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getBlockLocations(FSDirStatAndListingOp.java:156)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2124)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:770)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:460)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)
+
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1567)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1513)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1410)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy14.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:334)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:433)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:166)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:158)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:96)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:362)
+	at com.sun.proxy.$Proxy15.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:900)
+	... 19 more
+2023-11-29 07:19:22,246 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 07:19:22,249 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Previous history file is at hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+2023-11-29 07:19:22,251 WARN [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Could not parse the old history file. Will not have old AMinfos 
+java.io.FileNotFoundException: File does not exist: /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:86)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:76)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getBlockLocations(FSDirStatAndListingOp.java:156)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2124)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:770)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:460)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:121)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:88)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:902)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:889)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:878)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1046)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$4.doCall(DistributedFileSystem.java:343)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$4.doCall(DistributedFileSystem.java:339)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:356)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:997)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.getPreviousJobHistoryStream(MRAppMaster.java:1427)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.readJustAMInfos(MRAppMaster.java:1479)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.processRecovery(MRAppMaster.java:1341)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceStart(MRAppMaster.java:1221)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1761)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): File does not exist: /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_1196/job_1701142038763_1196_1.jhist
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:86)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:76)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getBlockLocations(FSDirStatAndListingOp.java:156)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2124)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:770)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:460)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)
+
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1567)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1513)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1410)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy14.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:334)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:433)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:166)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:158)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:96)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:362)
+	at com.sun.proxy.$Proxy15.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:900)
+	... 19 more
+2023-11-29 07:19:22,252 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Starting to clean up previous job's temporary files
+2023-11-29 07:19:22,257 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Finished cleaning up previous job temporary files
+2023-11-29 07:19:22,288 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler
+2023-11-29 07:19:22,439 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-11-29 07:19:22,501 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-11-29 07:19:22,501 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MRAppMaster metrics system started
+2023-11-29 07:19:22,507 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Adding job token for job_1701142038763_1196 to jobTokenSecretManager
+2023-11-29 07:19:22,511 WARN [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Job init failed
+java.lang.ArithmeticException: / by zero
+	at org.apache.hadoop.yarn.event.AsyncDispatcher$GenericEventHandler.handle(AsyncDispatcher.java:319)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl$InitTransition.transition(JobImpl.java:1473)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl$InitTransition.transition(JobImpl.java:1434)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$MultipleInternalArc.doTransition(StateMachineFactory.java:385)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.doTransition(StateMachineFactory.java:302)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.access$500(StateMachineFactory.java:46)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$InternalStateMachine.doTransition(StateMachineFactory.java:493)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl.handle(JobImpl.java:1012)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl.handle(JobImpl.java:141)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher.handle(MRAppMaster.java:1544)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceStart(MRAppMaster.java:1263)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1761)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-29 07:19:22,512 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STARTED
+java.lang.ArithmeticException: / by zero
+	at org.apache.hadoop.yarn.event.AsyncDispatcher$GenericEventHandler.handle(AsyncDispatcher.java:319)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceStart(MRAppMaster.java:1283)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1761)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-29 07:19:22,512 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0
+2023-11-29 07:19:22,513 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+2023-11-29 07:19:22,513 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Skipping cleaning up the staging dir. assuming AM will be retried.
+2023-11-29 07:19:22,513 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+java.lang.ArithmeticException: / by zero
+	at org.apache.hadoop.yarn.event.AsyncDispatcher$GenericEventHandler.handle(AsyncDispatcher.java:319)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceStart(MRAppMaster.java:1283)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1761)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-29 07:19:22,514 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: java.lang.ArithmeticException: / by zero

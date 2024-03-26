@@ -1,0 +1,23 @@
+,name,value,description
+0,mapreduce.task.timeout,nqcub,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+1,yarn.resourcemanager.application.max-tags,10,
+2,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+3,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+4,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+5,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+6,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+7,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+8,yarn.sharedcache.store.in-memory.initial-delay-mins,10,
+9,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."

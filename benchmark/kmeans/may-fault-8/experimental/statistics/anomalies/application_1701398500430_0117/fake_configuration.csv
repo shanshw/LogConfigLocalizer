@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.write.byte-array-manager.count-limit,2048,The maximum number of arrays allowed for each array length.
+2,file.client-write-packet-size,65536,Packet size for clients to write
+3,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+4,mapreduce.shuffle.port,13562,"Default port that the ShuffleHandler will run on. ShuffleHandler
+   is a service run at the NodeManager to facilitate transfers of intermediate
+   Map outputs to requesting Reducers."
+5,dfs.ls.limit,1000,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+6,yarn.timeline-service.client.fd-flush-interval-secs,10,
+7,dfs.client.refresh.read-block-locations.ms,0,Refreshing LocatedBlocks period. A value of 0 disables the feature.
+8,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+9,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.

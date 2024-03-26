@@ -1,0 +1,21 @@
+,name,value,description
+0,yarn.app.mapreduce.shuffle.log.limit.kb,-0.14916784,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+1,dfs.client-write-packet-size,65536,Packet size for clients to write
+2,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+3,yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,
+4,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+5,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+6,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+7,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+8,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+9,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache

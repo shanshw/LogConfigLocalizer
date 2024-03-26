@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0, which means no checksum is being calculated. This could be the cause of the 'Invalid checksum type' error in the log.
+
+name:dfs.client.block.write.replace-datanode-on-failure.min-replication
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.block.write.replace-datanode-on-failure.min-replication' is set to 0, which means no replication is being done. This could be the cause of the 'Invalid checksum type' error in the log.
+
+name:dfs.datanode.data.write.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.datanode.data.write.bandwidthPerSec' is set to 0, which means no limit on the bandwidth. This could be the cause of the 'Invalid checksum type' error in the log.

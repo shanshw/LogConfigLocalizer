@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-1010281526,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+2,yarn.resourcemanager.epoch.range,0,
+3,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+4,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+5,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+6,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+7,yarn.resourcemanager.application.max-tag.length,100,
+8,yarn.sharedcache.uploader.server.thread-count,50,
+9,dfs.datanode.data.dir.perm,700,"Permissions for the directories on on the local filesystem where
+  the DFS data node store its blocks. The permissions can either be octal or
+  symbolic."

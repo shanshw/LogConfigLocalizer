@@ -1,0 +1,33 @@
+,name,value,description
+0,mapreduce.jobhistory.intermediate-user-done-dir.permissions,-0.2599095,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+1,yarn.client.nodemanager-connect.max-wait-ms,180000,
+2,yarn.scheduler.maximum-allocation-mb,8192,
+3,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+4,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+5,dfs.disk.balancer.plan.threshold.percent,10,"The percentage threshold value for volume Data Density in a plan.
+      If the absolute value of volume Data Density which is out of
+      threshold value in a node, it means that the volumes corresponding to
+      the disks should do the balancing in the plan. The default value is 10."
+6,fs.s3a.threads.keepalivetime,60,"Number of seconds a thread can be idle before being
+    terminated."
+7,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+8,dfs.datanode.socket.reuse.keepalive,4000,"The window of time in ms before the DataXceiver closes a socket for a
+    single request.  If a second request occurs within that window, the
+    socket can be reused."
+9,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."

@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-1120307661,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+2,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+3,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.batch-size,1000,
+4,yarn.timeline-service.generic-application-history.max-applications,10000,
+5,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.
+6,yarn.dispatcher.drain-events.timeout,300000,
+7,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+8,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+9,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

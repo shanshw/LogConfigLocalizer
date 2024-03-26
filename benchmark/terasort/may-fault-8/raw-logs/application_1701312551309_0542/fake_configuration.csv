@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-232574920,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.delegation.key.update-interval,86400000,
+2,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+3,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+4,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+5,yarn.nodemanager.health-checker.timeout-ms,1200000,
+6,ha.failover-controller.new-active.rpc-timeout.ms,60000,Timeout that the FC waits for the new active to become active
+7,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+8,mapreduce.job.end-notification.retry.interval,1000,"The number of milliseconds the submitter of the job wants to
+    wait before job end notification is retried if it fails. This is capped by
+    mapreduce.job.end-notification.max.retry.interval"
+9,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,

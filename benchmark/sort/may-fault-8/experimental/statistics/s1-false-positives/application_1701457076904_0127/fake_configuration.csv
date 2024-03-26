@@ -1,0 +1,70 @@
+,name,value,description
+0,file.client-write-packet-size,,Packet size for clients to write
+1,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+2,ftp.client-write-packet-size,65536,Packet size for clients to write
+3,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,mapreduce.fileoutputcommitter.algorithm.version,2,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+5,dfs.namenode.resource.checked.volumes.minimum,1,The minimum number of redundant NameNode storage volumes required.
+6,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+7,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+8,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+9,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."

@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.socket.reuse.keepalive,4000,"The window of time in ms before the DataXceiver closes a socket for a
+    single request.  If a second request occurs within that window, the
+    socket can be reused."
+2,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+3,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+4,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.
+5,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+6,dfs.namenode.reencrypt.batch.size,1000,How many EDEKs should the re-encrypt thread process in one batch.
+7,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+9,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."

@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+2,dfs.ha.tail-edits.period,60,"How often, the StandbyNode and ObserverNode should check if there are new
+    edit log entries ready to be consumed. This is the minimum period between
+    checking; exponential backoff will be applied if no edits are found and
+    dfs.ha.tail-edits.period.backoff-max is configured. By default, no
+    backoff is applied.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+3,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+4,yarn.resourcemanager.client.thread-count,50,
+5,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."
+6,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+7,yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,
+8,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+9,mapreduce.jobhistory.max-age-ms,604800000,"Job history files older than this many milliseconds will
+  be deleted when the history cleaner runs. Defaults to 604800000 (1 week)."

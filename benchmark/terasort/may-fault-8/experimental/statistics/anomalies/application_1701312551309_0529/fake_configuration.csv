@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."
+2,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+3,yarn.client.failover-retries-on-socket-timeouts,0,
+4,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,
+5,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+6,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+7,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+8,dfs.batched.ls.limit,100,"Limit the number of paths that can be listed in a single batched
+    listing call. printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+9,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."

@@ -1,0 +1,30 @@
+anomaly_degree,content
+0.2,"ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+	at org.apache.hadoop.fs.FSOutputSummer.<init>(FSOutputSummer.java:55)
+	at org.apache.hadoop.hdfs.DFSOutputStream.<init>(DFSOutputStream.java:191)
+	at org.apache.hadoop.hdfs.DFSOutputStream.<init>(DFSOutputStream.java:250)
+	at org.apache.hadoop.hdfs.DFSOutputStream.newStreamForCreate(DFSOutputStream.java:318)
+	at org.apache.hadoop.hdfs.DFSClient.create(DFSClient.java:1271)
+	at org.apache.hadoop.hdfs.DFSClient.create(DFSClient.java:1250)
+	at org.apache.hadoop.hdfs.DFSClient.create(DFSClient.java:1232)
+	at org.apache.hadoop.hdfs.DFSClient.create(DFSClient.java:1170)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$8.doCall(DistributedFileSystem.java:569)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$8.doCall(DistributedFileSystem.java:566)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.create(DistributedFileSystem.java:580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.create(DistributedFileSystem.java:507)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1233)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1210)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1091)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler.createEventWriter(JobHistoryEventHandler.java:503)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler.setupEventWriter(JobHistoryEventHandler.java:543)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler.handleEvent(JobHistoryEventHandler.java:637)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler$1.run(JobHistoryEventHandler.java:383)
+	at java.base/java.lang.Thread.run(Thread.java:829)"
+0.4,"INFO	Halt with status -1: HaltException-1: HaltException
+	at org.apache.hadoop.util.ExitUtil.halt(ExitUtil.java:400)
+	at org.apache.hadoop.util.ExitUtil.halt(ExitUtil.java:390)
+	at org.apache.hadoop.yarn.YarnUncaughtExceptionHandler.uncaughtException(YarnUncaughtExceptionHandler.java:69)
+	at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1055)
+	at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1050)
+	at java.base/java.lang.Thread.dispatchUncaughtException(Thread.java:1997)"

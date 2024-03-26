@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,1329556081,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+2,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+3,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+4,dfs.namenode.storage.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS namenode stores the fsImage. The permissions can either be
+      octal or symbolic."
+5,yarn.resourcemanager.application.max-tag.length,100,
+6,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+7,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+8,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+9,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.

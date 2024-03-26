@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+2,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+3,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+4,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+5,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+6,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+7,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+8,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+9,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,

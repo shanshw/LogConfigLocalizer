@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+2,dfs.http.client.failover.sleep.max.millis,15000,"Specify the upper bound of sleep time in milliseconds between
+    retries or failovers for WebHDFS client."
+3,yarn.timeline-service.client.fd-flush-interval-secs,10,
+4,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+5,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+6,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+7,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.
+8,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+9,dfs.namenode.replication.min,1,Minimal block replication.

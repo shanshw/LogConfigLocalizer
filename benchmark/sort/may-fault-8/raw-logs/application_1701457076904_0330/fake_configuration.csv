@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-1368265150,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+2,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+3,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+4,ha.failover-controller.active-standby-elector.zk.op.retries,3,The number of zookeeper operation retry times in ActiveStandbyElector
+5,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,
+6,mapreduce.jobhistory.datestring.cache.size,200000,"Size of the date string cache. Effects the number of directories
+  which will be scanned to find a job."
+7,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+8,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+9,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."

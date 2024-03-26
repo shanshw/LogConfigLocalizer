@@ -1,0 +1,33 @@
+,name,value,description
+0,dfs.client.socketcache.capacity,-1960514541,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+1,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."
+2,yarn.scheduler.minimum-allocation-vcores,1,
+3,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+4,mapreduce.jobhistory.intermediate-user-done-dir.permissions,770,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+5,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+6,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+7,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,
+8,file.client-write-packet-size,65536,Packet size for clients to write
+9,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."

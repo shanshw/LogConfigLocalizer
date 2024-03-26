@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.reencrypt.batch.size,1000,How many EDEKs should the re-encrypt thread process in one batch.
+2,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+3,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.
+4,ha.failover-controller.active-standby-elector.zk.op.retries,3,The number of zookeeper operation retry times in ActiveStandbyElector
+5,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+6,yarn.resourcemanager.connect.retry-interval.ms,30000,
+7,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+8,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+9,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.

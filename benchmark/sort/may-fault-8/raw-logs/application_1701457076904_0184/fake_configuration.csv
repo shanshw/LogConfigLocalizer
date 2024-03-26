@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.client.read.shortcircuit.streams.cache.size,0,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+1,ha.failover-controller.cli-check.rpc-timeout.ms,20000,"Timeout that the CLI (manual) FC waits for monitorHealth, getServiceState"
+2,httpfs.buffer.size,4096,The size buffer to be used when creating or opening httpfs filesystem IO stream.
+3,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+4,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+5,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+6,nfs.rtmax,1048576,"This is the maximum size in bytes of a READ request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's rsize(add rsize= # of bytes to the 
+    mount directive)."
+7,yarn.log-aggregation.debug.filesize,104857600,
+8,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+9,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.

@@ -1,0 +1,17 @@
+name:yarn.resourcemanager.zk-appid-node.split-index
+value:0
+relevant log:2-1-INFO	Diagnostics report from attempt_1701457076904_0404_m_000005_0: [2023-12-02 09:26:45.431]Exception from container-launch.Container id: container_1701457076904_0404_01_000009
+Exit code: 1INFO	1 failures on node ed761ad59d44
+explanation: The log indicates a failure in the container launch. The configuration option 'yarn.resourcemanager.zk-appid-node.split-index' with a value of 0 and missing description might be the root cause. This configuration might be related to the resource manager's handling of application IDs, which could affect container launches.
+
+name:dfs.provided.aliasmap.inmemory.batch-size
+value:-0.33829856
+relevant log:2-1-INFO	Diagnostics report from attempt_1701457076904_0404_m_000005_0: [2023-12-02 09:26:45.431]Exception from container-launch.Container id: container_1701457076904_0404_01_000009
+Exit code: 1INFO	1 failures on node ed761ad59d44
+explanation: The configuration 'dfs.provided.aliasmap.inmemory.batch-size' has a negative value, which is unusual and might cause errors during the iteration over the database backing the aliasmap. This could potentially lead to failures in the container launch.
+
+name:fs.trash.checkpoint.interval
+value:0
+relevant log:2-1-INFO	Diagnostics report from attempt_1701457076904_0404_m_000005_0: [2023-12-02 09:26:45.431]Exception from container-launch.Container id: container_1701457076904_0404_01_000009
+Exit code: 1INFO	1 failures on node ed761ad59d44
+explanation: The configuration 'fs.trash.checkpoint.interval' with a value of 0 might cause issues. This configuration determines the number of minutes between trash checkpoints. If set to zero, it could potentially lead to issues with file deletion and recovery, which might indirectly affect other processes such as container launches.

@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-2145503254,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.balancer.block-move.timeout,0,"Maximum amount of time in milliseconds for a block to move. If this is set
+    greater than 0, Balancer will stop waiting for a block move completion
+    after this time. In typical clusters, a 3 to 5 minute timeout is reasonable.
+    If timeout happens to a large proportion of block moves, this needs to be
+    increased. It could also be that too much work is dispatched and many nodes
+    are constantly exceeding the bandwidth limit as a result. In that case,
+    other balancer parameters might need to be adjusted.
+    It is disabled (0) by default."
+2,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+3,yarn.log-aggregation-status.time-out.ms,600000,
+4,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+5,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+6,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+7,hadoop.zk.retry-interval-ms,1000,Retry interval in milliseconds when connecting to ZooKeeper.
+8,mapreduce.map.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each map task."
+9,yarn.nodemanager.collector-service.thread-count,5,

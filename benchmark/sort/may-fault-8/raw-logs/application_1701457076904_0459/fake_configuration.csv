@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.listen.queue.size,128,The length of the shuffle server listen queue.
+2,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+3,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+4,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+5,mapreduce.map.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each map task."
+6,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+7,yarn.resourcemanager.scheduler.client.thread-count,50,
+8,mapreduce.task.skip.start.attempts,2,"The number of Task attempts AFTER which skip mode
+    will be kicked off. When skip mode is kicked off, the
+    tasks reports the range of records which it will process
+    next, to the MR ApplicationMaster. So that on failures, the MR AM
+    knows which ones are possibly the bad records. On further executions,
+    those are skipped."
+9,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."

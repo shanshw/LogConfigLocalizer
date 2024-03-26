@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.fetch.retry.interval-ms,0.42167467,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+1,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+2,yarn.router.interceptor.user.threadpool-size,5,
+3,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."
+4,dfs.balancer.getBlocks.min-block-size,10485760,"Minimum block threshold size in bytes to ignore when fetching a source's
+    block list."
+5,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+6,hadoop.security.kms.client.authentication.retry-count,1,Number of time to retry connecting to KMS on authentication failure
+7,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+8,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+9,mapreduce.shuffle.pathcache.concurrency-level,16,"Uses the concurrency level to create a fixed number of hashtable
+    segments, each governed by its own write lock."

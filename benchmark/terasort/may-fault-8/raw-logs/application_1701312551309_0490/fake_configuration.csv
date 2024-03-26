@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+2,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+3,yarn.client.max-cached-nodemanagers-proxies,0,
+4,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+5,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+6,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+7,file.client-write-packet-size,65536,Packet size for clients to write
+8,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+9,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,

@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+2,datanode.https.port,50475,HTTPS port for DataNode.
+3,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+5,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+6,yarn.resourcemanager.placement-constraints.algorithm.pool-size,1,
+7,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+8,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+9,dfs.namenode.available-space-rack-fault-tolerant-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+    org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceRackFaultTolerantBlockPlacementPolicy.
+    Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+    this value will be set as 5 by default, Increases tolerance of
+    placing blocks on Datanodes with similar disk space used."

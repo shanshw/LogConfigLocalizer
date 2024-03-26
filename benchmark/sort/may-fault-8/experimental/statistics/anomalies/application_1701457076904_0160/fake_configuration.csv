@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+2,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"
+3,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+4,yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,
+5,yarn.sharedcache.nm.uploader.replication.factor,10,
+6,ipc.ping.interval,60000,"Timeout on waiting response from server, in milliseconds.
+  The client will send ping when the interval is passed without receiving bytes,
+  if ipc.client.ping is set to true."
+7,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+8,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+9,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."

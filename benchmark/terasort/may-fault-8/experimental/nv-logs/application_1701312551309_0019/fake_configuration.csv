@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-986763102,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+2,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+3,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+4,dfs.datanode.max.disks.to.report,5,"Number of disks to include in JSON report per operation. We will return
+    disks with the highest latency."
+5,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+6,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+7,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+8,ha.failover-controller.new-active.rpc-timeout.ms,60000,Timeout that the FC waits for the new active to become active
+9,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.

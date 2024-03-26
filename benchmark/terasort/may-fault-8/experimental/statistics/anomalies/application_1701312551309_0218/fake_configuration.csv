@@ -1,0 +1,30 @@
+,name,value,description
+0,dfs.client.read.short.circuit.replica.stale.threshold.ms,1382031381,Threshold in milliseconds for read entries during short-circuit local reads.
+1,fs.s3a.socket.send.buffer,8192,Socket send buffer hint to amazon connector. Represented in bytes.
+2,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+3,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+5,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+6,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."
+7,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+8,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+9,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.

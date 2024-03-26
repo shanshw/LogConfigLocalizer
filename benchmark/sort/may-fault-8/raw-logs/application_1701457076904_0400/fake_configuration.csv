@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-1058710883,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+2,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+3,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+4,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+5,yarn.resourcemanager.client.thread-count,50,
+6,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+7,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+8,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+9,mapreduce.shuffle.max.connections,0,"Max allowed connections for the shuffle.  Set to 0 (zero)
+               to indicate no limit on the number of connections."

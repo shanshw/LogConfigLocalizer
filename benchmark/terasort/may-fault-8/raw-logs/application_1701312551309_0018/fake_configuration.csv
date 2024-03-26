@@ -1,0 +1,37 @@
+,name,value,description
+0,io.bytes.per.checksum,-1385217344,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+2,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+3,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+5,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+6,dfs.batched.ls.limit,100,"Limit the number of paths that can be listed in a single batched
+    listing call. printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+7,fs.s3a.socket.send.buffer,8192,Socket send buffer hint to amazon connector. Represented in bytes.
+8,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+9,hadoop.security.kms.client.encrypted.key.cache.size,500,Size of the EncryptedKeyVersion cache Queue for each key

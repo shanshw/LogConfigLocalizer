@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+2,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+3,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+4,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+5,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+6,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+7,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+8,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+9,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the number of bytes per checksum is set to 0, which is causing an invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:dfs.client.socket.send.buffer.size
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the socket send buffer size is set to 0, which may affect the TCP connection throughput and cause errors. This configuration should be set to a valid non-zero value.
+
+name:dfs.datanode.ec.reconstruct.write.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the maximum amount of bandwidth that the EC reconstruction can utilize for writing is set to 0, which means there is no limit. This could potentially cause errors if the system resources are not sufficient. This configuration should be set to a valid non-zero value.

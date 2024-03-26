@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+2,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+3,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+4,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+5,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+6,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+7,mapreduce.shuffle.ssl.file.buffer.size,65536,Buffer size for reading spills from file when using SSL.
+8,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+9,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing

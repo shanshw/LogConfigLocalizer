@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,0,"1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null",The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+yarn.nodemanager.localizer.client.thread-count,5,<missing>,The description for 'yarn.nodemanager.localizer.client.thread-count' is missing. This could potentially cause issues if the thread count is not properly configured.
+yarn.app.mapreduce.client-am.ipc.max-retries,3,<missing>,"The 'yarn.app.mapreduce.client-am.ipc.max-retries' is set to 3. If the application master is not able to connect within these retries, it could lead to failures. This value may need to be increased based on the network conditions."

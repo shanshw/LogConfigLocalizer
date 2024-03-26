@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1597464946,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+2,dfs.namenode.max.extra.edits.segments.retained,10000,"The maximum number of extra edit log segments which should be retained
+  beyond what is minimally necessary for a NN restart. When used in conjunction with
+  dfs.namenode.num.extra.edits.retained, this configuration property serves to cap
+  the number of extra edits files to a reasonable value."
+3,yarn.timeline-service.writer.async.queue.capacity,100,
+4,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+5,dfs.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+6,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+7,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."
+9,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."

@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.shuffle.max.connections</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'mapreduce.shuffle.max.connections' is set to 0, which means there is no limit on the number of connections. This could potentially lead to resource exhaustion if too many connections are made. It is recommended to set this to a reasonable limit.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.fs-limits.max-directory-items</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1048576</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'dfs.namenode.fs-limits.max-directory-items' is set to a very high value, which could potentially lead to resource exhaustion if a directory contains too many items. It is recommended to set this to a reasonable limit.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

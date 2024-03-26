@@ -1,0 +1,28 @@
+,name,value,description
+0,yarn.app.mapreduce.shuffle.log.limit.kb,-0.14916784,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+1,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+2,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"
+3,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+4,yarn.timeline-service.client.fd-clean-interval-secs,60,
+5,yarn.nodemanager.container-retry-minimum-interval-ms,1000,
+6,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+7,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+8,yarn.nodemanager.amrmproxy.client.thread-count,25,
+9,fs.df.interval,60000,Disk usage statistics refresh interval in msec.

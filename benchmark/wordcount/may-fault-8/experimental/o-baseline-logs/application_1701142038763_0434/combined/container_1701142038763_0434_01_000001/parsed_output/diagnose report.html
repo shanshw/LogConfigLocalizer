@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.task.merge.progress.records</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-0.48442286</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>3-2-1-ERROR	Task: attempt_1701142038763_0434_r_000000_0 - exited : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: Error while doing final merge	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:162)</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The error log indicates a NumberFormatException for the input string "-0.48442286". This value is set for the configuration option "mapreduce.task.merge.progress.records", which is expected to be a long integer. The negative decimal value is causing the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.hedged.read.threadpool.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The value for the configuration option "dfs.client.hedged.read.threadpool.size" is set to 0. This means that no threads are dedicated to running 'hedged', concurrent reads in the client. This could potentially lead to performance issues.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.cluster.max-application-priority</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The value for the configuration option "yarn.cluster.max-application-priority" is set to 0. This means that all applications have the same priority, which could lead to resource allocation issues in a multi-tenant environment.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

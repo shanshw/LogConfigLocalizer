@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.local-fs.single-disk-limit.check.interval-ms,5000,Interval of disk limit check to run in ms.
+2,yarn.scheduler.configuration.max.version,100,
+3,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+4,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+5,fs.ftp.timeout,0,FTP filesystem's timeout in seconds.
+6,yarn.nodemanager.amrmproxy.client.thread-count,25,
+7,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+8,yarn.timeline-service.client.fd-flush-interval-secs,10,
+9,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."

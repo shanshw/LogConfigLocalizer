@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,990894497,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+2,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.
+3,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+4,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.
+5,datanode.https.port,50475,HTTPS port for DataNode.
+6,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+7,ha.health-monitor.check-interval.ms,1000,How often to check the service.
+8,mapreduce.job.running.map.limit,0,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+9,dfs.mover.moverThreads,1000,Configure the balancer's mover thread pool size.

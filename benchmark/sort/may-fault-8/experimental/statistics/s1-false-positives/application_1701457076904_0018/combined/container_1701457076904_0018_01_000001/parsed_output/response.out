@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0018_m_000008
+explanation:The missing value for this configuration might cause issues with task speculation in YARN. This configuration controls the maximum number of retry attempts for the delegation token renewer thread in ResourceManager, which is crucial for secure and authenticated communication in a Hadoop cluster.
+
+name:dfs.client.failover.connection.retries
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0018_m_000008
+explanation:The value of 0 for this configuration indicates that no retries will be made to establish a server connection in case of failover. This could potentially lead to task failures in case of temporary network issues or server unavailability.
+
+name:mapreduce.job.cache.limit.max-resources
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0018_m_000008
+explanation:The value of 0 for this configuration means that there is no limit on the number of resources a map reduce job is allowed to submit for localization. This could potentially lead to resource exhaustion if not managed properly.

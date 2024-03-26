@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-540253120,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+2,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+3,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+4,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+5,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."
+6,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+7,yarn.timeline-service.client.fd-flush-interval-secs,10,
+8,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+9,dfs.qjournal.accept-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."

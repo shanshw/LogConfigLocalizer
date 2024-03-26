@@ -1,0 +1,26 @@
+,name,value,description
+0,dfs.client.socketcache.capacity,-1960514541,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+1,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+2,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+3,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+4,fs.ftp.timeout,0,FTP filesystem's timeout in seconds.
+5,dfs.client.retry.times.get-last-block-length,3,Number of retries for calls to fetchLocatedBlocksAndGetLastBlockLength().
+6,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+7,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+8,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size,500,
+9,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.

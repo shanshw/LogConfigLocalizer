@@ -1,0 +1,72 @@
+,name,value,description
+0,mapreduce.fileoutputcommitter.algorithm.version,-93244609,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+1,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+2,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,
+3,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+4,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+5,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+6,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+7,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+8,yarn.log-aggregation-status.time-out.ms,600000,
+9,yarn.nodemanager.log.deletion-threads-count,4,

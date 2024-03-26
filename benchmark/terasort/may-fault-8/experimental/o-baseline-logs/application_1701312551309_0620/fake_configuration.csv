@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-1993639577,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+2,yarn.cluster.max-application-priority,0,
+3,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+4,dfs.datanode.lock-reporting-threshold-ms,300,"When thread waits to obtain a lock, or a thread holds a lock for
+    more than the threshold, a log message will be written. Note that
+    dfs.lock.suppress.warning.interval ensures a single log message is
+    emitted per interval for waiting threads and a single message for holding
+    threads to avoid excessive logging."
+5,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+6,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."
+7,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+8,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+9,dfs.client.write.max-packets-in-flight,80,The maximum number of DFSPackets allowed in flight.

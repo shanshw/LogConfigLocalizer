@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.client.fd-retain-secs,300,
+2,yarn.nodemanager.default-container-executor.log-dirs.permissions,710,
+3,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+4,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+5,yarn.resourcemanager.delegation.key.update-interval,86400000,
+6,yarn.timeline-service.ttl-ms,604800000,
+7,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+8,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+9,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."

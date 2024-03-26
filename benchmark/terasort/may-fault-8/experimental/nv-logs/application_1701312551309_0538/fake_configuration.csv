@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+2,ipc.ping.interval,60000,"Timeout on waiting response from server, in milliseconds.
+  The client will send ping when the interval is passed without receiving bytes,
+  if ipc.client.ping is set to true."
+3,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+4,yarn.client.max-cached-nodemanagers-proxies,0,
+5,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+6,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+7,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+8,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,10,"The initial size of thread pool to launch containers in the
+    app master."
+9,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."

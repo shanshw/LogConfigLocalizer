@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-1389984676,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+2,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,
+3,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+4,dfs.datanode.handler.count,10,The number of server threads for the datanode.
+5,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+6,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+7,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."
+8,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,
+9,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."

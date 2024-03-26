@@ -1,0 +1,14 @@
+name:fs.s3a.connection.request.timeout
+value:-677728316
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0412_m_000009
+explanation:The value of this configuration is negative, which is not valid. It should be a positive integer or zero. This might cause timeout issues when making HTTP requests to the AWS service.
+
+name:yarn.timeline-service.timeline-client.number-of-async-entities-to-merge
+value:<missing>
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0412_m_000009
+explanation:The value of this configuration is missing. This might cause issues when merging async entities in the timeline service.
+
+name:dfs.client.failover.connection.retries.on.timeouts
+value:0
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0412_m_000009
+explanation:The value of this configuration is zero, which means no retry attempts will be made on socket timeout when establishing a server connection. This might cause connection issues in case of socket timeout.

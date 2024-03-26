@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,-1381958370,"1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null",The configuration for the number of bytes per checksum is invalid. The value should not be negative. This could be the cause of the Invalid checksum type error in the log.
+io.file.buffer.size,4096,"1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null","The buffer size for sequence files could be related to the checksum error. If the buffer size is not a multiple of the checksum size, it could cause issues."
+dfs.datanode.socket.write.timeout,480000,"1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null","The timeout for socket writes to DataNodes could be related to the checksum error. If the write operation is timing out, it could cause an invalid checksum."

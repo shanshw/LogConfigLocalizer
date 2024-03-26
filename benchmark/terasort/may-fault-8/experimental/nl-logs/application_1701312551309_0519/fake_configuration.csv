@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,1568211558,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+2,dfs.image.parallel.threads,4,"The number of threads to use when dfs.image.parallel.load is
+        enabled. This setting should be less than
+        dfs.image.parallel.target.sections. The optimal number of
+        threads will depend on the hardware and environment."
+3,yarn.client.max-cached-nodemanagers-proxies,0,
+4,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+5,dfs.http.client.failover.sleep.max.millis,15000,"Specify the upper bound of sleep time in milliseconds between
+    retries or failovers for WebHDFS client."
+6,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."
+7,yarn.scheduler.maximum-allocation-vcores,4,
+8,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+9,yarn.nodemanager.runtime.linux.docker.userremapping-uid-threshold,1,

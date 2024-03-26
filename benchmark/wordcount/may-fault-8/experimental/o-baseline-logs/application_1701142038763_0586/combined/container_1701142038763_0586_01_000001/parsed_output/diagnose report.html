@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.reduce.cpu.vcores</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>461172584</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-INFO	Not uberizing job_1701142038763_0586 because: not enabled; too many maps; too much CPU; too much RAM; too much CPU;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the number of virtual cores for each reduce task is set too high, which might be causing the job to require too much CPU.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.resource.memory.cgroups.swappiness</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-INFO	Not uberizing job_1701142038763_0586 because: not enabled; too many maps; too much CPU; too much RAM; too much CPU;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the memory swappiness in the NodeManager is set to 0, which might be causing the job to require too much RAM.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.replication.max-streams</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>2</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-INFO	Not uberizing job_1701142038763_0586 because: not enabled; too many maps; too much CPU; too much RAM; too much CPU;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the maximum number of replication streams is set too low, which might be causing the job to have too many maps.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.job.running.map.limit,8RiRI,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+1,dfs.blockreport.incremental.intervalMsec,0,"If set to a positive integer, the value in ms to wait between sending
+    incremental block reports from the Datanode to the Namenode."
+2,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+3,yarn.router.interceptor.user.threadpool-size,5,
+4,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+5,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+6,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+7,yarn.router.pipeline.cache-max-size,25,
+8,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+9,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."

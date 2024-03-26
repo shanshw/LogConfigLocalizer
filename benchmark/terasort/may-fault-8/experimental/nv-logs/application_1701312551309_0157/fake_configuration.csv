@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,1706081678,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.entity-group-fs-store.scan-interval-seconds,60,
+2,dfs.default.chunk.view.size,32768,The number of bytes to view for a file on the browser.
+3,dfs.client.deadnode.detection.idle.sleep.ms,10000,The sleep time of DeadNodeDetector per iteration.
+4,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+5,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+6,dfs.client.socket-timeout,60000,Default timeout value in milliseconds for all sockets.
+7,dfs.datanode.fsdatasetasyncdisk.max.threads.per.volume,4,"The maximum number of threads per volume used to process async disk
+    operations on the datanode. These threads consume I/O and CPU at the
+    same time. This will affect normal data node operations."
+8,mapreduce.reduce.skip.maxgroups,0,"The number of acceptable skip groups surrounding the bad
+    group PER bad group in reducer. The number includes the bad group as well.
+    To turn the feature of detection/skipping of bad groups off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever groups(depends on application) get skipped are
+    acceptable."
+9,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."

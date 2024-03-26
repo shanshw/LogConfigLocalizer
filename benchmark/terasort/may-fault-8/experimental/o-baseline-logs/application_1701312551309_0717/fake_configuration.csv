@@ -1,0 +1,20 @@
+,name,value,description
+0,mapreduce.task.io.sort.factor,S78U9,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+1,yarn.resourcemanager.placement-constraints.retry-attempts,3,
+2,dfs.blockreport.incremental.intervalMsec,0,"If set to a positive integer, the value in ms to wait between sending
+    incremental block reports from the Datanode to the Namenode."
+3,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+4,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+5,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+6,dfs.namenode.blockreport.max.lock.hold.time,4,The BlockReportProcessingThread max write lock hold time in ms.
+7,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+8,dfs.disk.balancer.block.tolerance.percent,10,"When a disk balancer copy operation is proceeding, the datanode is still
+      active. So it might not be possible to move the exactly specified
+      amount of data. So tolerance allows us to define a percentage which
+      defines a good enough move."
+9,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."

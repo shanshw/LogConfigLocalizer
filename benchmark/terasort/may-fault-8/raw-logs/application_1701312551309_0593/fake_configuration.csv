@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+2,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+3,yarn.nodemanager.localizer.client.thread-count,5,
+4,ha.failover-controller.cli-check.rpc-timeout.ms,20000,"Timeout that the CLI (manual) FC waits for monitorHealth, getServiceState"
+5,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+6,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+7,yarn.cluster.max-application-priority,0,
+8,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+9,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."

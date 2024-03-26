@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+2,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+3,yarn.timeline-service.client.fd-flush-interval-secs,10,
+4,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+5,yarn.resourcemanager.amlauncher.thread-count,50,
+6,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+7,dfs.client.socket.send.buffer.size,0,"Socket send buffer size for a write pipeline in DFSClient side.
+    This may affect TCP connection throughput.
+    If it is set to zero or negative value,
+    no buffer size will be set explicitly,
+    thus enable tcp auto-tuning on some system.
+    The default value is 0."
+8,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+9,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."

@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,
+2,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+3,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+4,ftp.client-write-packet-size,65536,Packet size for clients to write
+5,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+6,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,
+7,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+8,dfs.mover.movedWinWidth,5400000,"The minimum time interval, in milliseconds, that a block can be
+    moved to another location again."
+9,mapreduce.shuffle.max.threads,0,"Max allowed threads for serving shuffle connections. Set to zero
+  to indicate the default of 2 times the number of available
+  processors (as reported by Runtime.availableProcessors()). Netty is used to
+  serve requests, so a thread is not needed for each connection."

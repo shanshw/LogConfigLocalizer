@@ -1,0 +1,26 @@
+,name,value,description
+0,dfs.blocksize,0,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+1,mapreduce.jobhistory.move.thread-count,3,The number of threads used to move files.
+2,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."
+3,mapreduce.reduce.skip.maxgroups,0,"The number of acceptable skip groups surrounding the bad
+    group PER bad group in reducer. The number includes the bad group as well.
+    To turn the feature of detection/skipping of bad groups off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever groups(depends on application) get skipped are
+    acceptable."
+4,yarn.resourcemanager.delegation.token.renew-interval,86400000,
+5,dfs.client-write-packet-size,65536,Packet size for clients to write
+6,yarn.dispatcher.drain-events.timeout,300000,
+7,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+8,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+9,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."

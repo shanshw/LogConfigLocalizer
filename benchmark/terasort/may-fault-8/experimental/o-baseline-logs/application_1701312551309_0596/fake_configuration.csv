@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+2,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+3,file.replication,1,Replication factor
+4,yarn.sharedcache.admin.thread-count,1,
+5,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+6,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+7,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+8,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+9,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.

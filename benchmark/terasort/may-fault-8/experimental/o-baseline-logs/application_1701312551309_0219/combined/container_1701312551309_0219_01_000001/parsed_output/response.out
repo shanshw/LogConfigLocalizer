@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration option should be set to a value greater than 0 to avoid this error.
+
+name:dfs.datanode.socket.write.timeout
+value:480000
+relevant log:1-ERROR	Task: attempt_1701312551309_0219_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration option 'dfs.datanode.socket.write.timeout' might be causing the task to exit prematurely. Increasing the timeout value might help in avoiding this error.
+
+name:file.client-write-packet-size
+value:65536
+relevant log:1-ERROR	Task: attempt_1701312551309_0219_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration option 'file.client-write-packet-size' might be causing the task to exit prematurely. Increasing the packet size might help in avoiding this error.

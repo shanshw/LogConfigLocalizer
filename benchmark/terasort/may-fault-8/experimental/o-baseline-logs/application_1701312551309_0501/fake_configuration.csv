@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+2,file.replication,1,Replication factor
+3,yarn.timeline-service.flowname.max-size,0,
+4,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+5,yarn.scheduler.minimum-allocation-mb,1024,
+6,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+7,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+8,dfs.namenode.checkpoint.txns,1000000,"The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired."
+9,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."

@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+2,httpfs.buffer.size,4096,The size buffer to be used when creating or opening httpfs filesystem IO stream.
+3,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+4,ha.health-monitor.check-interval.ms,1000,How often to check the service.
+5,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+6,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+7,dfs.client.short.circuit.replica.stale.threshold.ms,1800000,"The maximum amount of time that we will consider a short-circuit replica to
+    be valid, if there is no communication from the DataNode.  After this time
+    has elapsed, we will re-fetch the short-circuit replica even if it is in
+    the cache."
+8,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+9,mapreduce.job.cache.limit.max-resources,0,"The maximum number of resources a map reduce job is allowed to
+    submit for localization via files, libjars, archives, and jobjar command
+    line arguments and through the distributed cache. If set to 0 the limit is
+    ignored."

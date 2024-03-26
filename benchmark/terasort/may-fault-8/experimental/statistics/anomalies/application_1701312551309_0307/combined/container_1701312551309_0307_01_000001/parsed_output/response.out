@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the number of bytes per checksum is set to 0, which is causing an Invalid checksum type error. This value should be greater than 0 to ensure proper checksum calculation.
+
+name:dfs.namenode.snapshot.skiplist.max.levels
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the maximum number of skip levels in the snapshot diff list is set to 0. This could potentially cause issues with snapshot operations, although it's not directly related to the current error.
+
+name:nfs.wtmax
+value:1048576
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration for the maximum size of a WRITE request in the NFS gateway is set to a high value. While this is not directly causing the current error, it could potentially cause issues with large WRITE requests.

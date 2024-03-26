@@ -1,0 +1,32 @@
+,name,value,description
+0,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,-916839259,"The initial size of thread pool to launch containers in the
+    app master."
+1,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+2,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+3,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,dfs.ha.tail-edits.period,60,"How often, the StandbyNode and ObserverNode should check if there are new
+    edit log entries ready to be consumed. This is the minimum period between
+    checking; exponential backoff will be applied if no edits are found and
+    dfs.ha.tail-edits.period.backoff-max is configured. By default, no
+    backoff is applied.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+5,dfs.disk.balancer.plan.threshold.percent,10,"The percentage threshold value for volume Data Density in a plan.
+      If the absolute value of volume Data Density which is out of
+      threshold value in a node, it means that the volumes corresponding to
+      the disks should do the balancing in the plan. The default value is 10."
+6,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+7,yarn.nodemanager.collector-service.thread-count,5,
+8,yarn.cluster.max-application-priority,0,
+9,dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."

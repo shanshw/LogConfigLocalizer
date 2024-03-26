@@ -1,0 +1,21 @@
+,name,value,description
+0,mapreduce.reduce.cpu.vcores,-993979052,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+1,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+2,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+3,yarn.timeline-service.entity-group-fs-store.cleaner-interval-seconds,3600,
+4,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+5,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+6,dfs.datanode.socket.write.timeout,480000,Timeout in ms for clients socket writes to DataNodes.
+7,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+8,yarn.timeline-service.client.fd-retain-secs,300,
+9,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."

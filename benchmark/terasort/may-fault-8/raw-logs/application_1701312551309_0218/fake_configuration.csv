@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.client.read.short.circuit.replica.stale.threshold.ms,1382031381,Threshold in milliseconds for read entries during short-circuit local reads.
+1,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+2,yarn.app.mapreduce.client.job.max-retries,3,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+3,hadoop.security.crypto.buffer.size,8192,The buffer size used by CryptoInputStream and CryptoOutputStream.
+4,dfs.namenode.quota.init-threads,12,"The number of concurrent threads to be used in quota initialization. The
+    speed of quota initialization also affects the namenode fail-over latency.
+    If the size of name space is big, try increasing this to 16 or higher."
+5,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+6,dfs.namenode.list.encryption.zones.num.responses,100,"When listing encryption zones, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+7,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."
+8,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+9,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.

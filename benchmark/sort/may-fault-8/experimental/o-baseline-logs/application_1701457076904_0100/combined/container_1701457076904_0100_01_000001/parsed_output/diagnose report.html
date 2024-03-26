@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-1381958370</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for the number of bytes per checksum is invalid. The value should not be negative. This could be the cause of the Invalid checksum type error in the log.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.file.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4096</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The buffer size for sequence files could be related to the checksum error. If the buffer size is not a multiple of the checksum size, it could cause issues.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.socket.write.timeout</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>480000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-Invalid checksum type: userOpt=null, default=CRC32C:-1381958370, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The timeout for socket writes to DataNodes could be related to the checksum error. If the write operation is timing out, it could cause an invalid checksum.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

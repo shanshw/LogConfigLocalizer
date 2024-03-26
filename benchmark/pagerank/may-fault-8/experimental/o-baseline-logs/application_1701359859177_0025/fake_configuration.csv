@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,-196172510,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+2,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+3,yarn.resourcemanager.zk-delegation-token-node.split-index,0,
+4,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+5,yarn.sharedcache.nm.uploader.thread-count,20,
+6,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+7,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+8,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+9,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."

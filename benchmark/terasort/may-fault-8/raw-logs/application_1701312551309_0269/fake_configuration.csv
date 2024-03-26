@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.process-kill-wait.ms,5000,
+2,yarn.timeline-service.entity-group-fs-store.app-cache-size,10,
+3,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+4,dfs.http.client.failover.sleep.max.millis,15000,"Specify the upper bound of sleep time in milliseconds between
+    retries or failovers for WebHDFS client."
+5,dfs.qjournal.http.open.timeout.ms,60000,"Timeout in milliseconds when open a new HTTP connection to remote
+    journals."
+6,hadoop.http.authentication.token.validity,36000,"Indicates how long (in seconds) an authentication token is valid before it has
+    to be renewed."
+7,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+8,dfs.storage.policy.satisfier.queue.limit,1000,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."
+9,yarn.timeline-service.client.fd-flush-interval-secs,10,

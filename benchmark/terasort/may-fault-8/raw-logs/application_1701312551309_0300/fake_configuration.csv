@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].weighted-cost.lockfree,1,"The weight multiplier to apply to the time spent in the
+    LOCKFREE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+2,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+3,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+4,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+5,yarn.timeline-service.client.fd-clean-interval-secs,60,
+6,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+7,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+8,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+9,yarn.sharedcache.uploader.server.thread-count,50,

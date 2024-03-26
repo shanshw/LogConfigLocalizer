@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,1720753167,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+2,dfs.balancer.max-iteration-time,1200000,"Maximum amount of time while an iteration can be run by the Balancer. After
+    this time the Balancer will stop the iteration, and reevaluate the work
+    needs to be done to Balance the cluster. The default value is 20 minutes."
+3,yarn.log-aggregation.debug.filesize,104857600,
+4,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+5,yarn.timeline-service.entity-group-fs-store.cleaner-interval-seconds,3600,
+6,hadoop.security.groups.cache.background.reload.threads,3,"Only relevant if hadoop.security.groups.cache.background.reload is true.
+    Controls the number of concurrent background user->group cache entry
+    refreshes. Pending refresh requests beyond this value are queued and
+    processed when a thread is free."
+7,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+8,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+9,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"

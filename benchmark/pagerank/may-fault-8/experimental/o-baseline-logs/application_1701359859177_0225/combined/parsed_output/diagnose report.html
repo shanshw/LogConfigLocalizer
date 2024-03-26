@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option "io.bytes.per.checksum" is set to 0, which is causing an Invalid checksum type error. This option should be set to a non-zero value to avoid this error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.key.provider.cache.expiry</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>864000000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Task: attempt_1701359859177_0225_r_000001_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option "dfs.client.key.provider.cache.expiry" is set to a very high value. This could potentially cause issues with the cache expiration of the DFS client security key.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>file.client-write-packet-size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>65536</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option "file.client-write-packet-size" is set to 65536. This could potentially cause issues with the packet size for clients to write, leading to a NullPointerException.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

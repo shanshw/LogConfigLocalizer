@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."
+2,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+3,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,
+4,hadoop.http.idle_timeout.ms,60000,NN/JN/DN Server connection timeout in milliseconds.
+5,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+6,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+7,fs.du.interval,600000,File space usage statistics refresh interval in msec.
+8,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+9,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."

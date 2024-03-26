@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,1970257008,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+2,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+3,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+4,httpfs.buffer.size,4096,The size buffer to be used when creating or opening httpfs filesystem IO stream.
+5,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+6,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+7,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+8,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+9,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,

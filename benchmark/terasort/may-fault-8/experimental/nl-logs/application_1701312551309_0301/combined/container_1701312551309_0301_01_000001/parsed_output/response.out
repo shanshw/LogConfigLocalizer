@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:234032646
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. 
+
+name:dfs.client-write-packet-size
+value:65536
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The dfs.client-write-packet-size is set to a relatively small value. This could lead to inefficient data writing and potentially contribute to the OutOfMemoryError.
+
+name:yarn.resourcemanager.placement-constraints.scheduler.pool-size
+value:1
+relevant log:<missing>
+explanation: The description of this configuration is missing, which might cause errors. The pool size of 1 might be insufficient for handling multiple tasks concurrently, leading to potential bottlenecks in the system.

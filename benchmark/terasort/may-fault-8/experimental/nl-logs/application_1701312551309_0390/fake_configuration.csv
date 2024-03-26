@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-258949465,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,The maximum delay (unit is ms) before retrying locateFollowingBlock.
+2,hadoop.security.crypto.buffer.size,8192,The buffer size used by CryptoInputStream and CryptoOutputStream.
+3,mapreduce.ifile.readahead.bytes,4194304,Configuration key to set the IFile readahead length in bytes.
+4,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+5,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+6,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+7,yarn.dispatcher.drain-events.timeout,300000,
+8,yarn.nodemanager.log.deletion-threads-count,4,
+9,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."

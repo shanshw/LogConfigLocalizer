@@ -1,0 +1,101 @@
+2023-11-30 12:11:55,989 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701312551309_0096_000002
+2023-11-30 12:11:56,086 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-30 12:11:56,120 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-30 12:11:56,221 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 96 cluster_timestamp: 1701312551309 } attemptId: 2 } keyId: -2063349378)]
+2023-11-30 12:11:56,250 INFO [main] org.apache.hadoop.conf.Configuration: resource-types.xml not found
+2023-11-30 12:11:56,251 INFO [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-11-30 12:11:56,260 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-30 12:11:56,261 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-30 12:11:56,288 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-30 12:11:56,289 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-30 12:11:56,289 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-30 12:11:56,724 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2023-11-30 12:11:56,866 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2023-11-30 12:11:56,867 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2023-11-30 12:11:56,868 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2023-11-30 12:11:56,868 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2023-11-30 12:11:56,869 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2023-11-30 12:11:56,873 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+2023-11-30 12:11:56,873 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+2023-11-30 12:11:56,874 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+2023-11-30 12:11:56,876 INFO [main] org.apache.hadoop.service.AbstractService: Service TaskHeartbeatHandler failed in state INITED
+java.lang.NumberFormatException: For input string: "0.40565795"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler.serviceInit(TaskHeartbeatHandler.java:105)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapred.TaskAttemptListenerImpl.serviceInit(TaskAttemptListenerImpl.java:139)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 12:11:56,879 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapred.TaskAttemptListenerImpl failed in state INITED
+java.lang.NumberFormatException: For input string: "0.40565795"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler.serviceInit(TaskHeartbeatHandler.java:105)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapred.TaskAttemptListenerImpl.serviceInit(TaskAttemptListenerImpl.java:139)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 12:11:56,879 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITED
+java.lang.NumberFormatException: For input string: "0.40565795"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler.serviceInit(TaskHeartbeatHandler.java:105)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapred.TaskAttemptListenerImpl.serviceInit(TaskAttemptListenerImpl.java:139)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 12:11:56,880 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+java.lang.NumberFormatException: For input string: "0.40565795"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler.serviceInit(TaskHeartbeatHandler.java:105)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapred.TaskAttemptListenerImpl.serviceInit(TaskAttemptListenerImpl.java:139)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 12:11:56,881 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: java.lang.NumberFormatException: For input string: "0.40565795"

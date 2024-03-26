@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1434583012,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+2,hadoop.security.group.mapping.ldap.directory.search.timeout,10000,"The attribute applied to the LDAP SearchControl properties to set a
+    maximum time limit when searching and awaiting a result.
+    Set to 0 if infinite wait period is desired.
+    Default is 10 seconds. Units in milliseconds."
+3,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+4,yarn.resourcemanager.nodemanagers.heartbeat-interval-ms,1000,
+5,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+6,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+7,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+8,dfs.client.hedged.read.threadpool.size,0,"Support 'hedged' reads in DFSClient. To enable this feature, set the parameter
+    to a positive number. The threadpool size is how many threads to dedicate
+    to the running of these 'hedged', concurrent reads in your client."
+9,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."

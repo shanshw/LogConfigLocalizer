@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,1569006135,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.maintenance.replication.min,1,Minimal live block replication in existence of maintenance mode.
+2,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+3,file.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  file.stream-buffer-size"
+4,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+5,dfs.datanode.restart.replica.expiration,50,"During shutdown for restart, the amount of time in seconds budgeted for
+    datanode restart."
+6,mapreduce.jobhistory.move.thread-count,3,The number of threads used to move files.
+7,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+8,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+9,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."

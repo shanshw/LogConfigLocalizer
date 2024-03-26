@@ -1,0 +1,45 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+2,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+3,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+4,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,
+5,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."
+6,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+7,yarn.resourcemanager.fs.state-store.num-retries,0,
+8,dfs.namenode.num.extra.edits.retained,1000000,"The number of extra transactions which should be retained
+  beyond what is minimally necessary for a NN restart.
+  It does not translate directly to file's age, or the number of files kept,
+  but to the number of transactions (here ""edits"" means transactions).
+  One edit file may contain several transactions (edits).
+  During checkpoint, NameNode will identify the total number of edits to retain as extra by
+  checking the latest checkpoint transaction value, subtracted by the value of this property.
+  Then, it scans edits files to identify the older ones that don't include the computed range of
+  retained transactions that are to be kept around, and purges them subsequently.
+  The retainment can be useful for audit purposes or for an HA setup where a remote Standby Node may have
+  been offline for some time and need to have a longer backlog of retained
+  edits in order to start again.
+  Typically each edit is on the order of a few hundred bytes, so the default
+  of 1 million edits should be on the order of hundreds of MBs or low GBs.
+
+  NOTE: Fewer extra edits may be retained than value specified for this setting
+  if doing so would mean that more segments would be retained than the number
+  configured by dfs.namenode.max.extra.edits.segments.retained."
+9,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."

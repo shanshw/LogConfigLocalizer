@@ -1,0 +1,22 @@
+,name,value,description
+0,yarn.resourcemanager.client.thread-count,-540112311,<missing>
+1,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+2,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+3,yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,
+4,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+5,dfs.datanode.slowpeer.low.threshold.ms,5,Threshold in milliseconds below which a DataNode is definitely not slow.
+6,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+7,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+8,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+9,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache

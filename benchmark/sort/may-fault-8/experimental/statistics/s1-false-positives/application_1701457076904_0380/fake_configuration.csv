@@ -1,0 +1,26 @@
+,name,value,description
+0,yarn.timeline-service.leveldb-timeline-store.start-time-write-cache-size,0,<missing>
+1,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.
+2,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+3,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.
+4,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+5,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+6,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+7,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+8,dfs.ha.tail-edits.period,60,"How often, the StandbyNode and ObserverNode should check if there are new
+    edit log entries ready to be consumed. This is the minimum period between
+    checking; exponential backoff will be applied if no edits are found and
+    dfs.ha.tail-edits.period.backoff-max is configured. By default, no
+    backoff is applied.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+9,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."

@@ -1,0 +1,18 @@
+,name,value,description
+0,io.bytes.per.checksum,-454058460,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+2,yarn.nodemanager.process-kill-wait.ms,5000,
+3,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+4,yarn.log-aggregation-status.time-out.ms,600000,
+5,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+6,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+7,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+8,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+9,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."

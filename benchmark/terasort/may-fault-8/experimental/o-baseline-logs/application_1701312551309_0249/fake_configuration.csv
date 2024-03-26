@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+2,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+3,yarn.nodemanager.localizer.fetch.thread-count,4,
+4,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+5,file.blocksize,67108864,Block size
+6,yarn.timeline-service.client.fd-clean-interval-secs,60,
+7,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+8,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+9,yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,

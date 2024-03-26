@@ -1,0 +1,26 @@
+,name,value,description
+0,hadoop.security.groups.negative-cache.secs,-0.7635005,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+1,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+2,hadoop.zk.retry-interval-ms,1000,Retry interval in milliseconds when connecting to ZooKeeper.
+3,dfs.balancer.max-iteration-time,1200000,"Maximum amount of time while an iteration can be run by the Balancer. After
+    this time the Balancer will stop the iteration, and reevaluate the work
+    needs to be done to Balance the cluster. The default value is 20 minutes."
+4,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+5,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+6,datanode.https.port,50475,HTTPS port for DataNode.
+7,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+8,yarn.resourcemanager.delegation-token.max-conf-size-bytes,12800,
+9,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,

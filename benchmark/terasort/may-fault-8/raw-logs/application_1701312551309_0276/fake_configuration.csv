@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+2,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+3,dfs.client.deadnode.detection.idle.sleep.ms,10000,The sleep time of DeadNodeDetector per iteration.
+4,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+5,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."
+6,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+7,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."
+8,yarn.client.failover-retries-on-socket-timeouts,0,
+9,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."

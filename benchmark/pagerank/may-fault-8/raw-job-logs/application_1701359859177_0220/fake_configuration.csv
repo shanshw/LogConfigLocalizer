@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1480569782,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+2,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+3,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+4,ha.failover-controller.active-standby-elector.zk.op.retries,3,The number of zookeeper operation retry times in ActiveStandbyElector
+5,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+6,hadoop.registry.zk.retry.times,5,Zookeeper connection retry count before failing
+7,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+8,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+9,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"

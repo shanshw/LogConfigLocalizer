@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,-752891587,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+2,mapreduce.reduce.skip.maxgroups,0,"The number of acceptable skip groups surrounding the bad
+    group PER bad group in reducer. The number includes the bad group as well.
+    To turn the feature of detection/skipping of bad groups off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever groups(depends on application) get skipped are
+    acceptable."
+3,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+4,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+5,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+6,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+7,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+8,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."
+9,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,

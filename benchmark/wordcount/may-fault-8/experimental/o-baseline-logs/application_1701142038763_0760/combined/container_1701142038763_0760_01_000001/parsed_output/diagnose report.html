@@ -1,0 +1,573 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Not uberizing job_1701142038763_0760 because: not enabled; too many maps; too much input; too much RAM;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.trash.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Not uberizing job_1701142038763_0760 because: not enabled; too many maps; too much input; too much RAM;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.refresh.read-block-locations.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Not uberizing job_1701142038763_0760 because: not enabled; too many maps; too much input; too much RAM;</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.trash.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+                var reportItem7 = document.createElement("div");
+                reportItem7.innerHTML = `
+                    <strong>[No.7]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.refresh.read-block-locations.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem7);
+            
+                var reportItem8 = document.createElement("div");
+                reportItem8.innerHTML = `
+                    <strong>[No.8]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	block</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem8);
+            
+                var reportItem9 = document.createElement("div");
+                reportItem9.innerHTML = `
+                    <strong>[No.9]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	limit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem9);
+            
+                var reportItem10 = document.createElement("div");
+                reportItem10.innerHTML = `
+                    <strong>[No.10]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem10);
+            
+                var reportItem11 = document.createElement("div");
+                reportItem11.innerHTML = `
+                    <strong>[No.11]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error JobHistoryEventHandler in handleEvent: EventType: AM_STARTEDorg.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem11);
+            
+                var reportItem12 = document.createElement("div");
+                reportItem12.innerHTML = `
+                    <strong>[No.12]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem12);
+            
+                var reportItem13 = document.createElement("div");
+                reportItem13.innerHTML = `
+                    <strong>[No.13]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.trash.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem13);
+            
+                var reportItem14 = document.createElement("div");
+                reportItem14.innerHTML = `
+                    <strong>[No.14]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem14);
+            
+                var reportItem15 = document.createElement("div");
+                reportItem15.innerHTML = `
+                    <strong>[No.15]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.refresh.read-block-locations.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem15);
+            
+                var reportItem16 = document.createElement("div");
+                reportItem16.innerHTML = `
+                    <strong>[No.16]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	block</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem16);
+            
+                var reportItem17 = document.createElement("div");
+                reportItem17.innerHTML = `
+                    <strong>[No.17]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	limit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem17);
+            
+                var reportItem18 = document.createElement("div");
+                reportItem18.innerHTML = `
+                    <strong>[No.18]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem18);
+            
+                var reportItem19 = document.createElement("div");
+                reportItem19.innerHTML = `
+                    <strong>[No.19]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem19);
+            
+                var reportItem20 = document.createElement("div");
+                reportItem20.innerHTML = `
+                    <strong>[No.20]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem20);
+            
+                var reportItem21 = document.createElement("div");
+                reportItem21.innerHTML = `
+                    <strong>[No.21]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.trash.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem21);
+            
+                var reportItem22 = document.createElement("div");
+                reportItem22.innerHTML = `
+                    <strong>[No.22]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem22);
+            
+                var reportItem23 = document.createElement("div");
+                reportItem23.innerHTML = `
+                    <strong>[No.23]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.refresh.read-block-locations.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem23);
+            
+                var reportItem24 = document.createElement("div");
+                reportItem24.innerHTML = `
+                    <strong>[No.24]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	block</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem24);
+            
+                var reportItem25 = document.createElement("div");
+                reportItem25.innerHTML = `
+                    <strong>[No.25]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	limit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem25);
+            
+                var reportItem26 = document.createElement("div");
+                reportItem26.innerHTML = `
+                    <strong>[No.26]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem26);
+            
+                var reportItem27 = document.createElement("div");
+                reportItem27.innerHTML = `
+                    <strong>[No.27]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701142038763_0760_r_000000_0 - exited : org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem27);
+            
+                var reportItem28 = document.createElement("div");
+                reportItem28.innerHTML = `
+                    <strong>[No.28]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.blocksize</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem28);
+            
+                var reportItem29 = document.createElement("div");
+                reportItem29.innerHTML = `
+                    <strong>[No.29]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.trash.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem29);
+            
+                var reportItem30 = document.createElement("div");
+                reportItem30.innerHTML = `
+                    <strong>[No.30]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem30);
+            
+                var reportItem31 = document.createElement("div");
+                reportItem31.innerHTML = `
+                    <strong>[No.31]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.refresh.read-block-locations.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem31);
+            
+                var reportItem32 = document.createElement("div");
+                reportItem32.innerHTML = `
+                    <strong>[No.32]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	block</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem32);
+            
+                var reportItem33 = document.createElement("div");
+                reportItem33.innerHTML = `
+                    <strong>[No.33]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.block.misreplication.processing.limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	limit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem33);
+            
+                var reportItem34 = document.createElement("div");
+                reportItem34.innerHTML = `
+                    <strong>[No.34]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem34);
+            
+                var reportItem35 = document.createElement("div");
+                reportItem35.innerHTML = `
+                    <strong>[No.35]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701142038763_0760_r_000000_0: Error: org.apache.hadoop.ipc.RemoteException(java.io.IOException): Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 0 < 1048576	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem35);
+            
+                var reportItem36 = document.createElement("div");
+                reportItem36.innerHTML = `
+                    <strong>[No.36]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem36);
+            
+                var reportItem37 = document.createElement("div");
+                reportItem37.innerHTML = `
+                    <strong>[No.37]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	top</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem37);
+            
+                var reportItem38 = document.createElement("div");
+                reportItem38.innerHTML = `
+                    <strong>[No.38]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	handler</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem38);
+            
+                var reportItem39 = document.createElement("div");
+                reportItem39.innerHTML = `
+                    <strong>[No.39]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem39);
+            
+                var reportItem40 = document.createElement("div");
+                reportItem40.innerHTML = `
+                    <strong>[No.40]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	top</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem40);
+            
+                var reportItem41 = document.createElement("div");
+                reportItem41.innerHTML = `
+                    <strong>[No.41]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.handler.count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	handler</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem41);
+            
+                var reportItem42 = document.createElement("div");
+                reportItem42.innerHTML = `
+                    <strong>[No.42]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Graceful stop failed. Exiting..java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem42);
+            
+                var reportItem43 = document.createElement("div");
+                reportItem43.innerHTML = `
+                    <strong>[No.43]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.top.num.users</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Graceful stop failed. Exiting..java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	top</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem43);
+            
+                var reportItem44 = document.createElement("div");
+                reportItem44.innerHTML = `
+                    <strong>[No.44]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.datanode.slow.io.warning.threshold.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>300</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Exiting with status 1: java.lang.NullPointerException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem44);
+            
+    </script>
+    </body>
+    </html>
+    

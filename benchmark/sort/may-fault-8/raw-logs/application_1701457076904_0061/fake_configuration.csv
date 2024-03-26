@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,819744984,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+2,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+3,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+4,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+5,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+6,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+7,yarn.timeline-service.generic-application-history.max-applications,10000,
+8,dfs.qjournal.finalize-segment.timeout.ms,120000,"Quorum timeout in milliseconds during finalizing for a specific
+    segment."
+9,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."

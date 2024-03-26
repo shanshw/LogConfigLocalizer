@@ -1,0 +1,34 @@
+,name,value,description
+0,dfs.namenode.checkpoint.period,-0.9585963,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+1,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+2,ha.failover-controller.new-active.rpc-timeout.ms,60000,Timeout that the FC waits for the new active to become active
+3,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."
+4,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+5,hadoop.http.authentication.token.validity,36000,"Indicates how long (in seconds) an authentication token is valid before it has
+    to be renewed."
+6,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+7,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+8,yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,
+9,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."

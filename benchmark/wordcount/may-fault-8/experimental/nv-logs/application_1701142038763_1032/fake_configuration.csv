@@ -1,0 +1,27 @@
+,name,value,description
+0,yarn.client.nodemanager-connect.retry-interval-ms,sCcFs,<missing>
+1,dfs.mover.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Mover iteration."
+2,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+3,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+4,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+5,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+6,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+7,yarn.resourcemanager.application.max-tag.length,100,
+8,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+9,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:yarn.resourcemanager.nm-container-queuing.min-queue-length
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.resourcemanager.nm-container-queuing.min-queue-length' is missing. This could be causing issues with the container queuing system.
+
+name:yarn.nodemanager.local-cache.max-files-per-directory
+value:8192
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.nodemanager.local-cache.max-files-per-directory' is set to a high value. This could be causing issues with the local cache system.

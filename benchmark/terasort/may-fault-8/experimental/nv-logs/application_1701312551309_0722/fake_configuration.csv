@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-1039368213,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.generic-application-history.max-applications,10000,
+2,yarn.app.mapreduce.am.job.task.listener.thread-count,30,"The number of threads used to handle RPC calls in the
+    MR AppMaster from remote tasks"
+3,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+4,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+5,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+6,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+7,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+8,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+9,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,

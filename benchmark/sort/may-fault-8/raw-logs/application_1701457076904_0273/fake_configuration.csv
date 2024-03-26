@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,1945316425,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.socket.write.timeout,480000,Timeout in ms for clients socket writes to DataNodes.
+2,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+3,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+4,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+5,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+6,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+7,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."
+8,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+9,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."

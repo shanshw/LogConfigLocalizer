@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+2,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+3,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+4,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+5,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.
+6,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+7,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+8,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+9,fs.s3a.executor.capacity,16,"The maximum number of submitted tasks which is a single
+    operation (e.g. rename(), delete()) may submit simultaneously for
+    execution -excluding the IO-heavy block uploads, whose capacity
+    is set in ""fs.s3a.fast.upload.active.blocks""
+
+    All tasks are submitted to the shared thread pool whose size is
+    set in ""fs.s3a.threads.max""; the value of capacity should be less than that
+    of the thread pool itself, as the goal is to stop a single operation
+    from overloading that thread pool."

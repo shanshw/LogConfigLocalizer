@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+2,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+3,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+4,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+5,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+6,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+7,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+8,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+9,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."

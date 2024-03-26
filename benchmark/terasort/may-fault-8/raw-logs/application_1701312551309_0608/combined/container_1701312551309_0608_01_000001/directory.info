@@ -1,0 +1,30 @@
+ls -l:
+total 40
+lrwxrwxrwx 1 root root   66 Nov 30 17:48 _partition.lst -> /home/hadoop3/hadoop/tmp/nm-local-dir/filecache/611/_partition.lst
+-rw-r--r-- 1 root root  106 Nov 30 17:48 container_tokens
+-rwx------ 1 root root  755 Nov 30 17:48 default_container_executor.sh
+-rwx------ 1 root root  700 Nov 30 17:48 default_container_executor_session.sh
+lrwxrwxrwx 1 root root  113 Nov 30 17:48 job.jar -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701312551309_0608/filecache/11/job.jar
+lrwxrwxrwx 1 root root  113 Nov 30 17:48 job.xml -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701312551309_0608/filecache/13/job.xml
+drwxr-xr-x 2 root root 4096 Nov 30 17:48 jobSubmitDir
+-rwx------ 1 root root 6069 Nov 30 17:48 launch_container.sh
+drwx--x--- 2 root root 4096 Nov 30 17:48 tmp
+find -L . -maxdepth 5 -ls:
+295743727      4 drwx--x---   4 root     root         4096 Nov 30 17:48 .
+295743725    236 -r-x------   1 root     root       237866 Nov 30 17:48 ./job.xml
+295743729      4 -rw-r--r--   1 root     root          106 Nov 30 17:48 ./container_tokens
+295743734      4 -rw-r--r--   1 root     root           16 Nov 30 17:48 ./.default_container_executor_session.sh.crc
+295743733      4 -rwx------   1 root     root          700 Nov 30 17:48 ./default_container_executor_session.sh
+295743735      4 -rwx------   1 root     root          755 Nov 30 17:48 ./default_container_executor.sh
+295743736      4 -rw-r--r--   1 root     root           16 Nov 30 17:48 ./.default_container_executor.sh.crc
+295743688      0 -r-xr-xr-x   1 root     root            0 Nov 30 17:48 ./_partition.lst
+295743710      4 drwx------   2 root     root         4096 Nov 30 17:48 ./job.jar
+295743720    276 -r-x------   1 root     root       280486 Nov 30 17:48 ./job.jar/job.jar
+295743731      8 -rwx------   1 root     root         6069 Nov 30 17:48 ./launch_container.sh
+295743732      4 -rw-r--r--   1 root     root           56 Nov 30 17:48 ./.launch_container.sh.crc
+295743728      4 drwx--x---   2 root     root         4096 Nov 30 17:48 ./tmp
+295743730      4 -rw-r--r--   1 root     root           12 Nov 30 17:48 ./.container_tokens.crc
+295743737      4 drwxr-xr-x   2 root     root         4096 Nov 30 17:48 ./jobSubmitDir
+295743681      4 -r-x------   1 root     root          207 Nov 30 17:48 ./jobSubmitDir/job.splitmetainfo
+295743722      4 -r-x------   1 root     root         1257 Nov 30 17:48 ./jobSubmitDir/job.split
+broken symlinks(find -L . -maxdepth 5 -type l -ls):

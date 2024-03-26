@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-736713136,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.zk-max-znode-size.bytes,1048576,
+2,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+3,mapreduce.shuffle.max.threads,0,"Max allowed threads for serving shuffle connections. Set to zero
+  to indicate the default of 2 times the number of available
+  processors (as reported by Runtime.availableProcessors()). Netty is used to
+  serve requests, so a thread is not needed for each connection."
+4,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+5,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+6,dfs.namenode.available-space-rack-fault-tolerant-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+    org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceRackFaultTolerantBlockPlacementPolicy.
+    Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+    this value will be set as 5 by default, Increases tolerance of
+    placing blocks on Datanodes with similar disk space used."
+7,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+8,dfs.datanode.network.counts.cache.max.size,2147483647,"The maximum number of entries the datanode per-host network error
+    count cache may contain."
+9,dfs.storage.policy.satisfier.queue.limit,1000,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."

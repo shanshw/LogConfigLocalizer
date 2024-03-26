@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1985015058,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size,500,
+2,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+3,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.
+4,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+5,dfs.client.failover.sleep.base.millis,500,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least dfs.client.failover.sleep.base.millis
+    milliseconds. And so on."
+6,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+7,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+8,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+9,mapreduce.job.ubertask.maxmaps,9,"Threshold for number of maps, beyond which job is considered
+  too big for the ubertasking optimization.  Users may override this value,
+  but only downward."

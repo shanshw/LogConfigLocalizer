@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-2026973605,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+2,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+3,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+4,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+5,mapreduce.job.local-fs.single-disk-limit.check.interval-ms,5000,Interval of disk limit check to run in ms.
+6,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+7,yarn.nodemanager.default-container-executor.log-dirs.permissions,710,
+8,yarn.timeline-service.app-aggregation-interval-secs,15,
+9,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.

@@ -1,0 +1,28 @@
+,name,value,description
+0,fs.s3a.threads.keepalivetime,AFQ7W,"Number of seconds a thread can be idle before being
+    terminated."
+1,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+2,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+3,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+4,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."
+5,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+6,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+7,hadoop.security.group.mapping.ldap.num.attempts,3,"This property is the number of attempts to be made for LDAP operations.
+    If this limit is exceeded, LdapGroupsMapping will return an empty
+    group list."
+8,mapreduce.jobhistory.client.thread-count,10,The number of threads to handle client API requests
+9,yarn.nodemanager.default-container-executor.log-dirs.permissions,710,

@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+2,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+3,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+4,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+5,dfs.namenode.storage.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS namenode stores the fsImage. The permissions can either be
+      octal or symbolic."
+6,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+7,yarn.sharedcache.nm.uploader.thread-count,20,
+8,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."
+9,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."

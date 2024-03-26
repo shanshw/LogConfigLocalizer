@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+2,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+3,dfs.namenode.storage.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS namenode stores the fsImage. The permissions can either be
+      octal or symbolic."
+4,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+5,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."
+6,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+7,mapreduce.job.cache.limit.max-resources,0,"The maximum number of resources a map reduce job is allowed to
+    submit for localization via files, libjars, archives, and jobjar command
+    line arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+8,nfs.mountd.port,4242,Specify the port number used by Hadoop mount daemon.
+9,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,

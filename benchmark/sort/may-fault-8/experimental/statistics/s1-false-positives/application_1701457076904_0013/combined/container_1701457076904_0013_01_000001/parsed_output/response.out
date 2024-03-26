@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0013_m_000008
+explanation: The missing value for the number of bytes per checksum could be causing issues with the task speculation. This configuration option is important for data integrity and performance.
+
+name:dfs.namenode.quota.init-threads
+value:12
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0013_m_000008
+explanation: The number of concurrent threads used in quota initialization could be affecting the task speculation. If the size of the name space is big, increasing this value could improve performance.
+
+name:yarn.nodemanager.resource.percentage-physical-cpu-limit
+value:100
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0013_m_000008
+explanation: The CPU limit for the NodeManager could be causing issues with the task speculation. If the CPU usage is too high, it could affect the performance of the tasks.

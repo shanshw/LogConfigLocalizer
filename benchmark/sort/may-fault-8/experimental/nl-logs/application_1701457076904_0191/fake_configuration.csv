@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+2,dfs.image.parallel.threads,4,"The number of threads to use when dfs.image.parallel.load is
+        enabled. This setting should be less than
+        dfs.image.parallel.target.sections. The optimal number of
+        threads will depend on the hardware and environment."
+3,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+4,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+5,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+6,dfs.datanode.fileio.profiling.sampling.percentage,0,"This setting controls the percentage of file I/O events which will be
+    profiled for DataNode disk statistics. The default value of 0 disables
+    disk statistics. Set to an integer value between 1 and 100 to enable disk
+    statistics."
+7,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+8,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+9,yarn.nodemanager.local-cache.max-files-per-directory,8192,

@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,-34591569,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+2,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+3,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+4,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+5,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+6,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+7,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+8,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+9,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."

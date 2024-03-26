@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.scheduler.configuration.leveldb-store.compaction-interval-secs,86400,
+2,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+3,yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,
+4,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+5,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+6,mapreduce.task.skip.start.attempts,2,"The number of Task attempts AFTER which skip mode
+    will be kicked off. When skip mode is kicked off, the
+    tasks reports the range of records which it will process
+    next, to the MR ApplicationMaster. So that on failures, the MR AM
+    knows which ones are possibly the bad records. On further executions,
+    those are skipped."
+7,ha.health-monitor.check-interval.ms,1000,How often to check the service.
+8,file.blocksize,67108864,Block size
+9,dfs.client.write.max-packets-in-flight,80,The maximum number of DFSPackets allowed in flight.

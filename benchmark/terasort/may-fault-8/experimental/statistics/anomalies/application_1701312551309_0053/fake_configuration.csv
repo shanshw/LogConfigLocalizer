@@ -1,0 +1,71 @@
+,name,value,description
+0,mapreduce.fileoutputcommitter.algorithm.version,-93244609,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+1,ipc.[port_number].weighted-cost.lockfree,1,"The weight multiplier to apply to the time spent in the
+    LOCKFREE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+2,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+3,file.replication,1,Replication factor
+4,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+5,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+6,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+7,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+8,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."
+9,yarn.am.liveness-monitor.expiry-interval-ms,600000,

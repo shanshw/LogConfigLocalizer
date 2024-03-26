@@ -1,0 +1,30 @@
+,name,value,description
+0,dfs.qjournal.accept-recovery.timeout.ms,,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."
+1,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+2,yarn.nodemanager.log.retain-seconds,10800,
+3,dfs.webhdfs.ugi.expire.after.access,600000,"How long in milliseconds after the last access
+      the cached UGI will expire. With 0, never expire."
+4,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+5,file.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  file.stream-buffer-size"
+6,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+7,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+8,dfs.client.write.byte-array-manager.count-threshold,128,"The count threshold for each array length so that a manager is created only after the
+    allocation count exceeds the threshold. In other words, the particular array length
+    is not managed until the allocation count exceeds the threshold."
+9,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."

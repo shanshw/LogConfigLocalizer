@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.process-kill-wait.ms,5000,
+2,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+3,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+4,seq.io.sort.factor,100,"The number of streams to merge at once while sorting
+      files using SequenceFile.Sorter.
+      This determines the number of open file handles."
+5,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+6,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."
+7,yarn.sharedcache.nested-level,3,
+8,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+9,yarn.resourcemanager.fs.state-store.num-retries,0,

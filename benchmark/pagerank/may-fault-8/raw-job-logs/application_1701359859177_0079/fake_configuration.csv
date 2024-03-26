@@ -1,0 +1,21 @@
+,name,value,description
+0,dfs.client.mmap.retry.timeout.ms,0,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+1,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+2,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+3,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+4,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+5,file.replication,1,Replication factor
+6,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+7,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+9,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."

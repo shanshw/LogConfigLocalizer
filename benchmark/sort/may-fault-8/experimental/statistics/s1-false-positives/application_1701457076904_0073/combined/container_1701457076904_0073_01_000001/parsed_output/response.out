@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms
+value:10000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0073_m_000009
+explanation: The log indicates that a speculative task is being created, which is related to resource scheduling. The configuration option 'yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms' is related to scheduling and its description is missing, which might cause errors.
+
+name:yarn.app.mapreduce.am.container.log.backups
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0073_m_000009
+explanation: The log indicates that a speculative task is being created, which is related to the ApplicationMaster. The configuration option 'yarn.app.mapreduce.am.container.log.backups' is related to the ApplicationMaster logs and its value is 0, which might cause errors as it indicates no backup files for the ApplicationMaster logs.
+
+name:mapreduce.shuffle.connection-keep-alive.timeout
+value:5
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0073_m_000009
+explanation: The log indicates that a speculative task is being created, which is related to the shuffle phase of MapReduce. The configuration option 'mapreduce.shuffle.connection-keep-alive.timeout' is related to the shuffle phase and its value is relatively low, which might cause connection timeout errors.

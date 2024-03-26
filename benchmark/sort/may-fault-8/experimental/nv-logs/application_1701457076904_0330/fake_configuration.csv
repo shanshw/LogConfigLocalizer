@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-1368265150,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."
+2,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+3,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+4,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+5,ftp.client-write-packet-size,65536,Packet size for clients to write
+6,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+7,yarn.scheduler.maximum-allocation-vcores,4,
+8,mapreduce.map.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each map task."
+9,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.

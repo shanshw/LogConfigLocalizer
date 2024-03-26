@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-642153638,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+2,dfs.balancer.movedWinWidth,5400000,"Window of time in ms for the HDFS balancer tracking blocks and its
+    locations."
+3,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+4,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+5,yarn.resourcemanager.delegation.token.renew-interval,86400000,
+6,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+7,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+8,yarn.timeline-service.client.fd-flush-interval-secs,10,
+9,yarn.sharedcache.client-server.thread-count,50,

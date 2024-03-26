@@ -1,0 +1,14 @@
+LineId,Date,Time,Pid,Level,Component,Content,EventId,EventTemplate,ParameterList
+1,2023-12-01,11:25:19,440,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Created MRAppMaster for application appattempt_1701398500430_0023_000001,19b75bb3,Created MRAppMaster for application appattempt_<*>_<*>_<*>,"['1701398500430', '0023_000001']"
+2,2023-12-01,11:25:19,630,INFO,[main] org.apache.hadoop.security.SecurityUtil,Updating Configuration,b6c60981,Updating Configuration,[]
+3,2023-12-01,11:25:19,630,ERROR,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""bcyIb""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:114)
+	at org.apache.hadoop.security.SecurityUtil.setConfiguration(SecurityUtil.java:99)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1737)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+",ac0f54dd,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""bcyIb"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:<*>) at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:<*>) at org.apache.hadoop.security.SecurityUtil.setConfiguration(SecurityUtil.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>)","['65', '652', '770', '1534', '114', '99', '1737', '1691']"
+4,2023-12-01,11:25:19,635,INFO,[main] org.apache.hadoop.util.ExitUtil,"Exiting with status 1: java.lang.NumberFormatException: For input string: ""bcyIb""",f6b6ffa3,"Exiting with status <*>: java.lang.NumberFormatException: For input string: ""bcyIb""",['1']

@@ -1,0 +1,27 @@
+,name,value,description
+0,hadoop.security.groups.negative-cache.secs,-0.76789576,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+1,dfs.ha.zkfc.port,8019,"The port number that the zookeeper failover controller RPC
+    server binds to."
+2,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+3,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+4,dfs.mover.moverThreads,1000,Configure the balancer's mover thread pool size.
+5,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+6,yarn.timeline-service.client.retry-interval-ms,1000,
+7,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap
+9,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."

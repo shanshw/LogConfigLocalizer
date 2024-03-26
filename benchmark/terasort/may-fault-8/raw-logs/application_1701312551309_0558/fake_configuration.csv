@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,-1319447196,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+2,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+3,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."
+4,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+5,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+6,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+7,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+8,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."
+9,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,

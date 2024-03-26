@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+2,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+3,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+4,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+5,yarn.router.interceptor.user.threadpool-size,5,
+6,yarn.resourcemanager.application.max-tags,10,
+7,ipc.[port_number].weighted-cost.handler,1,"The weight multiplier to apply to the time spent in the
+    HANDLER phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+8,yarn.nodemanager.runtime.linux.docker.userremapping-uid-threshold,1,
+9,yarn.app.mapreduce.am.job.task.listener.thread-count,30,"The number of threads used to handle RPC calls in the
+    MR AppMaster from remote tasks"

@@ -1,0 +1,44 @@
+anomaly_degree,content
+0.2,"INFO	Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITEDorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.io.IOException: Only 1 or 2 algorithm version is supported
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.io.IOException: Only 1 or 2 algorithm version is supported
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:144)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more"
+0.4,"ERROR	Error starting MRAppMasterorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.io.IOException: Only 1 or 2 algorithm version is supported
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.io.IOException: Only 1 or 2 algorithm version is supported
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:144)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more"
+0.4,INFO	Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.io.IOException: Only 1 or 2 algorithm version is supported

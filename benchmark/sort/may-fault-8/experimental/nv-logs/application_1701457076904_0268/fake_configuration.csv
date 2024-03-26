@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,601318601,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+2,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+3,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."
+4,file.client-write-packet-size,65536,Packet size for clients to write
+5,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+6,mapreduce.shuffle.listen.queue.size,128,The length of the shuffle server listen queue.
+7,ha.health-monitor.rpc-timeout.ms,45000,Timeout for the actual monitorHealth() calls.
+8,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+9,hadoop.security.groups.cache.background.reload.threads,3,"Only relevant if hadoop.security.groups.cache.background.reload is true.
+    Controls the number of concurrent background user->group cache entry
+    refreshes. Pending refresh requests beyond this value are queued and
+    processed when a thread is free."

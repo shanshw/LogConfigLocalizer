@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-1557143565,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+2,yarn.client.max-cached-nodemanagers-proxies,0,
+3,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+4,hadoop.security.groups.cache.warn.after.ms,5000,"If looking up a single user to group takes longer than this amount of
+    milliseconds, we will log a warning message."
+5,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+6,yarn.router.pipeline.cache-max-size,25,
+7,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+8,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+9,ha.failover-controller.cli-check.rpc-timeout.ms,20000,"Timeout that the CLI (manual) FC waits for monitorHealth, getServiceState"

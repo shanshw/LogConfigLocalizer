@@ -1,0 +1,259 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.edit.log.transfer.bandwidthPerSec</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.write.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>3</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.read.shortcircuit.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1048576</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	read</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701359859177_0077_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+                var reportItem7 = document.createElement("div");
+                reportItem7.innerHTML = `
+                    <strong>[No.7]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.edit.log.transfer.bandwidthPerSec</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701359859177_0077_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem7);
+            
+                var reportItem8 = document.createElement("div");
+                reportItem8.innerHTML = `
+                    <strong>[No.8]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701359859177_0077_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem8);
+            
+                var reportItem9 = document.createElement("div");
+                reportItem9.innerHTML = `
+                    <strong>[No.9]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.write.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>3</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701359859177_0077_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem9);
+            
+                var reportItem10 = document.createElement("div");
+                reportItem10.innerHTML = `
+                    <strong>[No.10]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701359859177_0077_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem10);
+            
+                var reportItem11 = document.createElement("div");
+                reportItem11.innerHTML = `
+                    <strong>[No.11]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.edit.log.transfer.bandwidthPerSec</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701359859177_0077_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem11);
+            
+                var reportItem12 = document.createElement("div");
+                reportItem12.innerHTML = `
+                    <strong>[No.12]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701359859177_0077_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem12);
+            
+                var reportItem13 = document.createElement("div");
+                reportItem13.innerHTML = `
+                    <strong>[No.13]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.write.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>3</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701359859177_0077_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:-126213015, effective=null	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem13);
+            
+                var reportItem14 = document.createElement("div");
+                reportItem14.innerHTML = `
+                    <strong>[No.14]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem14);
+            
+                var reportItem15 = document.createElement("div");
+                reportItem15.innerHTML = `
+                    <strong>[No.15]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.jobhistory.client.thread-count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	jobhistory</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem15);
+            
+                var reportItem16 = document.createElement("div");
+                reportItem16.innerHTML = `
+                    <strong>[No.16]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem16);
+            
+                var reportItem17 = document.createElement("div");
+                reportItem17.innerHTML = `
+                    <strong>[No.17]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.jobhistory.client.thread-count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	jobhistory</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem17);
+            
+                var reportItem18 = document.createElement("div");
+                reportItem18.innerHTML = `
+                    <strong>[No.18]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Graceful stop failed. Exiting..java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem18);
+            
+                var reportItem19 = document.createElement("div");
+                reportItem19.innerHTML = `
+                    <strong>[No.19]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-126213015</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Exiting with status 1: java.lang.NullPointerException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem19);
+            
+    </script>
+    </body>
+    </html>
+    

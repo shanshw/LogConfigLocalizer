@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+2,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+3,hadoop.security.kms.client.authentication.retry-count,1,Number of time to retry connecting to KMS on authentication failure
+4,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."
+5,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+6,yarn.app.attempt.diagnostics.limit.kc,64,
+7,dfs.short.circuit.shared.memory.watcher.interrupt.check.ms,60000,"The length of time in milliseconds that the short-circuit shared memory
+    watcher will go between checking for java interruptions sent from other
+    threads.  This is provided mainly for unit tests."
+8,dfs.storage.policy.satisfier.queue.limit,1000,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."
+9,hadoop.zk.timeout-ms,10000,"ZooKeeper session timeout in milliseconds. Session expiration
+    is managed by the ZooKeeper cluster itself, not by the client. This value is
+    used by the cluster to determine when the client's session expires.
+    Expirations happens when the cluster does not hear from the client within
+    the specified session timeout period (i.e. no heartbeat)."

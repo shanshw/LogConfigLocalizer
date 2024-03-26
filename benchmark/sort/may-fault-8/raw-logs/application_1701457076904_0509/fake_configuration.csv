@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+2,dfs.namenode.top.num.users,10,Number of top users returned by the top tool
+3,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+4,yarn.nodemanager.health-checker.timeout-ms,1200000,
+5,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+6,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+7,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+8,dfs.datanode.lock-reporting-threshold-ms,300,"When thread waits to obtain a lock, or a thread holds a lock for
+    more than the threshold, a log message will be written. Note that
+    dfs.lock.suppress.warning.interval ensures a single log message is
+    emitted per interval for waiting threads and a single message for holding
+    threads to avoid excessive logging."
+9,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."

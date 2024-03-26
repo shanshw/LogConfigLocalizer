@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,-1617708091,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.delegation.key.update-interval,86400000,
+2,mapreduce.job.ubertask.maxmaps,9,"Threshold for number of maps, beyond which job is considered
+  too big for the ubertasking optimization.  Users may override this value,
+  but only downward."
+3,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+4,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+5,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."
+6,yarn.nodemanager.runtime.linux.runc.layer-mounts-interval-secs,600,
+7,yarn.resourcemanager.amlauncher.thread-count,50,
+8,hadoop.security.group.mapping.ldap.num.attempts,3,"This property is the number of attempts to be made for LDAP operations.
+    If this limit is exceeded, LdapGroupsMapping will return an empty
+    group list."
+9,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."

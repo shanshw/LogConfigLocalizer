@@ -1,0 +1,34 @@
+,name,value,description
+0,dfs.ls.limit,0.93906856,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+1,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+2,dfs.datanode.lock-reporting-threshold-ms,300,"When thread waits to obtain a lock, or a thread holds a lock for
+    more than the threshold, a log message will be written. Note that
+    dfs.lock.suppress.warning.interval ensures a single log message is
+    emitted per interval for waiting threads and a single message for holding
+    threads to avoid excessive logging."
+3,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+4,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+5,yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms,10000,
+6,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+7,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+8,yarn.app.mapreduce.client-am.ipc.max-retries-on-timeouts,3,"The number of client retries on socket timeouts to the AM - before
+    reconnecting to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries.on.timeouts to be used during
+    reconnecting to the RM and fetching Application Status."
+9,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"

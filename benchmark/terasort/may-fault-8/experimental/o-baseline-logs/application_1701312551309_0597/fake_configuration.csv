@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.client.failover-retries-on-socket-timeouts,0,
+2,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+3,dfs.namenode.snapshot.skiplist.interval,10,"The interval after which the skip levels will be formed in the skip list
+    for storing directory snapshot diffs. By default, value is set to 10."
+4,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+5,fs.s3a.connection.maximum,96,"Controls the maximum number of simultaneous connections to S3.
+    This must be bigger than the value of fs.s3a.threads.max so as to stop
+    threads being blocked waiting for new HTTPS connections.
+    Why not equal? The AWS SDK transfer manager also uses these connections."
+6,dfs.qjournal.finalize-segment.timeout.ms,120000,"Quorum timeout in milliseconds during finalizing for a specific
+    segment."
+7,ha.failover-controller.new-active.rpc-timeout.ms,60000,Timeout that the FC waits for the new active to become active
+8,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+9,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."

@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.localizer.fetch.thread-count,4,
+2,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+3,yarn.resourcemanager.nodemanager-connect-retries,10,
+4,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+5,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+6,dfs.datanode.fileio.profiling.sampling.percentage,0,"This setting controls the percentage of file I/O events which will be
+    profiled for DataNode disk statistics. The default value of 0 disables
+    disk statistics. Set to an integer value between 1 and 100 to enable disk
+    statistics."
+7,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+8,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+9,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.

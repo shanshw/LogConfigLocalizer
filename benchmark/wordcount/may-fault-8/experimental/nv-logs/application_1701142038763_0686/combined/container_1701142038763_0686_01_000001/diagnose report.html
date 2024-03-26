@@ -1,0 +1,29 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+        var reportContainer = document.getElementById("reportContainer");
+        var pElement = document.createElement("p");
+        pElement.textContent = "Identified as Configuration-Error-Free.";
+        pElement.style.backgroundColor = "#FFE4C4";
+        pElement.style.textAlign = "center";
+        pElement.style.fontWeight = "bold"; 
+        reportContainer.appendChild(pElement);
+        
+    </script>
+    </body>
+    </html>
+    

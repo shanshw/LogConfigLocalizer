@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,-252906185,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.app-collector.linger-period.ms,60000,
+2,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+3,yarn.sharedcache.nested-level,3,
+4,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+5,dfs.namenode.accesstime.precision,3600000,"The access time for HDFS file is precise upto this value. 
+               The default value is 1 hour. Setting a value of 0 disables
+               access times for HDFS."
+6,fs.s3a.executor.capacity,16,"The maximum number of submitted tasks which is a single
+    operation (e.g. rename(), delete()) may submit simultaneously for
+    execution -excluding the IO-heavy block uploads, whose capacity
+    is set in ""fs.s3a.fast.upload.active.blocks""
+
+    All tasks are submitted to the shared thread pool whose size is
+    set in ""fs.s3a.threads.max""; the value of capacity should be less than that
+    of the thread pool itself, as the goal is to stop a single operation
+    from overloading that thread pool."
+7,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+8,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."
+9,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."

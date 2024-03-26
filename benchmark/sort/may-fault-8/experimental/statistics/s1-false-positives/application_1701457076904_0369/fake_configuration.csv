@@ -1,0 +1,33 @@
+,name,value,description
+0,dfs.namenode.resource.checked.volumes.minimum,,The minimum number of redundant NameNode storage volumes required.
+1,yarn.resourcemanager.application.max-tags,10,
+2,dfs.datanode.data.dir.perm,700,"Permissions for the directories on on the local filesystem where
+  the DFS data node store its blocks. The permissions can either be octal or
+  symbolic."
+3,ha.health-monitor.rpc-timeout.ms,45000,Timeout for the actual monitorHealth() calls.
+4,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+5,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+6,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."
+7,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+8,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+9,mapreduce.job.speculative.minimum-allowed-tasks,10,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."

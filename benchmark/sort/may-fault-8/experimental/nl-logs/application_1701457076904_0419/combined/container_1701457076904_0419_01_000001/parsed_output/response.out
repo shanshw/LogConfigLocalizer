@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1127025069
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.
+
+name:ipc.maximum.data.length
+value:134217728
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of ipc.maximum.data.length is too large, which may cause the Java heap space OutOfMemoryError. Messages larger than this value are rejected by the server to avoid possible OOMs.
+
+name:dfs.client.block.write.locateFollowingBlock.retries
+value:5
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.client.block.write.locateFollowingBlock.retries may be too low, which may cause the Java heap space OutOfMemoryError. Increasing the number of retries may help to avoid this error.

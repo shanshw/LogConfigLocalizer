@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-1386865190,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+2,yarn.resourcemanager.nodemanager-connect-retries,10,
+3,yarn.nodemanager.localizer.client.thread-count,5,
+4,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+5,yarn.sharedcache.uploader.server.thread-count,50,
+6,yarn.resourcemanager.am.max-attempts,2,
+7,yarn.resourcemanager.connect.max-wait.ms,900000,
+8,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+9,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."

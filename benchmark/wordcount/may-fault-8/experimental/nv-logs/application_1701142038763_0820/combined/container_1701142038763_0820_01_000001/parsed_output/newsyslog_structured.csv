@@ -1,0 +1,16 @@
+LineId,Date,Time,Pid,Level,Component,Content,EventId,EventTemplate,ParameterList
+1,2023-11-29,04:28:09,135,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Created MRAppMaster for application appattempt_1701142038763_0820_000001,19b75bb3,Created MRAppMaster for application appattempt_<*>_<*>_<*>,"['1701142038763', '0820_000001']"
+2,2023-11-29,04:28:09,265,ERROR,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""-0.7635005""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:338)
+	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:366)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1735)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+",bafad144,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""<*>.<*>"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Long.parseLong(Long.java:<*>) at java.base/java.lang.Long.parseLong(Long.java:<*>) at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:<*>) at org.apache.hadoop.security.Groups.<init>(Groups.java:<*>) at org.apache.hadoop.security.Groups.<init>(Groups.java:<*>) at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:<*>) at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:<*>) at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>)","['-0.7635005', '65', '692', '817', '1587', '<init>', '116', '<init>', '102', '451', '338', '366', '1735', '1691']"
+3,2023-11-29,04:28:09,269,INFO,[main] org.apache.hadoop.util.ExitUtil,"Exiting with status 1: java.lang.NumberFormatException: For input string: ""-0.7635005""",f2dc02db,"Exiting with status <*>: java.lang.NumberFormatException: For input string: ""<*>.<*>""","['1', '-0.7635005']"

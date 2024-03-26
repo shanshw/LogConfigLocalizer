@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+2,dfs.namenode.snapshot.skiplist.interval,10,"The interval after which the skip levels will be formed in the skip list
+    for storing directory snapshot diffs. By default, value is set to 10."
+3,dfs.disk.balancer.max.disk.errors,5,"During a block move from a source to destination disk, we might
+      encounter various errors. This defines how many errors we can tolerate
+      before we declare a move between 2 disks (or a step) has failed."
+4,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+5,yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms,10000,
+6,yarn.nodemanager.amrmproxy.client.thread-count,25,
+7,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+8,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+9,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."

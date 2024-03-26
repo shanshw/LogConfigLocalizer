@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,1579384764,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+2,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+3,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+4,dfs.namenode.resource.check.interval,5000,"The interval in milliseconds at which the NameNode resource checker runs.
+    The checker calculates the number of the NameNode storage volumes whose
+    available spaces are more than dfs.namenode.resource.du.reserved, and
+    enters safemode if the number becomes lower than the minimum value
+    specified by dfs.namenode.resource.checked.volumes.minimum."
+5,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+6,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+7,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+8,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,
+9,yarn.resourcemanager.delegation-token-renewer.thread-count,50,

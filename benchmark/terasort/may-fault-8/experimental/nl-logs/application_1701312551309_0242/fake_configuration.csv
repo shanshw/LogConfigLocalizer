@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-579686851,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.fs-limits.max-xattrs-per-inode,32,Maximum number of extended attributes per inode.
+2,file.blocksize,67108864,Block size
+3,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+4,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+5,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+6,yarn.nodemanager.delete.thread-count,4,
+7,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+8,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+9,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."

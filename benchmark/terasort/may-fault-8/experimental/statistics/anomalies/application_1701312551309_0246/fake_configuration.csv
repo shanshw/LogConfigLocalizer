@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+2,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+3,dfs.namenode.storage.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS namenode stores the fsImage. The permissions can either be
+      octal or symbolic."
+4,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+5,tfile.fs.input.buffer.size,262144,Buffer size used for FSDataInputStream in bytes.
+6,fs.s3a.attempts.maximum,20,How many times we should retry commands on transient errors.
+7,yarn.resourcemanager.connect.max-wait.ms,900000,
+8,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+9,yarn.scheduler.minimum-allocation-mb,1024,

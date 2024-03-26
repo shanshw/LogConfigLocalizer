@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.
+2,yarn.nodemanager.process-kill-wait.ms,5000,
+3,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+4,yarn.app.mapreduce.am.job.task.listener.thread-count,30,"The number of threads used to handle RPC calls in the
+    MR AppMaster from remote tasks"
+5,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.
+6,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+7,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+8,yarn.log-aggregation-status.time-out.ms,600000,
+9,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."

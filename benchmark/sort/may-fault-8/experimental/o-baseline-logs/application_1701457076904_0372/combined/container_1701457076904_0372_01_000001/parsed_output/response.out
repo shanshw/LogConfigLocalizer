@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This value should not be 0 as it represents the number of bytes per checksum.
+
+name:dfs.bytes-per-checksum
+value:512
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.bytes-per-checksum' is set to 512. This value should be checked as it represents the number of bytes per checksum and could be causing the Invalid checksum type error.
+
+name:dfs.http.client.failover.max.attempts
+value:15
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.http.client.failover.max.attempts' is set to 15. This value should be checked as it could be causing the Invalid checksum type error due to excessive failover attempts.

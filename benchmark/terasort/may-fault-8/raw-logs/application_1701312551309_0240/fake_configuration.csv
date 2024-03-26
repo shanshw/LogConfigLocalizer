@@ -1,0 +1,41 @@
+,name,value,description
+0,io.bytes.per.checksum,1152874999,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+2,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."
+3,yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,
+4,fs.s3a.paging.maximum,5000,"How many keys to request from S3 when doing
+     directory listings at a time."
+5,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+6,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+7,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+8,ha.failover-controller.active-standby-elector.zk.op.retries,3,The number of zookeeper operation retry times in ActiveStandbyElector
+9,dfs.namenode.max.objects,0,"The maximum number of files, directories and blocks
+  dfs supports. A value of zero indicates no limit to the number
+  of objects that dfs supports."

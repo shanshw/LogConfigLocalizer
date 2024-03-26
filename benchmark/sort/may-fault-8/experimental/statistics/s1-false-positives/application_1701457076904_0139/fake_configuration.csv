@@ -1,0 +1,21 @@
+,name,value,description
+0,yarn.timeline-service.client.retry-interval-ms,hSPiR,<missing>
+1,dfs.namenode.decommission.interval,30,"Namenode periodicity in seconds to check if
+    decommission or maintenance is complete. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.
+    If no time unit is specified then seconds is assumed."
+2,datanode.https.port,50475,HTTPS port for DataNode.
+3,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+4,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+5,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+6,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+7,yarn.timeline-service.client.fd-retain-secs,300,
+8,yarn.nodemanager.process-kill-wait.ms,5000,
+9,mapreduce.jobhistory.max-age-ms,604800000,"Job history files older than this many milliseconds will
+  be deleted when the history cleaner runs. Defaults to 604800000 (1 week)."

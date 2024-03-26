@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,1430995493,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.retries,3,"The number of retries for writing blocks to the data nodes, 
+  before we signal failure to the application."
+2,dfs.balancer.max-iteration-time,1200000,"Maximum amount of time while an iteration can be run by the Balancer. After
+    this time the Balancer will stop the iteration, and reevaluate the work
+    needs to be done to Balance the cluster. The default value is 20 minutes."
+3,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+4,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+5,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+6,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+7,yarn.resourcemanager.nodemanager-connect-retries,10,
+8,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+9,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."

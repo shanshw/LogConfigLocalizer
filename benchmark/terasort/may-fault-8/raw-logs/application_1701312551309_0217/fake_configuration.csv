@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ftp.client-write-packet-size,65536,Packet size for clients to write
+2,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+3,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."
+4,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+5,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+6,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+7,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+8,yarn.client.failover-retries,0,
+9,yarn.resourcemanager.nm-tokens.master-key-rolling-interval-secs,86400,

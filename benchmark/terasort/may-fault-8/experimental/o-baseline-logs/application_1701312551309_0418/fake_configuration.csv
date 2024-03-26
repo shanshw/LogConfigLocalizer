@@ -1,0 +1,19 @@
+,name,value,description
+0,mapreduce.task.timeout,nqcub,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+1,yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,
+2,yarn.nodemanager.container-diagnostics-maximum-size,10000,
+3,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+4,yarn.timeline-service.hbase.coprocessor.app-final-value-retention-milliseconds,259200000,
+5,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+6,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+7,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+8,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+9,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.

@@ -1,0 +1,41 @@
+,name,value,description
+0,yarn.scheduler.minimum-allocation-mb,-0.8376893,<missing>
+1,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+2,io.map.index.interval,128,"MapFile consist of two files - data file (tuples) and index file
+    (keys). For every io.map.index.interval records written in the
+    data file, an entry (record-key, data-file-position) is written
+    in the index file. This is to allow for doing binary search later
+    within the index file to look up records by their keys and get their
+    closest positions in the data file."
+3,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+4,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+5,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+6,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+7,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+8,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+9,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."

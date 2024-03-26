@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+2,dfs.client.hedged.read.threadpool.size,0,"Support 'hedged' reads in DFSClient. To enable this feature, set the parameter
+    to a positive number. The threadpool size is how many threads to dedicate
+    to the running of these 'hedged', concurrent reads in your client."
+3,dfs.datanode.min.outlier.detection.disks,5,Minimum number of disks to run outlier detection.
+4,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+5,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+6,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+7,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+8,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+9,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.

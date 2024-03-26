@@ -1,0 +1,28 @@
+ls -l:
+total 36
+-rw-r--r-- 1 root root  105 Nov 28 13:45 container_tokens
+-rwx------ 1 root root  755 Nov 28 13:45 default_container_executor.sh
+-rwx------ 1 root root  700 Nov 28 13:45 default_container_executor_session.sh
+lrwxrwxrwx 1 root root  113 Nov 28 13:45 job.jar -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701142038763_0119/filecache/11/job.jar
+lrwxrwxrwx 1 root root  113 Nov 28 13:45 job.xml -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701142038763_0119/filecache/13/job.xml
+drwxr-xr-x 2 root root 4096 Nov 28 13:45 jobSubmitDir
+-rwx------ 1 root root 5973 Nov 28 13:45 launch_container.sh
+drwx--x--- 2 root root 4096 Nov 28 13:45 tmp
+find -L . -maxdepth 5 -ls:
+295668722      4 drwx--x---   4 root     root         4096 Nov 28 13:45 .
+295668720    232 -r-x------   1 root     root       237164 Nov 28 13:45 ./job.xml
+295668726      4 -rw-r--r--   1 root     root          105 Nov 28 13:45 ./container_tokens
+295668736      4 -rw-r--r--   1 root     root           16 Nov 28 13:45 ./.default_container_executor_session.sh.crc
+295668735      4 -rwx------   1 root     root          700 Nov 28 13:45 ./default_container_executor_session.sh
+295668744      4 -rwx------   1 root     root          755 Nov 28 13:45 ./default_container_executor.sh
+295668745      4 -rw-r--r--   1 root     root           16 Nov 28 13:45 ./.default_container_executor.sh.crc
+295668730      4 drwx------   2 root     root         4096 Nov 28 13:45 ./job.jar
+295668731    276 -r-x------   1 root     root       280486 Nov 28 13:45 ./job.jar/job.jar
+295668728      8 -rwx------   1 root     root         5973 Nov 28 13:45 ./launch_container.sh
+295668734      4 -rw-r--r--   1 root     root           56 Nov 28 13:45 ./.launch_container.sh.crc
+295668723      4 drwx--x---   2 root     root         4096 Nov 28 13:45 ./tmp
+295668727      4 -rw-r--r--   1 root     root           12 Nov 28 13:45 ./.container_tokens.crc
+295668746      4 drwxr-xr-x   2 root     root         4096 Nov 28 13:45 ./jobSubmitDir
+295668719      4 -r-x------   1 root     root          467 Nov 28 13:45 ./jobSubmitDir/job.splitmetainfo
+295668742      4 -r-x------   1 root     root         1257 Nov 28 13:45 ./jobSubmitDir/job.split
+broken symlinks(find -L . -maxdepth 5 -type l -ls):

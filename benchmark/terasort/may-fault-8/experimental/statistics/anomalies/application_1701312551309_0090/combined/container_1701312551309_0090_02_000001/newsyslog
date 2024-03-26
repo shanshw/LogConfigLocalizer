@@ -1,0 +1,9 @@
+2023-11-30 12:09:28,919 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701312551309_0090_000002
+2023-11-30 12:09:29,020 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-30 12:09:29,037 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+java.lang.IllegalArgumentException: Invalid attribute value for hadoop.kerberos.min.seconds.before.relogin of 9lG25
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:329)
+	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:366)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1735)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 12:09:29,040 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: java.lang.IllegalArgumentException: Invalid attribute value for hadoop.kerberos.min.seconds.before.relogin of 9lG25

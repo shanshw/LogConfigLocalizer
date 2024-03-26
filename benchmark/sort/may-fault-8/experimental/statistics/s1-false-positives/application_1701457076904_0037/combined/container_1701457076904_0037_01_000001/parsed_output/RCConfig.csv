@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+dfs.mover.moverThreads,<missing>,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0037_m_000009,The configuration for the balancer's mover thread pool size is missing. This could potentially cause issues with task speculation and distribution.
+fs.s3a.attempts.maximum,20,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0037_m_000009,"The maximum number of retry attempts for commands on transient errors is set to 20. If the task speculation is failing due to transient errors, this could be a potential cause."
+mapreduce.reduce.shuffle.parallelcopies,5,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0037_m_000009,"The number of parallel transfers run by reduce during the copy(shuffle) phase is set to 5. If the task speculation is related to the shuffle phase, this could be a potential cause."

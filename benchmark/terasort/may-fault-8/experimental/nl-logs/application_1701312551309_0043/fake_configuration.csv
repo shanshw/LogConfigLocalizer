@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.task.io.sort.factor,0.45700127,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+1,yarn.timeline-service.client.fd-retain-secs,300,
+2,hadoop.zk.retry-interval-ms,1000,Retry interval in milliseconds when connecting to ZooKeeper.
+3,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+4,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+5,mapreduce.shuffle.max.threads,0,"Max allowed threads for serving shuffle connections. Set to zero
+  to indicate the default of 2 times the number of available
+  processors (as reported by Runtime.availableProcessors()). Netty is used to
+  serve requests, so a thread is not needed for each connection."
+6,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+7,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."
+8,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+9,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."

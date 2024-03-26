@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-232574920,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+2,hadoop.hdfs.configuration.version,1,version of this configuration file
+3,yarn.sharedcache.nm.uploader.replication.factor,10,
+4,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.
+5,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+6,yarn.resourcemanager.scheduler.client.thread-count,50,
+7,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.
+8,yarn.resourcemanager.delegation.token.max-lifetime,604800000,
+9,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap

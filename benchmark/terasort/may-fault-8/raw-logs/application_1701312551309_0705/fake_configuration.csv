@@ -1,0 +1,22 @@
+,name,value,description
+0,dfs.client.block.reader.remote.buffer.size,0.22931182,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+1,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+2,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+3,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+4,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."
+5,yarn.sharedcache.client-server.thread-count,50,
+6,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.
+7,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+8,file.blocksize,67108864,Block size
+9,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,

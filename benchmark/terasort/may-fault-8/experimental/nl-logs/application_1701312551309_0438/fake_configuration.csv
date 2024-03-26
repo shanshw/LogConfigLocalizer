@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,file.replication,1,Replication factor
+2,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+3,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+4,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+5,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+6,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+7,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+8,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+9,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."

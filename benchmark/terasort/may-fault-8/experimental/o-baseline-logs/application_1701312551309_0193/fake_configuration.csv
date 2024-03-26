@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,1452768612,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,
+2,dfs.client.write.byte-array-manager.count-threshold,128,"The count threshold for each array length so that a manager is created only after the
+    allocation count exceeds the threshold. In other words, the particular array length
+    is not managed until the allocation count exceeds the threshold."
+3,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+4,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+5,yarn.resourcemanager.client.thread-count,50,
+6,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+7,hadoop.security.group.mapping.ldap.directory.search.timeout,10000,"The attribute applied to the LDAP SearchControl properties to set a
+    maximum time limit when searching and awaiting a result.
+    Set to 0 if infinite wait period is desired.
+    Default is 10 seconds. Units in milliseconds."
+8,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+9,dfs.default.chunk.view.size,32768,The number of bytes to view for a file on the browser.

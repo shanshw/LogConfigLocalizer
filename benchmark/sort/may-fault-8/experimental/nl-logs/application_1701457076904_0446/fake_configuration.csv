@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,525038800,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.groups.cache.warn.after.ms,5000,"If looking up a single user to group takes longer than this amount of
+    milliseconds, we will log a warning message."
+2,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,
+3,yarn.resourcemanager.delegation.token.max-lifetime,604800000,
+4,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+5,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+6,yarn.app.mapreduce.am.job.task.listener.thread-count,30,"The number of threads used to handle RPC calls in the
+    MR AppMaster from remote tasks"
+7,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+8,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+9,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."

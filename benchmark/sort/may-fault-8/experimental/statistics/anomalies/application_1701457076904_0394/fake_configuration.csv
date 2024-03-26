@@ -1,0 +1,83 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+2,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+3,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+4,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+5,dfs.client.socket.send.buffer.size,0,"Socket send buffer size for a write pipeline in DFSClient side.
+    This may affect TCP connection throughput.
+    If it is set to zero or negative value,
+    no buffer size will be set explicitly,
+    thus enable tcp auto-tuning on some system.
+    The default value is 0."
+6,dfs.client.hedged.read.threadpool.size,0,"Support 'hedged' reads in DFSClient. To enable this feature, set the parameter
+    to a positive number. The threadpool size is how many threads to dedicate
+    to the running of these 'hedged', concurrent reads in your client."
+7,mapreduce.fileoutputcommitter.algorithm.version,2,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+8,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."
+9,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.

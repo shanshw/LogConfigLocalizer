@@ -1,0 +1,61 @@
+LineId,Date,Time,Pid,Level,Component,Content,EventId,EventTemplate,ParameterList
+1,2023-12-02,11:14:17,418,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Created MRAppMaster for application appattempt_1701457076904_0542_000001,19b75bb3,Created MRAppMaster for application appattempt_<*>_<*>_<*>,"['1701457076904', '0542_000001']"
+2,2023-12-02,11:14:17,590,INFO,[main] org.apache.hadoop.security.SecurityUtil,Updating Configuration,b6c60981,Updating Configuration,[]
+3,2023-12-02,11:14:17,734,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 542 cluster_timestamp: 1701457076904 } attemptId: 1 } keyId: -579120151)]",0cd5c477,"Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: <*>)]","['542', '1701457076904', '1', '-579120151']"
+4,2023-12-02,11:14:17,779,INFO,[main] org.apache.hadoop.conf.Configuration,found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml,e22de8d1,found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-<*>.<*>.<*>/etc/hadoop/resource-types.xml,"['3', '3.6']"
+5,2023-12-02,11:14:17,796,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Using mapred newApiCommitter.,0594ecc2,Using mapred newApiCommitter.,[]
+6,2023-12-02,11:14:17,798,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,OutputCommitter set in config null,c0c8618d,OutputCommitter set in config null,[]
+7,2023-12-02,11:14:17,843,INFO,[main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory,"No output committer factory defined, defaulting to FileOutputCommitterFactory",9c2ab4d0,"No output committer factory defined, defaulting to FileOutputCommitterFactory",[]
+8,2023-12-02,11:14:17,845,INFO,[main] org.apache.hadoop.service.AbstractService,"Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITEDorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""0.79747874""
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.NumberFormatException: For input string: ""0.79747874""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:140)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more
+",9654430a,"Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITEDorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""<*>.<*>"" at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:<*>) at org.apache.hadoop.service.AbstractService.init(AbstractService.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.run(MRAppMaster.java:<*>) at java.base/java.security.AccessController.doPrivileged(Native Method) at java.base/javax.security.auth.Subject.doAs(Subject.java:<*>) at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>) Caused by: java.lang.NumberFormatException: For input string: ""<*>.<*>"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:<*>) at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) ... <*> more","['0.79747874', '3', '554', '3', '534', '1802', '534', '311', '164', '6', '1760', '423', '1899', '1757', '1691', '0.79747874', '65', '652', '770', '1534', '<init>', '140', '<init>', '118', '134', '35', '338', '3', '552', '11']"
+9,2023-12-02,11:14:17,849,ERROR,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Error starting MRAppMasterorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""0.79747874""
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.NumberFormatException: For input string: ""0.79747874""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:140)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more
+",f3721b6e,"Error starting MRAppMasterorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""<*>.<*>"" at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:<*>) at org.apache.hadoop.service.AbstractService.init(AbstractService.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.run(MRAppMaster.java:<*>) at java.base/java.security.AccessController.doPrivileged(Native Method) at java.base/javax.security.auth.Subject.doAs(Subject.java:<*>) at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>) Caused by: java.lang.NumberFormatException: For input string: ""<*>.<*>"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:<*>) at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:<*>) at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$<*>.call(MRAppMaster.java:<*>) ... <*> more","['0.79747874', '3', '554', '3', '534', '1802', '534', '311', '164', '6', '1760', '423', '1899', '1757', '1691', '0.79747874', '65', '652', '770', '1534', '<init>', '140', '<init>', '118', '134', '35', '338', '3', '552', '11']"
+10,2023-12-02,11:14:17,851,INFO,[main] org.apache.hadoop.util.ExitUtil,"Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""0.79747874""",6e6da65b,"Exiting with status <*>: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.NumberFormatException: For input string: ""<*>.<*>""","['1', '0.79747874']"

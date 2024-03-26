@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.flowname.max-size,0,
+2,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+3,yarn.nm.liveness-monitor.expiry-interval-ms,600000,
+4,mapreduce.job.speculative.minimum-allowed-tasks,10,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."
+5,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+6,yarn.scheduler.minimum-allocation-vcores,1,
+7,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+8,dfs.namenode.reconstruction.pending.timeout-sec,300,"Timeout in seconds for block reconstruction.  If this value is 0 or less,
+    then it will default to 5 minutes."
+9,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."

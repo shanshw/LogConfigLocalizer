@@ -1,0 +1,33 @@
+,name,value,description
+0,hadoop.http.authentication.token.validity,0,"Indicates how long (in seconds) an authentication token is valid before it has
+    to be renewed."
+1,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+2,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+3,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+4,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+5,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+6,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+7,dfs.qjournal.accept-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."
+8,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+9,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."

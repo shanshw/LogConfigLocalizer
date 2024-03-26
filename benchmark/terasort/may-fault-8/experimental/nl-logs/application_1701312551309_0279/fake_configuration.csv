@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+2,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+3,dfs.ls.limit,1000,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+4,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+5,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+6,yarn.timeline-service.generic-application-history.max-applications,10000,
+7,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."
+8,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."
+9,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."

@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms
+value:-0.4287696
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0333_m_000009
+explanation:This configuration option is related to the refresh interval of the submission preprocessor in YARN. The negative value might cause errors in the task speculation process.
+
+name:mapreduce.job.reducer.preempt.delay.sec
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0333_m_000009
+explanation:This configuration option is related to the delay before a reducer is preempted in MapReduce. The value of 0 means the reducer is preempted as soon as lack of headroom is detected, which might cause issues in task speculation.
+
+name:ha.zookeeper.session-timeout.ms
+value:10000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0333_m_000009
+explanation:This configuration option is related to the session timeout when the ZKFC connects to ZooKeeper. The value of 10000 might be too low, causing premature session timeouts and potentially affecting task speculation.

@@ -1,0 +1,32 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.fetch.retry.interval-ms,0.42167467,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+1,yarn.sharedcache.cleaner.initial-delay-mins,10,
+2,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+3,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+4,dfs.namenode.storage.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS namenode stores the fsImage. The permissions can either be
+      octal or symbolic."
+5,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."
+6,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+7,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+8,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+9,yarn.resourcemanager.amlauncher.thread-count,50,

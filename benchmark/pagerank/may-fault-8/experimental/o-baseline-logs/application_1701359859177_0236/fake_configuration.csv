@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,2019152374,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.max-completed-applications,1000,
+2,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+3,file.client-write-packet-size,65536,Packet size for clients to write
+4,hadoop.security.crypto.buffer.size,8192,The buffer size used by CryptoInputStream and CryptoOutputStream.
+5,yarn.resourcemanager.placement-constraints.algorithm.pool-size,1,
+6,mapreduce.shuffle.ssl.file.buffer.size,65536,Buffer size for reading spills from file when using SSL.
+7,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+8,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+9,dfs.ha.zkfc.nn.http.timeout.ms,20000,"The HTTP connection and read timeout value (unit is ms ) when DFS ZKFC
+    tries to get local NN thread dump after local NN becomes
+    SERVICE_NOT_RESPONDING or SERVICE_UNHEALTHY.
+    If it is set to zero, DFS ZKFC won't get local NN thread dump."

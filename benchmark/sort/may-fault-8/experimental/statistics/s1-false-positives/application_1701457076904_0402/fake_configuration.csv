@@ -1,0 +1,33 @@
+,name,value,description
+0,dfs.datanode.cache.revocation.timeout.ms,-0.7346693,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+1,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+2,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+3,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+4,mapreduce.job.end-notification.retry.interval,1000,"The number of milliseconds the submitter of the job wants to
+    wait before job end notification is retried if it fails. This is capped by
+    mapreduce.job.end-notification.max.retry.interval"
+5,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+6,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+7,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+8,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.
+9,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."

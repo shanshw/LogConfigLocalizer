@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,-156084721,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.
+2,yarn.sharedcache.admin.thread-count,1,
+3,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+4,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+5,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+6,hadoop.security.groups.cache.secs,300,"This is the config controlling the validity of the entries in the cache
+    containing the user->group mapping. When this duration has expired,
+    then the implementation of the group mapping provider is invoked to get
+    the groups of the user and then cached back."
+7,dfs.datanode.socket.reuse.keepalive,4000,"The window of time in ms before the DataXceiver closes a socket for a
+    single request.  If a second request occurs within that window, the
+    socket can be reused."
+8,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."
+9,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."

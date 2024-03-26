@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This configuration option should be set to a non-zero value to avoid this error.
+
+name:dfs.datanode.data.write.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Task: attempt_1701457076904_0492_r_000001_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration option 'dfs.datanode.data.write.bandwidthPerSec' is set to 0, which might be causing the data transfer to fail. This configuration option should be set to a non-zero value to ensure proper data transfer.
+
+name:yarn.scheduler.minimum-allocation-mb
+value:1024
+relevant log:<missing>
+explanation: The description for the configuration option 'yarn.scheduler.minimum-allocation-mb' is missing. This might cause confusion and errors in the system. It is recommended to provide a description for this configuration option.

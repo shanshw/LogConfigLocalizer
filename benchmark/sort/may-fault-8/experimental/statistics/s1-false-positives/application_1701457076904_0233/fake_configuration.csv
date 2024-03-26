@@ -1,0 +1,21 @@
+,name,value,description
+0,dfs.datanode.max.nodes.to.report,,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+1,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+2,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+3,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+4,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+5,hadoop.registry.zk.retry.times,5,Zookeeper connection retry count before failing
+6,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,
+7,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+8,fs.s3a.paging.maximum,5000,"How many keys to request from S3 when doing
+     directory listings at a time."
+9,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."

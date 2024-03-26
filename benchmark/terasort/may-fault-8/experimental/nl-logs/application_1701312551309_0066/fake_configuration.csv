@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.lease-recheck-interval-ms,2000,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+2,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+3,dfs.datanode.data.transfer.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for transfering block when
+      BlockConstructionStage is
+      PIPELINE_SETUP_CREATE and clientName is empty.
+      When the bandwidth value is zero, there is no limit."
+4,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+5,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+6,dfs.short.circuit.shared.memory.watcher.interrupt.check.ms,60000,"The length of time in milliseconds that the short-circuit shared memory
+    watcher will go between checking for java interruptions sent from other
+    threads.  This is provided mainly for unit tests."
+7,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+8,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+9,dfs.datanode.network.counts.cache.max.size,2147483647,"The maximum number of entries the datanode per-host network error
+    count cache may contain."

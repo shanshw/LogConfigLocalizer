@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1941787959,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.list.encryption.zones.num.responses,100,"When listing encryption zones, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+2,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+3,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+4,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+5,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+6,yarn.resourcemanager.epoch.range,0,
+7,mapreduce.input.fileinputformat.split.minsize,0,"The minimum size chunk that map input should be split
+  into.  Note that some file formats may have minimum split sizes that
+  take priority over this setting."
+8,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+9,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."

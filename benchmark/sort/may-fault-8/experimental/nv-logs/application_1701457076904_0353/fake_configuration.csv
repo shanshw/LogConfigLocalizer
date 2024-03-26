@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."
+2,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+3,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+4,yarn.timeline-service.writer.async.queue.capacity,100,
+5,mapreduce.task.combine.progress.records,10000,"The number of records to process during combine output collection
+   before sending a progress notification."
+6,dfs.namenode.max.extra.edits.segments.retained,10000,"The maximum number of extra edit log segments which should be retained
+  beyond what is minimally necessary for a NN restart. When used in conjunction with
+  dfs.namenode.num.extra.edits.retained, this configuration property serves to cap
+  the number of extra edits files to a reasonable value."
+7,dfs.batched.ls.limit,100,"Limit the number of paths that can be listed in a single batched
+    listing call. printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+8,ha.health-monitor.connect-retry-interval.ms,1000,How often to retry connecting to the service.
+9,mapreduce.shuffle.ssl.file.buffer.size,65536,Buffer size for reading spills from file when using SSL.

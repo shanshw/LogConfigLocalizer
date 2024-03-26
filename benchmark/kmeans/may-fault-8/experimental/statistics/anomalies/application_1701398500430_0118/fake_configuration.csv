@@ -1,0 +1,23 @@
+,name,value,description
+0,yarn.app.mapreduce.am.job.committer.commit-window,0.47065002,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+1,yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,
+2,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+3,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+4,yarn.nodemanager.collector-service.thread-count,5,
+5,file.replication,1,Replication factor
+6,yarn.resourcemanager.nm-container-queuing.min-queue-wait-time-ms,10,
+7,dfs.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+8,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+9,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"

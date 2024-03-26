@@ -1,0 +1,26 @@
+,name,value,description
+0,hadoop.security.dns.log-slow-lookups.threshold.ms,0.7357608,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+1,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+2,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+3,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+4,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+5,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+6,dfs.storage.policy.satisfier.retry.max.attempts,3,"Max retry to satisfy the block storage policy. After this retry block will be removed
+    from the movement needed queue."
+7,yarn.sharedcache.store.in-memory.initial-delay-mins,10,
+8,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+9,dfs.ha.tail-edits.period,60,"How often, the StandbyNode and ObserverNode should check if there are new
+    edit log entries ready to be consumed. This is the minimum period between
+    checking; exponential backoff will be applied if no edits are found and
+    dfs.ha.tail-edits.period.backoff-max is configured. By default, no
+    backoff is applied.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."

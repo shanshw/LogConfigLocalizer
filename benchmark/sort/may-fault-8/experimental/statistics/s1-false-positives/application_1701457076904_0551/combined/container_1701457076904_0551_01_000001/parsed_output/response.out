@@ -1,0 +1,14 @@
+name:hadoop.shell.safely.delete.limit.num.files
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0551_m_000008
+explanation:The configuration for the limit of files that can be safely deleted is missing. This could potentially lead to accidental deletion of important files, causing errors in the system.
+
+name:dfs.namenode.service.handler.count
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0551_m_000008
+explanation:The number of Namenode RPC server threads that listen to requests from DataNodes and from all other non-client nodes is set to 10. If this number is too low, it could lead to a bottleneck in the system, causing delays or errors.
+
+name:yarn.sharedcache.uploader.server.thread-count
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0551_m_000008
+explanation:The configuration for the number of server threads for the YARN shared cache uploader is missing. This could potentially lead to issues with the shared cache, causing errors in the system.

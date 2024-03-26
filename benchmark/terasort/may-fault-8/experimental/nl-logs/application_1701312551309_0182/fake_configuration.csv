@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1153457483,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+2,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+3,dfs.datanode.fsdatasetcache.max.threads.per.volume,4,"The maximum number of threads per volume to use for caching new data
+    on the datanode. These threads consume both I/O and CPU. This can affect
+    normal datanode operations."
+4,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+5,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+6,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+7,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+8,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+9,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"

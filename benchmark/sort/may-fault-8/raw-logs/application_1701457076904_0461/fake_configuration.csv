@@ -1,0 +1,23 @@
+,name,value,description
+0,dfs.replication,1801398929,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+1,dfs.disk.balancer.max.disk.errors,5,"During a block move from a source to destination disk, we might
+      encounter various errors. This defines how many errors we can tolerate
+      before we declare a move between 2 disks (or a step) has failed."
+2,ftp.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  ftp.stream-buffer-size"
+3,dfs.ls.limit,1000,"Limit the number of files printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+4,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+5,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+6,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+7,hadoop.hdfs.configuration.version,1,version of this configuration file
+8,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+9,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."

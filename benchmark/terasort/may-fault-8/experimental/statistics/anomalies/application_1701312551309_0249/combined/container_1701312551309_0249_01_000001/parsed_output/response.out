@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:dfs.namenode.edits.dir.minimum
+value:1
+relevant log:1-ERROR	Task: attempt_1701312551309_0249_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.namenode.edits.dir.minimum' is set to 1 which might be causing the error. This configuration should be set to a valid value based on the number of usable optional directories.
+
+name:file.blocksize
+value:67108864
+relevant log:1-ERROR	Task: attempt_1701312551309_0249_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'file.blocksize' is set to a large value which might be causing the error. This configuration should be set to a valid value based on the file size.

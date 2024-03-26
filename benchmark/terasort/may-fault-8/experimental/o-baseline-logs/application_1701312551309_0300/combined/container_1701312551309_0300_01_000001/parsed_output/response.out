@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:yarn.client.failover-retries-on-socket-timeouts
+value:0
+relevant log:<missing>
+explanation:The configuration 'yarn.client.failover-retries-on-socket-timeouts' is set to 0 which means there will be no retries on socket timeouts. This could potentially lead to failures if there are temporary network issues.
+
+name:mapreduce.job.running.map.limit
+value:0
+relevant log:<missing>
+explanation:The configuration 'mapreduce.job.running.map.limit' is set to 0 which means there is no limit on the number of simultaneous map tasks per job. This could potentially lead to resource exhaustion if too many map tasks are started simultaneously.

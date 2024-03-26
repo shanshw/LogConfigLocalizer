@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing an Invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:dfs.client.socketcache.capacity
+value:16
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.socketcache.capacity' is set to 16. This might be causing issues with the socket cache for short-circuit reads. Increasing the value might resolve the issue.
+
+name:yarn.scheduler.minimum-allocation-mb
+value:1024
+relevant log:<missing>
+explanation:The configuration option 'yarn.scheduler.minimum-allocation-mb' is set to 1024 but the description is missing. This might be causing issues with the allocation of resources in the Yarn scheduler.

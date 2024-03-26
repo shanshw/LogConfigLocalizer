@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.container.liveness-monitor.interval-ms,600000,
+2,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+3,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+4,dfs.datanode.scan.period.hours,504,"If this is positive, the DataNode will not scan any
+        individual block more than once in the specified scan period.
+        If this is negative, the block scanner is disabled.
+        If this is set to zero, then the default value of 504 hours
+        or 3 weeks is used. Prior versions of HDFS incorrectly documented
+        that setting this key to zero will disable the block scanner."
+5,yarn.app.mapreduce.shuffle.log.backups,0,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+6,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+7,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+8,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."
+9,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

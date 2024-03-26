@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,1235908528,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+2,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+3,yarn.resourcemanager.placement-constraints.scheduler.pool-size,1,
+4,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+5,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+6,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+7,dfs.balancer.block-move.timeout,0,"Maximum amount of time in milliseconds for a block to move. If this is set
+    greater than 0, Balancer will stop waiting for a block move completion
+    after this time. In typical clusters, a 3 to 5 minute timeout is reasonable.
+    If timeout happens to a large proportion of block moves, this needs to be
+    increased. It could also be that too much work is dispatched and many nodes
+    are constantly exceeding the bandwidth limit as a result. In that case,
+    other balancer parameters might need to be adjusted.
+    It is disabled (0) by default."
+8,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."
+9,yarn.timeline-service.entity-group-fs-store.leveldb-cache-read-cache-size,10485760,

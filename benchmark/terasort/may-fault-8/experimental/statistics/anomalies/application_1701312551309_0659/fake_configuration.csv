@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,-1269538164,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+2,yarn.app.attempt.diagnostics.limit.kc,64,
+3,dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+4,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+5,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+6,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+7,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+8,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+9,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap

@@ -1,0 +1,34 @@
+,name,value,description
+0,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+1,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."
+2,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+3,dfs.disk.balancer.block.tolerance.percent,10,"When a disk balancer copy operation is proceeding, the datanode is still
+      active. So it might not be possible to move the exactly specified
+      amount of data. So tolerance allows us to define a percentage which
+      defines a good enough move."
+4,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+5,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+6,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+7,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+8,yarn.timeline-service.writer.flush-interval-seconds,60,
+9,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

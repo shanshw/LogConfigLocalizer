@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.kms.client.authentication.retry-count,1,Number of time to retry connecting to KMS on authentication failure
+2,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+3,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+4,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+5,yarn.nodemanager.localizer.client.thread-count,5,
+6,yarn.nm.liveness-monitor.expiry-interval-ms,600000,
+7,dfs.namenode.replication.min,1,Minimal block replication.
+8,dfs.datanode.data.transfer.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for transfering block when
+      BlockConstructionStage is
+      PIPELINE_SETUP_CREATE and clientName is empty.
+      When the bandwidth value is zero, there is no limit."
+9,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."

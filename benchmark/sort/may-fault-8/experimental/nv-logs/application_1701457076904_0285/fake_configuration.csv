@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.scheduler.minimum-allocation-vcores,1,
+2,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+3,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+4,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+5,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+6,yarn.cluster.max-application-priority,0,
+7,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."
+8,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."
+9,yarn.nodemanager.container-log-monitor.total-size-limit-bytes,10000000000,

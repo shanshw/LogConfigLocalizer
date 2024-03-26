@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.mmap.retry.timeout.ms,300000,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+2,yarn.resourcemanager.zk-max-znode-size.bytes,1048576,
+3,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,10,"The initial size of thread pool to launch containers in the
+    app master."
+4,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+5,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+6,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+7,dfs.mover.movedWinWidth,5400000,"The minimum time interval, in milliseconds, that a block can be
+    moved to another location again."
+8,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+9,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."

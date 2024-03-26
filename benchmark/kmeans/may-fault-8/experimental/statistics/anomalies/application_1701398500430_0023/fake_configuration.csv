@@ -1,0 +1,27 @@
+,name,value,description
+0,hadoop.security.dns.log-slow-lookups.threshold.ms,bcyIb,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+1,dfs.namenode.max.objects,0,"The maximum number of files, directories and blocks
+  dfs supports. A value of zero indicates no limit to the number
+  of objects that dfs supports."
+2,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+3,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+4,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+5,ipc.client.connect.retry.interval,1000,"Indicates the number of milliseconds a client will wait for
+    before retrying to establish a server connection."
+6,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+7,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+8,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,
+9,yarn.sharedcache.cleaner.period-mins,1440,

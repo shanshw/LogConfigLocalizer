@@ -1,0 +1,35 @@
+,name,value,description
+0,mapreduce.task.stuck.timeout-ms,3BYHD,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+1,dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+2,mapreduce.job.end-notification.max.retry.interval,5000,"The maximum amount of time (in milliseconds) to wait before
+     retrying job end notification. Cluster administrators can set this to
+     limit how long the Application Master waits before exiting. Must be marked
+     as final to prevent users from overriding this."
+3,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,
+4,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+5,yarn.nodemanager.runtime.linux.runc.layer-mounts-interval-secs,600,
+6,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+7,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+8,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+9,dfs.namenode.redundancy.interval.seconds,3,"The periodicity in seconds with which the namenode computes 
+  low redundancy work for datanodes. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval."

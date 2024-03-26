@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+2,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+3,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+4,dfs.ha.zkfc.nn.http.timeout.ms,20000,"The HTTP connection and read timeout value (unit is ms ) when DFS ZKFC
+    tries to get local NN thread dump after local NN becomes
+    SERVICE_NOT_RESPONDING or SERVICE_UNHEALTHY.
+    If it is set to zero, DFS ZKFC won't get local NN thread dump."
+5,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+6,yarn.resourcemanager.delegation-token.max-conf-size-bytes,12800,
+7,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+8,dfs.client.short.circuit.replica.stale.threshold.ms,1800000,"The maximum amount of time that we will consider a short-circuit replica to
+    be valid, if there is no communication from the DataNode.  After this time
+    has elapsed, we will re-fetch the short-circuit replica even if it is in
+    the cache."
+9,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.

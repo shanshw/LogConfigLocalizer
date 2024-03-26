@@ -1,0 +1,16 @@
+,name,value,description
+0,io.bytes.per.checksum,-2040322260,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+2,yarn.router.pipeline.cache-max-size,25,
+3,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+4,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+5,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+6,yarn.scheduler.configuration.leveldb-store.compaction-interval-secs,86400,
+7,dfs.balancer.service.retries.on.exception,5,"When the balancer is executed as a long-running service, it will retry upon encountering an exception. This
+    configuration determines how many times it will retry before considering the exception to be fatal and quitting."
+8,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+9,yarn.resourcemanager.placement-constraints.scheduler.pool-size,1,

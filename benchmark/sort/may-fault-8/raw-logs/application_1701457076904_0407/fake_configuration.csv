@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,341058481,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+2,yarn.resourcemanager.resource-tracker.client.thread-count,50,
+3,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+4,yarn.sharedcache.admin.thread-count,1,
+5,yarn.resourcemanager.activities-manager.app-activities.max-queue-length,100,
+6,yarn.resourcemanager.delegation.token.renew-interval,86400000,
+7,yarn.timeline-service.leveldb-timeline-store.start-time-read-cache-size,10000,
+8,dfs.balancer.moverThreads,1000,"Thread pool size for executing block moves.
+    moverThreadAllocator"
+9,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"

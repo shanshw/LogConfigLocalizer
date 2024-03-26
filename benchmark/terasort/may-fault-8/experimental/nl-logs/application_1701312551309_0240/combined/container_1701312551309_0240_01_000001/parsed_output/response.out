@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1152874999
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.
+
+name:yarn.app.mapreduce.client.job.max-retries
+value:3
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of yarn.app.mapreduce.client.job.max-retries is too low, which may cause the job to fail prematurely. Increasing this value may help to avoid spurious failures during the getJob call.
+
+name:mapreduce.job.running.map.limit
+value:0
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of mapreduce.job.running.map.limit is 0, which means there is no limit on the number of simultaneous map tasks per job. This could potentially lead to resource exhaustion, such as Java heap space OutOfMemoryError.

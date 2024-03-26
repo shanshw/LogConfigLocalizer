@@ -1,0 +1,35 @@
+,name,value,description
+0,mapreduce.job.speculative.minimum-allowed-tasks,0.7148415,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."
+1,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size,500,
+2,fs.s3a.socket.send.buffer,8192,Socket send buffer hint to amazon connector. Represented in bytes.
+3,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+4,dfs.namenode.decommission.interval,30,"Namenode periodicity in seconds to check if
+    decommission or maintenance is complete. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.
+    If no time unit is specified then seconds is assumed."
+5,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+6,yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep,100,
+7,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+8,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+9,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."

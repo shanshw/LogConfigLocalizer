@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+2,fs.s3a.attempts.maximum,20,How many times we should retry commands on transient errors.
+3,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+4,mapreduce.reduce.shuffle.connect.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+5,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+6,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."
+7,ha.health-monitor.rpc-timeout.ms,45000,Timeout for the actual monitorHealth() calls.
+8,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+9,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."

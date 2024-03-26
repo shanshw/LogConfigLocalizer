@@ -1,0 +1,24 @@
+,name,value,description
+0,yarn.client.nodemanager-connect.max-wait-ms,-0.17853415,<missing>
+1,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+2,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+3,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+4,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+5,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."
+6,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+7,yarn.resourcemanager.proxy.connection.timeout,60000,
+8,yarn.resourcemanager.nm-tokens.master-key-rolling-interval-secs,86400,
+9,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,

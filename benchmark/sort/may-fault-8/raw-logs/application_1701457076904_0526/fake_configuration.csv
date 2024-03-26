@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+2,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"
+3,mapreduce.shuffle.pathcache.concurrency-level,16,"Uses the concurrency level to create a fixed number of hashtable
+    segments, each governed by its own write lock."
+4,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+5,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+6,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+7,yarn.resourcemanager.history-writer.multi-threaded-dispatcher.pool-size,10,
+8,dfs.cachereport.intervalMsec,10000,"Determines cache reporting interval in milliseconds.  After this amount of
+    time, the DataNode sends a full report of its cache state to the NameNode.
+    The NameNode uses the cache report to update its map of cached blocks to
+    DataNode locations.
+
+    This configuration has no effect if in-memory caching has been disabled by
+    setting dfs.datanode.max.locked.memory to 0 (which is the default).
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+9,mapreduce.job.ubertask.maxreduces,1,"Threshold for number of reduces, beyond which job is considered
+  too big for the ubertasking optimization.  CURRENTLY THE CODE CANNOT SUPPORT
+  MORE THAN ONE REDUCE and will ignore larger values.  (Zero is a valid max,
+  however.)  Users may override this value, but only downward."

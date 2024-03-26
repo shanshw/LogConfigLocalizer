@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"
+2,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+3,yarn.timeline-service.entity-group-fs-store.cleaner-interval-seconds,3600,
+4,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+5,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,
+6,yarn.scheduler.minimum-allocation-mb,1024,
+7,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+8,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+9,yarn.nodemanager.runtime.linux.docker.userremapping-uid-threshold,1,

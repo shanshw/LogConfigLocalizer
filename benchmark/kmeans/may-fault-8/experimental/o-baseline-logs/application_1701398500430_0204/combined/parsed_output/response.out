@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+
+name:yarn.app.mapreduce.am.container.log.backups
+value:0
+relevant log:1-ERROR	Task: attempt_1701398500430_0204_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.app.mapreduce.am.container.log.backups' is set to 0 which might be causing the task failure. This configuration should be set to a value greater than 0 to keep backup logs which can help in debugging.
+
+name:ipc.client.connect.max.retries.on.timeouts
+value:45
+relevant log:1-INFO	Exiting with status 1: java.lang.NullPointerException
+explanation:The configuration 'ipc.client.connect.max.retries.on.timeouts' is set to 45 which might be causing the client connection failure. This configuration should be set to a value less than 45 to avoid too many retries which can lead to connection timeout.

@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+2,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+3,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+4,yarn.client.max-cached-nodemanagers-proxies,0,
+5,dfs.datanode.min.outlier.detection.disks,5,Minimum number of disks to run outlier detection.
+6,mapreduce.job.speculative.retry-after-no-speculate,1000,"The waiting time(ms) to do next round of speculation
+  if there is no task speculated in this round."
+7,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+8,dfs.namenode.replication.max-streams-hard-limit,4,Hard limit for all replication streams.
+9,dfs.namenode.top.num.users,10,Number of top users returned by the top tool

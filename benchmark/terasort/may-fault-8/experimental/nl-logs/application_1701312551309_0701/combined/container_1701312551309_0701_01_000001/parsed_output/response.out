@@ -1,0 +1,14 @@
+name:mapreduce.job.ubertask.maxmaps
+value:132806309
+relevant log:1-INFO	Not uberizing job_1701312551309_0701 because: not enabled; too much RAM;
+explanation: The log indicates that the job is not being uberized due to not being enabled and having too much RAM. This could be related to the configuration option 'mapreduce.job.ubertask.maxmaps' which sets a threshold for the number of maps, beyond which the job is considered too big for the ubertasking optimization. The value is quite high which might be causing the issue.
+
+name:yarn.resourcemanager.fs.state-store.num-retries
+value:0
+relevant log:1-INFO	Not uberizing job_1701312551309_0701 because: not enabled; too much RAM;
+explanation: The configuration option 'yarn.resourcemanager.fs.state-store.num-retries' is set to 0. This means that if there is a failure, there will be no retries. This could be causing the job to not be uberized as indicated in the log.
+
+name:fs.s3a.executor.capacity
+value:16
+relevant log:1-INFO	Not uberizing job_1701312551309_0701 because: not enabled; too much RAM;
+explanation: The configuration option 'fs.s3a.executor.capacity' sets the maximum number of submitted tasks which a single operation may submit simultaneously for execution. The value is set to 16 which might be too low and could be causing the job to not be uberized as indicated in the log.

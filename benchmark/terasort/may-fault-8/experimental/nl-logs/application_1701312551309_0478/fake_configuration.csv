@@ -1,0 +1,40 @@
+,name,value,description
+0,dfs.bytes-per-checksum,0,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+1,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+2,mapreduce.task.combine.progress.records,10000,"The number of records to process during combine output collection
+   before sending a progress notification."
+3,yarn.nodemanager.delete.debug-delay-sec,0,
+4,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+5,tfile.fs.input.buffer.size,262144,Buffer size used for FSDataInputStream in bytes.
+6,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+7,dfs.namenode.audit.log.async.buffer.size,128,"Only used when enables asynchronous audit log. Sets the number of audit
+    logs allowed in the event buffer before the calling thread is blocked
+    (if dfs.namenode.audit.log.async.blocking is true) or until logs are
+    summarized and discarded. Default value is 128."
+8,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+9,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,

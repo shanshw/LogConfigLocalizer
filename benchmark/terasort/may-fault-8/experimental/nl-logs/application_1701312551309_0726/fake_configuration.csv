@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+2,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+3,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+4,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."
+5,yarn.app.mapreduce.client-am.ipc.max-retries-on-timeouts,3,"The number of client retries on socket timeouts to the AM - before
+    reconnecting to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries.on.timeouts to be used during
+    reconnecting to the RM and fetching Application Status."
+6,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+7,yarn.router.pipeline.cache-max-size,25,
+8,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.interval-seconds,60,
+9,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."

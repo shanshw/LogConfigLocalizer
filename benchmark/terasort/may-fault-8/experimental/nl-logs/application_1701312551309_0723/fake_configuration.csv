@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-360688459,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+2,yarn.timeline-service.leveldb-timeline-store.start-time-read-cache-size,10000,
+3,dfs.namenode.blockreport.max.lock.hold.time,4,The BlockReportProcessingThread max write lock hold time in ms.
+4,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+5,dfs.image.parallel.threads,4,"The number of threads to use when dfs.image.parallel.load is
+        enabled. This setting should be less than
+        dfs.image.parallel.target.sections. The optimal number of
+        threads will depend on the hardware and environment."
+6,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+7,yarn.nodemanager.sleep-delay-before-sigkill.ms,250,
+8,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,
+9,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.

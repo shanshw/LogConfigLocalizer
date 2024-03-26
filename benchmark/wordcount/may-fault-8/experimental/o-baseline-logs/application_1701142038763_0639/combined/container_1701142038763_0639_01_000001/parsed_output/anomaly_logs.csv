@@ -1,0 +1,23 @@
+anomaly_degree,content
+0.4,"ERROR	Error in dispatcher threadjava.lang.NumberFormatException: For input string: ""0.88861966""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.updateMillisCounters(TaskAttemptImpl.java:1634)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.createJobCounterUpdateEventTASucceeded(TaskAttemptImpl.java:1663)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.access$4900(TaskAttemptImpl.java:157)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl$MoveContainerToSucceededFinishingTransition.transition(TaskAttemptImpl.java:2437)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl$MoveContainerToSucceededFinishingTransition.transition(TaskAttemptImpl.java:2420)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$SingleInternalArc.doTransition(StateMachineFactory.java:362)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.doTransition(StateMachineFactory.java:302)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.access$500(StateMachineFactory.java:46)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$InternalStateMachine.doTransition(StateMachineFactory.java:493)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.handle(TaskAttemptImpl.java:1388)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.handle(TaskAttemptImpl.java:156)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher.handle(MRAppMaster.java:1566)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher.handle(MRAppMaster.java:1558)
+	at org.apache.hadoop.yarn.event.AsyncDispatcher.dispatch(AsyncDispatcher.java:241)
+	at org.apache.hadoop.yarn.event.AsyncDispatcher$1.run(AsyncDispatcher.java:156)
+	at java.base/java.lang.Thread.run(Thread.java:829)"
+0.2,"INFO	Exiting, bbye.."

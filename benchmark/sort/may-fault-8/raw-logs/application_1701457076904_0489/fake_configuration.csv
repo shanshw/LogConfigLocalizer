@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+2,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+3,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+4,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+5,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+6,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+7,dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,The maximum delay (unit is ms) before retrying locateFollowingBlock.
+8,hadoop.registry.zk.retry.interval.ms,1000,
+9,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,

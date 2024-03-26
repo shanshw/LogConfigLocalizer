@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-689146338,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.replication.max-streams-hard-limit,4,Hard limit for all replication streams.
+2,mapreduce.job.end-notification.retry.interval,1000,"The number of milliseconds the submitter of the job wants to
+    wait before job end notification is retried if it fails. This is capped by
+    mapreduce.job.end-notification.max.retry.interval"
+3,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+4,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+5,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."
+6,fs.s3a.connection.maximum,96,"Controls the maximum number of simultaneous connections to S3.
+    This must be bigger than the value of fs.s3a.threads.max so as to stop
+    threads being blocked waiting for new HTTPS connections.
+    Why not equal? The AWS SDK transfer manager also uses these connections."
+7,dfs.datanode.slowdisk.low.threshold.ms,20,Threshold in milliseconds below which a disk is definitely not slow.
+8,dfs.replication.max,512,Maximal block replication.
+9,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."

@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.placement-constraints.retry-attempts,3,
+2,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+3,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."
+4,dfs.client.deadnode.detection.idle.sleep.ms,10000,The sleep time of DeadNodeDetector per iteration.
+5,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+6,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+7,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+8,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+9,yarn.nodemanager.node-attributes.provider.fetch-interval-ms,600000,

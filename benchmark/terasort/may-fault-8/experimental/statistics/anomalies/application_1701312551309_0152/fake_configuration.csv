@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+2,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+3,dfs.client.slow.io.warning.threshold.ms,30000,"The threshold in milliseconds at which we will log a slow
+    io warning in a dfsclient. By default, this parameter is set to 30000
+    milliseconds (30 seconds)."
+4,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+5,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+6,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+7,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+8,dfs.cachereport.intervalMsec,10000,"Determines cache reporting interval in milliseconds.  After this amount of
+    time, the DataNode sends a full report of its cache state to the NameNode.
+    The NameNode uses the cache report to update its map of cached blocks to
+    DataNode locations.
+
+    This configuration has no effect if in-memory caching has been disabled by
+    setting dfs.datanode.max.locked.memory to 0 (which is the default).
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+9,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.

@@ -1,0 +1,21 @@
+,name,value,description
+0,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,0.4456836,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+1,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+2,yarn.sharedcache.store.in-memory.check-period-mins,720,
+3,yarn.resourcemanager.amlauncher.thread-count,50,
+4,hadoop.security.kms.client.encrypted.key.cache.size,500,Size of the EncryptedKeyVersion cache Queue for each key
+5,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+6,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."
+7,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+8,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+9,yarn.timeline-service.writer.async.queue.capacity,100,

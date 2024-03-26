@@ -1,0 +1,22 @@
+,name,value,description
+0,yarn.client.nodemanager-connect.retry-interval-ms,0,<missing>
+1,hadoop.registry.zk.retry.interval.ms,1000,
+2,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."
+3,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."
+4,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+5,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+6,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+7,yarn.resourcemanager.delegation.key.update-interval,86400000,
+8,dfs.namenode.reencrypt.batch.size,1000,How many EDEKs should the re-encrypt thread process in one batch.
+9,yarn.app.mapreduce.client-am.ipc.max-retries-on-timeouts,3,"The number of client retries on socket timeouts to the AM - before
+    reconnecting to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries.on.timeouts to be used during
+    reconnecting to the RM and fetching Application Status."

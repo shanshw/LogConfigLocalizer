@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+2,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,
+3,dfs.client.failover.sleep.base.millis,500,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least dfs.client.failover.sleep.base.millis
+    milliseconds. And so on."
+4,dfs.mover.movedWinWidth,5400000,"The minimum time interval, in milliseconds, that a block can be
+    moved to another location again."
+5,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,
+6,dfs.datanode.ec.reconstruct.read.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for reading.
+      When the bandwidth value is zero, there is no limit."
+7,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+8,dfs.block.invalidate.limit,1000,"The maximum number of invalidate blocks sent by namenode to a datanode
+    per heartbeat deletion command. This property works with
+    ""dfs.namenode.invalidate.work.pct.per.iteration"" to throttle block
+    deletions."
+9,dfs.image.parallel.threads,4,"The number of threads to use when dfs.image.parallel.load is
+        enabled. This setting should be less than
+        dfs.image.parallel.target.sections. The optimal number of
+        threads will depend on the hardware and environment."

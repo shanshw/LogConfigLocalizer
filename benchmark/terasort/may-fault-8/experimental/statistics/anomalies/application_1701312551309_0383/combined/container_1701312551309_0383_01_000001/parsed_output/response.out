@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This option should be set to a value greater than 0 to avoid this error.
+
+name:dfs.datanode.data.transfer.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.datanode.data.transfer.bandwidthPerSec' is set to 0 which might be causing issues with data transfer. This option should be set to a value greater than 0 to ensure proper data transfer.
+
+name:yarn.app.mapreduce.shuffle.log.backups
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.app.mapreduce.shuffle.log.backups' is set to 0 which might be causing issues with log backups. This option should be set to a value greater than 0 to ensure proper log backups.

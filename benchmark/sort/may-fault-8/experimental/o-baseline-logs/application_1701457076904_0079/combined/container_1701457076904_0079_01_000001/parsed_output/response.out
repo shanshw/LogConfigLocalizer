@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:2034001868
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. 
+
+name:dfs.datanode.transfer.socket.send.buffer.size
+value:0
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.datanode.transfer.socket.send.buffer.size is set to 0, which means no buffer size will be set explicitly. This may affect the TCP connection throughput and cause the system to run out of memory.
+
+name:tfile.fs.output.buffer.size
+value:262144
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of tfile.fs.output.buffer.size is relatively large, which may consume a lot of memory and cause the Java heap space to run out of memory.

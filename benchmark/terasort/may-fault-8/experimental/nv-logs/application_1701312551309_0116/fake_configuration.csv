@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+2,dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,The maximum delay (unit is ms) before retrying locateFollowingBlock.
+3,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+4,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+5,nfs.rtmax,1048576,"This is the maximum size in bytes of a READ request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's rsize(add rsize= # of bytes to the 
+    mount directive)."
+6,dfs.namenode.replication.min,1,Minimal block replication.
+7,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+8,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+9,dfs.datanode.data.transfer.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for transfering block when
+      BlockConstructionStage is
+      PIPELINE_SETUP_CREATE and clientName is empty.
+      When the bandwidth value is zero, there is no limit."

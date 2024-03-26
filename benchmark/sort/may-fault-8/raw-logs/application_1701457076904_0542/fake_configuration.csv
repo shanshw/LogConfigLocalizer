@@ -1,0 +1,71 @@
+,name,value,description
+0,mapreduce.fileoutputcommitter.algorithm.version,0.79747874,"The file output committer algorithm version
+  valid algorithm version number: 1 or 2
+  default to 2, which is the original algorithm
+
+  In algorithm version 1,
+
+  1. commitTask will rename directory
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to
+  $joboutput/_temporary/$appAttemptID/$taskID/
+
+  2. recoverTask will also do a rename
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/_temporary/($appAttemptID + 1)/$taskID/
+
+  3. commitJob will merge every task output file in
+  $joboutput/_temporary/$appAttemptID/$taskID/
+  to
+  $joboutput/, then it will delete $joboutput/_temporary/
+  and write $joboutput/_SUCCESS
+
+  It has a performance regression, which is discussed in MAPREDUCE-4815.
+  If a job generates many files to commit then the commitJob
+  method call at the end of the job can take minutes.
+  the commit is single-threaded and waits until all
+  tasks have completed before commencing.
+
+  algorithm version 2 will change the behavior of commitTask,
+  recoverTask, and commitJob.
+
+  1. commitTask will rename all files in
+  $joboutput/_temporary/$appAttemptID/_temporary/$taskAttemptID/
+  to $joboutput/
+
+  2. recoverTask actually doesn't require to do anything, but for
+  upgrade from version 1 to version 2 case, it will check if there
+  are any files in
+  $joboutput/_temporary/($appAttemptID - 1)/$taskID/
+  and rename them to $joboutput/
+
+  3. commitJob can simply delete $joboutput/_temporary and write
+  $joboutput/_SUCCESS
+
+  This algorithm will reduce the output commit time for
+  large jobs by having the tasks commit directly to the final
+  output directory as they were completing and commitJob had
+  very little to do."
+1,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+2,fs.s3a.max.total.tasks,32,"The number of operations which can be queued for execution.
+  This is in addition to the number of active threads in fs.s3a.threads.max."
+3,yarn.nodemanager.localizer.cache.cleanup.interval-ms,600000,
+4,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+5,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+6,yarn.resourcemanager.history-writer.multi-threaded-dispatcher.pool-size,10,
+7,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+8,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+9,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."

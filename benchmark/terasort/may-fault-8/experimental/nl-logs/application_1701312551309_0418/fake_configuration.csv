@@ -1,0 +1,28 @@
+,name,value,description
+0,mapreduce.task.timeout,nqcub,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+1,fs.s3a.connection.maximum,96,"Controls the maximum number of simultaneous connections to S3.
+    This must be bigger than the value of fs.s3a.threads.max so as to stop
+    threads being blocked waiting for new HTTPS connections.
+    Why not equal? The AWS SDK transfer manager also uses these connections."
+2,dfs.namenode.available-space-rack-fault-tolerant-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+    org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceRackFaultTolerantBlockPlacementPolicy.
+    Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+    this value will be set as 5 by default, Increases tolerance of
+    placing blocks on Datanodes with similar disk space used."
+3,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+4,dfs.namenode.delegation.token.renew-interval,86400000,The renewal interval for delegation token in milliseconds.
+5,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+6,nfs.wtmax,1048576,"This is the maximum size in bytes of a WRITE request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's wsize(add wsize= # of bytes to the 
+    mount directive)."
+7,yarn.app.mapreduce.client-am.ipc.max-retries,3,"The number of client retries to the AM - before reconnecting
+    to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries to be used during
+    reconnecting to the RM and fetching Application Status."
+8,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+9,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.

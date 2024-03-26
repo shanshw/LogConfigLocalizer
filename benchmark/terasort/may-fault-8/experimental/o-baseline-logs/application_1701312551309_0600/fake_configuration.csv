@@ -1,0 +1,31 @@
+,name,value,description
+0,ipc.client.connect.timeout,-1976887887,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+1,yarn.federation.cache-ttl.secs,300,
+2,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+3,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+4,mapreduce.job.end-notification.max.retry.interval,5000,"The maximum amount of time (in milliseconds) to wait before
+     retrying job end notification. Cluster administrators can set this to
+     limit how long the Application Master waits before exiting. Must be marked
+     as final to prevent users from overriding this."
+5,dfs.qjournal.new-epoch.timeout.ms,120000,"Timeout in milliseconds when getting an epoch number for write
+    access to JournalNodes."
+6,dfs.namenode.available-space-rack-fault-tolerant-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+    org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceRackFaultTolerantBlockPlacementPolicy.
+    Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+    this value will be set as 5 by default, Increases tolerance of
+    placing blocks on Datanodes with similar disk space used."
+7,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.
+8,yarn.nodemanager.container-log-monitor.total-size-limit-bytes,10000000000,
+9,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."

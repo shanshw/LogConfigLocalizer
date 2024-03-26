@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,1097680759,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+2,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+3,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+4,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+5,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+6,file.client-write-packet-size,65536,Packet size for clients to write
+7,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+8,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+9,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."

@@ -1,0 +1,24 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.fetch.retry.interval-ms,0GzTL,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+1,yarn.client.failover-retries,0,
+2,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+3,dfs.block.invalidate.limit,1000,"The maximum number of invalidate blocks sent by namenode to a datanode
+    per heartbeat deletion command. This property works with
+    ""dfs.namenode.invalidate.work.pct.per.iteration"" to throttle block
+    deletions."
+4,mapreduce.input.fileinputformat.split.minsize,0,"The minimum size chunk that map input should be split
+  into.  Note that some file formats may have minimum split sizes that
+  take priority over this setting."
+5,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+6,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+7,dfs.balancer.getBlocks.min-block-size,10485760,"Minimum block threshold size in bytes to ignore when fetching a source's
+    block list."
+8,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."
+9,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,

@@ -1,0 +1,38 @@
+,name,value,description
+0,dfs.namenode.accesstime.precision,0,"The access time for HDFS file is precise upto this value. 
+               The default value is 1 hour. Setting a value of 0 disables
+               access times for HDFS."
+1,dfs.balancer.moverThreads,1000,"Thread pool size for executing block moves.
+    moverThreadAllocator"
+2,dfs.client-write-packet-size,65536,Packet size for clients to write
+3,nfs.rtmax,1048576,"This is the maximum size in bytes of a READ request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's rsize(add rsize= # of bytes to the 
+    mount directive)."
+4,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+5,dfs.datanode.lock-reporting-threshold-ms,300,"When thread waits to obtain a lock, or a thread holds a lock for
+    more than the threshold, a log message will be written. Note that
+    dfs.lock.suppress.warning.interval ensures a single log message is
+    emitted per interval for waiting threads and a single message for holding
+    threads to avoid excessive logging."
+6,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+7,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+8,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+9,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."

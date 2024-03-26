@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1013023844,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.hdfs.configuration.version,1,version of this configuration file
+2,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+3,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+4,yarn.app.mapreduce.shuffle.log.backups,0,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+5,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+6,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+7,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+8,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+9,yarn.nodemanager.elastic-memory-control.timeout-sec,5,

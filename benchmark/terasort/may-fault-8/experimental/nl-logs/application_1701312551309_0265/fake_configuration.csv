@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+2,yarn.timeline-service.timeline-client.number-of-async-entities-to-merge,10,
+3,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+4,yarn.resourcemanager.container.liveness-monitor.interval-ms,600000,
+5,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."
+6,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"
+7,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+8,yarn.resourcemanager.scheduler.client.thread-count,50,
+9,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."

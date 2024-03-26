@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1153457483,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.idlethreshold,4000,"Defines the threshold number of connections after which
+               connections will be inspected for idleness."
+2,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.
+3,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+4,yarn.nodemanager.amrmproxy.client.thread-count,25,
+5,ftp.client-write-packet-size,65536,Packet size for clients to write
+6,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+7,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"
+8,dfs.image.transfer.bandwidthPerSec,52428800,"Maximum bandwidth used for regular image transfers (instead of
+        bootstrapping the standby namenode), in bytes per second.
+        This can help keep normal namenode operations responsive during
+        checkpointing.
+        A default value is 50mb per second.
+        The maximum bandwidth used for bootstrapping standby namenode is
+        configured with dfs.image.transfer-bootstrap-standby.bandwidthPerSec.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+9,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."

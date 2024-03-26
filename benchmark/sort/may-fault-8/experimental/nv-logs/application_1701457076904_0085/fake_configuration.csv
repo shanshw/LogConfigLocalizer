@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-1544648436,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."
+2,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+3,dfs.block.access.token.lifetime,600,The lifetime of access tokens in minutes.
+4,yarn.resourcemanager.placement-constraints.scheduler.pool-size,1,
+5,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+6,yarn.resourcemanager.activities-manager.app-activities.max-queue-length,100,
+7,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+8,yarn.nodemanager.localizer.client.thread-count,5,
+9,dfs.datanode.slowpeer.low.threshold.ms,5,Threshold in milliseconds below which a DataNode is definitely not slow.

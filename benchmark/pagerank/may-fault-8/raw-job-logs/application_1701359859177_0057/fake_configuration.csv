@@ -1,0 +1,43 @@
+,name,value,description
+0,io.bytes.per.checksum,-1839910344,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.sharedcache.client-server.thread-count,50,
+2,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+3,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+4,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+5,mapreduce.map.skip.maxrecords,0,"The number of acceptable skip records surrounding the bad
+    record PER bad record in mapper. The number includes the bad record as well.
+    To turn the feature of detection/skipping of bad records off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever records(depends on application) get skipped are
+    acceptable."
+6,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+7,dfs.datanode.du.reserved,0,"Reserved space in bytes per volume. Always leave this much space free for non dfs use.
+      Specific storage type based reservation is also supported. The property can be followed with
+      corresponding storage types ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+      For example, reserved space for RAM_DISK storage can be configured using property
+      'dfs.datanode.du.reserved.ram_disk'. If specific storage type reservation is not configured
+      then dfs.datanode.du.reserved will be used. Support multiple size unit suffix(case insensitive),
+      as described in dfs.blocksize.
+      Note: In case of using tune2fs to set reserved-blocks-percentage, or other filesystem tools,
+      then you can possibly run into out of disk errors because hadoop will not check those
+      external tool configurations."
+8,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+9,fs.s3a.threads.keepalivetime,60,"Number of seconds a thread can be idle before being
+    terminated."

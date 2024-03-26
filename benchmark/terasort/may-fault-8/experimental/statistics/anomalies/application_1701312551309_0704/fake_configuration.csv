@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,1647450755,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,
+2,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+3,yarn.nodemanager.process-kill-wait.ms,5000,
+4,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+5,datanode.https.port,50475,HTTPS port for DataNode.
+6,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+7,yarn.resourcemanager.history-writer.multi-threaded-dispatcher.pool-size,10,
+8,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+9,dfs.namenode.list.reencryption.status.num.responses,100,"When listing re-encryption status, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."

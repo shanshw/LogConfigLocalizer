@@ -1,0 +1,22 @@
+,name,value,description
+0,file.stream-buffer-size,-169077068,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+1,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+2,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+3,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+4,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+5,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."
+6,yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,
+7,mapreduce.shuffle.pathcache.concurrency-level,16,"Uses the concurrency level to create a fixed number of hashtable
+    segments, each governed by its own write lock."
+8,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+9,yarn.resourcemanager.epoch.range,0,

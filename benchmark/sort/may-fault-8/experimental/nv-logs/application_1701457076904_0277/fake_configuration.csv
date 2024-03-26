@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,240470161,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.snapshot.skiplist.max.levels,0,"Maximum no of the skip levels to be maintained in the skip list for
+    storing directory snapshot diffs. By default, it is set to 0 and a linear
+    list will be used to store the directory snapshot diffs."
+2,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+3,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+4,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."
+5,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+6,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"
+7,dfs.namenode.edit.log.autoroll.check.interval.ms,300000,"How often an active namenode will check if it needs to roll its edit log,
+    in milliseconds."
+8,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+9,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,

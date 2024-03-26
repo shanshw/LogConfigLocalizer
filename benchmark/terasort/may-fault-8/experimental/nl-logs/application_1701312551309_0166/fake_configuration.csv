@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,66335827,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+2,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+3,dfs.client-write-packet-size,65536,Packet size for clients to write
+4,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+5,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+6,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+7,mapreduce.am.max-attempts,2,"The maximum number of application attempts. It is a
+  application-specific setting. It should not be larger than the global number
+  set by resourcemanager. Otherwise, it will be override. The default number is
+  set to 2, to allow at least one retry for AM."
+8,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+9,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,

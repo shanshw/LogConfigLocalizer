@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+2,tfile.fs.input.buffer.size,262144,Buffer size used for FSDataInputStream in bytes.
+3,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+4,dfs.datanode.restart.replica.expiration,50,"During shutdown for restart, the amount of time in seconds budgeted for
+    datanode restart."
+5,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+6,yarn.nodemanager.log.deletion-threads-count,4,
+7,mapreduce.jobhistory.client.thread-count,10,The number of threads to handle client API requests
+8,dfs.ha.zkfc.port,8019,"The port number that the zookeeper failover controller RPC
+    server binds to."
+9,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"

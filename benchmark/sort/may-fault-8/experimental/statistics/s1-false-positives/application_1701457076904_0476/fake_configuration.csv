@@ -1,0 +1,26 @@
+,name,value,description
+0,mapreduce.job.encrypted-intermediate-data-key-size-bits,666005954,Mapreduce encrypt data key size default is 128
+1,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+2,yarn.nodemanager.localizer.fetch.thread-count,4,
+3,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+4,yarn.nodemanager.sleep-delay-before-sigkill.ms,250,
+5,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+6,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+7,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+8,dfs.datanode.max.disks.to.report,5,"Number of disks to include in JSON report per operation. We will return
+    disks with the highest latency."
+9,hadoop.security.group.mapping.ldap.directory.search.timeout,10000,"The attribute applied to the LDAP SearchControl properties to set a
+    maximum time limit when searching and awaiting a result.
+    Set to 0 if infinite wait period is desired.
+    Default is 10 seconds. Units in milliseconds."

@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,-1580439267,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+2,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+3,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+4,dfs.namenode.decommission.interval,30,"Namenode periodicity in seconds to check if
+    decommission or maintenance is complete. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.
+    If no time unit is specified then seconds is assumed."
+5,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.
+6,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+7,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+8,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+9,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."

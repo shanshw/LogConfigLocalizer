@@ -1,0 +1,86 @@
+2023-11-29 06:15:42,973 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701142038763_1055_000002
+2023-11-29 06:15:43,069 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-29 06:15:43,106 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-29 06:15:43,215 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 1055 cluster_timestamp: 1701142038763 } attemptId: 2 } keyId: -857926061)]
+2023-11-29 06:15:43,246 INFO [main] org.apache.hadoop.conf.Configuration: found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml
+2023-11-29 06:15:43,256 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-29 06:15:43,257 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-29 06:15:43,283 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-29 06:15:43,284 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-29 06:15:43,284 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-29 06:15:43,614 WARN [main] org.apache.hadoop.fs.FileSystem: Failed to initialize filesystem hdfs://2f08f873c798:9000/efghwordsortKOoQLrJ8i1/_LLNr4: java.lang.IllegalArgumentException
+2023-11-29 06:15:43,615 INFO [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state INITED
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.IllegalArgumentException
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:130)
+	at org.apache.hadoop.hdfs.shortcircuit.ShortCircuitCache.<init>(ShortCircuitCache.java:384)
+	at org.apache.hadoop.hdfs.shortcircuit.ShortCircuitCache.fromConf(ShortCircuitCache.java:376)
+	at org.apache.hadoop.hdfs.ClientContext.<init>(ClientContext.java:170)
+	at org.apache.hadoop.hdfs.ClientContext.get(ClientContext.java:216)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:405)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:204)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:189)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3611)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3712)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3663)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:557)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:162)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more
+2023-11-29 06:15:43,618 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:554)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.callWithJobClassLoader(MRAppMaster.java:1802)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.createOutputCommitter(MRAppMaster.java:534)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:311)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+Caused by: java.lang.IllegalArgumentException
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:130)
+	at org.apache.hadoop.hdfs.shortcircuit.ShortCircuitCache.<init>(ShortCircuitCache.java:384)
+	at org.apache.hadoop.hdfs.shortcircuit.ShortCircuitCache.fromConf(ShortCircuitCache.java:376)
+	at org.apache.hadoop.hdfs.ClientContext.<init>(ClientContext.java:170)
+	at org.apache.hadoop.hdfs.ClientContext.get(ClientContext.java:216)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:405)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:204)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:189)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3611)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3712)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3663)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:557)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:162)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.<init>(FileOutputCommitter.java:118)
+	at org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory.createFileOutputCommitter(PathOutputCommitterFactory.java:134)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitterFactory.createOutputCommitter(FileOutputCommitterFactory.java:35)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.getOutputCommitter(FileOutputFormat.java:338)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$3.call(MRAppMaster.java:552)
+	... 11 more
+2023-11-29 06:15:43,619 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException

@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1602604112,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."
+2,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+3,yarn.scheduler.minimum-allocation-mb,1024,
+4,seq.io.sort.factor,100,"The number of streams to merge at once while sorting
+      files using SequenceFile.Sorter.
+      This determines the number of open file handles."
+5,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+6,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+7,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+8,fs.s3a.attempts.maximum,20,How many times we should retry commands on transient errors.
+9,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."

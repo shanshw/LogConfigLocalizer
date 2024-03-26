@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+2,dfs.datanode.slowpeer.low.threshold.ms,5,Threshold in milliseconds below which a DataNode is definitely not slow.
+3,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+4,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+5,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+6,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."
+7,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+8,yarn.client.nodemanager-client-async.thread-pool-max-size,500,
+9,yarn.nodemanager.process-kill-wait.ms,5000,

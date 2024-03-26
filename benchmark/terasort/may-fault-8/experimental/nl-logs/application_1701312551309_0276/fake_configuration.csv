@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+2,yarn.scheduler.configuration.max.version,100,
+3,dfs.mover.moverThreads,1000,Configure the balancer's mover thread pool size.
+4,ftp.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  ftp.stream-buffer-size"
+5,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+6,mapreduce.job.ubertask.maxmaps,9,"Threshold for number of maps, beyond which job is considered
+  too big for the ubertasking optimization.  Users may override this value,
+  but only downward."
+7,dfs.storage.policy.satisfier.max.outstanding.paths,10000,"Defines the maximum number of paths to satisfy that can be queued up in the
+    Satisfier call queue in a period of time. Default value is 10000."
+8,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+9,yarn.resourcemanager.container-tokens.master-key-rolling-interval-secs,86400,

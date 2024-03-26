@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+2,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."
+3,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+4,ftp.replication,3,Replication factor
+5,dfs.qjournal.prepare-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during preparation phase of
+    recovery/synchronization for a specific segment."
+6,dfs.datanode.socket.reuse.keepalive,4000,"The window of time in ms before the DataXceiver closes a socket for a
+    single request.  If a second request occurs within that window, the
+    socket can be reused."
+7,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+8,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+9,ipc.client.connect.retry.interval,1000,"Indicates the number of milliseconds a client will wait for
+    before retrying to establish a server connection."

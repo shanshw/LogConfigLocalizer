@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This option should be set to a value greater than 0 to avoid this error.
+
+name:yarn.nodemanager.container.stderr.tail.bytes
+value:4096
+relevant log:1-ERROR	Task: attempt_1701457076904_0253_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.nodemanager.container.stderr.tail.bytes' is set to 4096. This might be causing the error as the log size might be exceeding this limit. Increasing this value might help in avoiding this error.
+
+name:dfs.datanode.slowpeer.low.threshold.ms
+value:5
+relevant log:1-INFO	1 failures on node ed761ad59d44
+explanation:The configuration option 'dfs.datanode.slowpeer.low.threshold.ms' is set to 5. This might be causing the node failure as the threshold is too low. Increasing this value might help in avoiding this error.

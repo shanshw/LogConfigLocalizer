@@ -1,0 +1,31 @@
+,name,value,description
+0,hadoop.kerberos.min.seconds.before.relogin,9lG25,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+1,mapreduce.reduce.shuffle.retry-delay.max.ms,60000,"The maximum number of ms the reducer will delay before retrying
+  to download map data."
+2,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+3,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+4,yarn.app.mapreduce.client-am.ipc.max-retries-on-timeouts,3,"The number of client retries on socket timeouts to the AM - before
+    reconnecting to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries.on.timeouts to be used during
+    reconnecting to the RM and fetching Application Status."
+5,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."
+6,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+7,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+8,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+9,fs.s3a.list.version,2,"Select which version of the S3 SDK's List Objects API to use.  Currently
+    support 2 (default) and 1 (older API)."

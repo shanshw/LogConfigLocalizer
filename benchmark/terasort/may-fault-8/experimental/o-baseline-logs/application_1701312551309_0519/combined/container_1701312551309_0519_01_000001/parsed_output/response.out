@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1568211558
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.
+
+name:yarn.nodemanager.resource-monitor.interval-ms
+value:3000
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The interval for the resource monitor is set to 3000ms. If the system resources are not sufficient, it may cause the Java heap space OutOfMemoryError.
+
+name:dfs.client.read.shortcircuit.streams.cache.size
+value:256
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The cache size for recently opened file descriptors is set to 256. If the number of file descriptors exceeds this limit, it may cause the Java heap space OutOfMemoryError.

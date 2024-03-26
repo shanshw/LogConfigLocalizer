@@ -1,0 +1,28 @@
+ls -l:
+total 36
+-rw-r--r-- 1 root root  100 Dec  1 11:14 container_tokens
+-rwx------ 1 root root  755 Dec  1 11:14 default_container_executor.sh
+-rwx------ 1 root root  700 Dec  1 11:14 default_container_executor_session.sh
+lrwxrwxrwx 1 root root  113 Dec  1 11:14 job.jar -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701398500430_0015/filecache/11/job.jar
+lrwxrwxrwx 1 root root  113 Dec  1 11:14 job.xml -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701398500430_0015/filecache/13/job.xml
+drwxr-xr-x 2 root root 4096 Dec  1 11:14 jobSubmitDir
+-rwx------ 1 root root 5976 Dec  1 11:14 launch_container.sh
+drwx--x--- 2 root root 4096 Dec  1 11:14 tmp
+find -L . -maxdepth 5 -ls:
+301414649      4 drwx--x---   4 root     root         4096 Dec  1 11:14 .
+301414600    236 -r-x------   1 root     root       238085 Dec  1 11:14 ./job.xml
+301414651      4 -rw-r--r--   1 root     root          100 Dec  1 11:14 ./container_tokens
+301414656      4 -rw-r--r--   1 root     root           16 Dec  1 11:14 ./.default_container_executor_session.sh.crc
+301414655      4 -rwx------   1 root     root          700 Dec  1 11:14 ./default_container_executor_session.sh
+301414657      4 -rwx------   1 root     root          755 Dec  1 11:14 ./default_container_executor.sh
+301414658      4 -rw-r--r--   1 root     root           16 Dec  1 11:14 ./.default_container_executor.sh.crc
+301414135      4 drwx------   2 root     root         4096 Dec  1 11:14 ./job.jar
+301414164  34568 -r-x------   1 root     root     35394971 Dec  1 11:14 ./job.jar/job.jar
+301414653      8 -rwx------   1 root     root         5976 Dec  1 11:14 ./launch_container.sh
+301414654      4 -rw-r--r--   1 root     root           56 Dec  1 11:14 ./.launch_container.sh.crc
+301414650      4 drwx--x---   2 root     root         4096 Dec  1 11:14 ./tmp
+301414652      4 -rw-r--r--   1 root     root           12 Dec  1 11:14 ./.container_tokens.crc
+301414661      4 drwxr-xr-x   2 root     root         4096 Dec  1 11:14 ./jobSubmitDir
+301413975      4 -r-x------   1 root     root          237 Dec  1 11:14 ./jobSubmitDir/job.splitmetainfo
+301414578      4 -r-x------   1 root     root          652 Dec  1 11:14 ./jobSubmitDir/job.split
+broken symlinks(find -L . -maxdepth 5 -type l -ls):

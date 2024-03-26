@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,<missing>,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0046_m_000009,The missing value for the number of bytes per checksum could be causing issues with the task speculation. This configuration option should be set to a value that is not larger than the io.file.buffer.size.
+dfs.client.hedged.read.threshold.millis,500,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0046_m_000009,"The hedged read threshold is set to 500 milliseconds. If the task is taking longer than this to read from the DFSClient, it could be causing the task to be speculated."
+mapreduce.job.ubertask.maxreduces,1,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0046_m_000009,"The maximum number of reduces for an ubertask is set to 1. If the task requires more reduces, it could be causing the task to be speculated."

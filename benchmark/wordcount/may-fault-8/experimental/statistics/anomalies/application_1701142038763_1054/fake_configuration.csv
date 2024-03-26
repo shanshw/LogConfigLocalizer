@@ -1,0 +1,24 @@
+,name,value,description
+0,dfs.client.read.shortcircuit.streams.cache.expiry.ms,155535518,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+1,dfs.namenode.resource.checked.volumes.minimum,1,The minimum number of redundant NameNode storage volumes required.
+2,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+3,yarn.nm.liveness-monitor.expiry-interval-ms,600000,
+4,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+5,dfs.datanode.min.outlier.detection.nodes,10,Minimum number of nodes to run outlier detection.
+6,dfs.namenode.edekcacheloader.initial.delay.ms,3000,"When KeyProvider is configured, the time delayed until the first
+    attempt to warm up edek cache on NN start up / become active."
+7,yarn.scheduler.minimum-allocation-mb,1024,
+8,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+9,dfs.namenode.snapshot.skiplist.max.levels,0,"Maximum no of the skip levels to be maintained in the skip list for
+    storing directory snapshot diffs. By default, it is set to 0 and a linear
+    list will be used to store the directory snapshot diffs."

@@ -1,0 +1,21 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.parallelcopies,-969465172,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."
+1,dfs.datanode.handler.count,10,The number of server threads for the datanode.
+2,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+3,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.
+4,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.
+5,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.
+6,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+7,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+8,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+9,dfs.ha.zkfc.port,8019,"The port number that the zookeeper failover controller RPC
+    server binds to."

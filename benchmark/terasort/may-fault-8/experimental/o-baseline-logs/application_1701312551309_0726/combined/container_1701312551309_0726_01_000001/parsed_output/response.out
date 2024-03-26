@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:dfs.client.mmap.cache.size
+value:256
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.mmap.cache.size' is set to 256. This option controls the maximum number of entries that we will keep in the cache for memory-mapped files. The error log indicates an issue with checksum calculation, which might be related to the size of this cache.
+
+name:dfs.datanode.ec.reconstruct.read.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.datanode.ec.reconstruct.read.bandwidthPerSec' is set to 0, which specifies that there is no limit on the maximum amount of bandwidth that the EC reconstruction can utilize for reading. This might be causing issues with the checksum calculation as indicated in the error log.

@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-2032887697,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,Datanode striped read timeout in milliseconds.
+2,yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms,1000,
+3,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,dfs.balancer.movedWinWidth,5400000,"Window of time in ms for the HDFS balancer tracking blocks and its
+    locations."
+5,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+6,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+7,dfs.namenode.edit.log.autoroll.check.interval.ms,300000,"How often an active namenode will check if it needs to roll its edit log,
+    in milliseconds."
+8,mapreduce.job.end-notification.max.retry.interval,5000,"The maximum amount of time (in milliseconds) to wait before
+     retrying job end notification. Cluster administrators can set this to
+     limit how long the Application Master waits before exiting. Must be marked
+     as final to prevent users from overriding this."
+9,dfs.namenode.replication.min,1,Minimal block replication.

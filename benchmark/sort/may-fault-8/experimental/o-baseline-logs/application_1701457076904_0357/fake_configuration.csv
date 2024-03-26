@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1212502725,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.admin.client.thread-count,1,
+2,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+3,yarn.sharedcache.nm.uploader.thread-count,20,
+4,yarn.resourcemanager.delegation-token.max-conf-size-bytes,12800,
+5,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+6,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+7,dfs.namenode.stale.datanode.interval,30000,"Default time interval in milliseconds for marking a datanode as ""stale"",
+    i.e., if the namenode has not received heartbeat msg from a datanode for
+    more than this time interval, the datanode will be marked and treated 
+    as ""stale"" by default. The stale interval cannot be too small since 
+    otherwise this may cause too frequent change of stale states. 
+    We thus set a minimum stale interval value (the default value is 3 times 
+    of heartbeat interval) and guarantee that the stale interval cannot be less
+    than the minimum value. A stale data node is avoided during lease/block
+    recovery. It can be conditionally avoided for reads (see
+    dfs.namenode.avoid.read.stale.datanode) and for writes (see
+    dfs.namenode.avoid.write.stale.datanode)."
+8,mapreduce.job.max.split.locations,15,"The max number of block locations to store for each split for
+    locality calculation."
+9,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.

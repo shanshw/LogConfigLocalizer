@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+2,dfs.namenode.max-lock-hold-to-release-lease-ms,25,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+3,yarn.scheduler.minimum-allocation-mb,1024,
+4,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+5,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+6,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+7,yarn.nodemanager.collector-service.thread-count,5,
+8,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."
+9,dfs.datanode.max.disks.to.report,5,"Number of disks to include in JSON report per operation. We will return
+    disks with the highest latency."

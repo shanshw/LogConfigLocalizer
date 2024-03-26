@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,-392837573,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+2,yarn.resourcemanager.nm-container-queuing.min-queue-wait-time-ms,10,
+3,hadoop.security.kms.client.timeout,60,"Sets value for KMS client connection timeout, and the read timeout
+    to KMS servers."
+4,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+5,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+6,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+7,yarn.resourcemanager.nm-tokens.master-key-rolling-interval-secs,86400,
+8,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+9,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."

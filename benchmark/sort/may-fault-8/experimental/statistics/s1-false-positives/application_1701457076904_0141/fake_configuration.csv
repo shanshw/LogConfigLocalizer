@@ -1,0 +1,29 @@
+,name,value,description
+0,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,771915154,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+1,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+2,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+3,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+4,yarn.nodemanager.localizer.client.thread-count,5,
+5,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."
+6,dfs.namenode.replication.min,1,Minimal block replication.
+7,dfs.short.circuit.shared.memory.watcher.interrupt.check.ms,60000,"The length of time in milliseconds that the short-circuit shared memory
+    watcher will go between checking for java interruptions sent from other
+    threads.  This is provided mainly for unit tests."
+8,dfs.qjournal.accept-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."
+9,dfs.client-write-packet-size,65536,Packet size for clients to write

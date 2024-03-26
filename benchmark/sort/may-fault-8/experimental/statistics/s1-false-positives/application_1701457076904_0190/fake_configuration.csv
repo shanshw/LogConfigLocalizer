@@ -1,0 +1,25 @@
+,name,value,description
+0,dfs.storage.policy.satisfier.queue.limit,652962983,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."
+1,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+2,yarn.app.mapreduce.task.container.log.backups,0,"Number of backup files for task logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for tasks when both mapreduce.task.userlog.limit.kb and
+    yarn.app.mapreduce.task.container.log.backups are greater than zero."
+3,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+4,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+5,yarn.resourcemanager.placement-constraints.algorithm.pool-size,1,
+6,yarn.resourcemanager.zk-appid-node.split-index,0,
+7,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"
+8,mapreduce.reduce.shuffle.read.timeout,180000,"Expert: The maximum amount of time (in milli seconds) reduce
+  task waits for map output data to be available for reading after obtaining
+  connection."
+9,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,

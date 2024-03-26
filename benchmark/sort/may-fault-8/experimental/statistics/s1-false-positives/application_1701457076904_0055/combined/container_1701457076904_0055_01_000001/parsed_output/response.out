@@ -1,0 +1,14 @@
+name:yarn.app.mapreduce.client-am.ipc.max-retries
+value:429956113
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0055_m_000009
+explanation:The log indicates that a speculative task is being created, which might be due to the high number of client retries to the Application Master (AM). The configuration value is unusually high, which might cause excessive speculative tasks and resource waste.
+
+name:yarn.app.mapreduce.am.hard-kill-timeout-ms
+value:10000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0055_m_000009
+explanation:The log indicates that a speculative task is being created. If the hard-kill timeout is too short, it might cause premature termination of tasks, leading to unnecessary speculative tasks.
+
+name:ipc.client.connect.max.retries.on.timeouts
+value:45
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0055_m_000009
+explanation:The log indicates that a speculative task is being created. If the number of retries on socket timeout to establish a server connection is too high, it might cause excessive speculative tasks and resource waste.

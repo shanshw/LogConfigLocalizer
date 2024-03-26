@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,868582317,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+2,dfs.storage.policy.satisfier.retry.max.attempts,3,"Max retry to satisfy the block storage policy. After this retry block will be removed
+    from the movement needed queue."
+3,yarn.nodemanager.aux-services.manifest.reload-ms,0,
+4,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+5,mapreduce.jobhistory.move.thread-count,3,The number of threads used to move files.
+6,yarn.sharedcache.admin.thread-count,1,
+7,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+8,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+9,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,

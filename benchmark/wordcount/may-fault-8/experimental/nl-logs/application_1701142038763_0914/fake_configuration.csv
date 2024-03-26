@@ -1,0 +1,34 @@
+,name,value,description
+0,ipc.server.max.connections,0.66853875,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+1,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+2,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+3,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+4,yarn.client.max-cached-nodemanagers-proxies,0,
+5,yarn.dispatcher.drain-events.timeout,300000,
+6,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+7,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+8,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+9,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."

@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.transfer.buffer.size,131072,"This property is used only if
+  mapreduce.shuffle.transferTo.allowed is set to false. In that case,
+  this property defines the size of the buffer used in the buffer copy code
+  for the shuffle phase. The size of this buffer determines the size of the IO
+  requests."
+2,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+3,ftp.replication,3,Replication factor
+4,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+5,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+6,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+7,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+8,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+9,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."

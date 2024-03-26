@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,351615604,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+2,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+3,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."
+4,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+5,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+6,yarn.app.mapreduce.client.job.max-retries,3,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+7,yarn.nodemanager.amrmproxy.client.thread-count,25,
+8,dfs.mover.retry.max.attempts,10,"The maximum number of retries before the mover consider the
+    move failed."
+9,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."

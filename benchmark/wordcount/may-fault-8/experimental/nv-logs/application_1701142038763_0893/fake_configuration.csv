@@ -1,0 +1,23 @@
+,name,value,description
+0,net.topology.script.number.args,0.64419204,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+1,yarn.resourcemanager.am.max-attempts,2,
+2,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+3,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+4,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+5,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+6,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+7,dfs.qjournal.start-segment.timeout.ms,20000,Quorum timeout in milliseconds for starting a log segment.
+8,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,
+9,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,

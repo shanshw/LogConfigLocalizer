@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+2,yarn.timeline-service.entity-group-fs-store.app-cache-size,10,
+3,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+4,dfs.namenode.fs-limits.max-directory-items,1048576,"Defines the maximum number of items that a directory may
+      contain. Cannot set the property to a value less than 1 or more than
+      6400000."
+5,file.blocksize,67108864,Block size
+6,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+7,mapreduce.task.exit.timeout,60000,"The number of milliseconds before a task will be
+  terminated if it stays in finishing state for too long.
+  After a task attempt completes from TaskUmbilicalProtocol's point of view,
+  it will be transitioned to finishing state. That will give a chance for the
+  task to exit by itself."
+8,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+9,yarn.nodemanager.container-manager.thread-count,20,

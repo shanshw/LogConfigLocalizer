@@ -1,0 +1,36 @@
+,name,value,description
+0,io.bytes.per.checksum,472103714,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+2,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+3,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+4,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.
+5,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+6,dfs.datanode.data.dir.perm,700,"Permissions for the directories on on the local filesystem where
+  the DFS data node store its blocks. The permissions can either be octal or
+  symbolic."
+7,ipc.ping.interval,60000,"Timeout on waiting response from server, in milliseconds.
+  The client will send ping when the interval is passed without receiving bytes,
+  if ipc.client.ping is set to true."
+8,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+9,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."

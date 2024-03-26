@@ -1,0 +1,24 @@
+,name,value,description
+0,dfs.client.read.shortcircuit.streams.cache.expiry.ms,-867724837,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+1,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+2,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+3,fs.s3a.connection.maximum,96,"Controls the maximum number of simultaneous connections to S3.
+    This must be bigger than the value of fs.s3a.threads.max so as to stop
+    threads being blocked waiting for new HTTPS connections.
+    Why not equal? The AWS SDK transfer manager also uses these connections."
+4,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+5,yarn.resourcemanager.admin.client.thread-count,1,
+6,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+7,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+8,dfs.namenode.fs-limits.max-xattrs-per-inode,32,Maximum number of extended attributes per inode.
+9,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."

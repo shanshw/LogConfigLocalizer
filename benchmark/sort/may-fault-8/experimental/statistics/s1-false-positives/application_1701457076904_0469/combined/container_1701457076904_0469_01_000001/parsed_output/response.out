@@ -1,0 +1,14 @@
+name:dfs.client.retry.max.attempts
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0469_m_000008
+explanation: The log indicates that a task is being speculated, which could be due to the DFSClient retrying to connect to the namenodes. Since the maximum retry attempts for DFSClient is not set, this could be causing the speculation.
+
+name:yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0469_m_000008
+explanation: The log indicates that a task is being speculated, which could be due to the ResourceManager retrying to renew the delegation token. Since the maximum retry attempts for the ResourceManager is set to 10, this could be causing the speculation.
+
+name:dfs.client.write.exclude.nodes.cache.expiry.interval.millis
+value:600000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0469_m_000008
+explanation: The log indicates that a task is being speculated, which could be due to the DFSClient excluding nodes from the cache. Since the maximum period to keep a DN in the excluded nodes list is set to 600000 milliseconds, this could be causing the speculation.

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value larger than 0 to avoid this error.
+
+name:dfs.client.deadnode.detection.probe.connection.timeout.ms
+value:20000
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.deadnode.detection.probe.connection.timeout.ms' might be causing the error as it is set to a high value. This could be causing the system to wait too long for a response from a dead node.
+
+name:mapreduce.job.cache.limit.max-resources-mb
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'mapreduce.job.cache.limit.max-resources-mb' is set to 0 which might be causing the system to not allocate any resources for job cache. This could be causing the error.

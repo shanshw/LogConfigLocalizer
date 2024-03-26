@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+2,yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms,10000,
+3,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+4,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+5,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.
+6,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+7,yarn.sharedcache.nm.uploader.replication.factor,10,
+8,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+9,dfs.namenode.fs-limits.max-blocks-per-file,10000,"Maximum number of blocks per file, enforced by the Namenode on
+        write. This prevents the creation of extremely large files which can
+        degrade performance."

@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.default.chunk.view.size,32768,The number of bytes to view for a file on the browser.
+2,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+3,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+4,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+5,dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,Datanode striped read timeout in milliseconds.
+6,dfs.namenode.fs-limits.max-xattrs-per-inode,32,Maximum number of extended attributes per inode.
+7,dfs.namenode.max-corrupt-file-blocks-returned,100,"The maximum number of corrupt file blocks listed by NameNode Web UI,
+      JMX and other client request."
+8,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"
+9,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."

@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,235618695,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+2,yarn.client.application-client-protocol.poll-interval-ms,200,
+3,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+4,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+5,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+6,yarn.nodemanager.health-checker.interval-ms,600000,
+7,yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,
+8,dfs.namenode.lease-recheck-interval-ms,2000,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+9,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.

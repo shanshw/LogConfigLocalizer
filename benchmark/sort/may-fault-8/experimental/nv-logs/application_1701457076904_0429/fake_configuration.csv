@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+2,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+3,ftp.client-write-packet-size,65536,Packet size for clients to write
+4,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+5,ftp.replication,3,Replication factor
+6,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+7,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+8,dfs.mover.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Mover iteration."
+9,yarn.sharedcache.store.in-memory.check-period-mins,720,

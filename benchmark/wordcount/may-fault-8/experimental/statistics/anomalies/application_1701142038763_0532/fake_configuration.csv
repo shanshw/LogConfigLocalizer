@@ -1,0 +1,31 @@
+,name,value,description
+0,mapreduce.job.running.map.limit,qsbvK,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+1,dfs.namenode.resource.du.reserved,104857600,"The amount of space to reserve/require for a NameNode storage directory
+    in bytes. The default is 100MB. Support multiple size unit
+    suffix(case insensitive), as described in dfs.blocksize."
+2,yarn.nodemanager.collector-service.thread-count,5,
+3,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+4,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+5,hadoop.fuse.timer.period,5,"The number of seconds between cache expiry checks in fuse_dfs. Lower values
+    will result in fuse_dfs noticing changes to Kerberos ticket caches more
+    quickly."
+6,yarn.resourcemanager.client.thread-count,50,
+7,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+8,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+9,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."

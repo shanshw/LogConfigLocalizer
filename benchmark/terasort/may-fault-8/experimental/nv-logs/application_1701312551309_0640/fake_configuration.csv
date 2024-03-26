@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,960512577,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.attempt.diagnostics.limit.kc,64,
+2,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+3,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+4,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+5,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+6,dfs.mover.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Mover iteration."
+7,yarn.nodemanager.localizer.client.thread-count,5,
+8,yarn.timeline-service.writer.async.queue.capacity,100,
+9,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."

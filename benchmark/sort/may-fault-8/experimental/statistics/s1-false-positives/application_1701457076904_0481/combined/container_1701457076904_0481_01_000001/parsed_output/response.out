@@ -1,0 +1,14 @@
+name:dfs.stream-buffer-size
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0481_m_000009
+explanation:The dfs.stream-buffer-size configuration is missing a value. This configuration is responsible for determining how much data is buffered during read and write operations. The absence of a value could potentially cause issues with data streaming and buffering.
+
+name:yarn.nodemanager.health-checker.timeout-ms
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0481_m_000009
+explanation:The yarn.nodemanager.health-checker.timeout-ms configuration is missing a value. This configuration is responsible for setting the timeout for the health checker in the Node Manager. The absence of a value could potentially cause issues with the health checking process.
+
+name:dfs.datanode.data.write.bandwidthPerSec
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0481_m_000009
+explanation:The dfs.datanode.data.write.bandwidthPerSec configuration is set to 0. This configuration specifies the maximum amount of bandwidth that data transfer can utilize for writing block or pipeline recovery. A value of 0 means there is no limit, which could potentially cause issues with data transfer and bandwidth utilization.

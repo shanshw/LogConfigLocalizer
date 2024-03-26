@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration for the number of bytes per checksum is set to 0. This is causing an Invalid checksum type error as seen in the log. The checksum cannot be 0, it should be a positive integer.
+
+name:dfs.client.read.shortcircuit.buffer.size
+value:1048576
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The buffer size for short-circuit local reads is set to a large value. This could potentially cause issues with memory allocation and should be checked.
+
+name:dfs.blocksize
+value:134217728
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The block size for new files is set to a large value. This could potentially cause issues with memory allocation and should be checked.

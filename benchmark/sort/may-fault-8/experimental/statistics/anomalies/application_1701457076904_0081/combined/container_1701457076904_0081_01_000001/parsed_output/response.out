@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which might be causing the Invalid checksum type error in the log. This option should not be 0 as it represents the number of bytes per checksum.
+
+name:yarn.app.mapreduce.am.container.log.backups
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.app.mapreduce.am.container.log.backups' is set to 0, which might be causing the error in the log. This option should not be 0 as it represents the number of backup files for the ApplicationMaster logs.
+
+name:yarn.router.interceptor.user.threadpool-size
+value:5
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.router.interceptor.user.threadpool-size' might be causing the error in the log. The description for this option is missing, which might be causing the error.

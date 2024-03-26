@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,367197274,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.block.invalidate.limit,1000,"The maximum number of invalidate blocks sent by namenode to a datanode
+    per heartbeat deletion command. This property works with
+    ""dfs.namenode.invalidate.work.pct.per.iteration"" to throttle block
+    deletions."
+2,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+3,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+4,yarn.timeline-service.client.retry-interval-ms,1000,
+5,dfs.blockreport.incremental.intervalMsec,0,"If set to a positive integer, the value in ms to wait between sending
+    incremental block reports from the Datanode to the Namenode."
+6,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+7,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+8,ipc.client.idlethreshold,4000,"Defines the threshold number of connections after which
+               connections will be inspected for idleness."
+9,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."

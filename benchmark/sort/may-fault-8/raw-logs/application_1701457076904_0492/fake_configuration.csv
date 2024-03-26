@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+2,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+3,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,
+4,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+5,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+6,mapreduce.reduce.shuffle.fetch.retry.interval-ms,1000,"Time of interval that fetcher retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+7,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."
+8,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+9,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,

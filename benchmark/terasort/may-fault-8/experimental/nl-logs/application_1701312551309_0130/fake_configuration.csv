@@ -1,0 +1,23 @@
+,name,value,description
+0,ipc.server.listen.queue.size,H0IeD,"Indicates the length of the listen queue for servers accepting
+               client connections."
+1,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+2,yarn.resourcemanager.fs.state-store.num-retries,0,
+3,dfs.datanode.min.outlier.detection.disks,5,Minimum number of disks to run outlier detection.
+4,dfs.namenode.decommission.blocks.per.interval,500000,"The approximate number of blocks to process per decommission
+    or maintenance interval, as defined in dfs.namenode.decommission.interval."
+5,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."
+6,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+7,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+8,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+9,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache

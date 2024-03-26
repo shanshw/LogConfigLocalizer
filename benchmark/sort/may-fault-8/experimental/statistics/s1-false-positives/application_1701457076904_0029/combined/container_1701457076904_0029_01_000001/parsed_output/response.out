@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0029_m_000007
+explanation:The configuration for the number of bytes per checksum is missing. This could potentially cause issues with data integrity and might be the cause of the task speculation.
+
+name:mapreduce.client.completion.pollinterval
+value:5000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0029_m_000007
+explanation:The poll interval for job status updates is set to 5000 milliseconds. This could potentially cause delays in task completion and might be the reason for the task speculation.
+
+name:mapreduce.map.cpu.vcores
+value:1
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0029_m_000007
+explanation:The number of virtual cores requested for each map task is set to 1. This could potentially cause resource constraints and might be the reason for the task speculation.

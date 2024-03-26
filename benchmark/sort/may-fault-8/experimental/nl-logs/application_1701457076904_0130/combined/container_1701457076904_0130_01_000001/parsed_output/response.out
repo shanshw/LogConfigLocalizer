@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a non-zero value to avoid this error.
+
+name:dfs.datanode.data.transfer.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.datanode.data.transfer.bandwidthPerSec' is set to 0 which might be causing issues with data transfer. This configuration should be set to a non-zero value to ensure proper data transfer.
+
+name:yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb
+value:0
+relevant log:<missing>
+explanation:The configuration 'yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb' is set to 0 which might be causing disk space issues. This configuration should be set to a non-zero value to ensure there is enough disk space for operations.

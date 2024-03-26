@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:dfs.http.client.failover.max.attempts
+value:15
+relevant log:2-ERROR	Task: attempt_1701398500430_0022_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.http.client.failover.max.attempts' is set to 15. This might be causing the task to fail after multiple attempts due to the invalid checksum type error. Reducing the number of max attempts or fixing the checksum error could resolve this issue.
+
+name:dfs.namenode.max.op.size
+value:52428800
+relevant log:3-INFO	Diagnostics report from attempt_1701398500430_0022_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.namenode.max.op.size' is set to a high value. This might be causing the Invalid checksum type error due to large operation size. Reducing the max operation size could resolve this issue.

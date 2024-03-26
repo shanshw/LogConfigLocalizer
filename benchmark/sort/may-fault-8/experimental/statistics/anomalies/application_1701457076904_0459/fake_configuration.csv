@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.ubertask.maxmaps,9,"Threshold for number of maps, beyond which job is considered
+  too big for the ubertasking optimization.  Users may override this value,
+  but only downward."
+2,yarn.log-aggregation.debug.filesize,104857600,
+3,yarn.resourcemanager.connect.max-wait.ms,900000,
+4,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+5,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+6,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."
+7,dfs.client.short.circuit.replica.stale.threshold.ms,1800000,"The maximum amount of time that we will consider a short-circuit replica to
+    be valid, if there is no communication from the DataNode.  After this time
+    has elapsed, we will re-fetch the short-circuit replica even if it is in
+    the cache."
+8,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+9,yarn.resourcemanager.placement-constraints.algorithm.pool-size,1,

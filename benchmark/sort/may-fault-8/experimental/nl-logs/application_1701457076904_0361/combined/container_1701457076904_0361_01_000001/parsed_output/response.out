@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:663195128
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The error log indicates an OutOfMemoryError, which could be caused by the large value of io.bytes.per.checksum. This configuration option determines the number of bytes per checksum, and a large value could lead to excessive memory usage.
+
+name:dfs.image.transfer-bootstrap-standby.bandwidthPerSec
+value:0
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.image.transfer-bootstrap-standby.bandwidthPerSec is set to 0, which means throttling is disabled. This could potentially lead to excessive memory usage, contributing to the OutOfMemoryError observed in the log.
+
+name:yarn.nodemanager.health-checker.timeout-ms
+value:1200000
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The description for yarn.nodemanager.health-checker.timeout-ms is missing, which could lead to improper configuration and potential memory issues. This could be a contributing factor to the OutOfMemoryError observed in the log.

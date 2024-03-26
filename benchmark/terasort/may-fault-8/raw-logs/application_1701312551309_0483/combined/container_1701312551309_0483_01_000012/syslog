@@ -1,0 +1,36 @@
+2023-11-30 16:30:49,528 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-30 16:30:49,610 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-11-30 16:30:49,682 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-11-30 16:30:49,682 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2023-11-30 16:30:49,738 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens: [Kind: mapreduce.job, Service: job_1701312551309_0483, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@78d6692f)]
+2023-11-30 16:30:49,767 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2023-11-30 16:30:49,952 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701312551309_0483
+2023-11-30 16:30:50,025 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.lang.NumberFormatException: For input string: "LoGvv"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.fs.ChecksumFileSystem.setConf(ChecksumFileSystem.java:86)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:140)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3609)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3712)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3663)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:557)
+	at org.apache.hadoop.fs.FileSystem.getLocal(FileSystem.java:510)
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.confChanged(LocalDirAllocator.java:319)
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:520)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:180)
+	at org.apache.hadoop.mapred.YarnChild.configureLocalDirs(YarnChild.java:286)
+	at org.apache.hadoop.mapred.YarnChild.configureTask(YarnChild.java:343)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:150)
+
+2023-11-30 16:30:50,031 INFO [main] org.apache.hadoop.mapred.Task: Running cleanup for the task
+2023-11-30 16:30:50,031 INFO [main] org.apache.hadoop.mapred.YarnChild: Exception cleaning up: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.Task.taskCleanup(Task.java:1458)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:194)
+
+2023-11-30 16:30:50,039 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2023-11-30 16:30:50,039 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2023-11-30 16:30:50,040 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.

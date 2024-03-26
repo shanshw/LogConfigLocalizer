@@ -1,0 +1,28 @@
+,name,value,description
+0,ipc.server.listen.queue.size,H0IeD,"Indicates the length of the listen queue for servers accepting
+               client connections."
+1,yarn.resourcemanager.client.thread-count,50,
+2,yarn.client.max-cached-nodemanagers-proxies,0,
+3,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+4,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+5,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.
+6,dfs.datanode.fileio.profiling.sampling.percentage,0,"This setting controls the percentage of file I/O events which will be
+    profiled for DataNode disk statistics. The default value of 0 disables
+    disk statistics. Set to an integer value between 1 and 100 to enable disk
+    statistics."
+7,yarn.sharedcache.nm.uploader.replication.factor,10,
+8,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+9,dfs.datanode.failed.volumes.tolerated,0,"The number of volumes that are allowed to
+  fail before a datanode stops offering service. By default
+  any volume failure will cause a datanode to shutdown.
+  The value should be greater than or equal to -1 , -1 represents minimum
+  1 valid volume."

@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.stream-buffer-size,,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+1,ftp.client-write-packet-size,65536,Packet size for clients to write
+2,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+3,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+4,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+5,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+6,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+7,yarn.nodemanager.health-checker.timeout-ms,1200000,
+8,dfs.client.retry.times.get-last-block-length,3,Number of retries for calls to fetchLocatedBlocksAndGetLastBlockLength().
+9,dfs.client.read.shortcircuit.buffer.size,1048576,Buffer size in bytes for short-circuit local reads.

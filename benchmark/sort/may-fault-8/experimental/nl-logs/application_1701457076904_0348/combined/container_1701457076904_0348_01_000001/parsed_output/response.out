@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:dfs.client.deadnode.detection.probe.suspectnode.interval.ms
+value:300
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.deadnode.detection.probe.suspectnode.interval.ms' is set to 300ms. This might be too short for the system to detect and handle dead nodes effectively, which could be contributing to the errors observed in the logs.
+
+name:fs.s3a.committer.threads
+value:8
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'fs.s3a.committer.threads' is set to 8. This might be too high for the system to handle effectively, which could be contributing to the errors observed in the logs.

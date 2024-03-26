@@ -1,0 +1,49 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an invalid checksum type. The configuration option 'io.bytes.per.checksum' is set to 0, which might be causing this issue as it is related to checksum calculation. The value should be greater than 0.
+
+name:yarn.nodemanager.localizer.fetch.thread-count
+value:4
+relevant log:<missing>
+explanation:<missing>
+
+name:yarn.minicluster.yarn.nodemanager.resource.memory-mb
+value:4096
+relevant log:<missing>
+explanation:<missing>
+
+name:dfs.namenode.delegation.key.update-interval
+value:86400000
+relevant log:<missing>
+explanation:<missing>
+
+name:dfs.datanode.directoryscan.threads
+value:1
+relevant log:<missing>
+explanation:<missing>
+
+name:dfs.qjournal.accept-recovery.timeout.ms
+value:120000
+relevant log:<missing>
+explanation:<missing>
+
+name:mapreduce.reduce.maxattempts
+value:4
+relevant log:<missing>
+explanation:<missing>
+
+name:dfs.ha.fencing.ssh.connect-timeout
+value:30000
+relevant log:<missing>
+explanation:<missing>
+
+name:dfs.datanode.ec.reconstruction.stripedread.buffer.size
+value:65536
+relevant log:<missing>
+explanation:<missing>
+
+name:mapreduce.client.completion.pollinterval
+value:5000
+relevant log:<missing>
+explanation:<missing>

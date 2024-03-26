@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,486528527,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.job.committer.cancel-timeout,60000,"The amount of time in milliseconds to wait for the output
+    committer to cancel an operation if the job is killed"
+2,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+3,hadoop.security.kms.client.encrypted.key.cache.size,500,Size of the EncryptedKeyVersion cache Queue for each key
+4,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."
+5,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+6,dfs.mover.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Mover iteration."
+7,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+8,ipc.[port_number].weighted-cost.lockfree,1,"The weight multiplier to apply to the time spent in the
+    LOCKFREE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+9,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."

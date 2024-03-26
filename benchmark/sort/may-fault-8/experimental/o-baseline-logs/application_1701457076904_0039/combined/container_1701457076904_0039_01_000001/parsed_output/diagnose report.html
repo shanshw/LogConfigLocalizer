@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option determines the number of bytes per checksum and should not be set to 0.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong><missing></strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-INFO	Diagnostics report from attempt_1701457076904_0039_m_000004_0: [2023-12-02 04:01:54.326]Exception when trying to cleanup container container_1701457076904_0039_01_000008: java.io.FileNotFoundException: /home/hadoop3/hadoop/tmp/nm-local-dir/nmPrivate/application_1701457076904_0039/container_1701457076904_0039_01_000008/container_1701457076904_0039_01_000008.pid (No such file or directory)</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep' is missing a value. This could be causing the FileNotFoundException error as the system may not know how many layer mounts to keep.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.get-blocks.max-qps</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>20</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>3-ERROR	Task: attempt_1701457076904_0039_r_000001_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration option 'dfs.namenode.get-blocks.max-qps' is set to 20, which may be too low and causing the Invalid checksum type error. This option determines the maximum number of getBlocks RPCs data movement utilities can make to a NameNode per second.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

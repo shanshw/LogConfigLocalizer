@@ -1,0 +1,14 @@
+name:mapreduce.task.merge.progress.records
+value:-0.48442286
+relevant log:3-2-1-ERROR	Task: attempt_1701142038763_0434_r_000000_0 - exited : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: Error while doing final merge	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:162)
+explanation: The error log indicates a NumberFormatException for the input string "-0.48442286". This value is set for the configuration option "mapreduce.task.merge.progress.records", which is expected to be a long integer. The negative decimal value is causing the error.
+
+name:dfs.client.hedged.read.threadpool.size
+value:0
+relevant log:<missing>
+explanation: The value for the configuration option "dfs.client.hedged.read.threadpool.size" is set to 0. This means that no threads are dedicated to running 'hedged', concurrent reads in the client. This could potentially lead to performance issues.
+
+name:yarn.cluster.max-application-priority
+value:0
+relevant log:<missing>
+explanation: The value for the configuration option "yarn.cluster.max-application-priority" is set to 0. This means that all applications have the same priority, which could lead to resource allocation issues in a multi-tenant environment.

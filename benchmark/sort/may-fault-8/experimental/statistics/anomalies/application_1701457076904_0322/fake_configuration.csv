@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,815869039,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+2,dfs.balancer.moverThreads,1000,"Thread pool size for executing block moves.
+    moverThreadAllocator"
+3,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+4,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+5,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+6,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+7,dfs.namenode.maintenance.replication.min,1,Minimal live block replication in existence of maintenance mode.
+8,fs.s3a.paging.maximum,5000,"How many keys to request from S3 when doing
+     directory listings at a time."
+9,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."

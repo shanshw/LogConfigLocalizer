@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-1617708091,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.
+2,dfs.client.failover.connection.retries,0,"Expert only. Indicates the number of retries a failover IPC client
+    will make to establish a server connection."
+3,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap
+4,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+5,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"
+6,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+7,yarn.client.application-client-protocol.poll-interval-ms,200,
+8,yarn.timeline-service.writer.async.queue.capacity,100,
+9,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,

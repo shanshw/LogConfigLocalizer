@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:2117148295
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. 
+
+name:dfs.namenode.handler.count
+value:10
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The number of Namenode RPC server threads that listen to requests from clients is too low, which may cause the system to be unable to handle the requests in time and lead to memory overflow.
+
+name:fs.s3a.executor.capacity
+value:16
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The maximum number of submitted tasks which is a single operation may submit simultaneously for execution is too low, which may cause the system to be unable to handle the tasks in time and lead to memory overflow.

@@ -1,0 +1,40 @@
+,name,value,description
+0,hadoop.http.authentication.token.validity,0,"Indicates how long (in seconds) an authentication token is valid before it has
+    to be renewed."
+1,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+2,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+3,fs.s3a.retry.limit,7,"Number of times to retry any repeatable S3 client request on failure,
+    excluding throttling requests."
+4,yarn.timeline-service.generic-application-history.max-applications,10000,
+5,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+6,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+7,mapreduce.reduce.skip.maxgroups,0,"The number of acceptable skip groups surrounding the bad
+    group PER bad group in reducer. The number includes the bad group as well.
+    To turn the feature of detection/skipping of bad groups off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever groups(depends on application) get skipped are
+    acceptable."
+8,dfs.namenode.replication.min,1,Minimal block replication.
+9,dfs.client.socketcache.expiryMsec,3000,Socket cache expiration for short-circuit reads in msec.

@@ -1,0 +1,30 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.retry-delay.max.ms,0,"The maximum number of ms the reducer will delay before retrying
+  to download map data."
+1,yarn.resourcemanager.zk-delegation-token-node.split-index,0,
+2,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+3,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+4,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+5,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,
+6,fs.s3a.attempts.maximum,20,How many times we should retry commands on transient errors.
+7,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+8,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+9,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."

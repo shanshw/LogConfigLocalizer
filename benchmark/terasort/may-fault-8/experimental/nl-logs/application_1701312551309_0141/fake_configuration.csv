@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,nfs.rtmax,1048576,"This is the maximum size in bytes of a READ request
+    supported by the NFS gateway. If you change this, make sure you
+    also update the nfs mount's rsize(add rsize= # of bytes to the 
+    mount directive)."
+2,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+3,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+4,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."
+5,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."
+6,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+7,dfs.namenode.resource.du.reserved,104857600,"The amount of space to reserve/require for a NameNode storage directory
+    in bytes. The default is 100MB. Support multiple size unit
+    suffix(case insensitive), as described in dfs.blocksize."
+8,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+9,dfs.cachereport.intervalMsec,10000,"Determines cache reporting interval in milliseconds.  After this amount of
+    time, the DataNode sends a full report of its cache state to the NameNode.
+    The NameNode uses the cache report to update its map of cached blocks to
+    DataNode locations.
+
+    This configuration has no effect if in-memory caching has been disabled by
+    setting dfs.datanode.max.locked.memory to 0 (which is the default).
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."

@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.provided.aliasmap.inmemory.batch-size,500,The batch size when iterating over the database backing the aliasmap
+2,hadoop.security.kms.client.timeout,60,"Sets value for KMS client connection timeout, and the read timeout
+    to KMS servers."
+3,dfs.datanode.handler.count,10,The number of server threads for the datanode.
+4,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+5,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+6,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+7,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+8,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+9,dfs.client.datanode-restart.timeout,30,"Expert only. The time to wait, in seconds, from reception of an
+    datanode shutdown notification for quick restart, until declaring
+    the datanode dead and invoking the normal recovery mechanisms.
+    The notification is sent by a datanode when it is being shutdown
+    using the shutdownDatanode admin command with the upgrade option.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."

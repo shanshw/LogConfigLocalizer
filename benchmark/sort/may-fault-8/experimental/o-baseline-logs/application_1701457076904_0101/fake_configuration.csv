@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,1235908528,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+2,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+3,yarn.timeline-service.generic-application-history.max-applications,10000,
+4,dfs.replication,3,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+5,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+6,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+7,yarn.resourcemanager.client.thread-count,50,
+8,mapreduce.jobhistory.intermediate-user-done-dir.permissions,770,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+9,dfs.namenode.decommission.blocks.per.interval,500000,"The approximate number of blocks to process per decommission
+    or maintenance interval, as defined in dfs.namenode.decommission.interval."

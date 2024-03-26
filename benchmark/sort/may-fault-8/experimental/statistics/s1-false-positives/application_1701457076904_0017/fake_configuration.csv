@@ -1,0 +1,30 @@
+,name,value,description
+0,mapreduce.jobhistory.datestring.cache.size,-0.12605387,"Size of the date string cache. Effects the number of directories
+  which will be scanned to find a job."
+1,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+2,dfs.image.transfer.bandwidthPerSec,52428800,"Maximum bandwidth used for regular image transfers (instead of
+        bootstrapping the standby namenode), in bytes per second.
+        This can help keep normal namenode operations responsive during
+        checkpointing.
+        A default value is 50mb per second.
+        The maximum bandwidth used for bootstrapping standby namenode is
+        configured with dfs.image.transfer-bootstrap-standby.bandwidthPerSec.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+3,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,
+4,mapreduce.job.end-notification.retry.interval,1000,"The number of milliseconds the submitter of the job wants to
+    wait before job end notification is retried if it fails. This is capped by
+    mapreduce.job.end-notification.max.retry.interval"
+5,yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms,10000,
+6,ha.failover-controller.cli-check.rpc-timeout.ms,20000,"Timeout that the CLI (manual) FC waits for monitorHealth, getServiceState"
+7,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+8,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."
+9,yarn.am.liveness-monitor.expiry-interval-ms,600000,

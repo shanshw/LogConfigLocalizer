@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1287975694,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.jobhistory.move.thread-count,3,The number of threads used to move files.
+2,dfs.domain.socket.disable.interval.seconds,600,"The interval that a DataNode is disabled for future Short-Circuit Reads,
+    after an error happens during a Short-Circuit Read. Setting this to 0 will
+    not disable Short-Circuit Reads at all after errors happen. Negative values
+    are invalid."
+3,yarn.resourcemanager.application.max-tags,10,
+4,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+5,yarn.nodemanager.process-kill-wait.ms,5000,
+6,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+7,yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,
+8,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+9,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,

@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-1687820511,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.shuffle.pathcache.concurrency-level,16,"Uses the concurrency level to create a fixed number of hashtable
+    segments, each governed by its own write lock."
+2,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."
+3,yarn.resourcemanager.activities-manager.app-activities.ttl-ms,600000,
+4,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+5,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."
+6,mapreduce.job.speculative.retry-after-no-speculate,1000,"The waiting time(ms) to do next round of speculation
+  if there is no task speculated in this round."
+7,fs.du.interval,600000,File space usage statistics refresh interval in msec.
+8,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+9,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."

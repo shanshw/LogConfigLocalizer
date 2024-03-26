@@ -1,0 +1,82 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.write.exclude.nodes.cache.expiry.interval.millis</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-1772503665</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.java.lang.IllegalArgumentException: duration cannot be negative: -1772503665 MILLISECONDS
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.write.exclude.nodes.cache.expiry.interval.millis</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-1772503665</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701457076904_0224_r_000000_0 - exited : java.lang.IllegalArgumentException: duration cannot be negative: -1772503665 MILLISECONDS	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.replication.max-streams-hard-limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Task: attempt_1701457076904_0224_r_000000_0 - exited : java.lang.IllegalArgumentException: duration cannot be negative: -1772503665 MILLISECONDS	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.write.exclude.nodes.cache.expiry.interval.millis</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-1772503665</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701457076904_0224_r_000000_0: Error: java.lang.IllegalArgumentException: duration cannot be negative: -1772503665 MILLISECONDS	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.replication.max-streams-hard-limit</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Diagnostics report from attempt_1701457076904_0224_r_000000_0: Error: java.lang.IllegalArgumentException: duration cannot be negative: -1772503665 MILLISECONDS	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+    </script>
+    </body>
+    </html>
+    

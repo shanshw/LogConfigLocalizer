@@ -1,0 +1,32 @@
+,name,value,description
+0,mapreduce.jobhistory.intermediate-user-done-dir.permissions,-0.2599095,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+1,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+2,yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep,100,
+3,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."
+4,hadoop.security.groups.cache.secs,300,"This is the config controlling the validity of the entries in the cache
+    containing the user->group mapping. When this duration has expired,
+    then the implementation of the group mapping provider is invoked to get
+    the groups of the user and then cached back."
+5,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+6,mapreduce.task.stuck.timeout-ms,600000,"The max timeout before receiving remote task's first heartbeat.
+    This parameter is in order to avoid waiting for the container
+    to start indefinitely, which made task stuck in the NEW state.
+    A value of 0 disables the timeout."
+7,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+8,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+9,yarn.client.nodemanager-connect.max-wait-ms,180000,

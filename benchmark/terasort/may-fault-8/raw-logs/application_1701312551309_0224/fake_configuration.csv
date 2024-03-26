@@ -1,0 +1,38 @@
+,name,value,description
+0,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,-916839259,"The initial size of thread pool to launch containers in the
+    app master."
+1,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+2,yarn.timeline-service.client.fd-retain-secs,300,
+3,yarn.app.mapreduce.task.container.log.backups,0,"Number of backup files for task logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for tasks when both mapreduce.task.userlog.limit.kb and
+    yarn.app.mapreduce.task.container.log.backups are greater than zero."
+4,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+5,yarn.sharedcache.cleaner.initial-delay-mins,10,
+6,ipc.client.connect.timeout,20000,"Indicates the number of milliseconds a client will wait for the
+               socket to establish a server connection."
+7,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+8,mapreduce.job.running.map.limit,0,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+9,dfs.datanode.du.reserved,0,"Reserved space in bytes per volume. Always leave this much space free for non dfs use.
+      Specific storage type based reservation is also supported. The property can be followed with
+      corresponding storage types ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+      For example, reserved space for RAM_DISK storage can be configured using property
+      'dfs.datanode.du.reserved.ram_disk'. If specific storage type reservation is not configured
+      then dfs.datanode.du.reserved will be used. Support multiple size unit suffix(case insensitive),
+      as described in dfs.blocksize.
+      Note: In case of using tune2fs to set reserved-blocks-percentage, or other filesystem tools,
+      then you can possibly run into out of disk errors because hadoop will not check those
+      external tool configurations."

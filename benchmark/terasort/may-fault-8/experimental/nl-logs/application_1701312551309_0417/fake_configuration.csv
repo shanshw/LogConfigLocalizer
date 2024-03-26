@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,367932490,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+2,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+3,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+4,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"
+5,ha.health-monitor.check-interval.ms,1000,How often to check the service.
+6,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+7,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+8,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+9,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."

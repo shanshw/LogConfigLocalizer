@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.ifile.readahead.bytes,4194304,Configuration key to set the IFile readahead length in bytes.
+2,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+3,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+4,dfs.namenode.num.checkpoints.retained,2,"The number of image checkpoint files (fsimage_*) that will be retained by
+  the NameNode and Secondary NameNode in their storage directories. All edit
+  logs (stored on edits_* files) necessary to recover an up-to-date namespace from the oldest retained
+  checkpoint will also be retained."
+5,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+6,dfs.webhdfs.netty.high.watermark,65535,High watermark configuration to Netty for Datanode WebHdfs.
+7,yarn.resourcemanager.nodemanager-connect-retries,10,
+8,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+9,dfs.namenode.safemode.extension,30000,"Determines extension of safe mode in milliseconds after the threshold level
+    is reached.  Support multiple time unit suffix (case insensitive), as
+    described in dfs.heartbeat.interval."

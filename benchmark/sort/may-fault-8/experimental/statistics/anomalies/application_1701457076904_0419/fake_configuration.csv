@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1127025069,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+2,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+3,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+4,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+5,dfs.client.failover.sleep.base.millis,500,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least dfs.client.failover.sleep.base.millis
+    milliseconds. And so on."
+6,yarn.sharedcache.cleaner.period-mins,1440,
+7,hadoop.http.idle_timeout.ms,60000,NN/JN/DN Server connection timeout in milliseconds.
+8,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+9,yarn.sharedcache.nested-level,3,

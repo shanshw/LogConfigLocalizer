@@ -1,0 +1,23 @@
+anomaly_degree,content
+0.4,"ERROR	Error in dispatcher threadjava.lang.NumberFormatException: For input string: ""-0.14916784""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapreduce.v2.util.MRApps.addLog4jSystemProperties(MRApps.java:654)
+	at org.apache.hadoop.mapred.MapReduceChildJVM.getVMCommand(MapReduceChildJVM.java:157)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.createContainerLaunchContext(TaskAttemptImpl.java:1146)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl$ContainerAssignedTransition.transition(TaskAttemptImpl.java:1906)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl$ContainerAssignedTransition.transition(TaskAttemptImpl.java:1883)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$SingleInternalArc.doTransition(StateMachineFactory.java:362)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.doTransition(StateMachineFactory.java:302)
+	at org.apache.hadoop.yarn.state.StateMachineFactory.access$500(StateMachineFactory.java:46)
+	at org.apache.hadoop.yarn.state.StateMachineFactory$InternalStateMachine.doTransition(StateMachineFactory.java:493)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.handle(TaskAttemptImpl.java:1388)
+	at org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl.handle(TaskAttemptImpl.java:156)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher.handle(MRAppMaster.java:1566)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher.handle(MRAppMaster.java:1558)
+	at org.apache.hadoop.yarn.event.AsyncDispatcher.dispatch(AsyncDispatcher.java:241)
+	at org.apache.hadoop.yarn.event.AsyncDispatcher$1.run(AsyncDispatcher.java:156)
+	at java.base/java.lang.Thread.run(Thread.java:829)"
+0.2,"INFO	Exiting, bbye.."

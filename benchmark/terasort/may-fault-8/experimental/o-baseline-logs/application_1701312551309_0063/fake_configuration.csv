@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,-1455351761,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.writer.flush-interval-seconds,60,
+2,nfs.mountd.port,4242,Specify the port number used by Hadoop mount daemon.
+3,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+4,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+5,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+6,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+7,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+8,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+9,yarn.log-aggregation.debug.filesize,104857600,

@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.proxy.connection.timeout,60000,
+2,yarn.nodemanager.default-container-executor.log-dirs.permissions,710,
+3,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+4,dfs.qjournal.start-segment.timeout.ms,20000,Quorum timeout in milliseconds for starting a log segment.
+5,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+6,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+7,ipc.client.connect.max.retries,10,"Indicates the number of retries a client will make to establish
+               a server connection."
+8,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+9,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,

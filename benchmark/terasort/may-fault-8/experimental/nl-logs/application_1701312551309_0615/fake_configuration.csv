@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,-670838799,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.restart.replica.expiration,50,"During shutdown for restart, the amount of time in seconds budgeted for
+    datanode restart."
+2,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+3,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+4,dfs.balancer.getBlocks.min-block-size,10485760,"Minimum block threshold size in bytes to ignore when fetching a source's
+    block list."
+5,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+6,dfs.client.slow.io.warning.threshold.ms,30000,"The threshold in milliseconds at which we will log a slow
+    io warning in a dfsclient. By default, this parameter is set to 30000
+    milliseconds (30 seconds)."
+7,hadoop.security.crypto.buffer.size,8192,The buffer size used by CryptoInputStream and CryptoOutputStream.
+8,yarn.timeline-service.generic-application-history.max-applications,10000,
+9,dfs.namenode.checkpoint.txns,1000000,"The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired."

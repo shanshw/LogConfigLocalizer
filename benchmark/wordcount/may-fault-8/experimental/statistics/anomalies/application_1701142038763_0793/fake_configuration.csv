@@ -1,0 +1,23 @@
+,name,value,description
+0,dfs.client.mmap.retry.timeout.ms,0,"The minimum amount of time that we will wait before retrying a failed mmap
+    operation."
+1,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."
+2,dfs.ha.zkfc.port,8019,"The port number that the zookeeper failover controller RPC
+    server binds to."
+3,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+4,yarn.sharedcache.client-server.thread-count,50,
+5,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+6,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+7,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+8,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+9,fs.getspaceused.jitterMillis,60000,fs space usage statistics refresh jitter in msec.

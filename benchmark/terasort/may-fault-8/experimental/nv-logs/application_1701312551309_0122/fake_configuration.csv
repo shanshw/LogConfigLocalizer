@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.group.mapping.ldap.search.group.hierarchy.levels,0,"The number of levels to go up the group hierarchy when determining
+    which groups a user is part of. 0 Will represent checking just the
+    group that the user belongs to.  Each additional level will raise the
+    time it takes to execute a query by at most
+    hadoop.security.group.mapping.ldap.directory.search.timeout.
+    The default will usually be appropriate for all LDAP systems."
+2,dfs.client.short.circuit.replica.stale.threshold.ms,1800000,"The maximum amount of time that we will consider a short-circuit replica to
+    be valid, if there is no communication from the DataNode.  After this time
+    has elapsed, we will re-fetch the short-circuit replica even if it is in
+    the cache."
+3,yarn.dispatcher.print-events-info.threshold,5000,
+4,dfs.client.deadnode.detection.probe.suspectnode.threads,10,The maximum number of threads to use for probing suspect node.
+5,yarn.resourcemanager.delegation.token.renew-interval,86400000,
+6,ha.health-monitor.rpc-timeout.ms,45000,Timeout for the actual monitorHealth() calls.
+7,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+8,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+9,yarn.nodemanager.health-checker.timeout-ms,1200000,

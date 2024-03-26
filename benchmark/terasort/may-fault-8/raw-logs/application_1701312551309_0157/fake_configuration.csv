@@ -1,0 +1,34 @@
+,name,value,description
+0,io.bytes.per.checksum,1706081678,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.generic-application-history.max-applications,10000,
+2,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+3,dfs.datanode.du.reserved,0,"Reserved space in bytes per volume. Always leave this much space free for non dfs use.
+      Specific storage type based reservation is also supported. The property can be followed with
+      corresponding storage types ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+      For example, reserved space for RAM_DISK storage can be configured using property
+      'dfs.datanode.du.reserved.ram_disk'. If specific storage type reservation is not configured
+      then dfs.datanode.du.reserved will be used. Support multiple size unit suffix(case insensitive),
+      as described in dfs.blocksize.
+      Note: In case of using tune2fs to set reserved-blocks-percentage, or other filesystem tools,
+      then you can possibly run into out of disk errors because hadoop will not check those
+      external tool configurations."
+4,yarn.timeline-service.entity-group-fs-store.scan-interval-seconds,60,
+5,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+6,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."
+7,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+8,fs.s3a.threads.keepalivetime,60,"Number of seconds a thread can be idle before being
+    terminated."
+9,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."

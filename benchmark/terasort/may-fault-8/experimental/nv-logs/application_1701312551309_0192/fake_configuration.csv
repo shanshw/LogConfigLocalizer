@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.group.mapping.ldap.num.attempts,3,"This property is the number of attempts to be made for LDAP operations.
+    If this limit is exceeded, LdapGroupsMapping will return an empty
+    group list."
+2,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+3,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.
+4,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+5,dfs.namenode.fs-limits.max-directory-items,1048576,"Defines the maximum number of items that a directory may
+      contain. Cannot set the property to a value less than 1 or more than
+      6400000."
+6,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+7,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+8,dfs.webhdfs.netty.low.watermark,32768,Low watermark configuration to Netty for Datanode WebHdfs.
+9,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."

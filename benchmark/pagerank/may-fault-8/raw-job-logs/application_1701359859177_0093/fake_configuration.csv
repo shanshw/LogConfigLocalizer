@@ -1,0 +1,26 @@
+,name,value,description
+0,mapreduce.job.running.reduce.limit,-0.76620615,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+1,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+2,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+3,yarn.nodemanager.container-log-monitor.total-size-limit-bytes,10000000000,
+4,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+5,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+6,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."
+7,yarn.federation.cache-ttl.secs,300,
+8,dfs.batched.ls.limit,100,"Limit the number of paths that can be listed in a single batched
+    listing call. printed by ls. If less or equal to
+    zero, at most DFS_LIST_LIMIT_DEFAULT (= 1000) will be printed."
+9,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

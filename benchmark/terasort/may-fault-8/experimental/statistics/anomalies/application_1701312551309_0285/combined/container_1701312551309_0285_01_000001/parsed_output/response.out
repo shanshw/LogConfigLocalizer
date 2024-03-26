@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an invalid checksum type. The configuration 'io.bytes.per.checksum' is set to 0, which might be causing this issue as it is related to checksum calculation. The value should be greater than 0 for proper functioning.
+
+name:dfs.datanode.failed.volumes.tolerated
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration 'dfs.datanode.failed.volumes.tolerated' is set to 0, which means any volume failure will cause a datanode to shutdown. This could be related to the error as the log indicates a failure in the DFSClient.
+
+name:dfs.client.cached.conn.retry
+value:3
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The configuration 'dfs.client.cached.conn.retry' is set to 3, which means the HDFS client will pull a socket from the cache 3 times before trying to create a new socket. This could be related to the error as the log indicates a failure in the DFSClient.

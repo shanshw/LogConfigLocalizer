@@ -1,0 +1,21 @@
+,name,value,description
+0,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,khSDE,"The initial size of thread pool to launch containers in the
+    app master."
+1,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+2,yarn.nodemanager.health-checker.timeout-ms,1200000,
+3,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+4,dfs.client.write.byte-array-manager.count-reset-time-period-ms,10000,"The time period in milliseconds that the allocation count for each array length is
+    reset to zero if there is no increment."
+5,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+6,dfs.balancer.moverThreads,1000,"Thread pool size for executing block moves.
+    moverThreadAllocator"
+7,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+8,yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,
+9,file.blocksize,67108864,Block size

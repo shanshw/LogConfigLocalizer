@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:4-3-2-1-ERROR
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the 'Invalid checksum type' error. This configuration should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:dfs.blocksize
+value:134217728
+relevant log:4-3-2-1-ERROR
+explanation:The 'dfs.blocksize' configuration might be related to the issue as it determines the size of the data blocks. If the block size is not compatible with the checksum type, it might cause errors.
+
+name:dfs.checksum.ec.socket-timeout
+value:3000
+relevant log:4-3-2-1-ERROR
+explanation:The 'dfs.checksum.ec.socket-timeout' configuration might be related to the issue. If the timeout for computing the checksum is too short, it might cause errors.

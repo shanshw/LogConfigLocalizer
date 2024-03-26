@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+2,hadoop.security.groups.cache.background.reload.threads,3,"Only relevant if hadoop.security.groups.cache.background.reload is true.
+    Controls the number of concurrent background user->group cache entry
+    refreshes. Pending refresh requests beyond this value are queued and
+    processed when a thread is free."
+3,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+4,yarn.log-aggregation.debug.filesize,104857600,
+5,hadoop.registry.zk.retry.interval.ms,1000,
+6,yarn.timeline-service.handler-thread-count,10,
+7,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+8,dfs.balancer.max-iteration-time,1200000,"Maximum amount of time while an iteration can be run by the Balancer. After
+    this time the Balancer will stop the iteration, and reevaluate the work
+    needs to be done to Balance the cluster. The default value is 20 minutes."
+9,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"

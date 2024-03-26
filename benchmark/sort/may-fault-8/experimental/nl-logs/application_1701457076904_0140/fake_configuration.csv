@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,1669679292,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.client.max-cached-nodemanagers-proxies,0,
+2,dfs.namenode.snapshot.skiplist.max.levels,0,"Maximum no of the skip levels to be maintained in the skip list for
+    storing directory snapshot diffs. By default, it is set to 0 and a linear
+    list will be used to store the directory snapshot diffs."
+3,dfs.datanode.restart.replica.expiration,50,"During shutdown for restart, the amount of time in seconds budgeted for
+    datanode restart."
+4,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+5,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+6,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+7,yarn.app.mapreduce.shuffle.log.backups,0,"If yarn.app.mapreduce.shuffle.log.limit.kb and
+    yarn.app.mapreduce.shuffle.log.backups are greater than zero
+    then a ContainerRollngLogAppender is used instead of ContainerLogAppender
+    for syslog.shuffle. See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex"
+8,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+9,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."

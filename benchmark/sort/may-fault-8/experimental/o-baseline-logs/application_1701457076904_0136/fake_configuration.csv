@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1569006135,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.fs-limits.max-component-length,255,"Defines the maximum number of bytes in UTF-8 encoding in each
+      component of a path.  A value of 0 will disable the check. Support
+      multiple size unit suffix(case insensitive), as described in dfs.blocksize."
+2,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+3,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+4,yarn.sharedcache.cleaner.initial-delay-mins,10,
+5,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+6,yarn.timeline-service.hbase.coprocessor.app-final-value-retention-milliseconds,259200000,
+7,dfs.namenode.num.checkpoints.retained,2,"The number of image checkpoint files (fsimage_*) that will be retained by
+  the NameNode and Secondary NameNode in their storage directories. All edit
+  logs (stored on edits_* files) necessary to recover an up-to-date namespace from the oldest retained
+  checkpoint will also be retained."
+8,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+9,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."

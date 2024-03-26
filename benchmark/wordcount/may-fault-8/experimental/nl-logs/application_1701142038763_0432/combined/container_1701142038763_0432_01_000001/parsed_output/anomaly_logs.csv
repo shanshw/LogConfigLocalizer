@@ -1,0 +1,36 @@
+anomaly_degree,content
+0.6000000000000001,"ERROR	Task: attempt_1701142038763_0432_r_000000_0 - exited : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: Error while doing final merge	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:162)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:377)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.lang.NumberFormatException: For input string: ""BfchI""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapred.Merger.writeFile(Merger.java:207)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl.finalMerge(MergeManagerImpl.java:748)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl.close(MergeManagerImpl.java:379)
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:160)
+	... 6 more"
+0.4,"INFO	Diagnostics report from attempt_1701142038763_0432_r_000000_0: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: Error while doing final merge	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:162)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:377)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.lang.NumberFormatException: For input string: ""BfchI""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.parseLong(Long.java:817)
+	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1587)
+	at org.apache.hadoop.mapred.Merger.writeFile(Merger.java:207)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl.finalMerge(MergeManagerImpl.java:748)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl.close(MergeManagerImpl.java:379)
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:160)
+	... 6 more"
+0.2,INFO	1 failures on node cf6e5ca2712c

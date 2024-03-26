@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,525038800,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+2,dfs.client.socket-timeout,60000,Default timeout value in milliseconds for all sockets.
+3,dfs.namenode.quota.init-threads,12,"The number of concurrent threads to be used in quota initialization. The
+    speed of quota initialization also affects the namenode fail-over latency.
+    If the size of name space is big, try increasing this to 16 or higher."
+4,mapreduce.jobhistory.client.thread-count,10,The number of threads to handle client API requests
+5,fs.s3a.executor.capacity,16,"The maximum number of submitted tasks which is a single
+    operation (e.g. rename(), delete()) may submit simultaneously for
+    execution -excluding the IO-heavy block uploads, whose capacity
+    is set in ""fs.s3a.fast.upload.active.blocks""
+
+    All tasks are submitted to the shared thread pool whose size is
+    set in ""fs.s3a.threads.max""; the value of capacity should be less than that
+    of the thread pool itself, as the goal is to stop a single operation
+    from overloading that thread pool."
+6,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+7,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+8,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+9,dfs.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"

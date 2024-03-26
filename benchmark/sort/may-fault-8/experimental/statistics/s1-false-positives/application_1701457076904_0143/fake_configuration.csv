@@ -1,0 +1,31 @@
+,name,value,description
+0,hadoop.security.crypto.buffer.size,,The buffer size used by CryptoInputStream and CryptoOutputStream.
+1,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+2,dfs.datanode.scan.period.hours,504,"If this is positive, the DataNode will not scan any
+        individual block more than once in the specified scan period.
+        If this is negative, the block scanner is disabled.
+        If this is set to zero, then the default value of 504 hours
+        or 3 weeks is used. Prior versions of HDFS incorrectly documented
+        that setting this key to zero will disable the block scanner."
+3,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+4,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+5,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+6,file.replication,1,Replication factor
+7,yarn.timeline-service.writer.flush-interval-seconds,60,
+8,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+9,yarn.nodemanager.container-log-monitor.total-size-limit-bytes,10000000000,

@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The error log indicates an invalid checksum type. The configuration 'io.bytes.per.checksum' is set to 0, which might be causing this issue as it is related to checksum calculation. The value should be greater than 0.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong><missing></strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration 'yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb' is missing a value. This could potentially cause issues as it is related to the disk health check, which is crucial for the system's performance and stability.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.timeline-service.leveldb-timeline-store.read-cache-size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>104857600</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>Although there is no direct error log related to this configuration, the 'yarn.timeline-service.leveldb-timeline-store.read-cache-size' might be a potential cause of issues. It is related to the read cache size of the timeline service, which could affect the performance if not set properly.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

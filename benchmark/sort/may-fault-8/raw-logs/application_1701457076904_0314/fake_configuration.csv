@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-1981649061,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+2,dfs.datanode.data.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the data transfering can utilize for writing block or pipeline
+      recovery when
+      BlockConstructionStage is PIPELINE_SETUP_APPEND_RECOVERY or PIPELINE_SETUP_STREAMING_RECOVERY.
+      When the bandwidth value is zero, there is no limit."
+3,yarn.nodemanager.log.retain-seconds,10800,
+4,yarn.app.mapreduce.am.resource.mb,1536,The amount of memory the MR AppMaster needs.
+5,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+6,mapreduce.job.end-notification.max.attempts,5,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."
+7,yarn.client.nodemanager-client-async.thread-pool-max-size,500,
+8,yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,
+9,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."

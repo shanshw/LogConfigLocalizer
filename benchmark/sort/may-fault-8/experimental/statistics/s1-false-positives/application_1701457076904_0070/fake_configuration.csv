@@ -1,0 +1,50 @@
+,name,value,description
+0,dfs.datanode.ec.reconstruction.threads,0,"Number of threads used by the Datanode for background
+    reconstruction work."
+1,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+2,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+3,mapreduce.job.ubertask.maxreduces,1,"Threshold for number of reduces, beyond which job is considered
+  too big for the ubertasking optimization.  CURRENTLY THE CODE CANNOT SUPPORT
+  MORE THAN ONE REDUCE and will ignore larger values.  (Zero is a valid max,
+  however.)  Users may override this value, but only downward."
+4,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+5,dfs.namenode.num.extra.edits.retained,1000000,"The number of extra transactions which should be retained
+  beyond what is minimally necessary for a NN restart.
+  It does not translate directly to file's age, or the number of files kept,
+  but to the number of transactions (here ""edits"" means transactions).
+  One edit file may contain several transactions (edits).
+  During checkpoint, NameNode will identify the total number of edits to retain as extra by
+  checking the latest checkpoint transaction value, subtracted by the value of this property.
+  Then, it scans edits files to identify the older ones that don't include the computed range of
+  retained transactions that are to be kept around, and purges them subsequently.
+  The retainment can be useful for audit purposes or for an HA setup where a remote Standby Node may have
+  been offline for some time and need to have a longer backlog of retained
+  edits in order to start again.
+  Typically each edit is on the order of a few hundred bytes, so the default
+  of 1 million edits should be on the order of hundreds of MBs or low GBs.
+
+  NOTE: Fewer extra edits may be retained than value specified for this setting
+  if doing so would mean that more segments would be retained than the number
+  configured by dfs.namenode.max.extra.edits.segments.retained."
+6,dfs.datanode.readahead.bytes,4194304,"While reading block files, if the Hadoop native libraries are available,
+        the datanode can use the posix_fadvise system call to explicitly
+        page data into the operating system buffer cache ahead of the current
+        reader's position. This can improve performance especially when
+        disks are highly contended.
+
+        This configuration specifies the number of bytes ahead of the current
+        read position which the datanode will attempt to read ahead. This
+        feature may be disabled by configuring this property to 0.
+
+        If the native libraries are not available, this configuration has no
+        effect."
+7,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+8,yarn.resourcemanager.am-rm-tokens.master-key-rolling-interval-secs,86400,
+9,dfs.datanode.metrics.logger.period.seconds,600,"This setting controls how frequently the DataNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    DataNodeMetricsLog for the metrics to be logged.
+    DataNode metrics logging is disabled if this value is set to zero or
+    less than zero."

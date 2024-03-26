@@ -1,0 +1,35 @@
+,name,value,description
+0,io.bytes.per.checksum,1608699657,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+2,yarn.app.mapreduce.client.job.max-retries,3,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+3,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+4,yarn.nodemanager.health-checker.interval-ms,600000,
+5,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+6,dfs.image.transfer.bandwidthPerSec,52428800,"Maximum bandwidth used for regular image transfers (instead of
+        bootstrapping the standby namenode), in bytes per second.
+        This can help keep normal namenode operations responsive during
+        checkpointing.
+        A default value is 50mb per second.
+        The maximum bandwidth used for bootstrapping standby namenode is
+        configured with dfs.image.transfer-bootstrap-standby.bandwidthPerSec.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+7,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+8,yarn.sharedcache.admin.thread-count,1,
+9,yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,

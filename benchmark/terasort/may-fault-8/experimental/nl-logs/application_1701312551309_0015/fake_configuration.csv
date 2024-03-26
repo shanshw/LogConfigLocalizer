@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+2,yarn.log-aggregation-status.time-out.ms,600000,
+3,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+4,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+5,hadoop.http.idle_timeout.ms,60000,NN/JN/DN Server connection timeout in milliseconds.
+6,yarn.nodemanager.local-cache.max-files-per-directory,8192,
+7,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,
+8,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+9,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."

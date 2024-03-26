@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,1178416143,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+2,file.replication,1,Replication factor
+3,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+4,dfs.mover.moverThreads,1000,Configure the balancer's mover thread pool size.
+5,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+6,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+7,dfs.client.write.byte-array-manager.count-reset-time-period-ms,10000,"The time period in milliseconds that the allocation count for each array length is
+    reset to zero if there is no increment."
+8,dfs.client.socket-timeout,60000,Default timeout value in milliseconds for all sockets.
+9,dfs.datanode.handler.count,10,The number of server threads for the datanode.

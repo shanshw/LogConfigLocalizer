@@ -1,0 +1,14 @@
+name:dfs.client.read.shortcircuit.streams.cache.expiry.ms
+value:-940390417
+relevant log:4-3-2-1-WARN Failed to initialize filesystem hdfs://2f08f873c798:9000/efghwordsortKOoQLrJ8i1/_LLNr4: java.lang.IllegalArgumentException
+explanation: The negative value for the configuration dfs.client.read.shortcircuit.streams.cache.expiry.ms is causing the IllegalArgumentException. This configuration controls the minimum amount of time file descriptors need to sit in the client cache context before they can be closed for being inactive for too long. The value should be a positive integer.
+
+name:ipc.server.max.connections
+value:0
+relevant log:4-3-2-1-WARN Failed to initialize filesystem hdfs://2f08f873c798:9000/efghwordsortKOoQLrJ8i1/_LLNr4: java.lang.IllegalArgumentException
+explanation: The value of 0 for the configuration ipc.server.max.connections is causing the IllegalArgumentException. This configuration controls the maximum number of concurrent connections a server is allowed to accept. The value should be a positive integer.
+
+name:yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms
+value:100
+relevant log:<missing>
+explanation: The description for the configuration yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms is missing. This could potentially cause issues if the configuration is not properly understood or set.

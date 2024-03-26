@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+2,dfs.disk.balancer.plan.threshold.percent,10,"The percentage threshold value for volume Data Density in a plan.
+      If the absolute value of volume Data Density which is out of
+      threshold value in a node, it means that the volumes corresponding to
+      the disks should do the balancing in the plan. The default value is 10."
+3,ipc.[port_number].weighted-cost.lockfree,1,"The weight multiplier to apply to the time spent in the
+    LOCKFREE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+4,dfs.client.refresh.read-block-locations.threads,5,"Number of threads to use for refreshing LocatedBlocks of registered
+      DFSInputStreams. If a DFSClient opens many DFSInputStreams, increasing
+      this may help refresh them all in a timely manner."
+5,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+6,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+7,dfs.datanode.network.counts.cache.max.size,2147483647,"The maximum number of entries the datanode per-host network error
+    count cache may contain."
+8,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+9,yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms,1000,

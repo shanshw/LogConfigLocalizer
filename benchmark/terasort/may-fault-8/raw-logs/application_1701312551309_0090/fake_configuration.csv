@@ -1,0 +1,26 @@
+,name,value,description
+0,hadoop.kerberos.min.seconds.before.relogin,9lG25,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+1,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+2,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+3,yarn.client.nodemanager-connect.retry-interval-ms,10000,
+4,yarn.nodemanager.delete.thread-count,4,
+5,dfs.namenode.block.deletion.increment,1000,"The number of block deletion increment.
+      This setting will control the block increment deletion rate to
+      ensure that other waiters on the lock can get in."
+6,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+7,yarn.nodemanager.container-retry-minimum-interval-ms,1000,
+8,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+9,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."

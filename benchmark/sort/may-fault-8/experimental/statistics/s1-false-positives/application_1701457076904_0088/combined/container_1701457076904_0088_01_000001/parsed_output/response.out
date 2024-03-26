@@ -1,0 +1,14 @@
+name:yarn.am.liveness-monitor.expiry-interval-ms
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0088_m_000008
+explanation:This configuration is related to the Application Master's liveness monitor. The value of 0 might indicate that the liveness monitor is not properly set, which could cause issues with task speculation.
+
+name:mapreduce.job.running.map.limit
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0088_m_000008
+explanation:This configuration is related to the maximum number of simultaneous map tasks per job. The value of 0 might indicate that there is no limit on the number of map tasks, which could lead to resource overuse and task speculation.
+
+name:mapreduce.reduce.shuffle.connect.timeout
+value:180000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0088_m_000008
+explanation:This configuration is related to the maximum amount of time a reduce task spends trying to connect to a remote node for getting map output. If the timeout is too long, it could delay the task completion and trigger task speculation.

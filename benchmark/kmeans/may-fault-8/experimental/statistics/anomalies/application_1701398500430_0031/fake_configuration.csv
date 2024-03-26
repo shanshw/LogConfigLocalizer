@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-1416719551,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.retry.times.get-last-block-length,3,Number of retries for calls to fetchLocatedBlocksAndGetLastBlockLength().
+2,dfs.namenode.lease-recheck-interval-ms,2000,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+3,dfs.datanode.directoryscan.threads,1,"How many threads should the threadpool used to compile reports
+  for volumes in parallel have."
+4,dfs.client.slow.io.warning.threshold.ms,30000,"The threshold in milliseconds at which we will log a slow
+    io warning in a dfsclient. By default, this parameter is set to 30000
+    milliseconds (30 seconds)."
+5,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+6,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+7,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+8,dfs.ha.tail-edits.period.backoff-max,0,"The maximum time the tailer should wait between checking for new edit log
+    entries. Exponential backoff will be applied when an edit log tail is
+    performed but no edits are available to be read. Values less than or
+    equal to zero disable backoff entirely; this is the default behavior.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+9,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."

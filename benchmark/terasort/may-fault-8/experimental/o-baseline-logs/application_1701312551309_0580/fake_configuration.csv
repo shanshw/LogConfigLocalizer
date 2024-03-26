@@ -1,0 +1,37 @@
+,name,value,description
+0,io.bytes.per.checksum,351615604,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+2,dfs.datanode.bp-ready.timeout,20,"The maximum wait time for datanode to be ready before failing the
+    received request. Setting this to 0 fails requests right away if the
+    datanode is not yet registered with the namenode. This wait time
+    reduces initial request failures after datanode restart.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+3,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+4,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+5,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+6,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+7,yarn.client.failover-retries-on-socket-timeouts,0,
+8,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+9,ipc.server.purge.interval,15,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."

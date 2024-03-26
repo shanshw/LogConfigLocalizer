@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+2,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+3,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+4,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+5,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+6,yarn.nodemanager.localizer.client.thread-count,5,
+7,dfs.namenode.max.full.block.report.leases,6,"The maximum number of leases for full block reports that the
+    NameNode will issue at any given time.  This prevents the NameNode from
+    being flooded with full block reports that use up all the RPC handler
+    threads.  This number should never be more than the number of RPC handler
+    threads or less than 1."
+8,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+9,ha.failover-controller.new-active.rpc-timeout.ms,60000,Timeout that the FC waits for the new active to become active

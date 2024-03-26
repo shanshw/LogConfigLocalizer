@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:593796179
+relevant log:2-1-ERROR
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.
+
+name:yarn.resourcemanager.scheduler.client.thread-count
+value:50
+relevant log:2-1-ERROR
+explanation: The number of threads for the resource manager scheduler client is set to 50. This could potentially lead to high memory usage and cause the Java heap space OutOfMemoryError.
+
+name:yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size
+value:10
+relevant log:2-1-ERROR
+explanation: The initial size of the thread pool to launch containers in the app master is set to 10. This could potentially lead to high memory usage and cause the Java heap space OutOfMemoryError.

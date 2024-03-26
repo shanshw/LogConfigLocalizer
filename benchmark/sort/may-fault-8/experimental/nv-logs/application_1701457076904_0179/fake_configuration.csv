@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.zk-max-znode-size.bytes,1048576,
+2,dfs.client.cached.conn.retry,3,"The number of times the HDFS client will pull a socket from the
+   cache.  Once this number is exceeded, the client will try to create a new
+   socket."
+3,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+4,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+5,yarn.timeline-service.generic-application-history.max-applications,10000,
+6,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+7,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+8,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."
+9,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."

@@ -1,0 +1,32 @@
+,name,value,description
+0,mapreduce.job.speculative.retry-after-speculate,l91u7,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+1,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+2,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."
+3,yarn.client.nodemanager-client-async.thread-pool-max-size,500,
+4,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+5,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+6,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+7,mapreduce.job.ubertask.maxreduces,1,"Threshold for number of reduces, beyond which job is considered
+  too big for the ubertasking optimization.  CURRENTLY THE CODE CANNOT SUPPORT
+  MORE THAN ONE REDUCE and will ignore larger values.  (Zero is a valid max,
+  however.)  Users may override this value, but only downward."
+8,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,
+9,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."

@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.name.cache.threshold,10,"Frequently accessed files that are accessed more times than this
+    threshold are cached in the FSDirectory nameCache."
+2,dfs.disk.balancer.block.tolerance.percent,10,"When a disk balancer copy operation is proceeding, the datanode is still
+      active. So it might not be possible to move the exactly specified
+      amount of data. So tolerance allows us to define a percentage which
+      defines a good enough move."
+3,dfs.mover.retry.max.attempts,10,"The maximum number of retries before the mover consider the
+    move failed."
+4,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+5,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+6,yarn.nodemanager.log.retain-seconds,10800,
+7,yarn.nodemanager.opportunistic-containers-max-queue-length,0,
+8,yarn.sharedcache.client-server.thread-count,50,
+9,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."

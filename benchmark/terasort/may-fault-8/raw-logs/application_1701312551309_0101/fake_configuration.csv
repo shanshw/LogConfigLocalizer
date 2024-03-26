@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,819562056,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+2,yarn.timeline-service.leveldb-timeline-store.start-time-write-cache-size,10000,
+3,dfs.cachereport.intervalMsec,10000,"Determines cache reporting interval in milliseconds.  After this amount of
+    time, the DataNode sends a full report of its cache state to the NameNode.
+    The NameNode uses the cache report to update its map of cached blocks to
+    DataNode locations.
+
+    This configuration has no effect if in-memory caching has been disabled by
+    setting dfs.datanode.max.locked.memory to 0 (which is the default).
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+4,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+5,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+6,yarn.nodemanager.health-checker.timeout-ms,1200000,
+7,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+8,dfs.edit.log.transfer.bandwidthPerSec,0,"Maximum bandwidth used for transferring edit log to between journal nodes
+    for syncing, in bytes per second.
+    A default value of 0 indicates that throttling is disabled."
+9,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."

@@ -1,0 +1,39 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+2,hadoop.security.key.default.bitlength,128,"The length (bits) of keys we want the KeyProvider to produce. Key length
+    defines the upper-bound on an algorithm's security, ideally, it would
+    coincide with the lower-bound on an algorithm's security."
+3,dfs.namenode.num.extra.edits.retained,1000000,"The number of extra transactions which should be retained
+  beyond what is minimally necessary for a NN restart.
+  It does not translate directly to file's age, or the number of files kept,
+  but to the number of transactions (here ""edits"" means transactions).
+  One edit file may contain several transactions (edits).
+  During checkpoint, NameNode will identify the total number of edits to retain as extra by
+  checking the latest checkpoint transaction value, subtracted by the value of this property.
+  Then, it scans edits files to identify the older ones that don't include the computed range of
+  retained transactions that are to be kept around, and purges them subsequently.
+  The retainment can be useful for audit purposes or for an HA setup where a remote Standby Node may have
+  been offline for some time and need to have a longer backlog of retained
+  edits in order to start again.
+  Typically each edit is on the order of a few hundred bytes, so the default
+  of 1 million edits should be on the order of hundreds of MBs or low GBs.
+
+  NOTE: Fewer extra edits may be retained than value specified for this setting
+  if doing so would mean that more segments would be retained than the number
+  configured by dfs.namenode.max.extra.edits.segments.retained."
+4,dfs.client.write.byte-array-manager.count-limit,2048,The maximum number of arrays allowed for each array length.
+5,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+6,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+7,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+8,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+9,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.

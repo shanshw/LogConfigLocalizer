@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,240470161,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+2,yarn.sharedcache.store.in-memory.initial-delay-mins,10,
+3,dfs.client.mmap.cache.timeout.ms,3600000,"The minimum length of time that we will keep an mmap entry in the cache
+    between uses.  If an entry is in the cache longer than this, and nobody
+    uses it, it will be removed by a background thread."
+4,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+5,mapreduce.task.combine.progress.records,10000,"The number of records to process during combine output collection
+   before sending a progress notification."
+6,hadoop.kerberos.min.seconds.before.relogin,60,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+7,dfs.namenode.num.checkpoints.retained,2,"The number of image checkpoint files (fsimage_*) that will be retained by
+  the NameNode and Secondary NameNode in their storage directories. All edit
+  logs (stored on edits_* files) necessary to recover an up-to-date namespace from the oldest retained
+  checkpoint will also be retained."
+8,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+9,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."

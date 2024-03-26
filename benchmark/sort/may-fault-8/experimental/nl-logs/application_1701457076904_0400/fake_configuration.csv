@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,-1058710883,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+2,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+3,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+4,dfs.storage.policy.satisfier.recheck.timeout.millis,60000,"Blocks storage movements monitor re-check interval in milliseconds.
+    This check will verify whether any blocks storage movement results arrived from DN
+    and also verify if any of file blocks movements not at all reported to DN
+    since dfs.storage.policy.satisfier.self.retry.timeout.
+    The default value is 1 * 60 * 1000 (1 mins)"
+5,yarn.timeline-service.writer.flush-interval-seconds,60,
+6,yarn.nm.liveness-monitor.expiry-interval-ms,600000,
+7,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+8,dfs.namenode.edit.log.autoroll.check.interval.ms,300000,"How often an active namenode will check if it needs to roll its edit log,
+    in milliseconds."
+9,ipc.client.idlethreshold,4000,"Defines the threshold number of connections after which
+               connections will be inspected for idleness."

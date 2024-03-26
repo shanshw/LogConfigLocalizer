@@ -1,0 +1,26 @@
+,name,value,description
+0,ipc.server.purge.interval,NdiTF,"Define how often calls are cleaned up in the server.
+    The default is 15 minutes. The unit is minutes."
+1,dfs.disk.balancer.block.tolerance.percent,10,"When a disk balancer copy operation is proceeding, the datanode is still
+      active. So it might not be possible to move the exactly specified
+      amount of data. So tolerance allows us to define a percentage which
+      defines a good enough move."
+2,yarn.log-aggregation-status.time-out.ms,600000,
+3,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+4,dfs.namenode.snapshot.skiplist.interval,10,"The interval after which the skip levels will be formed in the skip list
+    for storing directory snapshot diffs. By default, value is set to 10."
+5,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+6,yarn.resourcemanager.zk-delegation-token-node.split-index,0,
+7,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+8,dfs.provided.aliasmap.load.retries,0,"The number of retries on the Datanode to load the provided aliasmap;
+      defaults to 0."
+9,yarn.resourcemanager.nm-container-queuing.max-queue-length,15,

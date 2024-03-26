@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,-2001296879,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+2,yarn.app.mapreduce.client.job.retry-interval,2000,"The delay between getJob retries in ms for retries configured
+  with yarn.app.mapreduce.client.job.max-retries."
+3,hadoop.security.key.default.bitlength,128,"The length (bits) of keys we want the KeyProvider to produce. Key length
+    defines the upper-bound on an algorithm's security, ideally, it would
+    coincide with the lower-bound on an algorithm's security."
+4,yarn.nodemanager.default-container-executor.log-dirs.permissions,710,
+5,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+6,dfs.datanode.block.id.layout.upgrade.threads,6,"The number of threads to use when creating hard links from
+    current to previous blocks during upgrade of a DataNode to block ID-based
+    block layout (see HDFS-6482 for details on the layout)."
+7,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+8,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."
+9,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.

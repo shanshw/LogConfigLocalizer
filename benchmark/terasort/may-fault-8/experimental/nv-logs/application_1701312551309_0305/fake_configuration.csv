@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.am.job.committer.commit-window,10000,"Defines a time window in milliseconds for output commit
+  operations.  If contact with the RM has occurred within this window then
+  commits are allowed, otherwise the AM will not allow output commits until
+  contact with the RM has been re-established."
+2,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+3,dfs.namenode.resource.du.reserved,104857600,"The amount of space to reserve/require for a NameNode storage directory
+    in bytes. The default is 100MB. Support multiple size unit
+    suffix(case insensitive), as described in dfs.blocksize."
+4,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+5,yarn.app.mapreduce.client.job.max-retries,3,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+6,hadoop.hdfs.configuration.version,1,version of this configuration file
+7,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+8,yarn.nodemanager.runtime.linux.docker.userremapping-gid-threshold,1,
+9,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.

@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,1871270027,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+2,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+3,yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,
+4,mapreduce.reduce.shuffle.parallelcopies,5,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."
+5,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+6,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+7,yarn.nodemanager.process-kill-wait.ms,5000,
+8,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+9,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."

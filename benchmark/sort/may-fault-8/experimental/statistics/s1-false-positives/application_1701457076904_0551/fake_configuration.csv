@@ -1,0 +1,29 @@
+,name,value,description
+0,hadoop.shell.safely.delete.limit.num.files,,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+1,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+2,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+3,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+4,fs.du.interval,600000,File space usage statistics refresh interval in msec.
+5,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+6,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+7,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+8,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+9,yarn.sharedcache.uploader.server.thread-count,50,

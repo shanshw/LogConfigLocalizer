@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0413_m_000008
+explanation: The missing value for the number of bytes per checksum could cause errors during data transfer, which might be the cause of the task speculation.
+
+name:dfs.datanode.data.write.bandwidthPerSec
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0413_m_000008
+explanation: The bandwidth for data transfer is set to zero, which means there is no limit. This could lead to overuse of resources and cause the task to be speculated.
+
+name:dfs.client.block.write.replace-datanode-on-failure.min-replication
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0413_m_000008
+explanation: The minimum number of replications is set to zero, which means that if a datanode fails and cannot be replaced, an exception will be thrown. This could be the cause of the task speculation.

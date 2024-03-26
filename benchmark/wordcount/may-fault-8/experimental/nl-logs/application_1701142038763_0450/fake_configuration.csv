@@ -1,0 +1,24 @@
+,name,value,description
+0,io.file.buffer.size,-489077794,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+1,dfs.balancer.max-size-to-move,10737418240,"Maximum number of bytes that can be moved by the balancer in a single
+    thread."
+2,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+3,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."
+4,yarn.scheduler.configuration.store.max-logs,1000,
+5,ipc.[port_number].decay-scheduler.metrics.top.user.count,10,"The number of top (i.e., heaviest) users to emit metric
+    information about. This property applies to DecayRpcScheduler."
+6,yarn.router.interceptor.user.threadpool-size,5,
+7,dfs.namenode.read-lock-reporting-threshold-ms,5000,"When a read lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+8,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+9,dfs.client.short.circuit.replica.stale.threshold.ms,1800000,"The maximum amount of time that we will consider a short-circuit replica to
+    be valid, if there is no communication from the DataNode.  After this time
+    has elapsed, we will re-fetch the short-circuit replica even if it is in
+    the cache."

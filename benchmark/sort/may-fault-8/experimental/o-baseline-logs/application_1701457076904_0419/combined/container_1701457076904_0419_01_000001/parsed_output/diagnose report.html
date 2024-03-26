@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1127025069</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The value of io.bytes.per.checksum is too large, which may cause the Java heap space OutOfMemoryError. It should not be larger than io.file.buffer.size.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>ipc.maximum.data.length</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>134217728</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The value of ipc.maximum.data.length is too large, which may cause the Java heap space OutOfMemoryError. Messages larger than this value are rejected by the server to avoid possible OOMs.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.write.locateFollowingBlock.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>5</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The value of dfs.client.block.write.locateFollowingBlock.retries may be too low, which may cause the Java heap space OutOfMemoryError. Increasing the number of retries may help to avoid this error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

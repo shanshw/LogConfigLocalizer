@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.application.max-tags
+value:-0.25180852
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0129_m_000009
+explanation: The negative value for the maximum tags of the resource manager application could be causing the speculation of tasks. This value should be a positive integer.
+
+name:yarn.scheduler.configuration.store.max-logs
+value:1000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0129_m_000009
+explanation: The maximum logs stored by the scheduler could be causing the speculation of tasks. This value should be adjusted based on the system's capacity.
+
+name:yarn.nodemanager.localizer.fetch.thread-count
+value:4
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0129_m_000009
+explanation: The number of threads for fetching localizer could be causing the speculation of tasks. This value should be adjusted based on the system's capacity.

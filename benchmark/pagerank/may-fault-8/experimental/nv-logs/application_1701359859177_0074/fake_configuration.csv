@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.balancer.service.retries.on.exception,5,"When the balancer is executed as a long-running service, it will retry upon encountering an exception. This
+    configuration determines how many times it will retry before considering the exception to be fatal and quitting."
+2,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."
+3,dfs.namenode.resource.checked.volumes.minimum,1,The minimum number of redundant NameNode storage volumes required.
+4,dfs.namenode.quota.init-threads,12,"The number of concurrent threads to be used in quota initialization. The
+    speed of quota initialization also affects the namenode fail-over latency.
+    If the size of name space is big, try increasing this to 16 or higher."
+5,dfs.namenode.list.openfiles.num.responses,1000,"When listing open files, the maximum number of open files that will be
+      returned in a single batch. Fetching the list incrementally in batches
+      improves namenode performance."
+6,yarn.resourcemanager.container-tokens.master-key-rolling-interval-secs,86400,
+7,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+8,mapreduce.job.speculative.minimum-allowed-tasks,10,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."
+9,yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,

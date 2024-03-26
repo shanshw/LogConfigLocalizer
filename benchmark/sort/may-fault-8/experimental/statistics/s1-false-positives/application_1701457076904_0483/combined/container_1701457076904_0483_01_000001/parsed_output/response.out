@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0483_m_000009
+explanation: The missing value for the number of bytes per checksum could be causing issues with the task speculation. This configuration option is important for data integrity and performance.
+
+name:mapreduce.task.skip.start.attempts
+value:2
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0483_m_000009
+explanation: The value of this configuration option might be causing the task to enter skip mode prematurely, leading to speculation of the task. Adjusting this value could potentially resolve the issue.
+
+name:mapreduce.task.exit.timeout.check-interval-ms
+value:20000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0483_m_000009
+explanation: The interval at which the MR framework checks if task attempts stay in finishing state for too long might be too long, causing the task to be speculated. Reducing this value could potentially resolve the issue.

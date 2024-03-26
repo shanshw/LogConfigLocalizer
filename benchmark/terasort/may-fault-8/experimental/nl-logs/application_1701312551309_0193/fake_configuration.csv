@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,1452768612,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.merge.inmem.threshold,1000,"The threshold, in terms of the number of files
+  for the in-memory merge process. When we accumulate threshold number of files
+  we initiate the in-memory merge and spill to disk. A value of 0 or less than
+  0 indicates we want to DON'T have any threshold and instead depend only on
+  the ramfs's memory consumption to trigger the merge."
+2,dfs.client.hedged.read.threshold.millis,500,"Configure 'hedged' reads in DFSClient. This is the number of milliseconds
+    to wait before starting up a 'hedged' read."
+3,mapreduce.job.counters.max,120,The max number of user counters allowed per job.
+4,dfs.blocksize,134217728,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+5,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+6,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+7,dfs.datanode.fsdatasetasyncdisk.max.threads.per.volume,4,"The maximum number of threads per volume used to process async disk
+    operations on the datanode. These threads consume I/O and CPU at the
+    same time. This will affect normal data node operations."
+8,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+9,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

@@ -1,0 +1,14 @@
+name:yarn.minicluster.yarn.nodemanager.resource.memory-mb
+value:yZcQ2
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0030_m_000009
+explanation:The value of this configuration option is not a valid integer, which is required for specifying the memory in MB. This could cause issues with task scheduling and resource allocation, as indicated in the log.
+
+name:dfs.namenode.metrics.logger.period.seconds
+value:600
+relevant log:<missing>
+explanation:Although this configuration option is not directly mentioned in the log, it is related to logging frequency. If the logging frequency is too high, it could potentially cause performance issues.
+
+name:dfs.http.client.failover.max.attempts
+value:15
+relevant log:<missing>
+explanation:This configuration option is related to network exceptions. If the number of failover attempts is too high, it could potentially cause network congestion and slow down the system.

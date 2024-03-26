@@ -1,0 +1,32 @@
+anomaly_degree,content
+0.6000000000000001,"ERROR	Task: attempt_1701312551309_0035_m_000008_0 - exited : java.io.IOException: Initialization of all the collectors failed. Error in last collector was:java.lang.ArithmeticException: / by zero	at org.apache.hadoop.mapred.MapTask.createSortingCollector(MapTask.java:424)
+	at org.apache.hadoop.mapred.MapTask.access$100(MapTask.java:83)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.<init>(MapTask.java:711)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:783)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:348)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.setEquator(MapTask.java:1218)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.init(MapTask.java:1006)
+	at org.apache.hadoop.mapred.MapTask.createSortingCollector(MapTask.java:409)
+	... 9 more"
+0.4,"INFO	Diagnostics report from attempt_1701312551309_0035_m_000008_0: Error: java.io.IOException: Initialization of all the collectors failed. Error in last collector was:java.lang.ArithmeticException: / by zero	at org.apache.hadoop.mapred.MapTask.createSortingCollector(MapTask.java:424)
+	at org.apache.hadoop.mapred.MapTask.access$100(MapTask.java:83)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.<init>(MapTask.java:711)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:783)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:348)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.setEquator(MapTask.java:1218)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.init(MapTask.java:1006)
+	at org.apache.hadoop.mapred.MapTask.createSortingCollector(MapTask.java:409)
+	... 9 more"
+0.2,INFO	1 failures on node ed761ad59d44

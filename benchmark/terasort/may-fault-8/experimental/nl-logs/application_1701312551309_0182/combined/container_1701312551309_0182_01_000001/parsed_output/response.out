@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1153457483
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. The value should not be larger than io.file.buffer.size.
+
+name:dfs.block.scanner.volume.bytes.per.second
+value:1048576
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.block.scanner.volume.bytes.per.second is configured to a high value, which may cause the DataNode's block scanner to consume a large amount of memory and lead to OutOfMemoryError.
+
+name:mapreduce.task.timeout
+value:600000
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of mapreduce.task.timeout is set to a high value, which may cause tasks to run for a long time without being terminated, potentially leading to memory exhaustion.

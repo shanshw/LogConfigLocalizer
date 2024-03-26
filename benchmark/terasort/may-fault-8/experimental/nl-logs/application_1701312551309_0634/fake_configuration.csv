@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-772320474,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.ubertask.maxreduces,1,"Threshold for number of reduces, beyond which job is considered
+  too big for the ubertasking optimization.  CURRENTLY THE CODE CANNOT SUPPORT
+  MORE THAN ONE REDUCE and will ignore larger values.  (Zero is a valid max,
+  however.)  Users may override this value, but only downward."
+2,yarn.client.failover-retries,0,
+3,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."
+4,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+5,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+6,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+7,mapreduce.reduce.cpu.vcores,1,"The number of virtual cores to request from the scheduler for
+  each reduce task."
+8,dfs.namenode.decommission.blocks.per.interval,500000,"The approximate number of blocks to process per decommission
+    or maintenance interval, as defined in dfs.namenode.decommission.interval."
+9,dfs.qjournal.new-epoch.timeout.ms,120000,"Timeout in milliseconds when getting an epoch number for write
+    access to JournalNodes."

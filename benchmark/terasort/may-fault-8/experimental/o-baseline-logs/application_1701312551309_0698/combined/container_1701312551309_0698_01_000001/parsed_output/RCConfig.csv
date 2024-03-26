@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,0,"1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null",The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+yarn.client.failover-retries-on-socket-timeouts,0,<missing>,The configuration 'yarn.client.failover-retries-on-socket-timeouts' is set to 0 which might be causing socket timeout errors. This configuration should be set to a value greater than 0 to avoid this error.
+dfs.heartbeat.interval,3,<missing>,"The configuration 'dfs.heartbeat.interval' is set to 3 seconds. If the system is under heavy load, this might be too short, causing unnecessary network traffic. Consider increasing this value."

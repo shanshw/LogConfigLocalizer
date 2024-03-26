@@ -1,0 +1,21 @@
+,name,value,description
+0,dfs.short.circuit.shared.memory.watcher.interrupt.check.ms,0,"The length of time in milliseconds that the short-circuit shared memory
+    watcher will go between checking for java interruptions sent from other
+    threads.  This is provided mainly for unit tests."
+1,yarn.nodemanager.collector-service.thread-count,5,
+2,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+3,yarn.resourcemanager.nodemanager-connect-retries,10,
+4,dfs.datanode.data.dir.perm,700,"Permissions for the directories on on the local filesystem where
+  the DFS data node store its blocks. The permissions can either be octal or
+  symbolic."
+5,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+6,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,
+7,yarn.nodemanager.local-cache.max-files-per-directory,8192,
+8,fs.ftp.host.port,21,FTP filesystem connects to fs.ftp.host on this port
+9,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."

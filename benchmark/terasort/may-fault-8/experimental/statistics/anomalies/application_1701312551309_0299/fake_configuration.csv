@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.balancer.block-move.timeout,0,"Maximum amount of time in milliseconds for a block to move. If this is set
+    greater than 0, Balancer will stop waiting for a block move completion
+    after this time. In typical clusters, a 3 to 5 minute timeout is reasonable.
+    If timeout happens to a large proportion of block moves, this needs to be
+    increased. It could also be that too much work is dispatched and many nodes
+    are constantly exceeding the bandwidth limit as a result. In that case,
+    other balancer parameters might need to be adjusted.
+    It is disabled (0) by default."
+2,yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,
+3,yarn.app.mapreduce.client-am.ipc.max-retries,3,"The number of client retries to the AM - before reconnecting
+    to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries to be used during
+    reconnecting to the RM and fetching Application Status."
+4,dfs.image.parallel.target.sections,12,"Controls the number of sub-sections that will be written to
+        fsimage for each section. This should be larger than
+        dfs.image.parallel.threads, otherwise all threads will not be
+        used when loading. Ideally, have at least twice the number
+        of target sections as threads, so each thread must load more
+        than one section to avoid one long running section affecting
+        the load time."
+5,yarn.nodemanager.sleep-delay-before-sigkill.ms,250,
+6,yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,
+7,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+8,dfs.client.refresh.read-block-locations.ms,0,Refreshing LocatedBlocks period. A value of 0 disables the feature.
+9,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."

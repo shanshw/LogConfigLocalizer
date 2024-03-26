@@ -1,0 +1,28 @@
+2023-12-02 10:38:37,927 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-12-02 10:38:38,058 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-12-02 10:38:38,173 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-12-02 10:38:38,173 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2023-12-02 10:38:38,270 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens: [Kind: mapreduce.job, Service: job_1701457076904_0496, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@7a55af6b)]
+2023-12-02 10:38:38,307 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2023-12-02 10:38:38,544 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701457076904_0496
+2023-12-02 10:38:38,761 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.io.FileNotFoundException: /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701457076904_0496/container_1701457076904_0496_01_000030/job.xml (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.<init>(RawLocalFileSystem.java:449)
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.<init>(RawLocalFileSystem.java:412)
+	at org.apache.hadoop.fs.RawLocalFileSystem.createOutputStreamWithMode(RawLocalFileSystem.java:575)
+	at org.apache.hadoop.fs.RawLocalFileSystem.create(RawLocalFileSystem.java:564)
+	at org.apache.hadoop.fs.RawLocalFileSystem.create(RawLocalFileSystem.java:595)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSOutputSummer.<init>(ChecksumFileSystem.java:642)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:730)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:709)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1233)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1210)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1091)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1078)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:745)
+	at org.apache.hadoop.mapred.YarnChild.writeLocalJobFile(YarnChild.java:373)
+	at org.apache.hadoop.mapred.YarnChild.configureTask(YarnChild.java:355)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:150)
+

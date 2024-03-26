@@ -1,0 +1,32 @@
+,name,value,description
+0,dfs.client.block.reader.remote.buffer.size,0.22931182,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+1,dfs.namenode.list.cache.directives.num.responses,100,"This value controls the number of cache directives that the NameNode will
+    send over the wire in response to a listDirectives RPC."
+2,dfs.namenode.reencrypt.edek.threads,10,"Maximum number of re-encrypt threads to contact the KMS
+    and re-encrypt the edeks."
+3,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"
+4,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+5,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."
+6,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."
+7,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+8,mapreduce.task.merge.progress.records,10000,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+9,dfs.client.slow.io.warning.threshold.ms,30000,"The threshold in milliseconds at which we will log a slow
+    io warning in a dfsclient. By default, this parameter is set to 30000
+    milliseconds (30 seconds)."

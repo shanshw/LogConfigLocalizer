@@ -1,0 +1,41 @@
+,name,value,description
+0,file.client-write-packet-size,sdN24,Packet size for clients to write
+1,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+2,dfs.namenode.edit.log.autoroll.check.interval.ms,300000,"How often an active namenode will check if it needs to roll its edit log,
+    in milliseconds."
+3,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+4,yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size,10,
+5,mapreduce.reduce.skip.maxgroups,0,"The number of acceptable skip groups surrounding the bad
+    group PER bad group in reducer. The number includes the bad group as well.
+    To turn the feature of detection/skipping of bad groups off, set the
+    value to 0.
+    The framework tries to narrow down the skipped range by retrying
+    until this threshold is met OR all attempts get exhausted for this task.
+    Set the value to Long.MAX_VALUE to indicate that framework need not try to
+    narrow down. Whatever groups(depends on application) get skipped are
+    acceptable."
+6,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.
+7,dfs.datanode.fsdatasetcache.max.threads.per.volume,4,"The maximum number of threads per volume to use for caching new data
+    on the datanode. These threads consume both I/O and CPU. This can affect
+    normal datanode operations."
+8,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+9,nfs.server.port,2049,Specify the port number used by Hadoop NFS.

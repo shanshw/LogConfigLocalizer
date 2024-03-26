@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1097680759
+relevant log:2-1-ERROR
+explanation: The error log indicates a Java heap space OutOfMemoryError. This could be due to the configuration "io.bytes.per.checksum" being set to a very high value, which might be causing the system to run out of memory.
+
+name:ha.health-monitor.rpc.connect.max.retries
+value:1
+relevant log:2-1-ERROR
+explanation: The error log shows a halt exception, which could be due to the system not being able to establish an RPC proxy connection to NameNode. This might be because the "ha.health-monitor.rpc.connect.max.retries" is set to 1, which means the system only tries once to establish the connection.
+
+name:yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms
+value:60000
+relevant log:2-1-ERROR
+explanation: The error log shows a halt exception, which could be due to the system not being able to refresh the file in time. This might be because the "yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms" is set to 60000ms, which might be too long for the system to handle.

@@ -1,0 +1,30 @@
+,name,value,description
+0,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+1,dfs.datanode.du.reserved,0,"Reserved space in bytes per volume. Always leave this much space free for non dfs use.
+      Specific storage type based reservation is also supported. The property can be followed with
+      corresponding storage types ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+      For example, reserved space for RAM_DISK storage can be configured using property
+      'dfs.datanode.du.reserved.ram_disk'. If specific storage type reservation is not configured
+      then dfs.datanode.du.reserved will be used. Support multiple size unit suffix(case insensitive),
+      as described in dfs.blocksize.
+      Note: In case of using tune2fs to set reserved-blocks-percentage, or other filesystem tools,
+      then you can possibly run into out of disk errors because hadoop will not check those
+      external tool configurations."
+2,yarn.nodemanager.container-manager.thread-count,20,
+3,mapreduce.job.speculative.retry-after-no-speculate,1000,"The waiting time(ms) to do next round of speculation
+  if there is no task speculated in this round."
+4,yarn.nodemanager.log.deletion-threads-count,4,
+5,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.
+6,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+7,seq.io.sort.factor,100,"The number of streams to merge at once while sorting
+      files using SequenceFile.Sorter.
+      This determines the number of open file handles."
+8,yarn.app.mapreduce.am.hard-kill-timeout-ms,10000,Number of milliseconds to wait before the job client kills the application.
+9,dfs.qjournal.accept-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."

@@ -1,0 +1,14 @@
+name:dfs.datanode.ec.reconstruction.threads
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0070_m_000008
+explanation:The number of threads used by the Datanode for background reconstruction work is set to 0. This could be causing the speculation of tasks as there are no threads available for reconstruction work.
+
+name:fs.s3a.committer.threads
+value:8
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0070_m_000008
+explanation:The number of threads in committers for parallel operations on files is set to 8. This could be causing the speculation of tasks as there might be too many threads trying to commit at the same time.
+
+name:mapreduce.job.ubertask.maxreduces
+value:1
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0070_m_000008
+explanation:The threshold for number of reduces is set to 1. This could be causing the speculation of tasks as the job might be too big for the ubertasking optimization.

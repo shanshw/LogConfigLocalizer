@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,190319084,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+2,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,
+3,dfs.ha.zkfc.nn.http.timeout.ms,20000,"The HTTP connection and read timeout value (unit is ms ) when DFS ZKFC
+    tries to get local NN thread dump after local NN becomes
+    SERVICE_NOT_RESPONDING or SERVICE_UNHEALTHY.
+    If it is set to zero, DFS ZKFC won't get local NN thread dump."
+4,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+5,dfs.namenode.resource.checked.volumes.minimum,1,The minimum number of redundant NameNode storage volumes required.
+6,yarn.nodemanager.localizer.cache.cleanup.interval-ms,600000,
+7,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+8,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+9,yarn.sharedcache.client-server.thread-count,50,

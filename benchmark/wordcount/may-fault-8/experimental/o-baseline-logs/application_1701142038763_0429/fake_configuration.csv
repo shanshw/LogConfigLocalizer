@@ -1,0 +1,44 @@
+,name,value,description
+0,mapreduce.job.running.map.limit,-0.6634065,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+1,dfs.namenode.num.extra.edits.retained,1000000,"The number of extra transactions which should be retained
+  beyond what is minimally necessary for a NN restart.
+  It does not translate directly to file's age, or the number of files kept,
+  but to the number of transactions (here ""edits"" means transactions).
+  One edit file may contain several transactions (edits).
+  During checkpoint, NameNode will identify the total number of edits to retain as extra by
+  checking the latest checkpoint transaction value, subtracted by the value of this property.
+  Then, it scans edits files to identify the older ones that don't include the computed range of
+  retained transactions that are to be kept around, and purges them subsequently.
+  The retainment can be useful for audit purposes or for an HA setup where a remote Standby Node may have
+  been offline for some time and need to have a longer backlog of retained
+  edits in order to start again.
+  Typically each edit is on the order of a few hundred bytes, so the default
+  of 1 million edits should be on the order of hundreds of MBs or low GBs.
+
+  NOTE: Fewer extra edits may be retained than value specified for this setting
+  if doing so would mean that more segments would be retained than the number
+  configured by dfs.namenode.max.extra.edits.segments.retained."
+2,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+3,dfs.image.parallel.threads,4,"The number of threads to use when dfs.image.parallel.load is
+        enabled. This setting should be less than
+        dfs.image.parallel.target.sections. The optimal number of
+        threads will depend on the hardware and environment."
+4,dfs.namenode.max.objects,0,"The maximum number of files, directories and blocks
+  dfs supports. A value of zero indicates no limit to the number
+  of objects that dfs supports."
+5,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+6,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+7,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+8,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+9,dfs.datanode.socket.reuse.keepalive,4000,"The window of time in ms before the DataXceiver closes a socket for a
+    single request.  If a second request occurs within that window, the
+    socket can be reused."

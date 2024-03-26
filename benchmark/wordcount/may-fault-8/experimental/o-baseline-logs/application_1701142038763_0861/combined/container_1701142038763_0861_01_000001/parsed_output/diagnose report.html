@@ -1,0 +1,81 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.job.speculative.minimum-allowed-tasks</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0.7148415</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-ERROR	Can't make a speculator -- check yarn.app.mapreduce.am.job.speculator.classjava.lang.reflect.InvocationTargetException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The error log indicates that there is a problem with the speculator class in the MapReduce application master. The configuration option 'mapreduce.job.speculative.minimum-allowed-tasks' is related to the speculative execution of tasks in MapReduce. The value of this configuration option is a float, which is causing a NumberFormatException as the system is trying to parse it as an integer. This could be the root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>500</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not directly related to the error log provided. Therefore, it is not likely to be the root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>fs.s3a.socket.send.buffer</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>8192</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not directly related to the error log provided. Therefore, it is not likely to be the root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.path.based.cache.retry.interval.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not directly related to the error log provided. Therefore, it is not likely to be the root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.decommission.interval</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong><missing></strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>This configuration option is not directly related to the error log provided. Therefore, it is not likely to be the root cause of the error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+    </script>
+    </body>
+    </html>
+    

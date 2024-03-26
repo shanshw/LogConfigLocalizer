@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.heartbeat.recheck-interval,300000,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+2,hadoop.security.groups.cache.warn.after.ms,5000,"If looking up a single user to group takes longer than this amount of
+    milliseconds, we will log a warning message."
+3,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,
+4,yarn.client.failover-retries-on-socket-timeouts,0,
+5,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+6,dfs.datanode.ec.reconstruct.write.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for writing.
+      When the bandwidth value is zero, there is no limit."
+7,yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,
+8,yarn.nodemanager.log.retain-seconds,10800,
+9,dfs.http.client.failover.sleep.base.millis,500,"Specify the base amount of time in milliseconds upon which the
+    exponentially increased sleep time between retries or failovers
+    is calculated for WebHDFS client."

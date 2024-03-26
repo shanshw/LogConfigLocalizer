@@ -1,0 +1,14 @@
+name:mapreduce.job.speculative.retry-after-speculate
+value:l91u7
+relevant log:4-3-2-1-ERROR	Can't make a speculator -- check yarn.app.mapreduce.am.job.speculator.classjava.lang.reflect.InvocationTargetException
+explanation: The configuration option 'mapreduce.job.speculative.retry-after-speculate' is expected to be a long integer representing the waiting time in milliseconds for the next round of speculation. However, the current value 'l91u7' cannot be parsed into a long integer, causing a NumberFormatException. This is the most likely root cause of the error in the log.
+
+name:dfs.datanode.data.dir.perm
+value:700
+relevant log:<missing>
+explanation: The configuration option 'dfs.datanode.data.dir.perm' is set to '700', which might not provide sufficient permissions for the DFS data node to store its blocks. This could potentially cause errors, although it is not directly mentioned in the log.
+
+name:dfs.datanode.max.locked.memory
+value:0
+relevant log:<missing>
+explanation: The configuration option 'dfs.datanode.max.locked.memory' is set to '0', which disables in-memory caching of block replicas on the datanode. This could potentially impact the performance of the datanode, although it is not directly mentioned in the log.

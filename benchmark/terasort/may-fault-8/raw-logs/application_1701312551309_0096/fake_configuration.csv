@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.task.timeout,0.40565795,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."
+1,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+2,fs.ftp.timeout,0,FTP filesystem's timeout in seconds.
+3,yarn.nodemanager.runtime.linux.docker.userremapping-uid-threshold,1,
+4,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+5,dfs.balancer.service.retries.on.exception,5,"When the balancer is executed as a long-running service, it will retry upon encountering an exception. This
+    configuration determines how many times it will retry before considering the exception to be fatal and quitting."
+6,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+7,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."
+8,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+9,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."

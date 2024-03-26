@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-821686414,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+2,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+3,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+4,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+5,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+6,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+7,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"
+8,dfs.blockreport.initialDelay,0,"Delay for first block report in seconds. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.If
+    no time unit is specified then seconds is assumed"
+9,mapreduce.reduce.shuffle.parallelcopies,5,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."

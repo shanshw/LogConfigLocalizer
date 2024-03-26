@@ -1,0 +1,26 @@
+,name,value,description
+0,yarn.client.max-cached-nodemanagers-proxies,IHU0f,<missing>
+1,yarn.resourcemanager.nodemanager-connect-retries,10,
+2,dfs.namenode.resource.check.interval,5000,"The interval in milliseconds at which the NameNode resource checker runs.
+    The checker calculates the number of the NameNode storage volumes whose
+    available spaces are more than dfs.namenode.resource.du.reserved, and
+    enters safemode if the number becomes lower than the minimum value
+    specified by dfs.namenode.resource.checked.volumes.minimum."
+3,dfs.balancer.block-move.timeout,0,"Maximum amount of time in milliseconds for a block to move. If this is set
+    greater than 0, Balancer will stop waiting for a block move completion
+    after this time. In typical clusters, a 3 to 5 minute timeout is reasonable.
+    If timeout happens to a large proportion of block moves, this needs to be
+    increased. It could also be that too much work is dispatched and many nodes
+    are constantly exceeding the bandwidth limit as a result. In that case,
+    other balancer parameters might need to be adjusted.
+    It is disabled (0) by default."
+4,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+5,ipc.client.connection.maxidletime,10000,"The maximum time in msec after which a client will bring down the
+               connection to the server."
+6,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+7,dfs.client-write-packet-size,65536,Packet size for clients to write
+8,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+9,yarn.resourcemanager.nm-tokens.master-key-rolling-interval-secs,86400,

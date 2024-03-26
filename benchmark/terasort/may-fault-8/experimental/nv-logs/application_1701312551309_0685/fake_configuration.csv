@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,1293771670,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.timeline-client.number-of-async-entities-to-merge,10,
+2,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+3,yarn.nodemanager.amrmproxy.client.thread-count,25,
+4,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+5,mapreduce.jobhistory.max-age-ms,604800000,"Job history files older than this many milliseconds will
+  be deleted when the history cleaner runs. Defaults to 604800000 (1 week)."
+6,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+7,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+8,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+9,hadoop.fuse.connection.timeout,300,"The minimum number of seconds that we'll cache libhdfs connection objects
+    in fuse_dfs. Lower values will result in lower memory consumption; higher
+    values may speed up access by avoiding the overhead of creating new
+    connection objects."

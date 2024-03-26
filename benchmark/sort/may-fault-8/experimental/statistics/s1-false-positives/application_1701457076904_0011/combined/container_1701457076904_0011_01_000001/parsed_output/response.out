@@ -1,0 +1,14 @@
+name:dfs.qjournal.accept-recovery.timeout.ms
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0011_m_000007
+explanation:The configuration for the quorum timeout during the recovery phase is missing. This could potentially cause issues with task recovery and speculation.
+
+name:yarn.nodemanager.elastic-memory-control.timeout-sec
+value:5
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0011_m_000007
+explanation:The timeout for elastic memory control in the node manager is set to a very short duration. This could potentially cause issues with memory allocation during task execution.
+
+name:dfs.datanode.max.locked.memory
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0011_m_000007
+explanation:The maximum locked memory for the datanode is set to 0, which disables in-memory caching. This could potentially cause performance issues during task execution.

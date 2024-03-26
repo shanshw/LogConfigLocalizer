@@ -1,0 +1,18 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.nodemanager.log.deletion-threads-count,4,
+2,yarn.scheduler.maximum-allocation-mb,8192,
+3,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+4,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+5,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.
+6,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."
+7,hadoop.registry.zk.retry.times,5,Zookeeper connection retry count before failing
+8,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."
+9,ftp.client-write-packet-size,65536,Packet size for clients to write

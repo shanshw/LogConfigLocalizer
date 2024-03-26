@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,1178416143,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.balancer.getBlocks.min-block-size,10485760,"Minimum block threshold size in bytes to ignore when fetching a source's
+    block list."
+2,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+3,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+4,mapreduce.shuffle.max.threads,0,"Max allowed threads for serving shuffle connections. Set to zero
+  to indicate the default of 2 times the number of available
+  processors (as reported by Runtime.availableProcessors()). Netty is used to
+  serve requests, so a thread is not needed for each connection."
+5,mapreduce.job.cache.limit.max-resources,0,"The maximum number of resources a map reduce job is allowed to
+    submit for localization via files, libjars, archives, and jobjar command
+    line arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+6,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+7,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."
+8,dfs.client-write-packet-size,65536,Packet size for clients to write
+9,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"

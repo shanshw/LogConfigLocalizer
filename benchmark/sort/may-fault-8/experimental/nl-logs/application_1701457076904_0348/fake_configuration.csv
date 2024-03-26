@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.client-am.ipc.max-retries-on-timeouts,3,"The number of client retries on socket timeouts to the AM - before
+    reconnecting to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries.on.timeouts to be used during
+    reconnecting to the RM and fetching Application Status."
+2,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+3,yarn.resourcemanager.nm-container-queuing.min-queue-wait-time-ms,10,
+4,yarn.timeline-service.entity-group-fs-store.leveldb-cache-read-cache-size,10485760,
+5,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+6,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.
+7,dfs.client.deadnode.detection.probe.suspectnode.interval.ms,300,Interval time in milliseconds for probing suspect node behavior.
+8,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+9,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"

@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.job.reducer.unconditional-preempt.delay.sec,0.021427453,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+1,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+2,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+3,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+4,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+5,fs.s3a.socket.recv.buffer,8192,Socket receive buffer hint to amazon connector. Represented in bytes.
+6,dfs.client.failover.connection.retries,0,"Expert only. Indicates the number of retries a failover IPC client
+    will make to establish a server connection."
+7,yarn.nodemanager.localizer.fetch.thread-count,4,
+8,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+9,yarn.timeline-service.client.fd-clean-interval-secs,60,

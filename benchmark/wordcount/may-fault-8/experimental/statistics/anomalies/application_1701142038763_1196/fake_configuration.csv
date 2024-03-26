@@ -1,0 +1,21 @@
+,name,value,description
+0,yarn.dispatcher.print-events-info.threshold,0,<missing>
+1,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+2,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."
+3,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+4,dfs.namenode.blockreport.max.lock.hold.time,4,The BlockReportProcessingThread max write lock hold time in ms.
+5,yarn.client.nodemanager-connect.max-wait-ms,180000,
+6,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+7,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+8,yarn.resourcemanager.nodemanagers.heartbeat-interval-ms,1000,
+9,yarn.sharedcache.admin.thread-count,1,

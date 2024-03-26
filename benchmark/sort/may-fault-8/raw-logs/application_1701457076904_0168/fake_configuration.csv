@@ -1,0 +1,33 @@
+,name,value,description
+0,yarn.client.nodemanager-connect.retry-interval-ms,V3LhS,
+1,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+2,mapreduce.shuffle.max.connections,0,"Max allowed connections for the shuffle.  Set to 0 (zero)
+               to indicate no limit on the number of connections."
+3,dfs.replication.max,512,Maximal block replication.
+4,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."
+5,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."
+6,yarn.scheduler.minimum-allocation-mb,1024,
+7,file.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+9,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."

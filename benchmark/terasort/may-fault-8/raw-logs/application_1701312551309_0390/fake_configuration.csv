@@ -1,0 +1,32 @@
+,name,value,description
+0,io.bytes.per.checksum,-258949465,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.cached-dfsused.check.interval.ms,600000,"The interval check time of loading DU_CACHE_FILE in each volume.
+    When the cluster doing the rolling upgrade operations, it will
+    usually lead dfsUsed cache file of each volume expired and redo the
+    du operations in datanode and that makes datanode start slowly. Adjust
+    this property can make cache file be available for the time as you want."
+2,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+3,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+4,dfs.balancer.block-move.timeout,0,"Maximum amount of time in milliseconds for a block to move. If this is set
+    greater than 0, Balancer will stop waiting for a block move completion
+    after this time. In typical clusters, a 3 to 5 minute timeout is reasonable.
+    If timeout happens to a large proportion of block moves, this needs to be
+    increased. It could also be that too much work is dispatched and many nodes
+    are constantly exceeding the bandwidth limit as a result. In that case,
+    other balancer parameters might need to be adjusted.
+    It is disabled (0) by default."
+5,fs.s3a.threads.keepalivetime,60,"Number of seconds a thread can be idle before being
+    terminated."
+6,dfs.datanode.available-space-volume-choosing-policy.balanced-space-threshold,10737418240,"Only used when the dfs.datanode.fsdataset.volume.choosing.policy is set to
+    org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy.
+    This setting controls how much DN volumes are allowed to differ in terms of
+    bytes of free disk space before they are considered imbalanced. If the free
+    space of all the volumes are within this range of each other, the volumes
+    will be considered balanced and block assignments will be done on a pure
+    round robin basis. Support multiple size unit suffix(case insensitive), as
+    described in dfs.blocksize."
+7,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+8,httpfs.buffer.size,4096,The size buffer to be used when creating or opening httpfs filesystem IO stream.
+9,yarn.log-aggregation.debug.filesize,104857600,

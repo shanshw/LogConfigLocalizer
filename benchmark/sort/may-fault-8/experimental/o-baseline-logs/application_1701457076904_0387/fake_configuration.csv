@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,261383865,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.sharedcache.uploader.server.thread-count,50,
+2,dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,The maximum delay (unit is ms) before retrying locateFollowingBlock.
+3,yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-size,500,
+4,yarn.resourcemanager.delegation-token.max-conf-size-bytes,12800,
+5,yarn.resourcemanager.application.max-tag.length,100,
+6,dfs.image.transfer.chunksize,65536,"Chunksize in bytes to upload the checkpoint.
+        Chunked streaming is used to avoid internal buffering of contents
+        of image file of huge size.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+7,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+8,fs.s3a.max.total.tasks,32,"The number of operations which can be queued for execution.
+  This is in addition to the number of active threads in fs.s3a.threads.max."
+9,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."

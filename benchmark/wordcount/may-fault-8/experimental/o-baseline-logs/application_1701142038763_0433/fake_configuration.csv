@@ -1,0 +1,17 @@
+,name,value,description
+0,mapreduce.task.merge.progress.records,0.5408669,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+1,yarn.resourcemanager.placement-constraints.retry-attempts,3,
+2,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+3,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+4,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+5,yarn.sharedcache.store.in-memory.check-period-mins,720,
+6,ha.failover-controller.graceful-fence.rpc-timeout.ms,5000,Timeout that the FC waits for the old active to go to standby
+7,yarn.nodemanager.localizer.client.thread-count,5,
+8,yarn.resourcemanager.resource-tracker.client.thread-count,50,
+9,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.

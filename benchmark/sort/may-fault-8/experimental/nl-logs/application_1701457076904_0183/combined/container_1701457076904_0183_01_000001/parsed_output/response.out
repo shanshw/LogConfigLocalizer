@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+
+name:dfs.datanode.data.write.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.datanode.data.write.bandwidthPerSec' is set to 0 which might be causing issues with data transfer. This configuration should be set to a value greater than 0 to ensure proper data transfer.
+
+name:dfs.ha.tail-edits.namenode-retries
+value:3
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.ha.tail-edits.namenode-retries' is set to 3 which might be causing issues with namenode retries. This configuration should be set to a value greater than 3 to ensure proper retries.

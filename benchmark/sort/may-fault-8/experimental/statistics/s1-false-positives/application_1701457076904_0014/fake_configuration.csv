@@ -1,0 +1,20 @@
+,name,value,description
+0,mapreduce.job.end-notification.max.attempts,231504901,"The maximum number of times a URL will be read for providing job
+    end notification. Cluster administrators can set this to limit how long
+    after end of a job, the Application Master waits before exiting. Must be
+    marked as final to prevent users from overriding this."
+1,yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms,10000,
+2,yarn.nodemanager.process-kill-wait.ms,5000,
+3,yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,
+4,yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep,100,
+5,yarn.client.nodemanager-connect.retry-interval-ms,10000,
+6,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing
+7,fs.s3a.committer.threads,8,"Number of threads in committers for parallel operations on files
+    (upload, commit, abort, delete...)"
+8,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+9,hadoop.shell.safely.delete.limit.num.files,100,"Used by -safely option of hadoop fs shell -rm command to avoid
+      accidental deletion of large directories. When enabled, the -rm command
+      requires confirmation if the number of files to be deleted is greater than
+      this limit.  The default limit is 100 files. The warning is disabled if
+      the limit is 0 or the -safely is not specified in -rm command."

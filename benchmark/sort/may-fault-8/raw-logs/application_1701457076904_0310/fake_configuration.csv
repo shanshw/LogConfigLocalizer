@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,1608699657,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.group.mapping.ldap.read.timeout.ms,60000,"This property is the read timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't get a LDAP response within the
+    specified period, it will abort the read attempt. Non-positive value
+    means no read timeout is specified in which case it waits for the response
+    infinitely."
+2,dfs.client.retry.max.attempts,10,Max retry attempts for DFSClient talking to namenodes.
+3,dfs.datanode.ec.reconstruction.stripedread.buffer.size,65536,Datanode striped read buffer size.
+4,yarn.resourcemanager.epoch.range,0,
+5,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+6,hadoop.registry.zk.retry.interval.ms,1000,
+7,mapreduce.jobhistory.move.thread-count,3,The number of threads used to move files.
+8,dfs.namenode.delegation.key.update-interval,86400000,"The update interval for master key for delegation tokens 
+       in the namenode in milliseconds."
+9,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,

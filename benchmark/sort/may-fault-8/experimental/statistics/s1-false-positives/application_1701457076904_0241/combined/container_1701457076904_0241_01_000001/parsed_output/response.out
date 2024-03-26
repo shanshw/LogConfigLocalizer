@@ -1,0 +1,14 @@
+name:yarn.app.mapreduce.client.job.max-retries
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0241_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to the job not being completed within the expected time. The configuration option 'yarn.app.mapreduce.client.job.max-retries' is set to 0, which means the client will not make any retries for getJob and dependent calls. This could be the root cause of the issue as the job might need retries to complete successfully.
+
+name:mapreduce.task.stuck.timeout-ms
+value:600000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0241_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to the task being stuck. The configuration option 'mapreduce.task.stuck.timeout-ms' is set to 600000, which means the maximum timeout before receiving the remote task's first heartbeat is 600000 milliseconds. If the task takes longer than this to start, it could be considered stuck and speculated, which could be the root cause of the issue.
+
+name:yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0241_m_000008
+explanation:The log indicates that a task is being speculated, which could be due to the node manager not sending heartbeats within the expected interval. The configuration option 'yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms' is missing a value, which could be the root cause of the issue as the system might not know the maximum interval for node manager heartbeats.

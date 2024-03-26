@@ -1,0 +1,20 @@
+,name,value,description
+0,mapreduce.task.merge.progress.records,-0.38262832,"The number of records to process during merge before
+   sending a progress notification to the MR ApplicationMaster."
+1,mapreduce.client.completion.pollinterval,5000,"The interval (in milliseconds) between which the JobClient
+    polls the MapReduce ApplicationMaster for updates about job status. You may want to
+    set this to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+2,dfs.namenode.blockreport.max.lock.hold.time,4,The BlockReportProcessingThread max write lock hold time in ms.
+3,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+4,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+5,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+6,yarn.client.nodemanager-connect.retry-interval-ms,10000,
+7,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+8,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.
+9,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."

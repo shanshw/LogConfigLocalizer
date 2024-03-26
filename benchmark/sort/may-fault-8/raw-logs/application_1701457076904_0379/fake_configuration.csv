@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-221060224,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.failover.connection.retries,0,"Expert only. Indicates the number of retries a failover IPC client
+    will make to establish a server connection."
+2,dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,Datanode striped read timeout in milliseconds.
+3,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+4,hadoop.security.kms.client.authentication.retry-count,1,Number of time to retry connecting to KMS on authentication failure
+5,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+6,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+7,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+8,dfs.namenode.snapshot.max.limit,65536,"Limits the maximum number of snapshots allowed per snapshottable
+    directory.If the configuration is not set, the default limit
+    for maximum no of snapshots allowed is 65536."
+9,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."

@@ -1,0 +1,20 @@
+,name,value,description
+0,dfs.bytes-per-checksum,0,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+1,yarn.nodemanager.localizer.client.thread-count,5,
+2,dfs.namenode.list.cache.pools.num.responses,100,"This value controls the number of cache pools that the NameNode will
+    send over the wire in response to a listPools RPC."
+3,yarn.timeline-service.ttl-ms,604800000,
+4,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,60000,
+5,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."
+6,mapreduce.map.maxattempts,4,"Expert: The maximum number of attempts per map task.
+  In other words, framework will try to execute a map task these many number
+  of times before giving up on it."
+7,yarn.resourcemanager.container-tokens.master-key-rolling-interval-secs,86400,
+8,hadoop.registry.zk.connection.timeout.ms,15000,Zookeeper connection timeout in milliseconds
+9,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."

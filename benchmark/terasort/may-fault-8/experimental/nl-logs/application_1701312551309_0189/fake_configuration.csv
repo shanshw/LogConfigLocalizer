@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,2117148295,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,nfs.mountd.port,4242,Specify the port number used by Hadoop mount daemon.
+2,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+3,hadoop.security.group.mapping.ldap.num.attempts,3,"This property is the number of attempts to be made for LDAP operations.
+    If this limit is exceeded, LdapGroupsMapping will return an empty
+    group list."
+4,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+5,yarn.sharedcache.uploader.server.thread-count,50,
+6,fs.s3a.executor.capacity,16,"The maximum number of submitted tasks which is a single
+    operation (e.g. rename(), delete()) may submit simultaneously for
+    execution -excluding the IO-heavy block uploads, whose capacity
+    is set in ""fs.s3a.fast.upload.active.blocks""
+
+    All tasks are submitted to the shared thread pool whose size is
+    set in ""fs.s3a.threads.max""; the value of capacity should be less than that
+    of the thread pool itself, as the goal is to stop a single operation
+    from overloading that thread pool."
+7,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.cache-refresh-interval-secs,60,
+8,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.
+9,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,

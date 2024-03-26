@@ -1,0 +1,44 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.retries,5,Number of retries to use when finding the next block during HDFS writes.
+2,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+3,dfs.balancer.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Balancer iteration."
+4,dfs.datanode.data.dir.perm,700,"Permissions for the directories on on the local filesystem where
+  the DFS data node store its blocks. The permissions can either be octal or
+  symbolic."
+5,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+6,dfs.namenode.redundancy.queue.restart.iterations,2400,"When picking blocks from the low redundancy queues, reset the
+    bookmarked iterator after the set number of iterations to ensure any blocks
+    which were not processed on the first pass are retried before the iterators
+    would naturally reach their end point. This ensures blocks are retried
+    more frequently when there are many pending blocks or blocks are
+    continuously added to the queues preventing the iterator reaching its
+    natural endpoint.
+    The default setting of 2400 combined with the default of
+    dfs.namenode.redundancy.interval.seconds means the iterators will be reset
+    approximately every 2 hours.
+    Setting this parameter to zero disables the feature and the iterators will
+    be reset only when the end of all queues has been reached."
+7,dfs.datanode.available-space-volume-choosing-policy.balanced-space-threshold,10737418240,"Only used when the dfs.datanode.fsdataset.volume.choosing.policy is set to
+    org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy.
+    This setting controls how much DN volumes are allowed to differ in terms of
+    bytes of free disk space before they are considered imbalanced. If the free
+    space of all the volumes are within this range of each other, the volumes
+    will be considered balanced and block assignments will be done on a pure
+    round robin basis. Support multiple size unit suffix(case insensitive), as
+    described in dfs.blocksize."
+8,hadoop.security.kms.client.failover.sleep.max.millis,2000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers.
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of hadoop.security.client.failover.sleep.max.millis
+    milliseconds."
+9,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.

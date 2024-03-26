@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an invalid checksum type error. This value should be greater than 0 to ensure proper checksum calculation.
+
+name:dfs.client.failover.max.attempts
+value:15
+relevant log:1-ERROR	Task: attempt_1701312551309_0732_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.failover.max.attempts' is set to 15. This might be causing the system to make too many failover attempts, leading to the error. Reducing this value might help in resolving the issue.
+
+name:dfs.client.write.max-packets-in-flight
+value:80
+relevant log:1-ERROR	Task: attempt_1701312551309_0732_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.write.max-packets-in-flight' is set to 80. This might be causing the system to overload with too many packets in flight, leading to the error. Reducing this value might help in resolving the issue.

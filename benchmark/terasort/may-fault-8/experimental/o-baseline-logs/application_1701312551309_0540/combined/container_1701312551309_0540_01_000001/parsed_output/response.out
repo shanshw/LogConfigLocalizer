@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This value should not be 0 as it is used to calculate the number of bytes per checksum.
+
+name:mapreduce.jobhistory.move.thread-count
+value:3
+relevant log:24-INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+explanation:The configuration option 'mapreduce.jobhistory.move.thread-count' is set to 3. This might be causing the NullPointerException in the JobHistoryEventHandler service as it might not be able to handle the number of threads.
+
+name:dfs.namenode.handler.count
+value:10
+relevant log:24-INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+explanation:The configuration option 'dfs.namenode.handler.count' is set to 10. This might be causing the NullPointerException in the JobHistoryEventHandler service as it might not be able to handle the number of handler threads.

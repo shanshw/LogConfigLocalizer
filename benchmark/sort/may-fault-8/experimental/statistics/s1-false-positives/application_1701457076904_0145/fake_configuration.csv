@@ -1,0 +1,39 @@
+,name,value,description
+0,fs.s3a.connection.timeout,0.023149252,Socket connection timeout in milliseconds.
+1,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+2,dfs.image.transfer.bandwidthPerSec,52428800,"Maximum bandwidth used for regular image transfers (instead of
+        bootstrapping the standby namenode), in bytes per second.
+        This can help keep normal namenode operations responsive during
+        checkpointing.
+        A default value is 50mb per second.
+        The maximum bandwidth used for bootstrapping standby namenode is
+        configured with dfs.image.transfer-bootstrap-standby.bandwidthPerSec.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+3,dfs.ha.tail-edits.period,60,"How often, the StandbyNode and ObserverNode should check if there are new
+    edit log entries ready to be consumed. This is the minimum period between
+    checking; exponential backoff will be applied if no edits are found and
+    dfs.ha.tail-edits.period.backoff-max is configured. By default, no
+    backoff is applied.
+    Supports multiple time unit suffix (case insensitive), as described
+    in dfs.heartbeat.interval."
+4,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+5,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+6,mapreduce.job.reduces,1,"The default number of reduce tasks per job. Typically set to 99%
+  of the cluster's reduce capacity, so that if a node fails the reduces can
+  still be executed in a single wave.
+  Ignored when mapreduce.framework.name is ""local""."
+7,fs.s3a.socket.send.buffer,8192,Socket send buffer hint to amazon connector. Represented in bytes.
+8,dfs.datanode.fsdatasetcache.max.threads.per.volume,4,"The maximum number of threads per volume to use for caching new data
+    on the datanode. These threads consume both I/O and CPU. This can affect
+    normal datanode operations."
+9,mapreduce.task.timeout,600000,"The number of milliseconds before a task will be
+  terminated if it neither reads an input, writes an output, nor
+  updates its status string.  A value of 0 disables the timeout."

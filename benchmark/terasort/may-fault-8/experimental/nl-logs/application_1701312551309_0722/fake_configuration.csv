@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-1039368213,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+2,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+3,dfs.namenode.reconstruction.pending.timeout-sec,300,"Timeout in seconds for block reconstruction.  If this value is 0 or less,
+    then it will default to 5 minutes."
+4,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+5,dfs.image.parallel.inode.threshold,1000000,"If the image contains less inodes than this setting, then
+        do not write sub-sections and hence disable parallel loading.
+        This is because small images load very quickly in serial and
+        parallel loading is not needed."
+6,yarn.timeline-service.writer.async.queue.capacity,100,
+7,fs.s3a.threads.max,64,"The total number of threads available in the filesystem for data
+    uploads *or any other queued filesystem operation*."
+8,dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms,300000,"How often to refresh the datanode storages cache in milliseconds. This cache
+    keeps live datanode storage reports fetched from namenode. After elapsed time,
+    it will again fetch latest datanodes from namenode.
+    By default, this parameter is set to 5 minutes."
+9,yarn.nodemanager.runtime.linux.docker.userremapping-uid-threshold,1,

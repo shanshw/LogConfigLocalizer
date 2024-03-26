@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-877495085,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+2,yarn.log-aggregation-status.time-out.ms,600000,
+3,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+4,mapreduce.job.speculative.minimum-allowed-tasks,10,"The minimum allowed tasks that
+  can be speculatively re-executed at any time."
+5,ipc.client.idlethreshold,4000,"Defines the threshold number of connections after which
+               connections will be inspected for idleness."
+6,ipc.maximum.data.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the server. Messages larger than this value are rejected by the
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed."
+7,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+8,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"
+9,fs.s3a.fast.upload.active.blocks,4,"Maximum Number of blocks a single output stream can have
+    active (uploading, or queued to the central FileSystem
+    instance's pool of queued operations.
+
+    This stops a single stream overloading the shared thread pool."

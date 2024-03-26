@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0135_m_000008
+explanation:The configuration for the number of bytes per checksum is missing. This could cause issues with data integrity and might be the reason for the speculative task execution.
+
+name:dfs.client.hedged.read.threadpool.size
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0135_m_000008
+explanation:The hedged read feature in DFSClient is disabled as the threadpool size is set to 0. This could impact the performance of the system and might be causing the speculative task execution.
+
+name:dfs.client.retry.max.attempts
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0135_m_000008
+explanation:The maximum retry attempts for DFSClient is set to 10. If the system is experiencing network issues or the namenodes are not responding, this could lead to tasks being speculated.

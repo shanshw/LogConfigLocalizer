@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1569006135
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. This configuration should be adjusted to a smaller value.
+
+name:yarn.nodemanager.opportunistic-containers-max-queue-length
+value:0
+relevant log:<missing>
+explanation: The value of yarn.nodemanager.opportunistic-containers-max-queue-length is set to 0, which means no opportunistic containers can be queued. This may cause resource allocation issues in the YARN NodeManager.
+
+name:dfs.client.deadnode.detection.rpc.threads
+value:20
+relevant log:<missing>
+explanation: The value of dfs.client.deadnode.detection.rpc.threads is set to 20, which may be too high for the system to handle, potentially causing system instability or performance issues. This value should be adjusted based on the system's capacity.

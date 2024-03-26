@@ -1,0 +1,18 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.slowdisk.low.threshold.ms,20,Threshold in milliseconds below which a disk is definitely not slow.
+2,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+3,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+4,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+5,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+6,yarn.timeline-service.writer.flush-interval-seconds,60,
+7,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+8,yarn.resourcemanager.placement-constraints.retry-attempts,3,
+9,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,

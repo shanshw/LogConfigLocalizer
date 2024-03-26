@@ -1,0 +1,24 @@
+,name,value,description
+0,hadoop.security.groups.cache.background.reload.threads,NUhZ9,"Only relevant if hadoop.security.groups.cache.background.reload is true.
+    Controls the number of concurrent background user->group cache entry
+    refreshes. Pending refresh requests beyond this value are queued and
+    processed when a thread is free."
+1,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+2,hadoop.security.key.default.bitlength,128,"The length (bits) of keys we want the KeyProvider to produce. Key length
+    defines the upper-bound on an algorithm's security, ideally, it would
+    coincide with the lower-bound on an algorithm's security."
+3,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+4,dfs.storage.policy.satisfier.max.outstanding.paths,10000,"Defines the maximum number of paths to satisfy that can be queued up in the
+    Satisfier call queue in a period of time. Default value is 10000."
+5,dfs.namenode.replication.min,1,Minimal block replication.
+6,dfs.datanode.max.nodes.to.report,5,"Number of nodes to include in JSON report. We will return nodes with
+    the highest number of votes from peers."
+7,dfs.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+8,dfs.datanode.min.outlier.detection.disks,5,Minimum number of disks to run outlier detection.
+9,dfs.datanode.max.slowdisks.to.exclude,0,"The number of slow disks that needs to be excluded. By default, this parameter is set to 0,
+    which disables excluding slow disk when choosing volume."

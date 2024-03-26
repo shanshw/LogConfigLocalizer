@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+2,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+3,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+4,dfs.datanode.directoryscan.interval,21600,"Interval in seconds for Datanode to scan data directories and
+  reconcile the difference between blocks in memory and on the disk.
+  Support multiple time unit suffix(case insensitive), as described
+  in dfs.heartbeat.interval.If no time unit is specified then seconds
+  is assumed."
+5,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+6,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,10,"The initial size of thread pool to launch containers in the
+    app master."
+7,mapreduce.job.local-fs.single-disk-limit.check.interval-ms,5000,Interval of disk limit check to run in ms.
+8,dfs.namenode.lease-recheck-interval-ms,2000,"During the release of lease a lock is hold that make any
+    operations on the namenode stuck. In order to not block them during
+    a too long duration we stop releasing lease after this max lock limit."
+9,mapreduce.shuffle.connection-keep-alive.timeout,5,"The number of seconds a shuffle client attempts to retain
+   http connection. Refer ""Keep-Alive: timeout="" header in
+   Http specification"

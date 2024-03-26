@@ -1,0 +1,25 @@
+,name,value,description
+0,mapreduce.jobhistory.intermediate-user-done-dir.permissions,qiBt9,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+1,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+2,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+3,ftp.stream-buffer-size,4096,"The size of buffer to stream files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+4,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+5,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+6,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+7,dfs.blockreport.incremental.intervalMsec,0,"If set to a positive integer, the value in ms to wait between sending
+    incremental block reports from the Datanode to the Namenode."
+8,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+9,hadoop.registry.zk.retry.interval.ms,1000,

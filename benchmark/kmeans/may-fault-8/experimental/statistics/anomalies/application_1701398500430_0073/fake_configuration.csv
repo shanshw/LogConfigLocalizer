@@ -1,0 +1,26 @@
+,name,value,description
+0,hadoop.kerberos.min.seconds.before.relogin,0.57093954,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+1,yarn.resourcemanager.nm-tokens.master-key-rolling-interval-secs,86400,
+2,dfs.storage.policy.satisfier.retry.max.attempts,3,"Max retry to satisfy the block storage policy. After this retry block will be removed
+    from the movement needed queue."
+3,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+4,fs.s3a.max.total.tasks,32,"The number of operations which can be queued for execution.
+  This is in addition to the number of active threads in fs.s3a.threads.max."
+5,yarn.timeline-service.handler-thread-count,10,
+6,dfs.block.scanner.volume.join.timeout.ms,5000,"The amount of time in milliseconds that the BlockScanner times out waiting
+    for the VolumeScanner thread to join during a shutdown call."
+7,ipc.server.max.connections,0,"The maximum number of concurrent connections a server is allowed
+    to accept. If this limit is exceeded, incoming connections will first fill
+    the listen queue and then may go to an OS-specific listen overflow queue.
+    The client may fail or timeout, but the server can avoid running out of file
+    descriptors using this feature. 0 means no limit."
+8,dfs.namenode.list.encryption.zones.num.responses,100,"When listing encryption zones, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+9,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."

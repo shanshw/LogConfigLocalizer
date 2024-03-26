@@ -1,0 +1,24 @@
+,name,value,description
+0,mapreduce.task.io.sort.mb,0,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+1,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+2,yarn.resourcemanager.reservation-system.planfollower.time-step,1000,
+3,yarn.cluster.max-application-priority,0,
+4,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+5,mapreduce.job.end-notification.retry.attempts,0,"The number of times the submitter of the job wants to retry job
+    end notification if it fails. This is capped by
+    mapreduce.job.end-notification.max.attempts"
+6,yarn.dispatcher.drain-events.timeout,300000,
+7,dfs.datanode.cached-dfsused.check.interval.ms,600000,"The interval check time of loading DU_CACHE_FILE in each volume.
+    When the cluster doing the rolling upgrade operations, it will
+    usually lead dfsUsed cache file of each volume expired and redo the
+    du operations in datanode and that makes datanode start slowly. Adjust
+    this property can make cache file be available for the time as you want."
+8,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+9,yarn.resourcemanager.nm-container-queuing.min-queue-length,5,

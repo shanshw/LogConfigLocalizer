@@ -1,0 +1,27 @@
+,name,value,description
+0,dfs.blocksize,0,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+1,yarn.nodemanager.local-cache.max-files-per-directory,8192,
+2,yarn.dispatcher.print-events-info.threshold,5000,
+3,mapreduce.job.split.metainfo.maxsize,10000000,"The maximum permissible size of the split metainfo file.
+  The MapReduce ApplicationMaster won't attempt to read submitted split metainfo
+  files bigger than this configured value.
+  No limits if set to -1."
+4,yarn.federation.cache-ttl.secs,300,
+5,dfs.datanode.ec.reconstruct.read.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for reading.
+      When the bandwidth value is zero, there is no limit."
+6,dfs.client.socket.send.buffer.size,0,"Socket send buffer size for a write pipeline in DFSClient side.
+    This may affect TCP connection throughput.
+    If it is set to zero or negative value,
+    no buffer size will be set explicitly,
+    thus enable tcp auto-tuning on some system.
+    The default value is 0."
+7,dfs.client.test.drop.namenode.response.number,0,"The number of Namenode responses dropped by DFSClient for each RPC call.  Used
+    for testing the NN retry cache."
+8,dfs.client.failover.connection.retries.on.timeouts,0,"Expert only. The number of retry attempts a failover IPC client
+    will make on socket timeout when establishing a server connection."
+9,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."

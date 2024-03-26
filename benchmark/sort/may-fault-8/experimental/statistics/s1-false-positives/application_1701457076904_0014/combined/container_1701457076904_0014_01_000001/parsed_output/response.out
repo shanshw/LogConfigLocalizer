@@ -1,0 +1,14 @@
+name:mapreduce.job.end-notification.max.attempts
+value:231504901
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0014_m_000009
+explanation: The log indicates a speculative task attempt, which could be related to the job end notification attempts. The high value of max attempts might cause unnecessary resource consumption.
+
+name:yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms
+value:10000
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0014_m_000009
+explanation: The log indicates a speculative task attempt, which could be related to the scheduling wait time in the ResourceManager. The value of 10000ms might be too long and cause delays in task scheduling.
+
+name:yarn.nodemanager.process-kill-wait.ms
+value:5000
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0014_m_000009
+explanation: The log indicates a speculative task attempt, which could be related to the process kill wait time in the NodeManager. The value of 5000ms might be too short and cause premature termination of tasks.

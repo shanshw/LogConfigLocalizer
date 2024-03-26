@@ -1,0 +1,37 @@
+,name,value,description
+0,yarn.app.mapreduce.shuffle.log.limit.kb,PwGKZ,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+1,dfs.client.short.circuit.num,1,"Number of short-circuit caches. This setting should
+    be in the range 1 - 5. Lower values will result in lower CPU consumption; higher
+    values may speed up massive parallel reading files."
+2,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+3,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+4,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+5,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."
+6,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+7,mapreduce.task.skip.start.attempts,2,"The number of Task attempts AFTER which skip mode
+    will be kicked off. When skip mode is kicked off, the
+    tasks reports the range of records which it will process
+    next, to the MR ApplicationMaster. So that on failures, the MR AM
+    knows which ones are possibly the bad records. On further executions,
+    those are skipped."
+8,yarn.nodemanager.disk-health-checker.min-free-space-per-disk-watermark-high-mb,0,
+9,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."

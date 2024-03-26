@@ -1,0 +1,23 @@
+,name,value,description
+0,dfs.client.block.reader.remote.buffer.size,0.22931182,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+1,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.
+2,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."
+3,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+4,nfs.server.port,2049,Specify the port number used by Hadoop NFS.
+5,yarn.resourcemanager.max-log-aggregation-diagnostics-in-memory,10,
+6,dfs.blockreport.intervalMsec,21600000,Determines block reporting interval in milliseconds.
+7,yarn.resourcemanager.nm-container-queuing.max-queue-wait-time-ms,100,
+8,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+9,ha.health-monitor.sleep-after-disconnect.ms,1000,How long to sleep after an unexpected RPC error.

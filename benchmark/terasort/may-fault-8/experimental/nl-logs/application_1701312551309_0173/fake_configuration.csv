@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.timeline-client.number-of-async-entities-to-merge,10,
+2,yarn.resourcemanager.delegation.token.max-lifetime,604800000,
+3,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+4,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+5,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+6,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,
+7,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+8,dfs.namenode.maintenance.replication.min,1,Minimal live block replication in existence of maintenance mode.
+9,dfs.client.failover.sleep.max.millis,15000,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the maximum value to wait between failovers. 
+    Specifically, the time between two failover attempts will not
+    exceed +/- 50% of dfs.client.failover.sleep.max.millis
+    milliseconds."

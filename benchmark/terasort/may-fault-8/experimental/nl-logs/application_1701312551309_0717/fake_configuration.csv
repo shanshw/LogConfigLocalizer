@@ -1,0 +1,28 @@
+,name,value,description
+0,mapreduce.task.io.sort.factor,S78U9,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+1,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+2,mapreduce.job.speculative.retry-after-no-speculate,1000,"The waiting time(ms) to do next round of speculation
+  if there is no task speculated in this round."
+3,yarn.nodemanager.delete.thread-count,4,
+4,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+5,yarn.app.mapreduce.am.container.log.backups,0,"Number of backup files for the ApplicationMaster logs when using
+    ContainerRollingLogAppender (CRLA). See
+    org.apache.log4j.RollingFileAppender.maxBackupIndex. By default,
+    ContainerLogAppender (CLA) is used, and container logs are not rolled. CRLA
+    is enabled for the ApplicationMaster when both
+    yarn.app.mapreduce.am.container.log.limit.kb and
+    yarn.app.mapreduce.am.container.log.backups are greater than zero."
+6,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+7,yarn.client.nodemanager-connect.max-wait-ms,180000,
+8,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,
+9,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."

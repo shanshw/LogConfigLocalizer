@@ -1,0 +1,14 @@
+name:dfs.namenode.accesstime.precision
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0016_m_000008
+explanation: The access time for HDFS file is precise up to this value. The default value is 1 hour. Setting a value of 0 disables access times for HDFS. This could be causing issues with file access times during task speculation.
+
+name:dfs.balancer.moverThreads
+value:1000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0016_m_000008
+explanation: This configuration controls the thread pool size for executing block moves. A high value like 1000 could be causing resource contention issues during task speculation.
+
+name:yarn.resourcemanager.opportunistic-container-allocation.nodes-used
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0016_m_000008
+explanation: This configuration controls the number of nodes used for opportunistic container allocation. The description is missing, but a low value like 10 could be limiting the resources available for task speculation.

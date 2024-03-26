@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0, which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:dfs.datanode.ec.reconstruct.read.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.datanode.ec.reconstruct.read.bandwidthPerSec' is set to 0, which might be causing issues with the data node's ability to read data. This value should be set to a positive value to ensure proper data node operation.
+
+name:mapreduce.job.cache.limit.max-resources
+value:0
+relevant log:1-ERROR	Task: attempt_1701312551309_0500_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'mapreduce.job.cache.limit.max-resources' is set to 0, which might be causing issues with the job's ability to submit resources for localization. This value should be set to a positive value to ensure proper job operation.

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+
+name:yarn.nodemanager.container-manager.thread-count
+value:20
+relevant log:1-ERROR	Task: attempt_1701312551309_0345_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.nodemanager.container-manager.thread-count' is set to 20. This might be causing the task to exit due to insufficient threads. Increasing the thread count might resolve the issue.
+
+name:yarn.nodemanager.delete.debug-delay-sec
+value:<missing>
+relevant log:1-WARN	When stopping the service JobHistoryEventHandlerjava.lang.NullPointerException
+explanation:The configuration 'yarn.nodemanager.delete.debug-delay-sec' is missing. This might be causing the NullPointerException when stopping the service JobHistoryEventHandler. Setting a value for this configuration might resolve the issue.

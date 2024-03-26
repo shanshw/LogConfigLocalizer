@@ -1,0 +1,14 @@
+name:dfs.namenode.decommission.max.concurrent.tracked.nodes
+value:-0.24363297
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0134_m_000008
+explanation: The negative value for the maximum number of decommission-in-progress or entering-maintenance datanodes nodes that will be tracked at one time by the namenode is invalid. This could cause issues with task speculation.
+
+name:fs.s3a.fast.upload.active.blocks
+value:4
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0134_m_000008
+explanation: The number of active blocks a single output stream can have might be too low, potentially causing a bottleneck in the system and leading to task speculation.
+
+name:mapreduce.reduce.shuffle.read.timeout
+value:180000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0134_m_000008
+explanation: The maximum amount of time reduce task waits for map output data to be available for reading after obtaining connection might be too high, causing delays and leading to task speculation.

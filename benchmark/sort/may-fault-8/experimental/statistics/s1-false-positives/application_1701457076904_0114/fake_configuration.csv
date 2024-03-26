@@ -1,0 +1,25 @@
+,name,value,description
+0,yarn.resourcemanager.fs.state-store.retry-interval-ms,6GHFX,<missing>
+1,yarn.client.failover-retries-on-socket-timeouts,0,
+2,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+3,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.interval-seconds,60,
+4,dfs.namenode.decommission.interval,30,"Namenode periodicity in seconds to check if
+    decommission or maintenance is complete. Support multiple time unit
+    suffix(case insensitive), as described in dfs.heartbeat.interval.
+    If no time unit is specified then seconds is assumed."
+5,dfs.namenode.get-blocks.max-qps,20,"The maximum number of getBlocks RPCs data movement utilities can make to
+    a NameNode per second. Values less than or equal to 0 disable throttling.
+    This affects anything that uses a NameNodeConnector, i.e., the Balancer,
+    Mover, and StoragePolicySatisfier."
+6,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+7,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+8,mapreduce.shuffle.max.threads,0,"Max allowed threads for serving shuffle connections. Set to zero
+  to indicate the default of 2 times the number of available
+  processors (as reported by Runtime.availableProcessors()). Netty is used to
+  serve requests, so a thread is not needed for each connection."
+9,yarn.timeline-service.leveldb-timeline-store.start-time-write-cache-size,10000,

@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+hadoop.http.idle_timeout.ms,<missing>,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0261_m_000009,The configuration for the server connection timeout is missing. This could cause issues with tasks being speculated due to connection timeouts.
+yarn.resourcemanager.scheduler.client.thread-count,50,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0261_m_000009,"The number of threads for the scheduler client could be causing the task to be speculated. If the thread count is too high, it could be causing resource contention."
+dfs.datanode.data.write.bandwidthPerSec,0,1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0261_m_000009,The bandwidth for data transfer is set to unlimited. This could be causing issues with tasks being speculated due to resource contention.

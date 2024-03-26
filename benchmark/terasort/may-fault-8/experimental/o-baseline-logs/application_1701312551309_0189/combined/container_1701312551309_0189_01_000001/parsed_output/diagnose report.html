@@ -1,0 +1,96 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.short.circuit.shared.memory.watcher.interrupt.check.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>60000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	memory</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.balancer.service.retries.on.exception</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>5</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.block.write.locateFollowingBlock.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>5</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>2117148295</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Halt with status -1: HaltException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.balancer.service.retries.on.exception</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>5</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Halt with status -1: HaltException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	on</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.balancer.service.retries.on.exception</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>5</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Halt with status -1: HaltException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	exception</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+    </script>
+    </body>
+    </html>
+    

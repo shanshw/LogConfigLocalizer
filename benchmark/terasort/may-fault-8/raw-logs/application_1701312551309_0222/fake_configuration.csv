@@ -1,0 +1,20 @@
+,name,value,description
+0,mapreduce.job.speculative.retry-after-speculate,l91u7,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+1,yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,
+2,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+3,dfs.namenode.edekcacheloader.interval.ms,1000,"When KeyProvider is configured, the interval time of warming
+    up edek cache on NN starts up / becomes active. All edeks will be loaded
+    from KMS into provider cache. The edek cache loader will try to warm up the
+    cache until succeed or NN leaves active state."
+4,yarn.nodemanager.container-log-monitor.dir-size-limit-bytes,1000000000,
+5,yarn.client.max-cached-nodemanagers-proxies,0,
+6,mapreduce.task.io.sort.factor,10,"The number of streams to merge at once while sorting
+  files.  This determines the number of open file handles."
+7,dfs.client-write-packet-size,65536,Packet size for clients to write
+8,dfs.datanode.slowpeer.low.threshold.ms,5,Threshold in milliseconds below which a DataNode is definitely not slow.
+9,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."

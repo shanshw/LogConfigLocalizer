@@ -1,0 +1,14 @@
+name:mapreduce.shuffle.pathcache.concurrency-level
+value:16
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0023_m_000009
+explanation: The log indicates a speculative attempt on a MapReduce task. The configuration option 'mapreduce.shuffle.pathcache.concurrency-level' is related to MapReduce tasks and could be the root cause if it is not properly configured.
+
+name:yarn.app.mapreduce.client.job.max-retries
+value:3
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0023_m_000009
+explanation: The log indicates a speculative attempt on a MapReduce task. The configuration option 'yarn.app.mapreduce.client.job.max-retries' is related to the number of retries for MapReduce tasks and could be the root cause if it is not properly configured.
+
+name:dfs.client.socket-timeout
+value:60000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0023_m_000009
+explanation: The log indicates a speculative attempt on a MapReduce task. The configuration option 'dfs.client.socket-timeout' is related to the timeout value for all sockets and could be the root cause if it is not properly configured.

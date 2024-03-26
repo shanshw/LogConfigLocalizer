@@ -1,0 +1,14 @@
+name:yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size
+value:10
+relevant log:1-ERROR	ERROR IN CONTACTING RM.java.io.InterruptedIOException: Call interrupted
+explanation:The error log indicates an issue with contacting the Resource Manager (RM). This could be due to insufficient threads in the Application Master (AM) for launching containers. The current configuration has 10 threads, which might not be enough for the workload.
+
+name:yarn.resourcemanager.amlauncher.thread-count
+value:50
+relevant log:1-ERROR	ERROR IN CONTACTING RM.java.io.InterruptedIOException: Call interrupted
+explanation:The error log shows an issue with contacting the Resource Manager (RM). This could be due to insufficient threads in the Resource Manager for launching Application Masters. The current configuration has 50 threads, which might not be enough for the workload.
+
+name:yarn.resourcemanager.client.thread-count
+value:50
+relevant log:1-ERROR	ERROR IN CONTACTING RM.java.io.InterruptedIOException: Call interrupted
+explanation:The error log indicates an issue with contacting the Resource Manager (RM). This could be due to insufficient threads in the Resource Manager for handling client requests. The current configuration has 50 threads, which might not be enough for the workload.

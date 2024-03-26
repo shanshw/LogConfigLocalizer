@@ -1,0 +1,22 @@
+,name,value,description
+0,mapreduce.task.userlog.limit.kb,nTplV,The maximum size of user-logs of each task in KB. 0 disables the cap.
+1,dfs.storage.policy.satisfier.retry.max.attempts,3,"Max retry to satisfy the block storage policy. After this retry block will be removed
+    from the movement needed queue."
+2,ha.health-monitor.check-interval.ms,1000,How often to check the service.
+3,mapreduce.shuffle.max.connections,0,"Max allowed connections for the shuffle.  Set to 0 (zero)
+               to indicate no limit on the number of connections."
+4,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+5,yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,
+6,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+7,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.
+8,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+9,mapreduce.job.cache.limit.max-single-resource-mb,0,"The maximum size (in MB) of a single resource a map reduce job
+    is allow to submit for localization via files, libjars, archives, and
+    jobjar command line arguments and through the distributed cache. If set to
+    0 the limit is ignored."

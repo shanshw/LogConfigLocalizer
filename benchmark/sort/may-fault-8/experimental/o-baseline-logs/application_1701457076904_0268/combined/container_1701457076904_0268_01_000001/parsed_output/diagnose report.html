@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.bytes.per.checksum</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>601318601</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The error log indicates an OutOfMemoryError, which could be caused by the large value of 'io.bytes.per.checksum'. This configuration option determines the number of bytes per checksum, and it should not be larger than 'io.file.buffer.size'. The current value is excessively large, which might have caused the system to run out of memory.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>file.client-write-packet-size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>65536</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The 'file.client-write-packet-size' configuration option could also be related to the OutOfMemoryError. This option determines the packet size for clients to write. If the packet size is too large, it could lead to memory issues. The current value seems to be reasonable, but it might still be worth investigating if it's causing the memory error.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.reduce.shuffle.fetch.retry.timeout-ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The 'mapreduce.reduce.shuffle.fetch.retry.timeout-ms' configuration option might be related to the error as well. This option determines the timeout value for the fetcher to retry to fetch again when some non-fatal failure happens. If the timeout is too short, it could lead to frequent retries, which could potentially cause memory issues. The current value seems to be reasonable, but it might still be worth investigating.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

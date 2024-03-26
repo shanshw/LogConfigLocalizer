@@ -1,0 +1,14 @@
+name:mapreduce.task.combine.progress.records
+value:10000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0056_m_000009
+explanation: The log indicates that a speculative task is being added, which could be related to the configuration of how many records are processed during combine output collection before sending a progress notification. If this value is too high, it might cause delays in task speculation.
+
+name:mapreduce.reduce.shuffle.fetch.retry.timeout-ms
+value:30000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0056_m_000009
+explanation: The log indicates that a speculative task is being added, which could be related to the configuration of the timeout value for fetcher to retry to fetch again when some non-fatal failure happens. If this value is too low, it might cause unnecessary retries and impact the performance.
+
+name:dfs.replication
+value:3
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0056_m_000009
+explanation: The log indicates that a speculative task is being added, which could be related to the configuration of the default block replication. If this value is not properly set, it might cause issues in data replication and impact the task execution.

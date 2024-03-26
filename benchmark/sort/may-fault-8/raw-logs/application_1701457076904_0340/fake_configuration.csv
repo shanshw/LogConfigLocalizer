@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,486528527,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,datanode.https.port,50475,HTTPS port for DataNode.
+2,dfs.namenode.checkpoint.period,3600,"The number of seconds between two periodic checkpoints.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+3,mapreduce.task.userlog.limit.kb,0,The maximum size of user-logs of each task in KB. 0 disables the cap.
+4,mapreduce.task.exit.timeout.check-interval-ms,20000,"The interval in milliseconds between which the MR framework
+  checks if task attempts stay in finishing state for too long."
+5,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+6,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+7,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."
+8,yarn.timeline-service.generic-application-history.max-applications,10000,
+9,ipc.[port_number].weighted-cost.lockshared,10,"The weight multiplier to apply to the time spent in the
+    processing phase which holds a shared (read) lock.
+    This property applies to WeightedTimeCostProvider."

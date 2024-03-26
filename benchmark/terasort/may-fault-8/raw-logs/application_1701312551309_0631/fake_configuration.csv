@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,1959112752,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.shuffle.retry-delay.max.ms,60000,"The maximum number of ms the reducer will delay before retrying
+  to download map data."
+2,yarn.app.attempt.diagnostics.limit.kc,64,
+3,dfs.client.block.reader.remote.buffer.size,512,"The output stream buffer size of a DFSClient remote read. The buffer default value is 512B. The buffer includes
+      only some request parameters that are: block, blockToken, clientName, startOffset, len, verifyChecksum,
+      cachingStrategy."
+4,yarn.resourcemanager.container-tokens.master-key-rolling-interval-secs,86400,
+5,dfs.ha.tail-edits.namenode-retries,3,Number of retries to use when contacting the namenode when tailing the log.
+6,dfs.namenode.max.slowpeer.collect.nodes,5,"How many slow nodes we will collect for filtering out
+    when choosing targets for blocks.
+
+    It is ignored if dfs.namenode.block-placement-policy.exclude-slow-nodes.enabled is false."
+7,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+8,dfs.client.failover.max.attempts,15,"Expert only. The number of client failover attempts that should be
+    made before the failover is considered failed."
+9,ipc.client.connect.max.retries.on.timeouts,45,"Indicates the number of retries a client will make on socket timeout
+               to establish a server connection."

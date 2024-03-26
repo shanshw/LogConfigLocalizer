@@ -1,0 +1,29 @@
+,name,value,description
+0,io.bytes.per.checksum,891744574,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.merge.inmem.threshold,1000,"The threshold, in terms of the number of files
+  for the in-memory merge process. When we accumulate threshold number of files
+  we initiate the in-memory merge and spill to disk. A value of 0 or less than
+  0 indicates we want to DON'T have any threshold and instead depend only on
+  the ramfs's memory consumption to trigger the merge."
+2,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+3,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+4,yarn.dispatcher.cpu-monitor.samples-per-min,60,
+5,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+6,yarn.resourcemanager.application.max-tags,10,
+7,dfs.namenode.max.extra.edits.segments.retained,10000,"The maximum number of extra edit log segments which should be retained
+  beyond what is minimally necessary for a NN restart. When used in conjunction with
+  dfs.namenode.num.extra.edits.retained, this configuration property serves to cap
+  the number of extra edits files to a reasonable value."
+8,dfs.qjournal.accept-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during accept phase of
+    recovery/synchronization for a specific segment."
+9,dfs.datanode.fsdatasetasyncdisk.max.threads.per.volume,4,"The maximum number of threads per volume used to process async disk
+    operations on the datanode. These threads consume I/O and CPU at the
+    same time. This will affect normal data node operations."

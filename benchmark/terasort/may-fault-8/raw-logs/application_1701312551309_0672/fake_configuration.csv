@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.rpc-timeout.ms,0,"Timeout on waiting response from server, in milliseconds.
+  If ipc.client.ping is set to true and this rpc-timeout is greater than
+  the value of ipc.ping.interval, the effective value of the rpc-timeout is
+  rounded up to multiple of ipc.ping.interval."
+2,yarn.nodemanager.localizer.cache.cleanup.interval-ms,600000,
+3,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,
+4,dfs.namenode.checkpoint.txns,1000000,"The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired."
+5,yarn.client.application-client-protocol.poll-interval-ms,200,
+6,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+7,mapreduce.reduce.shuffle.parallelcopies,5,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."
+8,yarn.sharedcache.nm.uploader.replication.factor,10,
+9,yarn.app.mapreduce.am.container.log.limit.kb,0,"The maximum size of the MRAppMaster attempt container logs in KB.
+    0 disables the cap."

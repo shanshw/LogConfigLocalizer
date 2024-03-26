@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ipc.client.kill.max,10,Defines the maximum number of clients to disconnect in one go.
+2,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+3,yarn.nodemanager.node-labels.provider.fetch-interval-ms,600000,
+4,yarn.nodemanager.container-diagnostics-maximum-size,10000,
+5,dfs.namenode.fs-limits.max-xattrs-per-inode,32,Maximum number of extended attributes per inode.
+6,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+7,hadoop.security.key.default.bitlength,128,"The length (bits) of keys we want the KeyProvider to produce. Key length
+    defines the upper-bound on an algorithm's security, ideally, it would
+    coincide with the lower-bound on an algorithm's security."
+8,dfs.qjournal.select-input-streams.timeout.ms,20000,Timeout in milliseconds for accepting streams from JournalManagers.
+9,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."

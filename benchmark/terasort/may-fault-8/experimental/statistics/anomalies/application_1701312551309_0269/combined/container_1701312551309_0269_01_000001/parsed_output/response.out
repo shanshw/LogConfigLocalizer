@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:dfs.datanode.fsdatasetasyncdisk.max.threads.per.volume
+value:4
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.datanode.fsdatasetasyncdisk.max.threads.per.volume' is set to 4. This might be causing a bottleneck in the processing of async disk operations on the datanode, which could be contributing to the checksum error.
+
+name:io.map.index.skip
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.map.index.skip' is set to 0. This means that no index entries are being skipped, which could be causing an overload of data and contributing to the checksum error.

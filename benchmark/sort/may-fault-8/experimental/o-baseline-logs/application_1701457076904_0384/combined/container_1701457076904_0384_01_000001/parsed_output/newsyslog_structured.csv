@@ -1,0 +1,16 @@
+LineId,Date,Time,Pid,Level,Component,Content,EventId,EventTemplate,ParameterList
+1,2023-12-02,09:09:32,754,INFO,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,Created MRAppMaster for application appattempt_1701457076904_0384_000001,19b75bb3,Created MRAppMaster for application appattempt_<*>_<*>_<*>,"['1701457076904', '0384_000001']"
+2,2023-12-02,09:09:32,934,ERROR,[main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""nNHiT""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:128)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:338)
+	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:366)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1735)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+",5e9563ba,"Error starting MRAppMasterjava.lang.NumberFormatException: For input string: ""nNHiT"" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at java.base/java.lang.Integer.parseInt(Integer.java:<*>) at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:<*>) at org.apache.hadoop.security.Groups.<init>(Groups.java:<*>) at org.apache.hadoop.security.Groups.<init>(Groups.java:<*>) at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:<*>) at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:<*>) at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:<*>) at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:<*>)","['65', '652', '770', '1534', '<init>', '128', '<init>', '102', '451', '338', '366', '1735', '1691']"
+3,2023-12-02,09:09:32,939,INFO,[main] org.apache.hadoop.util.ExitUtil,"Exiting with status 1: java.lang.NumberFormatException: For input string: ""nNHiT""",37c43fd1,"Exiting with status <*>: java.lang.NumberFormatException: For input string: ""nNHiT""",['1']

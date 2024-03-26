@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value larger than 0.
+
+name:dfs.client-write-packet-size
+value:65536
+relevant log:1-ERROR	Task: attempt_1701312551309_0446_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client-write-packet-size' might be related to the error as it controls the packet size for clients to write. The error might be due to the packet size being too large or too small.
+
+name:dfs.namenode.max.extra.edits.segments.retained
+value:10000
+relevant log:1-ERROR	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+explanation:The configuration 'dfs.namenode.max.extra.edits.segments.retained' might be related to the NullPointerException error in the JobHistoryEventHandler service. This configuration controls the maximum number of extra edit log segments which should be retained beyond what is minimally necessary for a NN restart. The error might be due to the number of extra edit log segments being too high.

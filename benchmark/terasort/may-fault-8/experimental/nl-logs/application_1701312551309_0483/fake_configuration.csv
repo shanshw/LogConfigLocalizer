@@ -1,0 +1,41 @@
+,name,value,description
+0,file.bytes-per-checksum,LoGvv,"The number of bytes per checksum.  Must not be larger than
+  file.stream-buffer-size"
+1,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+2,yarn.federation.cache-ttl.secs,300,
+3,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+4,mapreduce.reduce.merge.inmem.threshold,1000,"The threshold, in terms of the number of files
+  for the in-memory merge process. When we accumulate threshold number of files
+  we initiate the in-memory merge and spill to disk. A value of 0 or less than
+  0 indicates we want to DON'T have any threshold and instead depend only on
+  the ramfs's memory consumption to trigger the merge."
+5,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+6,ha.health-monitor.rpc.connect.max.retries,1,"The number of retries on connect error when establishing RPC proxy
+    connection to NameNode, used for monitorHealth() calls."
+7,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+8,dfs.image.transfer.bandwidthPerSec,52428800,"Maximum bandwidth used for regular image transfers (instead of
+        bootstrapping the standby namenode), in bytes per second.
+        This can help keep normal namenode operations responsive during
+        checkpointing.
+        A default value is 50mb per second.
+        The maximum bandwidth used for bootstrapping standby namenode is
+        configured with dfs.image.transfer-bootstrap-standby.bandwidthPerSec.
+        Support multiple size unit suffix(case insensitive), as described
+        in dfs.blocksize."
+9,yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds.min,3600,

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:dfs.image.transfer-bootstrap-standby.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.image.transfer-bootstrap-standby.bandwidthPerSec' is set to 0, which might be causing issues with image transfer during the bootstrap standby process. This option should be set to a value larger than 0 to ensure proper bandwidth allocation.
+
+name:yarn.log-aggregation.debug.filesize
+value:104857600
+relevant log:<missing>
+explanation:The configuration option 'yarn.log-aggregation.debug.filesize' has no description provided, which might cause confusion or misconfiguration. It is recommended to provide a description for this option to ensure proper understanding and usage.

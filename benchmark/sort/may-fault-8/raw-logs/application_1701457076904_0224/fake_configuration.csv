@@ -1,0 +1,25 @@
+,name,value,description
+0,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,-1772503665,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."
+1,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.interval-seconds,60,
+2,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+3,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+4,dfs.image.transfer-bootstrap-standby.bandwidthPerSec,0,"Maximum bandwidth used for transferring image to bootstrap standby
+      namenode, in bytes per second.
+      A default value of 0 indicates that throttling is disabled. This default
+      value should be used in most cases, to ensure timely HA operations.
+      The maximum bandwidth used for regular image transfers is configured
+      with dfs.image.transfer.bandwidthPerSec.
+      Support multiple size unit suffix(case insensitive), as described in
+      dfs.blocksize."
+5,yarn.resourcemanager.delegation.key.update-interval,86400000,
+6,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+7,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+8,dfs.qjournal.write-txns.timeout.ms,20000,"Write timeout in milliseconds when writing to a quorum of remote
+    journals."
+9,yarn.resourcemanager.zk-max-znode-size.bytes,1048576,

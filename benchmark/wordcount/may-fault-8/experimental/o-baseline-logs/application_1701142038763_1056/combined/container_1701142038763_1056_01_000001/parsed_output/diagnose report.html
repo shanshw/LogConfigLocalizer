@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.read.shortcircuit.streams.cache.expiry.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-867724837</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>4-3-2-1-WARN Failed to initialize filesystem hdfs://2f08f873c798:9000/efghwordsortKOoQLrJ8i1/_LdYTY: java.lang.IllegalArgumentException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The negative value for the configuration dfs.client.read.shortcircuit.streams.cache.expiry.ms is causing the IllegalArgumentException. This configuration controls the minimum amount of time file descriptors need to sit in the client cache context before they can be closed for being inactive for too long. The value should be a positive integer.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>ipc.client.connect.max.retries</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>10</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR Error starting MRAppMasterorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration ipc.client.connect.max.retries indicates the number of retries a client will make to establish a server connection. The log shows that the MRAppMaster service failed to initialize, which could be due to the client not being able to connect to the server. Increasing the value of this configuration might solve the issue.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.resourcemanager.admin.client.thread-count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong><missing></strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration yarn.resourcemanager.admin.client.thread-count is missing a value. This configuration controls the number of threads for the ResourceManager's admin client. The missing value could be causing the YarnRuntimeException. Setting a value for this configuration might solve the issue.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

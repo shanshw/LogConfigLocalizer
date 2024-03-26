@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+2,dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,Connection timeout for probing dead node in milliseconds.
+3,dfs.namenode.maintenance.replication.min,1,Minimal live block replication in existence of maintenance mode.
+4,fs.s3a.connection.request.timeout,0,"Time out on HTTP requests to the AWS service; 0 means no timeout.
+    Measured in seconds; the usual time suffixes are all supported
+
+    Important: this is the maximum duration of any AWS service call,
+    including upload and copy operations. If non-zero, it must be larger
+    than the time to upload multi-megabyte blocks to S3 from the client,
+    and to rename many-GB files. Use with care.
+
+    Values that are larger than Integer.MAX_VALUE milliseconds are
+    converged to Integer.MAX_VALUE milliseconds"
+5,dfs.datanode.ec.reconstruction.threads,8,"Number of threads used by the Datanode for background
+    reconstruction work."
+6,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+7,yarn.router.interceptor.user.threadpool-size,5,
+8,dfs.balancer.service.retries.on.exception,5,"When the balancer is executed as a long-running service, it will retry upon encountering an exception. This
+    configuration determines how many times it will retry before considering the exception to be fatal and quitting."
+9,dfs.qjournal.prepare-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during preparation phase of
+    recovery/synchronization for a specific segment."

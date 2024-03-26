@@ -1,0 +1,26 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.parallelcopies,-969465172,"The default number of parallel transfers run by reduce
+  during the copy(shuffle) phase."
+1,dfs.storage.policy.satisfier.queue.limit,1000,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."
+2,yarn.router.interceptor.user.threadpool-size,5,
+3,dfs.datanode.balance.max.concurrent.moves,100,"Maximum number of threads for Datanode balancer pending moves.  This
+    value is reconfigurable via the ""dfsadmin -reconfig"" command."
+4,dfs.namenode.replication.work.multiplier.per.iteration,2,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    parallel at a DN, for replication, when such a command list is being
+    sent over a DN heartbeat by the NN. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately for, per DN heartbeat. This number can be any positive,
+    non-zero integer."
+5,hadoop.hdfs.configuration.version,1,version of this configuration file
+6,yarn.timeline-service.entity-group-fs-store.app-cache-size,10,
+7,dfs.client.max.block.acquire.failures,3,Maximum failures allowed when trying to get block information from a specific datanode.
+8,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+9,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."

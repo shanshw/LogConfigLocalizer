@@ -1,0 +1,16 @@
+2023-11-30 18:15:14,159 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701312551309_0648_000001
+2023-11-30 18:15:14,268 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-30 18:15:14,288 ERROR [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Error starting MRAppMaster
+java.lang.NumberFormatException: For input string: "NUhZ9"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1534)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:128)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:338)
+	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:366)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1735)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)
+2023-11-30 18:15:14,291 INFO [main] org.apache.hadoop.util.ExitUtil: Exiting with status 1: java.lang.NumberFormatException: For input string: "NUhZ9"

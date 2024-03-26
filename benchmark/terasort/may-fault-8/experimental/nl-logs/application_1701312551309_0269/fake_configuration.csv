@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.slowdisk.low.threshold.ms,20,Threshold in milliseconds below which a disk is definitely not slow.
+2,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+3,yarn.timeline-service.flowname.max-size,0,
+4,yarn.nodemanager.node-attributes.provider.fetch-interval-ms,600000,
+5,yarn.resourcemanager.fs.state-store.num-retries,0,
+6,yarn.app.mapreduce.am.resource.cpu-vcores,1,The number of virtual CPU cores the MR AppMaster needs.
+7,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+8,dfs.namenode.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from clients.
+  If dfs.namenode.servicerpc-address is not configured then
+  Namenode RPC server threads listen to requests from all nodes."
+9,dfs.datanode.cached-dfsused.check.interval.ms,600000,"The interval check time of loading DU_CACHE_FILE in each volume.
+    When the cluster doing the rolling upgrade operations, it will
+    usually lead dfsUsed cache file of each volume expired and redo the
+    du operations in datanode and that makes datanode start slowly. Adjust
+    this property can make cache file be available for the time as you want."

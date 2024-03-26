@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,-221060224,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.cached.conn.retry,3,"The number of times the HDFS client will pull a socket from the
+   cache.  Once this number is exceeded, the client will try to create a new
+   socket."
+2,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+3,yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,
+4,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+5,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+6,dfs.namenode.ec.policies.max.cellsize,4194304,The maximum cell size of erasure coding policy. Default is 4MB.
+7,fs.s3a.connection.establish.timeout,5000,Socket connection setup timeout in milliseconds.
+8,yarn.app.attempt.diagnostics.limit.kc,64,
+9,dfs.namenode.service.handler.count,10,"The number of Namenode RPC server threads that listen to
+  requests from DataNodes and from all other non-client nodes.
+  dfs.namenode.service.handler.count will be valid only if
+  dfs.namenode.servicerpc-address is configured."

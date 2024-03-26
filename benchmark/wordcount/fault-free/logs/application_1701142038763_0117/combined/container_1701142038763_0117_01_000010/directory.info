@@ -1,0 +1,24 @@
+ls -l:
+total 32
+-rw-r--r-- 1 root root  129 Nov 28 13:44 container_tokens
+-rwx------ 1 root root  755 Nov 28 13:44 default_container_executor.sh
+-rwx------ 1 root root  700 Nov 28 13:44 default_container_executor_session.sh
+lrwxrwxrwx 1 root root  113 Nov 28 13:44 job.jar -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701142038763_0117/filecache/10/job.jar
+lrwxrwxrwx 1 root root  113 Nov 28 13:44 job.xml -> /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701142038763_0117/filecache/11/job.xml
+-rwx------ 1 root root 6175 Nov 28 13:44 launch_container.sh
+drwx--x--- 2 root root 4096 Nov 28 13:44 tmp
+find -L . -maxdepth 5 -ls:
+301415399      4 drwx--x---   3 root     root         4096 Nov 28 13:44 .
+301415323    232 -r-x------   1 root     root       237164 Nov 28 13:44 ./job.xml
+301415401      4 -rw-r--r--   1 root     root          129 Nov 28 13:44 ./container_tokens
+301415406      4 -rw-r--r--   1 root     root           16 Nov 28 13:44 ./.default_container_executor_session.sh.crc
+301415405      4 -rwx------   1 root     root          700 Nov 28 13:44 ./default_container_executor_session.sh
+301415423      4 -rwx------   1 root     root          755 Nov 28 13:44 ./default_container_executor.sh
+301415424      4 -rw-r--r--   1 root     root           16 Nov 28 13:44 ./.default_container_executor.sh.crc
+301415143      4 drwx------   2 root     root         4096 Nov 28 13:44 ./job.jar
+301415290    276 -r-x------   1 root     root       280486 Nov 28 13:44 ./job.jar/job.jar
+301415403      8 -rwx------   1 root     root         6175 Nov 28 13:44 ./launch_container.sh
+301415404      4 -rw-r--r--   1 root     root           60 Nov 28 13:44 ./.launch_container.sh.crc
+301415400      4 drwx--x---   2 root     root         4096 Nov 28 13:44 ./tmp
+301415402      4 -rw-r--r--   1 root     root           12 Nov 28 13:44 ./.container_tokens.crc
+broken symlinks(find -L . -maxdepth 5 -type l -ls):

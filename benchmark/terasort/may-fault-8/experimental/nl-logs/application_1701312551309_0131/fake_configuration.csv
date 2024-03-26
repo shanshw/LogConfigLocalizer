@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,-1508645539,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+2,dfs.client.server-defaults.validity.period.ms,3600000,"The amount of milliseconds after which cached server defaults are updated.
+
+    By default this parameter is set to 1 hour.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval."
+3,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+4,yarn.resourcemanager.connect.max-wait.ms,900000,
+5,dfs.datanode.fsdatasetcache.max.threads.per.volume,4,"The maximum number of threads per volume to use for caching new data
+    on the datanode. These threads consume both I/O and CPU. This can affect
+    normal datanode operations."
+6,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+7,hadoop.security.kms.client.encrypted.key.cache.size,500,Size of the EncryptedKeyVersion cache Queue for each key
+8,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+9,yarn.resourcemanager.epoch.range,0,

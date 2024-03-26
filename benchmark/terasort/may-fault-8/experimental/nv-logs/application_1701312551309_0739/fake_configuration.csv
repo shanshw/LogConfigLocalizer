@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+2,yarn.timeline-service.leveldb-timeline-store.read-cache-size,104857600,
+3,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+4,yarn.sharedcache.nm.uploader.replication.factor,10,
+5,mapreduce.job.ubertask.maxreduces,1,"Threshold for number of reduces, beyond which job is considered
+  too big for the ubertasking optimization.  CURRENTLY THE CODE CANNOT SUPPORT
+  MORE THAN ONE REDUCE and will ignore larger values.  (Zero is a valid max,
+  however.)  Users may override this value, but only downward."
+6,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+7,yarn.sharedcache.cleaner.period-mins,1440,
+8,yarn.resourcemanager.nm-container-queuing.sorting-nodes-interval-ms,1000,
+9,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."

@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.lazywriter.interval.sec,60,Interval in seconds for Datanodes for lazy persist writes.
+2,ipc.[port_number].decay-scheduler.period-ms,5000,"How frequently the decay factor should be applied to the
+    operation counts of users. Higher values have less overhead, but respond
+    less quickly to changes in client behavior.
+    This property applies to DecayRpcScheduler."
+3,dfs.namenode.top.window.num.buckets,10,Number of buckets in the rolling window implementation of nntop
+4,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+5,dfs.datanode.max.disks.to.report,5,"Number of disks to include in JSON report per operation. We will return
+    disks with the highest latency."
+6,dfs.datanode.cache.revocation.timeout.ms,900000,"When the DFSClient reads from a block file which the DataNode is
+    caching, the DFSClient can skip verifying checksums.  The DataNode will
+    keep the block file in cache until the client is done.  If the client takes
+    an unusually long time, though, the DataNode may need to evict the block
+    file from the cache anyway.  This value controls how long the DataNode will
+    wait for the client to release a replica that it is reading without
+    checksums."
+7,yarn.nodemanager.log.deletion-threads-count,4,
+8,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.
+9,yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms,1000,

@@ -1,0 +1,33 @@
+,name,value,description
+0,io.bytes.per.checksum,1152874999,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.app.mapreduce.client.job.max-retries,3,"The number of retries the client will make for getJob and
+    dependent calls.
+    This is needed for non-HDFS DFS where additional, high level
+    retries are required to avoid spurious failures during the getJob call.
+    30 is a good value for WASB"
+2,yarn.timeline-service.writer.flush-interval-seconds,60,
+3,ipc.client.connection.maxidletime,10000,"The maximum time in msec after which a client will bring down the
+               connection to the server."
+4,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+5,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+6,mapreduce.job.running.map.limit,0,"The maximum number of simultaneous map tasks per job.
+  There is no limit if this value is 0 or negative."
+7,dfs.journalnode.edits.dir.perm,700,"Permissions for the directories on on the local filesystem where
+      the DFS journal node stores the edits. The permissions can either be
+      octal or symbolic."
+8,dfs.heartbeat.interval,3,"Determines datanode heartbeat interval in seconds.
+    Can use the following suffix (case insensitive):
+    ms(millis), s(sec), m(min), h(hour), d(day)
+    to specify the time (such as 2s, 2m, 1h, etc.).
+    Or provide complete number in seconds (such as 30 for 30 seconds).
+    If no time unit is specified then seconds is assumed."
+9,yarn.timeline-service.leveldb-timeline-store.start-time-read-cache-size,10000,

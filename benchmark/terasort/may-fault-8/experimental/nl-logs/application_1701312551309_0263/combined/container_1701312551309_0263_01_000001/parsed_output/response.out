@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1617148588
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. This configuration should be adjusted to a smaller value.
+
+name:yarn.nodemanager.process-kill-wait.ms
+value:5000
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of yarn.nodemanager.process-kill-wait.ms is set to 5000ms. This might be too short for some processes to complete, causing them to be killed prematurely and leading to errors. Consider increasing this value.
+
+name:dfs.client.block.write.locateFollowingBlock.retries
+value:5
+relevant log:2-1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation: The value of dfs.client.block.write.locateFollowingBlock.retries is set to 5. This might be too low, causing retries to run out before the next block can be found during HDFS writes. Consider increasing this value.

@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,601318601,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,"If any of file related block movements not at all reported by datanode,
+    then after this timeout(in milliseconds), the item will be added back to movement needed list
+    at namenode which will be retried for block movements.
+    The default value is 5 * 60 * 1000 (5 mins)"
+2,yarn.minicluster.yarn.nodemanager.resource.memory-mb,4096,
+3,yarn.app.mapreduce.shuffle.log.limit.kb,0,"Maximum size of the syslog.shuffle file in kilobytes
+    (0 for no limit)."
+4,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+5,yarn.client.nodemanager-client-async.thread-pool-max-size,500,
+6,mapreduce.jobhistory.move.interval-ms,180000,"Scan for history files to more from intermediate done dir to done
+  dir at this frequency."
+7,ftp.blocksize,67108864,Block size
+8,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+9,mapreduce.input.fileinputformat.split.minsize,0,"The minimum size chunk that map input should be split
+  into.  Note that some file formats may have minimum split sizes that
+  take priority over this setting."

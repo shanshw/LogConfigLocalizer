@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,ftp.blocksize,67108864,Block size
+2,yarn.router.interceptor.user.threadpool-size,5,
+3,yarn.resourcemanager.node-labels.provider.fetch-interval-ms,1800000,
+4,mapreduce.input.fileinputformat.list-status.num-threads,1,"The number of threads to use to list and fetch block locations
+  for the specified input paths. Note: multiple threads should not be used
+  if a custom non thread-safe path filter is used."
+5,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."
+6,mapreduce.input.fileinputformat.split.minsize,0,"The minimum size chunk that map input should be split
+  into.  Note that some file formats may have minimum split sizes that
+  take priority over this setting."
+7,dfs.client.mmap.cache.size,256,"When zero-copy reads are used, the DFSClient keeps a cache of recently used
+    memory mapped regions.  This parameter controls the maximum number of
+    entries that we will keep in that cache.
+
+    The larger this number is, the more file descriptors we will potentially
+    use for memory-mapped files.  mmaped files also use virtual address space.
+    You may need to increase your ulimit virtual address space limits before
+    increasing the client mmap cache size.
+
+    Note that you can still do zero-copy reads when this size is set to 0."
+8,yarn.resourcemanager.amlauncher.thread-count,50,
+9,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.

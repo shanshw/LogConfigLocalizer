@@ -1,0 +1,23 @@
+,name,value,description
+0,io.bytes.per.checksum,1959112752,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."
+2,hadoop.security.kms.client.failover.sleep.base.millis,100,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+3,yarn.nodemanager.runtime.linux.runc.image-tag-to-manifest-plugin.num-manifests-to-cache,10,
+4,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.
+5,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+6,dfs.datanode.peer.metrics.min.outlier.detection.samples,1000,"Minimum number of packet send samples which are required to qualify for outlier detection.
+      If the number of samples is below this then outlier detection is skipped."
+7,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+8,datanode.https.port,50475,HTTPS port for DataNode.
+9,dfs.namenode.reconstruction.pending.timeout-sec,300,"Timeout in seconds for block reconstruction.  If this value is 0 or less,
+    then it will default to 5 minutes."

@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,1720753167,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.registry.zk.retry.times,5,Zookeeper connection retry count before failing
+2,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+3,hadoop.security.group.mapping.ldap.connection.timeout.ms,60000,"This property is the connection timeout (in milliseconds) for LDAP
+    operations. If the LDAP provider doesn't establish a connection within the
+    specified period, it will abort the connect attempt. Non-positive value
+    means no LDAP connection timeout is specified in which case it waits for the
+    connection to establish until the underlying network times out."
+4,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,
+5,yarn.sharedcache.nested-level,3,
+6,yarn.nodemanager.container-metrics.unregister-delay-ms,10000,
+7,dfs.namenode.path.based.cache.refresh.interval.ms,30000,"The amount of milliseconds between subsequent path cache rescans.  Path
+    cache rescans are when we calculate which blocks should be cached, and on
+    what datanodes.
+
+    By default, this parameter is set to 30 seconds."
+8,yarn.resourcemanager.delegation-token-renewer.thread-count,50,
+9,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.

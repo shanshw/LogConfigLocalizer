@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-670838799,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.webhdfs.netty.low.watermark,32768,Low watermark configuration to Netty for Datanode WebHdfs.
+2,mapreduce.reduce.maxattempts,4,"Expert: The maximum number of attempts per reduce task.
+  In other words, framework will try to execute a reduce task these many number
+  of times before giving up on it."
+3,yarn.sharedcache.admin.thread-count,1,
+4,dfs.client.retry.window.base,3000,"Base time window in ms for DFSClient retries.  For each retry attempt,
+    this value is extended linearly (e.g. 3000 ms for first attempt and
+    first retry, 6000 ms for second retry, 9000 ms for third retry, etc.)."
+5,fs.s3a.connection.maximum,96,"Controls the maximum number of simultaneous connections to S3.
+    This must be bigger than the value of fs.s3a.threads.max so as to stop
+    threads being blocked waiting for new HTTPS connections.
+    Why not equal? The AWS SDK transfer manager also uses these connections."
+6,dfs.client.write.byte-array-manager.count-threshold,128,"The count threshold for each array length so that a manager is created only after the
+    allocation count exceeds the threshold. In other words, the particular array length
+    is not managed until the allocation count exceeds the threshold."
+7,yarn.nodemanager.localizer.cache.target-size-mb,10240,
+8,mapreduce.job.maps,2,"The default number of map tasks per job.
+  Ignored when mapreduce.framework.name is ""local""."
+9,dfs.namenode.lease-hard-limit-sec,1200,Determines the namenode automatic lease recovery interval in seconds.

@@ -1,0 +1,28 @@
+,name,value,description
+0,yarn.resourcemanager.submission-preprocessor.file-refresh-interval-ms,-0.4287696,<missing>
+1,hadoop.security.group.mapping.ldap.num.attempts.before.failover,3,"This property is the number of attempts to be made for LDAP operations
+    using a single LDAP instance. If multiple LDAP servers are configured
+    and this number of failed operations is reached, we will switch to the
+    next LDAP server. The configuration for the overall number of attempts
+    will still be respected, failover will thus be performed only if this
+    property is less than hadoop.security.group.mapping.ldap.num.attempts."
+2,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+3,mapreduce.job.reducer.preempt.delay.sec,0,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers reducer preemption when there is no anticipated
+      headroom. If set to 0 or a negative value, the reducer is preempted as
+      soon as lack of headroom is detected. Default is 0."
+4,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+5,dfs.namenode.resource.du.reserved,104857600,"The amount of space to reserve/require for a NameNode storage directory
+    in bytes. The default is 100MB. Support multiple size unit
+    suffix(case insensitive), as described in dfs.blocksize."
+6,yarn.nodemanager.health-checker.timeout-ms,1200000,
+7,ha.zookeeper.session-timeout.ms,10000,"The session timeout to use when the ZKFC connects to ZooKeeper.
+    Setting this value to a lower value implies that server crashes
+    will be detected more quickly, but risks triggering failover too
+    aggressively in the case of a transient error or network blip."
+8,yarn.timeline-service.leveldb-timeline-store.start-time-read-cache-size,10000,
+9,ha.failover-controller.graceful-fence.connection.retries,1,FC connection retries for graceful fencing

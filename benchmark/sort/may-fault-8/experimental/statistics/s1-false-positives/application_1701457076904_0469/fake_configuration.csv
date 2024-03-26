@@ -1,0 +1,23 @@
+,name,value,description
+0,dfs.client.retry.max.attempts,,Max retry attempts for DFSClient talking to namenodes.
+1,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+2,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+3,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."
+4,dfs.namenode.fs-limits.max-directory-items,1048576,"Defines the maximum number of items that a directory may
+      contain. Cannot set the property to a value less than 1 or more than
+      6400000."
+5,dfs.checksum.ec.socket-timeout,3000,"Default timeout value in milliseconds for computing the checksum of striped blocks.
+    Recommended to set the same value between client and DNs in a cluster because mismatching
+    may cause exhausting handler threads."
+6,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+7,yarn.resourcemanager.delegation-token-renewer.thread-retry-max-attempts,10,
+8,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+9,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,"The maximum period to keep a DN in the excluded nodes list
+  at a client. After this period, in milliseconds, the previously excluded node(s) will
+  be removed automatically from the cache and will be considered good for block allocations
+  again. Useful to lower or raise in situations where you keep a file open for very long
+  periods (such as a Write-Ahead-Log (WAL) file) to make the writer tolerant to cluster maintenance
+  restarts. Defaults to 10 minutes."

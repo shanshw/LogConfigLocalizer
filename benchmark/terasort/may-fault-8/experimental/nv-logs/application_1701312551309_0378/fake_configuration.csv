@@ -1,0 +1,30 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.job.local-fs.single-disk-limit.check.interval-ms,5000,Interval of disk limit check to run in ms.
+2,dfs.datanode.min.outlier.detection.disks,5,Minimum number of disks to run outlier detection.
+3,dfs.namenode.replication.work.multiplier.per.iteration,2,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    parallel at a DN, for replication, when such a command list is being
+    sent over a DN heartbeat by the NN. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately for, per DN heartbeat. This number can be any positive,
+    non-zero integer."
+4,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."
+5,dfs.storage.policy.satisfier.work.multiplier.per.iteration,1,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    one iteration, for satisfy the policy. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately. This number can be any positive, non-zero integer."
+6,hadoop.security.uid.cache.secs,14400,"This is the config controlling the validity of the entries in the cache
+        containing the userId to userName and groupId to groupName used by
+        NativeIO getFstat()."
+7,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+8,file.replication,1,Replication factor
+9,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."

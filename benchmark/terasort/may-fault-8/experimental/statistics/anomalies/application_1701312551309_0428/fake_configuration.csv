@@ -1,0 +1,25 @@
+,name,value,description
+0,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,0.4456836,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+1,dfs.datanode.min.outlier.detection.nodes,10,Minimum number of nodes to run outlier detection.
+2,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,
+3,mapreduce.jobhistory.loadedjobs.cache.size,5,"Size of the loaded job cache.  This property is ignored if
+  the property mapreduce.jobhistory.loadedtasks.cache.size is set to a
+  positive value."
+4,yarn.nodemanager.amrmproxy.client.thread-count,25,
+5,dfs.namenode.decommission.max.concurrent.tracked.nodes,100,"The maximum number of decommission-in-progress or
+    entering-maintenance datanodes nodes that will be tracked at one time by
+    the namenode. Tracking these datanode consumes additional NN memory
+    proportional to the number of blocks on the datnode. Having a conservative
+    limit reduces the potential impact of decommissioning or maintenance of
+    a large number of nodes at once.
+      
+    A value of 0 means no limit will be enforced."
+6,dfs.namenode.snapshot.skiplist.max.levels,0,"Maximum no of the skip levels to be maintained in the skip list for
+    storing directory snapshot diffs. By default, it is set to 0 and a linear
+    list will be used to store the directory snapshot diffs."
+7,yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,
+8,dfs.qjournal.http.read.timeout.ms,60000,"Timeout in milliseconds when reading from a HTTP connection from remote
+    journals."
+9,dfs.qjournal.get-journal-state.timeout.ms,120000,"Timeout in milliseconds when calling getJournalState().
+    JournalNodes."

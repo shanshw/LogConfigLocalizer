@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.bytes-per-checksum,0,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"
+1,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"
+2,yarn.sharedcache.cleaner.period-mins,1440,
+3,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+4,yarn.app.mapreduce.client-am.ipc.max-retries,3,"The number of client retries to the AM - before reconnecting
+    to the RM to fetch Application Status.
+    In other words, it is the ipc.client.connect.max.retries to be used during
+    reconnecting to the RM and fetching Application Status."
+5,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."
+6,yarn.nodemanager.container-diagnostics-maximum-size,10000,
+7,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+8,mapreduce.job.speculative.retry-after-speculate,15000,"The waiting time(ms) to do next round of speculation
+  if there are tasks speculated in this round."
+9,yarn.nodemanager.container-manager.thread-count,20,

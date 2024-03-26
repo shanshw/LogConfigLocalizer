@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+2,ipc.[port_number].scheduler.priority.levels,4,"How many priority levels to use within the scheduler and call
+    queue. This property applies to RpcScheduler and CallQueue."
+3,mapreduce.jobhistory.intermediate-user-done-dir.permissions,770,"The permissions of the user directories in
+  ${mapreduce.jobhistory.intermediate-done-dir}. The user and the group
+  permission must be 7, this is enforced."
+4,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,
+5,fs.trash.checkpoint.interval,0,"Number of minutes between trash checkpoints.
+  Should be smaller or equal to fs.trash.interval. If zero,
+  the value is set to the value of fs.trash.interval.
+  Every time the checkpointer runs it creates a new checkpoint
+  out of current and removes checkpoints created more than
+  fs.trash.interval minutes ago."
+6,tfile.fs.input.buffer.size,262144,Buffer size used for FSDataInputStream in bytes.
+7,yarn.am.liveness-monitor.expiry-interval-ms,600000,
+8,yarn.timeline-service.client.fd-flush-interval-secs,10,
+9,dfs.datanode.ec.reconstruct.read.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for reading.
+      When the bandwidth value is zero, there is no limit."

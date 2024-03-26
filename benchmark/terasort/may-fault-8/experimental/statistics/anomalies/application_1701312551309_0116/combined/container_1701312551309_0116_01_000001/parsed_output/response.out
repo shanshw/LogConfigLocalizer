@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an invalid checksum type. The configuration option 'io.bytes.per.checksum' is set to 0, which might be causing this issue as it is related to checksum calculation. The value should not be 0.
+
+name:dfs.datanode.transfer.socket.send.buffer.size
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an issue with data transfer. The configuration option 'dfs.datanode.transfer.socket.send.buffer.size' is set to 0, which might be causing this issue as it is related to data transfer. The value should not be 0.
+
+name:dfs.datanode.data.transfer.bandwidthPerSec
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation: The error log indicates an issue with data transfer. The configuration option 'dfs.datanode.data.transfer.bandwidthPerSec' is set to 0, which might be causing this issue as it is related to data transfer. The value should not be 0.

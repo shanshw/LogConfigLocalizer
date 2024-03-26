@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This option should be set to a value greater than 0 to avoid this error.
+
+name:dfs.client.retry.window.base
+value:3000
+relevant log:1-ERROR	Task: attempt_1701312551309_0471_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.retry.window.base' is set to 3000ms. This might be causing the client to retry too quickly after a failure, leading to the Invalid checksum type error. Increasing this value might help to avoid this error.
+
+name:yarn.resourcemanager.delegation-token-renewer.thread-count
+value:<missing>
+relevant log:1-INFO	1 failures on node cf6e5ca2712c
+explanation:The configuration option 'yarn.resourcemanager.delegation-token-renewer.thread-count' is missing. This might be causing the failures on node cf6e5ca2712c. Setting a value for this option might help to avoid these failures.

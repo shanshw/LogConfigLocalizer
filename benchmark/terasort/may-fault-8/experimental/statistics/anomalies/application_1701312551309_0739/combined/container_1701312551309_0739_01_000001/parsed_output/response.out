@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value to avoid this error.
+
+name:dfs.namenode.fs-limits.min-block-size
+value:1048576
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.namenode.fs-limits.min-block-size' is set to 1048576 which might be causing the Invalid checksum type error. This configuration should be set to a valid non-zero value to avoid this error.
+
+name:tfile.io.chunk.size
+value:1048576
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'tfile.io.chunk.size' is set to 1048576 which might be causing the Invalid checksum type error. This configuration should be set to a valid non-zero value to avoid this error.

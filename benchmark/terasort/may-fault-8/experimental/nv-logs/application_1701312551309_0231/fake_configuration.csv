@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.cluster.max-application-priority,0,
+2,yarn.sharedcache.uploader.server.thread-count,50,
+3,hadoop.security.crypto.buffer.size,8192,The buffer size used by CryptoInputStream and CryptoOutputStream.
+4,fs.s3a.connection.timeout,200000,Socket connection timeout in milliseconds.
+5,dfs.namenode.available-space-block-placement-policy.balanced-space-tolerance,5,"Only used when the dfs.block.replicator.classname is set to
+      org.apache.hadoop.hdfs.server.blockmanagement.AvailableSpaceBlockPlacementPolicy.
+      Special value between 0 and 20, inclusive. if the value is set beyond the scope,
+      this value will be set as 5 by default, Increases tolerance of
+      placing blocks on Datanodes with similar disk space used."
+6,dfs.mover.max-no-move-interval,60000,"If this specified amount of time has elapsed and no block has been moved
+    out of a source DataNode, on more effort will be made to move blocks out of
+    this DataNode in the current Mover iteration."
+7,dfs.webhdfs.ugi.expire.after.access,600000,"How long in milliseconds after the last access
+      the cached UGI will expire. With 0, never expire."
+8,hadoop.registry.zk.retry.interval.ms,1000,
+9,yarn.client.nodemanager-client-async.thread-pool-max-size,500,

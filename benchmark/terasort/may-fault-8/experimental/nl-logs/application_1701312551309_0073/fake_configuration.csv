@@ -1,0 +1,24 @@
+,name,value,description
+0,io.bytes.per.checksum,1344483239,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+2,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+3,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+4,hadoop.security.dns.log-slow-lookups.threshold.ms,1000,"If slow lookup logging is enabled, this threshold is used to decide if a
+    lookup is considered slow enough to be logged."
+5,yarn.timeline-service.entity-group-fs-store.leveldb-cache-read-cache-size,10485760,
+6,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+7,dfs.datanode.socket.write.timeout,480000,Timeout in ms for clients socket writes to DataNodes.
+8,dfs.namenode.reconstruction.pending.timeout-sec,300,"Timeout in seconds for block reconstruction.  If this value is 0 or less,
+    then it will default to 5 minutes."
+9,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."

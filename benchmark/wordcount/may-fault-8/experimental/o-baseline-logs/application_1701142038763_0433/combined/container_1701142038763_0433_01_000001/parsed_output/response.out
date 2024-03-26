@@ -1,0 +1,14 @@
+name:mapreduce.task.merge.progress.records
+value:0.5408669
+relevant log:3-2-1-ERROR Task: attempt_1701142038763_0433_r_000000_0 - exited : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: Error while doing final merge at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:162)
+explanation: The error log indicates a NumberFormatException for the input string "0.5408669". This value is set for the configuration option "mapreduce.task.merge.progress.records", which is expected to be a long integer. The decimal value is causing the error. 
+
+name:yarn.resourcemanager.placement-constraints.retry-attempts
+value:3
+relevant log:<missing>
+explanation: There is no direct error log related to this configuration. However, it might be related to the failure on node ed761ad59d44. If the placement constraints are not met, the task might fail.
+
+name:ha.failover-controller.graceful-fence.rpc-timeout.ms
+value:5000
+relevant log:<missing>
+explanation: There is no direct error log related to this configuration. However, it might be related to the failure on node ed761ad59d44. If the failover controller's RPC timeout is too short, it might cause unexpected errors.

@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-392837573,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.sharedcache.client-server.thread-count,50,
+2,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+3,dfs.namenode.checkpoint.txns,1000000,"The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired."
+4,dfs.storage.policy.satisfier.queue.limit,1000,"Storage policy satisfier queue size. This queue contains the currently
+    scheduled file's inode ID for statisfy the policy.
+    Default value is 1000."
+5,dfs.namenode.resource.checked.volumes.minimum,1,The minimum number of redundant NameNode storage volumes required.
+6,net.topology.script.number.args,100,"The max number of args that the script configured with
+    net.topology.script.file.name should be run with. Each arg is an
+    IP address."
+7,dfs.client.cached.conn.retry,3,"The number of times the HDFS client will pull a socket from the
+   cache.  Once this number is exceeded, the client will try to create a new
+   socket."
+8,dfs.namenode.fs-limits.min-block-size,1048576,"Minimum block size in bytes, enforced by the Namenode at create
+      time. This prevents the accidental creation of files with tiny block
+      sizes (and thus many blocks), which can degrade performance. Support multiple
+      size unit suffix(case insensitive), as described in dfs.blocksize."
+9,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"

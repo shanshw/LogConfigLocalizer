@@ -1,0 +1,19 @@
+,name,value,description
+0,io.bytes.per.checksum,-454058460,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.read.short.circuit.replica.stale.threshold.ms,1800000,Threshold in milliseconds for read entries during short-circuit local reads.
+2,yarn.nodemanager.health-checker.timeout-ms,1200000,
+3,dfs.edit.log.transfer.timeout,30000,"Socket timeout for edit log transfer in milliseconds. This timeout
+    should be configured such that normal edit log transfer for journal
+    node syncing can complete successfully."
+4,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+5,yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep,100,
+6,hadoop.registry.zk.retry.times,5,Zookeeper connection retry count before failing
+7,dfs.image.transfer.timeout,60000,"Socket timeout for the HttpURLConnection instance used in the image
+        transfer. This is measured in milliseconds.
+        This timeout prevents client hangs if the connection is idle
+        for this configured timeout, during image transfer."
+8,dfs.namenode.full.block.report.lease.length.ms,300000,"The number of milliseconds that the NameNode will wait before invalidating
+    a full block report lease.  This prevents a crashed DataNode from
+    permanently using up a full block report lease."
+9,yarn.nodemanager.container-manager.thread-count,20,

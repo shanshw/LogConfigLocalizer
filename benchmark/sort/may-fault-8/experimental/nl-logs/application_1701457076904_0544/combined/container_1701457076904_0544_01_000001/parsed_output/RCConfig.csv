@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+hadoop.http.authentication.token.validity,0,5-4-3-2-1-ERROR,"The value of this configuration is set to 0, which means the authentication token is not valid at all. This could be the reason why the http server failed to start, as indicated in the log."
+dfs.client.socketcache.capacity,16,5-4-3-2-1-ERROR,"The value of this configuration is set to 16, which might be too low for the system to handle the socket connections, leading to the failure of the http server."
+dfs.edit.log.transfer.bandwidthPerSec,0,5-4-3-2-1-ERROR,"The value of this configuration is set to 0, which means the bandwidth for transferring edit log is disabled. This could be the reason why the http server failed to start, as indicated in the log."

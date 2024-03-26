@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-1773637460,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.stale.datanode.minimum.interval,3,"Minimum number of missed heartbeats intervals for a datanode to
+    be marked stale by the Namenode.  The actual interval is calculated as
+    (dfs.namenode.stale.datanode.minimum.interval * dfs.heartbeat.interval)
+    in seconds.  If this value is greater than the property
+    dfs.namenode.stale.datanode.interval, then the calculated value above
+    is used."
+2,yarn.resourcemanager.delegation.token.max-lifetime,604800000,
+3,dfs.namenode.path.based.cache.retry.interval.ms,30000,"When the NameNode needs to uncache something that is cached, or cache
+    something that is not cached, it must direct the DataNodes to do so by
+    sending a DNA_CACHE or DNA_UNCACHE command in response to a DataNode
+    heartbeat.  This parameter controls how frequently the NameNode will
+    resend these commands."
+4,yarn.resourcemanager.admin.client.thread-count,1,
+5,mapreduce.jobhistory.datestring.cache.size,200000,"Size of the date string cache. Effects the number of directories
+  which will be scanned to find a job."
+6,io.seqfile.compress.blocksize,1000000,"The minimum block size for compression in block compressed
+          SequenceFiles."
+7,dfs.disk.balancer.plan.threshold.percent,10,"The percentage threshold value for volume Data Density in a plan.
+      If the absolute value of volume Data Density which is out of
+      threshold value in a node, it means that the volumes corresponding to
+      the disks should do the balancing in the plan. The default value is 10."
+8,yarn.nodemanager.runtime.linux.docker.stop.grace-period,10,
+9,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,

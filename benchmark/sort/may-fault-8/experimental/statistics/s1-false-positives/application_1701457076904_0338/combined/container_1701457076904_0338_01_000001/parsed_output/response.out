@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0338_m_000008
+explanation: The missing value for the number of bytes per checksum could be causing issues with the task speculation. This configuration option should be set to a value that is not larger than the io.file.buffer.size.
+
+name:mapreduce.task.exit.timeout.check-interval-ms
+value:20000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0338_m_000008
+explanation: The interval at which the MR framework checks if task attempts stay in finishing state for too long is set to 20000 milliseconds. This could be causing delays in the speculation of tasks.
+
+name:yarn.app.mapreduce.am.container.log.limit.kb
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0338_m_000008
+explanation: The maximum size of the MRAppMaster attempt container logs is set to 0 KB, which disables the cap. This could be causing issues with the logging of task speculations.

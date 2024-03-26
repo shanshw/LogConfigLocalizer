@@ -1,0 +1,29 @@
+,name,value,description
+0,ipc.server.listen.queue.size,H0IeD,"Indicates the length of the listen queue for servers accepting
+               client connections."
+1,dfs.client.read.shortcircuit.streams.cache.size,256,"The DFSClient maintains a cache of recently opened file descriptors.
+    This parameter controls the maximum number of file descriptors in the cache.
+    Setting this higher will use more file descriptors,
+    but potentially provide better performance on workloads
+    involving lots of seeks."
+2,yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,
+3,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,10,"The initial size of thread pool to launch containers in the
+    app master."
+4,dfs.client.socketcache.capacity,16,"Socket cache capacity (in entries) for short-circuit reads.
+    If this value is set to 0, the client socket cache is disabled."
+5,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,
+6,dfs.namenode.edits.dir.minimum,1,"dfs.namenode.edits.dir includes both required directories
+    (specified by dfs.namenode.edits.dir.required) and optional directories.
+
+    The number of usable optional directories must be greater than or equal
+    to this property.  If the number of usable optional directories falls
+    below dfs.namenode.edits.dir.minimum, HDFS will issue an error.
+
+    This property defaults to 1."
+7,dfs.mover.movedWinWidth,5400000,"The minimum time interval, in milliseconds, that a block can be
+    moved to another location again."
+8,mapreduce.shuffle.ssl.file.buffer.size,65536,Buffer size for reading spills from file when using SSL.
+9,dfs.datanode.fileio.profiling.sampling.percentage,0,"This setting controls the percentage of file I/O events which will be
+    profiled for DataNode disk statistics. The default value of 0 disables
+    disk statistics. Set to an integer value between 1 and 100 to enable disk
+    statistics."

@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:file.replication
+value:1
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The 'file.replication' configuration option is set to 1. This could be causing issues with the checksum calculation as there is only one copy of the data. Increasing the replication factor could help in resolving the issue.
+
+name:dfs.client.datanode-restart.timeout
+value:30
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The 'dfs.client.datanode-restart.timeout' configuration option is set to 30 seconds. This could be causing issues if the datanode is not able to restart within this time frame. Increasing this timeout could help in resolving the issue.

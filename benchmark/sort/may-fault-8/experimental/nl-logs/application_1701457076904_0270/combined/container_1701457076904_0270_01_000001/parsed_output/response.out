@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value larger than 0 to ensure proper checksum calculation.
+
+name:mapreduce.jobhistory.loadedjobs.cache.size
+value:5
+relevant log:24-INFO	Service JobHistoryEventHandler failed in state STOPPEDjava.lang.NullPointerException
+explanation:The configuration option 'mapreduce.jobhistory.loadedjobs.cache.size' is set to 5. This might be causing the NullPointerException in the JobHistoryEventHandler service due to insufficient cache size. Increasing the cache size might resolve the issue.
+
+name:yarn.resourcemanager.client.thread-count
+value:50
+relevant log:32-WARN	Graceful stop failed. Exiting..java.lang.NullPointerException
+explanation:The configuration option 'yarn.resourcemanager.client.thread-count' is set to 50. This might be causing the NullPointerException during the graceful stop due to insufficient thread count. Increasing the thread count might resolve the issue.

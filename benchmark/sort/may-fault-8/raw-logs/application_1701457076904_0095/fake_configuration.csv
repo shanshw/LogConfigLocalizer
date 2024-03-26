@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,1079793829,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.activities-manager.app-activities.ttl-ms,600000,
+2,dfs.client.read.striped.threadpool.size,18,"The maximum number of threads used for parallel reading
+    in striped layout."
+3,yarn.timeline-service.writer.async.queue.capacity,100,
+4,dfs.namenode.accesstime.precision,3600000,"The access time for HDFS file is precise upto this value. 
+               The default value is 1 hour. Setting a value of 0 disables
+               access times for HDFS."
+5,mapreduce.input.fileinputformat.list-status.num-threads,1,"The number of threads to use to list and fetch block locations
+  for the specified input paths. Note: multiple threads should not be used
+  if a custom non thread-safe path filter is used."
+6,yarn.app.mapreduce.am.scheduler.heartbeat.interval-ms,1000,"The interval in ms at which the MR AppMaster should send
+    heartbeats to the ResourceManager"
+7,dfs.datanode.du.reserved.pct,0,"Reserved space in percentage. Read dfs.datanode.du.reserved.calculator to see
+    when this takes effect. The actual number of bytes reserved will be calculated by using the
+    total capacity of the data directory in question. Specific storage type based reservation
+    is also supported. The property can be followed with corresponding storage types
+    ([ssd]/[disk]/[archive]/[ram_disk]) for cluster with heterogeneous storage.
+    For example, reserved percentage space for RAM_DISK storage can be configured using property
+    'dfs.datanode.du.reserved.pct.ram_disk'. If specific storage type reservation is not configured
+    then dfs.datanode.du.reserved.pct will be used."
+8,datanode.https.port,50475,HTTPS port for DataNode.
+9,yarn.nodemanager.amrmproxy.client.thread-count,25,

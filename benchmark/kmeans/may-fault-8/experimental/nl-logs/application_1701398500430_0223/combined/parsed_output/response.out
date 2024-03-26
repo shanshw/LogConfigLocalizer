@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a valid non-zero value.
+
+name:dfs.client.deadnode.detection.rpc.threads
+value:20
+relevant log:1-ERROR	Task: attempt_1701398500430_0223_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.deadnode.detection.rpc.threads' might be causing the issue as it is related to the DFSClient which is mentioned in the stack trace. The value seems to be high and might need to be adjusted.
+
+name:mapreduce.reduce.shuffle.fetch.retry.timeout-ms
+value:30000
+relevant log:1-INFO	Diagnostics report from attempt_1701398500430_0223_r_000000_0: Error: org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'mapreduce.reduce.shuffle.fetch.retry.timeout-ms' might be related to the issue as it is related to the mapreduce job which is mentioned in the log. The value seems to be high and might need to be adjusted.

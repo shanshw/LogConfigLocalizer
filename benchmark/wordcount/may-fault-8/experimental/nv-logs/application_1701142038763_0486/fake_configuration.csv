@@ -1,0 +1,23 @@
+,name,value,description
+0,mapreduce.jobhistory.jobname.limit,1FJtd,Number of characters allowed for job name in Job History Server web page.
+1,dfs.namenode.decommission.backoff.monitor.pending.limit,10000,"When the Backoff monitor is enabled, determines the maximum number of blocks
+    related to decommission and maintenance operations that can be loaded
+    into the replication queue at any given time. Every
+    dfs.namenode.decommission.interval seconds, the list is checked to see if
+    the blocks have become fully replicated and then further blocks are added
+    to reach the limit defined in this parameter."
+2,hadoop.hdfs.configuration.version,1,version of this configuration file
+3,ipc.[port_number].weighted-cost.response,1,"The weight multiplier to apply to the time spent in the
+    RESPONSE phase which do not involve holding a lock.
+    See org.apache.hadoop.ipc.ProcessingDetails.Timing for more details on
+    this phase. This property applies to WeightedTimeCostProvider."
+4,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+5,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+6,yarn.nodemanager.resource-monitor.interval-ms,3000,
+7,tfile.io.chunk.size,1048576,"Value chunk size in bytes. Default  to
+    1MB. Values of the length less than the chunk size is
+    guaranteed to have known value length in read time (See also
+    TFile.Reader.Scanner.Entry.isValueLengthKnown())."
+8,yarn.timeline-service.generic-application-history.max-applications,10000,
+9,yarn.app.attempt.diagnostics.limit.kc,64,

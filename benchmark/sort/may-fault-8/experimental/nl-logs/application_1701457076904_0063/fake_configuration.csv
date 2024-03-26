@@ -1,0 +1,28 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.s3a.multipart.purge.age,86400,"Minimum age in seconds of multipart uploads to purge
+    on startup if ""fs.s3a.multipart.purge"" is true"
+2,mapreduce.jobhistory.jobname.limit,50,Number of characters allowed for job name in Job History Server web page.
+3,dfs.datanode.max.locked.memory,0,"The amount of memory in bytes to use for caching of block replicas in
+    memory on the datanode. The datanode's maximum locked memory soft ulimit
+    (RLIMIT_MEMLOCK) must be set to at least this value, else the datanode
+    will abort on startup. Support multiple size unit suffix(case insensitive),
+    as described in dfs.blocksize.
+
+    By default, this parameter is set to 0, which disables in-memory caching.
+
+    If the native libraries are not available to the DataNode, this
+    configuration has no effect."
+4,io.mapfile.bloom.size,1048576,"The size of BloomFilter-s used in BloomMapFile. Each time this many
+  keys is appended the next BloomFilter will be created (inside a DynamicBloomFilter).
+  Larger values minimize the number of filters, which slightly increases the performance,
+  but may waste too much space if the total number of keys is usually much smaller
+  than this number."
+5,yarn.nodemanager.runtime.linux.runc.layer-mounts-to-keep,100,
+6,hadoop.zk.num-retries,1000,Number of tries to connect to ZooKeeper.
+7,yarn.nodemanager.logaggregation.threadpool-size-max,100,
+8,dfs.namenode.snapshot.skiplist.interval,10,"The interval after which the skip levels will be formed in the skip list
+    for storing directory snapshot diffs. By default, value is set to 10."
+9,dfs.http.client.failover.sleep.max.millis,15000,"Specify the upper bound of sleep time in milliseconds between
+    retries or failovers for WebHDFS client."

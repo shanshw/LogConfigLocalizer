@@ -1,0 +1,4 @@
+name,value,relevant log,explanation
+io.bytes.per.checksum,0,"1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null",The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb,0,<missing>,The configuration 'yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb' is set to 0. This could potentially cause disk space related issues as it does not leave any free space on the disk.
+yarn.resourcemanager.fs.state-store.num-retries,0,<missing>,The configuration 'yarn.resourcemanager.fs.state-store.num-retries' is set to 0. This could potentially cause issues as it does not allow any retries in case of failures.

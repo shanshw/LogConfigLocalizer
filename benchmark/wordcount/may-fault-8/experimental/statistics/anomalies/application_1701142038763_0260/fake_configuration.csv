@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.replication,177218790,"Default block replication. 
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time."
+1,dfs.namenode.replication.max-streams,2,Hard limit for the number of replication streams other than those with highest-priority.
+2,yarn.nodemanager.delete.thread-count,4,
+3,mapreduce.task.io.sort.mb,100,"The total amount of buffer memory to use while sorting
+  files, in megabytes.  By default, gives each merge stream 1MB, which
+  should minimize seeks."
+4,ftp.blocksize,67108864,Block size
+5,dfs.namenode.replication.work.multiplier.per.iteration,2,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    parallel at a DN, for replication, when such a command list is being
+    sent over a DN heartbeat by the NN. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately for, per DN heartbeat. This number can be any positive,
+    non-zero integer."
+6,dfs.datanode.scan.period.hours,504,"If this is positive, the DataNode will not scan any
+        individual block more than once in the specified scan period.
+        If this is negative, the block scanner is disabled.
+        If this is set to zero, then the default value of 504 hours
+        or 3 weeks is used. Prior versions of HDFS incorrectly documented
+        that setting this key to zero will disable the block scanner."
+7,yarn.app.attempt.diagnostics.limit.kc,64,
+8,mapreduce.job.running.reduce.limit,0,"The maximum number of simultaneous reduce tasks per job.
+  There is no limit if this value is 0 or negative."
+9,yarn.resourcemanager.system-metrics-publisher.timeline-server-v1.batch-size,1000,

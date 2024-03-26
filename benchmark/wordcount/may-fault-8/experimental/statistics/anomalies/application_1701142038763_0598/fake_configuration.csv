@@ -1,0 +1,25 @@
+,name,value,description
+0,file.bytes-per-checksum,Bp1sE,"The number of bytes per checksum.  Must not be larger than
+  file.stream-buffer-size"
+1,yarn.client.failover-retries-on-socket-timeouts,0,
+2,mapreduce.job.end-notification.max.retry.interval,5000,"The maximum amount of time (in milliseconds) to wait before
+     retrying job end notification. Cluster administrators can set this to
+     limit how long the Application Master waits before exiting. Must be marked
+     as final to prevent users from overriding this."
+3,dfs.client.socket-timeout,60000,Default timeout value in milliseconds for all sockets.
+4,dfs.datanode.socket.write.timeout,480000,Timeout in ms for clients socket writes to DataNodes.
+5,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+6,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+7,hadoop.caller.context.max.size,128,"The maximum bytes a caller context string can have. If the
+      passed caller context is longer than this maximum bytes, client will
+      truncate it before sending to server. Note that the server may have a
+      different maximum size, and will truncate the caller context to the
+      maximum size it allows."
+8,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+9,dfs.ha.fencing.ssh.connect-timeout,30000,"SSH connection timeout, in milliseconds, to use with the builtin
+    sshfence fencer."

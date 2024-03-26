@@ -1,0 +1,14 @@
+name:yarn.minicluster.yarn.nodemanager.resource.memory-mb
+value:4096
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The error log indicates that the system ran out of memory. The configuration option 'yarn.minicluster.yarn.nodemanager.resource.memory-mb' is set to 4096MB, which might not be sufficient for the system to operate properly. Increasing this value could potentially solve the issue.
+
+name:file.stream-buffer-size
+value:4096
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The error log indicates that the system ran out of memory. The configuration option 'file.stream-buffer-size' is set to 4096, which might be too high and causing the system to run out of memory. Decreasing this value could potentially solve the issue.
+
+name:dfs.datanode.readahead.bytes
+value:4194304
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error.  Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The error log indicates that the system ran out of memory. The configuration option 'dfs.datanode.readahead.bytes' is set to 4194304, which might be too high and causing the system to run out of memory. Decreasing this value could potentially solve the issue.

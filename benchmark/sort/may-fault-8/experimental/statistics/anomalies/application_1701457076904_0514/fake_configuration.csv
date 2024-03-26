@@ -1,0 +1,17 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+2,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+3,yarn.resourcemanager.nodemanager-connect-retries,10,
+4,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+5,yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,
+6,hadoop.security.kms.client.encrypted.key.cache.expiry,43200000,"Cache expiry time for a Key, after which the cache Queue for this
+    key will be dropped. Default = 12hrs"
+7,yarn.resourcemanager.opportunistic-container-allocation.nodes-used,10,
+8,hadoop.security.kms.client.encrypted.key.cache.num.refill.threads,2,"Number of threads to use for refilling depleted EncryptedKeyVersion
+    cache Queues"
+9,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."

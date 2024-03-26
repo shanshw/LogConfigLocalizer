@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:mapreduce.shuffle.max.threads
+value:0
+relevant log:1-ERROR	Task: attempt_1701312551309_0255_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'mapreduce.shuffle.max.threads' is set to 0, which might be causing issues with the shuffle operation in MapReduce. This option should be set to a value greater than 0 to ensure proper operation of the shuffle phase.
+
+name:yarn.client.failover-retries-on-socket-timeouts
+value:0
+relevant log:1-ERROR	Task: attempt_1701312551309_0255_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.client.failover-retries-on-socket-timeouts' is set to 0, which might be causing issues with the failover mechanism in YARN. This option should be set to a value greater than 0 to ensure proper operation of the failover mechanism.

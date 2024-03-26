@@ -1,0 +1,36 @@
+anomaly_degree,content
+0.2,"INFO	Service JobHistoryEventHandler failed in state INITEDjava.lang.IllegalArgumentException: -0.2599095
+	at org.apache.hadoop.fs.permission.PermissionParser.applyNormalPattern(PermissionParser.java:70)
+	at org.apache.hadoop.fs.permission.PermissionParser.<init>(PermissionParser.java:56)
+	at org.apache.hadoop.fs.permission.RawParser.<init>(RawParser.java:36)
+	at org.apache.hadoop.fs.permission.FsPermission.<init>(FsPermission.java:149)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.getConfiguredHistoryIntermediateUserDoneDirPermissions(JobHistoryUtils.java:223)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler.serviceInit(JobHistoryEventHandler.java:240)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)"
+0.4,"ERROR	Error starting MRAppMasterjava.lang.IllegalArgumentException: -0.2599095
+	at org.apache.hadoop.fs.permission.PermissionParser.applyNormalPattern(PermissionParser.java:70)
+	at org.apache.hadoop.fs.permission.PermissionParser.<init>(PermissionParser.java:56)
+	at org.apache.hadoop.fs.permission.RawParser.<init>(RawParser.java:36)
+	at org.apache.hadoop.fs.permission.FsPermission.<init>(FsPermission.java:149)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.getConfiguredHistoryIntermediateUserDoneDirPermissions(JobHistoryUtils.java:223)
+	at org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler.serviceInit(JobHistoryEventHandler.java:240)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:109)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.serviceInit(MRAppMaster.java:494)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster$6.run(MRAppMaster.java:1760)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.initAndStartAppMaster(MRAppMaster.java:1757)
+	at org.apache.hadoop.mapreduce.v2.app.MRAppMaster.main(MRAppMaster.java:1691)"
+0.4,INFO	Exiting with status 1: java.lang.IllegalArgumentException: -0.2599095

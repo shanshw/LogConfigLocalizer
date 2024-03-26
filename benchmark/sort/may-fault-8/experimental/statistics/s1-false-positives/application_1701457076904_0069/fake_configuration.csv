@@ -1,0 +1,23 @@
+,name,value,description
+0,hadoop.security.kms.client.failover.sleep.base.millis,,"Expert only. The time to wait, in milliseconds, between failover
+    attempts increases exponentially as a function of the number of
+    attempts made so far, with a random factor of +/- 50%. This option
+    specifies the base value used in the failover calculation. The
+    first failover will retry immediately. The 2nd failover attempt
+    will delay at least hadoop.security.client.failover.sleep.base.millis
+    milliseconds. And so on."
+1,dfs.datanode.fsdatasetcache.max.threads.per.volume,4,"The maximum number of threads per volume to use for caching new data
+    on the datanode. These threads consume both I/O and CPU. This can affect
+    normal datanode operations."
+2,yarn.nodemanager.runtime.linux.runc.layer-mounts-interval-secs,600,
+3,dfs.namenode.max-num-blocks-to-log,1000,"Puts a limit on the number of blocks printed to the log by the Namenode
+    after a block report."
+4,dfs.ha.tail-edits.rolledits.timeout,60,The timeout in seconds of calling rollEdits RPC on Active NN.
+5,mapreduce.shuffle.listen.queue.size,128,The length of the shuffle server listen queue.
+6,dfs.balancer.dispatcherThreads,200,"Size of the thread pool for the HDFS balancer block mover.
+    dispatchExecutor"
+7,dfs.short.circuit.shared.memory.watcher.interrupt.check.ms,60000,"The length of time in milliseconds that the short-circuit shared memory
+    watcher will go between checking for java interruptions sent from other
+    threads.  This is provided mainly for unit tests."
+8,yarn.nodemanager.localizer.client.thread-count,5,
+9,yarn.nodemanager.local-cache.max-files-per-directory,8192,

@@ -1,0 +1,38 @@
+,name,value,description
+0,mapreduce.reduce.shuffle.connect.timeout,2c81k,"Expert: The maximum amount of time (in milli seconds) reduce
+  task spends in trying to connect to a remote node for getting map output."
+1,yarn.timeline-service.generic-application-history.max-applications,10000,
+2,dfs.datanode.scan.period.hours,504,"If this is positive, the DataNode will not scan any
+        individual block more than once in the specified scan period.
+        If this is negative, the block scanner is disabled.
+        If this is set to zero, then the default value of 504 hours
+        or 3 weeks is used. Prior versions of HDFS incorrectly documented
+        that setting this key to zero will disable the block scanner."
+3,dfs.client.block.write.retries,3,"The number of retries for writing blocks to the data nodes, 
+  before we signal failure to the application."
+4,dfs.namenode.retrycache.expirytime.millis,600000,The time for which retry cache entries are retained.
+5,dfs.datanode.directoryscan.throttle.limit.ms.per.sec,1000,"The report compilation threads are limited to only running for
+  a given number of milliseconds per second, as configured by the
+  property. The limit is taken per thread, not in aggregate, e.g. setting
+  a limit of 100ms for 4 compiler threads will result in each thread being
+  limited to 100ms, not 25ms.
+
+  Note that the throttle does not interrupt the report compiler threads, so the
+  actual running time of the threads per second will typically be somewhat
+  higher than the throttle limit, usually by no more than 20%.
+
+  Setting this limit to 1000 disables compiler thread throttling. Only
+  values between 1 and 1000 are valid. Setting an invalid value will result
+  in the throttle being disabled and an error message being logged. 1000 is
+  the default setting."
+6,dfs.qjournal.queued-edits.limit.mb,10,Queue size in MB for quorum journal edits.
+7,dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,"This controls the minimum amount of time
+    file descriptors need to sit in the client cache context
+    before they can be closed for being inactive for too long."
+8,fs.s3a.max.total.tasks,32,"The number of operations which can be queued for execution.
+  This is in addition to the number of active threads in fs.s3a.threads.max."
+9,dfs.journalnode.edit-cache-size.bytes,1048576,"The size, in bytes, of the in-memory cache of edits to keep on the
+    JournalNode. This cache is used to serve edits for tailing via the RPC-based
+    mechanism, and is only enabled when dfs.ha.tail-edits.in-progress is true.
+    Transactions range in size but are around 200 bytes on average, so the
+    default of 1MB can store around 5000 transactions."

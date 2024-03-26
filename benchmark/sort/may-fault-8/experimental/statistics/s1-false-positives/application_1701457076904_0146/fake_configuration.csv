@@ -1,0 +1,23 @@
+,name,value,description
+0,ftp.blocksize,,Block size
+1,dfs.encrypt.data.transfer.cipher.key.bitlength,128,"The key bitlength negotiated by dfsclient and datanode for encryption.
+    This value may be set to either 128, 192 or 256."
+2,dfs.namenode.delegation.token.max-lifetime,604800000,"The maximum lifetime in milliseconds for which a delegation 
+      token is valid."
+3,yarn.app.mapreduce.am.containerlauncher.threadpool-initial-size,10,"The initial size of thread pool to launch containers in the
+    app master."
+4,yarn.resourcemanager.proxy.connection.timeout,60000,
+5,dfs.datanode.handler.count,10,The number of server threads for the datanode.
+6,dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,"The initial delay (unit is ms) for locateFollowingBlock,
+    the delay time will increase exponentially(double) for each retry
+    until dfs.client.block.write.locateFollowingBlock.max.delay.ms is reached,
+    after that the delay for each retry will be
+    dfs.client.block.write.locateFollowingBlock.max.delay.ms."
+7,hadoop.zk.retry-interval-ms,1000,Retry interval in milliseconds when connecting to ZooKeeper.
+8,mapreduce.jobhistory.cleaner.interval-ms,86400000,"How often the job history cleaner checks for files to delete,
+  in milliseconds. Defaults to 86400000 (one day). Files are only deleted if
+  they are older than mapreduce.jobhistory.max-age-ms."
+9,mapreduce.job.cache.limit.max-resources-mb,0,"The maximum size (in MB) a map reduce job is allowed to submit
+    for localization via files, libjars, archives, and jobjar command line
+    arguments and through the distributed cache. If set to 0 the limit is
+    ignored."

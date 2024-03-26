@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-1455351761,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+2,yarn.resourcemanager.application.max-tag.length,100,
+3,dfs.namenode.startup.delay.block.deletion.sec,0,"The delay in seconds at which we will pause the blocks deletion
+    after Namenode startup. By default it's disabled.
+    In the case a directory has large number of directories and files are
+    deleted, suggested delay is one hour to give the administrator enough time
+    to notice large number of pending deletion blocks and take corrective
+    action."
+4,dfs.http.client.retry.max.attempts,10,"Specify the max number of retry attempts for WebHDFS client,
+    if the difference between retried attempts and failovered attempts is
+    larger than the max number of retry attempts, there will be no more
+    retries."
+5,yarn.nodemanager.log-aggregation.num-log-files-per-app,30,
+6,yarn.sharedcache.cleaner.period-mins,1440,
+7,mapreduce.job.ubertask.maxmaps,9,"Threshold for number of maps, beyond which job is considered
+  too big for the ubertasking optimization.  Users may override this value,
+  but only downward."
+8,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+9,yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,

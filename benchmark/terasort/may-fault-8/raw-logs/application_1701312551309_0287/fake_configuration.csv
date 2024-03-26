@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-1687820511,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.http.client.failover.max.attempts,15,"Specify the max number of failover attempts for WebHDFS client
+    in case of network exception."
+2,yarn.client.max-cached-nodemanagers-proxies,0,
+3,yarn.nodemanager.container-log-monitor.interval-ms,60000,
+4,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."
+5,dfs.namenode.fs-limits.max-xattrs-per-inode,32,Maximum number of extended attributes per inode.
+6,mapreduce.client.progressmonitor.pollinterval,1000,"The interval (in milliseconds) between which the JobClient
+    reports status to the console and checks for job completion. You may want to set this
+    to a lower value to make tests run faster on a single node system. Adjusting
+    this value in production may lead to unwanted client-server traffic."
+7,dfs.namenode.lazypersist.file.scrub.interval.sec,300,"The NameNode periodically scans the namespace for LazyPersist files with
+    missing blocks and unlinks them from the namespace. This configuration key
+    controls the interval between successive scans. If this value is set to 0,
+    the file scrubber is disabled."
+8,dfs.client.block.write.retries,3,"The number of retries for writing blocks to the data nodes, 
+  before we signal failure to the application."

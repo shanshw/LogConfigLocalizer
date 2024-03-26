@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."
+2,dfs.datanode.scan.period.hours,504,"If this is positive, the DataNode will not scan any
+        individual block more than once in the specified scan period.
+        If this is negative, the block scanner is disabled.
+        If this is set to zero, then the default value of 504 hours
+        or 3 weeks is used. Prior versions of HDFS incorrectly documented
+        that setting this key to zero will disable the block scanner."
+3,yarn.nodemanager.node-attributes.resync-interval-ms,120000,
+4,dfs.namenode.list.encryption.zones.num.responses,100,"When listing encryption zones, the maximum number of zones
+    that will be returned in a batch. Fetching the list incrementally in
+    batches improves namenode performance."
+5,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+6,dfs.qjournal.parallel-read.num-threads,5,Number of threads per JN to be used for tailing edits.
+7,yarn.nodemanager.container.stderr.tail.bytes,4096,
+8,dfs.namenode.inotify.max.events.per.rpc,1000,"Maximum number of events that will be sent to an inotify client
+    in a single RPC response. The default value attempts to amortize away
+    the overhead for this RPC while avoiding huge memory requirements for the
+    client and NameNode (1000 events should consume no more than 1 MB.)"
+9,dfs.qjournal.prepare-recovery.timeout.ms,120000,"Quorum timeout in milliseconds during preparation phase of
+    recovery/synchronization for a specific segment."

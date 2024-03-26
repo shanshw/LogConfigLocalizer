@@ -1,0 +1,728 @@
+2023-11-29 00:39:45,378 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1701142038763_0334_000001
+2023-11-29 00:39:45,487 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: 
+2023-11-29 00:39:45,520 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-11-29 00:39:45,625 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens: [Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 334 cluster_timestamp: 1701142038763 } attemptId: 1 } keyId: -857926061)]
+2023-11-29 00:39:45,651 INFO [main] org.apache.hadoop.conf.Configuration: found resource resource-types.xml at file:/usr/local/revisedJQF/v8/hadoop-3.3.6/etc/hadoop/resource-types.xml
+2023-11-29 00:39:45,661 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2023-11-29 00:39:45,662 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2023-11-29 00:39:45,689 INFO [main] org.apache.hadoop.mapreduce.lib.output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2023-11-29 00:39:45,690 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2023-11-29 00:39:45,690 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2023-11-29 00:39:46,064 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2023-11-29 00:39:46,174 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2023-11-29 00:39:46,174 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2023-11-29 00:39:46,175 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2023-11-29 00:39:46,176 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2023-11-29 00:39:46,176 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2023-11-29 00:39:46,180 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+2023-11-29 00:39:46,180 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+2023-11-29 00:39:46,181 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+2023-11-29 00:39:46,203 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 00:39:46,215 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 00:39:46,227 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://2f08f873c798:9000]
+2023-11-29 00:39:46,235 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Emitting job history data to the timeline server is not enabled
+2023-11-29 00:39:46,266 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler
+2023-11-29 00:39:46,425 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-11-29 00:39:46,487 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-11-29 00:39:46,488 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MRAppMaster metrics system started
+2023-11-29 00:39:46,493 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Adding job token for job_1701142038763_0334 to jobTokenSecretManager
+2023-11-29 00:39:46,596 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Not uberizing job_1701142038763_0334 because: not enabled; too many maps; too much RAM;
+2023-11-29 00:39:46,612 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Input size for job job_1701142038763_0334 = 7976. Number of splits = 10
+2023-11-29 00:39:46,613 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Number of reduces for job job_1701142038763_0334 = 1
+2023-11-29 00:39:46,613 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from NEW to INITED
+2023-11-29 00:39:46,614 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: MRAppMaster launching normal, non-uberized, multi-container job job_1701142038763_0334.
+2023-11-29 00:39:46,639 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 100, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-11-29 00:39:46,645 INFO [main] org.apache.hadoop.ipc.Server: Listener at 0.0.0.0:40273
+2023-11-29 00:39:46,646 INFO [Socket Reader #1 for port 0] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 0
+2023-11-29 00:39:46,803 INFO [main] org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server
+2023-11-29 00:39:46,804 INFO [IPC Server listener on 0] org.apache.hadoop.ipc.Server: IPC Server listener on 0: starting
+2023-11-29 00:39:46,804 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-11-29 00:39:46,805 INFO [main] org.apache.hadoop.mapreduce.v2.app.client.MRClientService: Instantiated MRClientService at 2f08f873c798/192.161.20.17:40273
+2023-11-29 00:39:46,827 INFO [main] org.eclipse.jetty.util.log: Logging initialized @2159ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-11-29 00:39:46,891 WARN [main] org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /root/hadoop-http-auth-signature-secret
+2023-11-29 00:39:46,894 INFO [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.mapreduce is not defined
+2023-11-29 00:39:46,897 INFO [main] org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2023-11-29 00:39:46,920 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce
+2023-11-29 00:39:46,920 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static
+2023-11-29 00:39:47,223 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2023-11-29 00:39:47,223 INFO [main] org.apache.hadoop.http.HttpServer2: Jetty bound to port 44127
+2023-11-29 00:39:47,224 INFO [main] org.eclipse.jetty.server.Server: jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: b45c405e4544384de066f814ed42ae3dceacdd49; jvm 11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+2023-11-29 00:39:47,245 INFO [main] org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2023-11-29 00:39:47,245 INFO [main] org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2023-11-29 00:39:47,247 INFO [main] org.eclipse.jetty.server.session: node0 Scavenging every 660000ms
+2023-11-29 00:39:47,257 INFO [main] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@5be052ca{static,/static,jar:file:/usr/local/revisedJQF/v8/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/static,AVAILABLE}
+2023-11-29 00:39:47,954 INFO [main] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@553fbe94{mapreduce,/,file:///home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701142038763_0334/container_1701142038763_0334_01_000001/tmp/jetty-0_0_0_0-44127-hadoop-yarn-common-3_3_6_jar-_-any-5766930061807042559/webapp/,AVAILABLE}{jar:file:/usr/local/revisedJQF/v8/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/mapreduce}
+2023-11-29 00:39:47,970 INFO [main] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@56c8e6f0{HTTP/1.1, (http/1.1)}{0.0.0.0:44127}
+2023-11-29 00:39:47,971 INFO [main] org.eclipse.jetty.server.Server: Started @3302ms
+2023-11-29 00:39:47,971 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Web app mapreduce started at 44127
+2023-11-29 00:39:47,977 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 3000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-11-29 00:39:47,977 INFO [main] org.apache.hadoop.ipc.Server: Listener at 0.0.0.0:40431
+2023-11-29 00:39:47,977 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: JOB_CREATE job_1701142038763_0334
+2023-11-29 00:39:47,978 INFO [Socket Reader #1 for port 0] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 0
+2023-11-29 00:39:47,982 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-11-29 00:39:47,982 INFO [IPC Server listener on 0] org.apache.hadoop.ipc.Server: IPC Server listener on 0: starting
+2023-11-29 00:39:48,012 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: nodeBlacklistingEnabled:true
+2023-11-29 00:39:48,013 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: maxTaskFailuresPerNode is 3
+2023-11-29 00:39:48,013 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: blacklistDisablePercent is 33
+2023-11-29 00:39:48,015 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: 0% of the mappers will be scheduled using OPPORTUNISTIC containers
+2023-11-29 00:39:48,085 INFO [main] org.apache.hadoop.yarn.client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at 2f08f873c798/192.161.20.17:8030
+2023-11-29 00:39:48,142 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: maxContainerCapability: <memory:8192, vCores:4>
+2023-11-29 00:39:48,142 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: queue: default
+2023-11-29 00:39:48,146 INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Upper limit on the thread pool size is 500
+2023-11-29 00:39:48,146 INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: The thread pool initial size is 10
+2023-11-29 00:39:48,163 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from INITED to SETUP
+2023-11-29 00:39:48,168 INFO [CommitterEvent Processor #0] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_SETUP
+2023-11-29 00:39:48,192 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from SETUP to RUNNING
+2023-11-29 00:39:48,222 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Resource capability of task type MAP is set to <memory:5120, vCores:1>
+2023-11-29 00:39:48,227 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000000 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,227 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000001 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,227 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000002 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,228 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000003 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,228 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000004 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,228 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000005 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,228 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000006 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,229 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000007 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,229 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000008 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,230 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000009 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,231 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Resource capability of task type REDUCE is set to <memory:5120, vCores:1>
+2023-11-29 00:39:48,231 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_r_000000 Task Transitioned from NEW to SCHEDULED
+2023-11-29 00:39:48,232 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,232 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000004_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000005_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000006_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000007_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000008_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000009_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,233 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_r_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:48,236 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: mapResourceRequest:<memory:5120, vCores:1>
+2023-11-29 00:39:48,266 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Event Writer setup for JobId: job_1701142038763_0334, File: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job_1701142038763_0334_1.jhist
+2023-11-29 00:39:48,273 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: reduceResourceRequest:<memory:5120, vCores:1>
+2023-11-29 00:39:49,145 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0
+2023-11-29 00:39:49,178 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1701142038763_0334: ask=5 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:22528, vCores:23> knownNMs=3
+2023-11-29 00:39:49,179 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:22528, vCores:23>
+2023-11-29 00:39:49,179 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:50,202 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 3
+2023-11-29 00:39:50,205 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000002 to attempt_1701142038763_0334_m_000000_0
+2023-11-29 00:39:50,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000004 to attempt_1701142038763_0334_m_000001_0
+2023-11-29 00:39:50,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000006 to attempt_1701142038763_0334_m_000002_0
+2023-11-29 00:39:50,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:2048, vCores:19>
+2023-11-29 00:39:50,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:50,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:7 ScheduledReds:0 AssignedMaps:3 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:3 ContRel:0 HostLocal:3 RackLocal:0
+2023-11-29 00:39:50,263 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-jar file on the remote FS is hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job.jar
+2023-11-29 00:39:50,265 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job.xml
+2023-11-29 00:39:50,267 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Adding #0 tokens and #1 secret keys for NM use for launching container
+2023-11-29 00:39:50,267 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Size of containertokens_dob is 1
+2023-11-29 00:39:50,267 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Putting shuffle token in serviceData
+2023-11-29 00:39:50,289 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:50,293 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:50,294 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:50,297 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000002 taskAttempt attempt_1701142038763_0334_m_000000_0
+2023-11-29 00:39:50,298 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000004 taskAttempt attempt_1701142038763_0334_m_000001_0
+2023-11-29 00:39:50,298 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000006 taskAttempt attempt_1701142038763_0334_m_000002_0
+2023-11-29 00:39:50,302 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000001_0
+2023-11-29 00:39:50,303 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000000_0
+2023-11-29 00:39:50,302 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000002_0
+2023-11-29 00:39:50,310 ERROR [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000004 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,310 ERROR [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000006 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,310 ERROR [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000002 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,312 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000001_0: Container launch failed for container_1701142038763_0334_01_000004 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,312 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000000_0: Container launch failed for container_1701142038763_0334_01_000002 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,312 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000002_0: Container launch failed for container_1701142038763_0334_01_000006 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:50,312 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000000_0] using containerId: [container_1701142038763_0334_01_000002 on NM: [cf6e5ca2712c:46101]
+2023-11-29 00:39:50,321 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_0 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=cf6e5ca2712c:46101
+2023-11-29 00:39:50,321 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000002_0] using containerId: [container_1701142038763_0334_01_000006 on NM: [ed761ad59d44:45797]
+2023-11-29 00:39:50,322 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_0 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=ed761ad59d44:45797
+2023-11-29 00:39:50,322 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000001_0] using containerId: [container_1701142038763_0334_01_000004 on NM: [2f08f873c798:37279]
+2023-11-29 00:39:50,322 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_0 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=2f08f873c798:37279
+2023-11-29 00:39:50,323 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:50,331 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:50,331 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:50,332 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 1 failures on node cf6e5ca2712c
+2023-11-29 00:39:50,333 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:50,333 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 1 failures on node ed761ad59d44
+2023-11-29 00:39:50,333 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:50,333 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 1 failures on node 2f08f873c798
+2023-11-29 00:39:50,333 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:50,334 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000000_1 to list of failed maps
+2023-11-29 00:39:50,335 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000002_1 to list of failed maps
+2023-11-29 00:39:50,335 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000001_1 to list of failed maps
+2023-11-29 00:39:51,206 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:3 ContRel:3 HostLocal:3 RackLocal:0
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1701142038763_0334: ask=6 release= 3 newContainers=0 finishedContainers=3 resourcelimit=<memory:17408, vCores:22> knownNMs=3
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000002
+2023-11-29 00:39:51,221 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000002
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000006
+2023-11-29 00:39:51,221 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000006
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000004
+2023-11-29 00:39:51,221 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000004
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:17408, vCores:22>
+2023-11-29 00:39:51,221 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:52,230 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 3
+2023-11-29 00:39:52,231 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000007, AllocationRequestId: -1, Version: 0, NodeId: cf6e5ca2712c:46101, NodeHttpAddress: cf6e5ca2712c:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.5:46101 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:52,231 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:52,232 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000007 to attempt_1701142038763_0334_m_000000_1
+2023-11-29 00:39:52,232 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000008, AllocationRequestId: -1, Version: 0, NodeId: ed761ad59d44:45797, NodeHttpAddress: ed761ad59d44:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.23:45797 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:52,232 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:52,232 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000008 to attempt_1701142038763_0334_m_000002_1
+2023-11-29 00:39:52,233 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000005 to attempt_1701142038763_0334_m_000003_0
+2023-11-29 00:39:52,233 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:7168, vCores:20>
+2023-11-29 00:39:52,233 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:52,233 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:7 ScheduledReds:0 AssignedMaps:3 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:6 ContRel:3 HostLocal:4 RackLocal:0
+2023-11-29 00:39:52,236 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:52,241 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:52,245 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:52,246 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000007 taskAttempt attempt_1701142038763_0334_m_000000_1
+2023-11-29 00:39:52,247 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000000_1
+2023-11-29 00:39:52,247 INFO [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000008 taskAttempt attempt_1701142038763_0334_m_000002_1
+2023-11-29 00:39:52,247 INFO [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000002_1
+2023-11-29 00:39:52,248 INFO [ContainerLauncher #5] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000005 taskAttempt attempt_1701142038763_0334_m_000003_0
+2023-11-29 00:39:52,248 INFO [ContainerLauncher #5] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000003_0
+2023-11-29 00:39:52,248 ERROR [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000007 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,248 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000000_1: Container launch failed for container_1701142038763_0334_01_000007 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,249 ERROR [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000008 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,249 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000000_1] using containerId: [container_1701142038763_0334_01_000007 on NM: [cf6e5ca2712c:46101]
+2023-11-29 00:39:52,250 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_1 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=cf6e5ca2712c:46101
+2023-11-29 00:39:52,250 ERROR [ContainerLauncher #5] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000005 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,250 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000002_1: Container launch failed for container_1701142038763_0334_01_000008 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,251 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000002_1] using containerId: [container_1701142038763_0334_01_000008 on NM: [ed761ad59d44:45797]
+2023-11-29 00:39:52,251 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_1 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=ed761ad59d44:45797
+2023-11-29 00:39:52,251 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:52,252 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000003_0: Container launch failed for container_1701142038763_0334_01_000005 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:52,253 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000003_0] using containerId: [container_1701142038763_0334_01_000005 on NM: [2f08f873c798:37279]
+2023-11-29 00:39:52,253 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_0 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=2f08f873c798:37279
+2023-11-29 00:39:52,253 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:52,254 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 2 failures on node cf6e5ca2712c
+2023-11-29 00:39:52,254 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_2 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:52,254 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:52,254 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 2 failures on node ed761ad59d44
+2023-11-29 00:39:52,254 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_2 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:52,255 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:52,255 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000000_2 to list of failed maps
+2023-11-29 00:39:52,255 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 2 failures on node 2f08f873c798
+2023-11-29 00:39:52,256 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000002_2 to list of failed maps
+2023-11-29 00:39:52,256 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000003_1 to list of failed maps
+2023-11-29 00:39:53,234 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:6 ContRel:6 HostLocal:4 RackLocal:0
+2023-11-29 00:39:53,239 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1701142038763_0334: ask=6 release= 3 newContainers=0 finishedContainers=3 resourcelimit=<memory:17408, vCores:22> knownNMs=3
+2023-11-29 00:39:53,239 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000007
+2023-11-29 00:39:53,239 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000007
+2023-11-29 00:39:53,240 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000008
+2023-11-29 00:39:53,240 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000008
+2023-11-29 00:39:53,240 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000005
+2023-11-29 00:39:53,240 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000005
+2023-11-29 00:39:53,240 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:17408, vCores:22>
+2023-11-29 00:39:53,240 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:54,248 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 3
+2023-11-29 00:39:54,249 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000009, AllocationRequestId: -1, Version: 0, NodeId: cf6e5ca2712c:46101, NodeHttpAddress: cf6e5ca2712c:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.5:46101 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:54,249 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:54,249 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000009 to attempt_1701142038763_0334_m_000001_1
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000010, AllocationRequestId: -1, Version: 0, NodeId: 2f08f873c798:37279, NodeHttpAddress: 2f08f873c798:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.17:37279 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000010 to attempt_1701142038763_0334_m_000000_2
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000011, AllocationRequestId: -1, Version: 0, NodeId: ed761ad59d44:45797, NodeHttpAddress: ed761ad59d44:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.23:45797 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000011 to attempt_1701142038763_0334_m_000002_2
+2023-11-29 00:39:54,250 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:7168, vCores:20>
+2023-11-29 00:39:54,251 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:54,251 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:7 ScheduledReds:0 AssignedMaps:3 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:9 ContRel:6 HostLocal:4 RackLocal:0
+2023-11-29 00:39:54,254 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:54,257 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_2 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:54,260 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_2 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:54,262 INFO [ContainerLauncher #6] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000009 taskAttempt attempt_1701142038763_0334_m_000001_1
+2023-11-29 00:39:54,262 INFO [ContainerLauncher #6] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000001_1
+2023-11-29 00:39:54,262 INFO [ContainerLauncher #7] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000010 taskAttempt attempt_1701142038763_0334_m_000000_2
+2023-11-29 00:39:54,262 INFO [ContainerLauncher #7] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000000_2
+2023-11-29 00:39:54,262 INFO [ContainerLauncher #8] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000011 taskAttempt attempt_1701142038763_0334_m_000002_2
+2023-11-29 00:39:54,262 ERROR [ContainerLauncher #6] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000009 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,263 INFO [ContainerLauncher #8] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000002_2
+2023-11-29 00:39:54,263 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000001_1: Container launch failed for container_1701142038763_0334_01_000009 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,263 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000001_1] using containerId: [container_1701142038763_0334_01_000009 on NM: [cf6e5ca2712c:46101]
+2023-11-29 00:39:54,263 ERROR [ContainerLauncher #7] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000010 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,264 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_1 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=cf6e5ca2712c:46101
+2023-11-29 00:39:54,264 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000000_2: Container launch failed for container_1701142038763_0334_01_000010 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,264 ERROR [ContainerLauncher #8] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000011 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,265 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000000_2] using containerId: [container_1701142038763_0334_01_000010 on NM: [2f08f873c798:37279]
+2023-11-29 00:39:54,265 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_2 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=2f08f873c798:37279
+2023-11-29 00:39:54,265 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:54,266 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000002_2: Container launch failed for container_1701142038763_0334_01_000011 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:54,266 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000002_2] using containerId: [container_1701142038763_0334_01_000011 on NM: [ed761ad59d44:45797]
+2023-11-29 00:39:54,266 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_2 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=ed761ad59d44:45797
+2023-11-29 00:39:54,267 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:54,268 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 3 failures on node cf6e5ca2712c
+2023-11-29 00:39:54,268 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_2 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:54,268 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Blacklisted host cf6e5ca2712c
+2023-11-29 00:39:54,268 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_3 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:54,268 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_3 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:54,270 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:54,270 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 3 failures on node 2f08f873c798
+2023-11-29 00:39:54,270 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Blacklisted host 2f08f873c798
+2023-11-29 00:39:54,270 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000001_2 to list of failed maps
+2023-11-29 00:39:54,271 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: 3 failures on node ed761ad59d44
+2023-11-29 00:39:54,271 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Blacklisted host ed761ad59d44
+2023-11-29 00:39:54,272 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000000_3 to list of failed maps
+2023-11-29 00:39:54,273 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000002_3 to list of failed maps
+2023-11-29 00:39:55,251 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:9 ContRel:9 HostLocal:4 RackLocal:0
+2023-11-29 00:39:55,257 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1701142038763_0334: ask=4 release= 3 newContainers=0 finishedContainers=3 resourcelimit=<memory:17408, vCores:22> knownNMs=3
+2023-11-29 00:39:55,257 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Update the blacklist for application_1701142038763_0334: blacklistAdditions=3 blacklistRemovals=0
+2023-11-29 00:39:55,257 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Ignore blacklisting set to true. Known: 3, Blacklisted: 3, 100%
+2023-11-29 00:39:55,258 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000009
+2023-11-29 00:39:55,258 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000009
+2023-11-29 00:39:55,258 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000011
+2023-11-29 00:39:55,258 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000011
+2023-11-29 00:39:55,258 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1701142038763_0334_01_000010
+2023-11-29 00:39:55,258 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container container_1701142038763_0334_01_000010
+2023-11-29 00:39:55,258 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:17408, vCores:22>
+2023-11-29 00:39:55,258 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:56,261 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: Update the blacklist for application_1701142038763_0334: blacklistAdditions=0 blacklistRemovals=3
+2023-11-29 00:39:56,261 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:17408, vCores:22>
+2023-11-29 00:39:56,261 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:57,272 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 3
+2023-11-29 00:39:57,273 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000013, AllocationRequestId: -1, Version: 0, NodeId: 2f08f873c798:37279, NodeHttpAddress: 2f08f873c798:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.17:37279 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:57,273 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:57,273 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000013 to attempt_1701142038763_0334_m_000003_1
+2023-11-29 00:39:57,273 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000014, AllocationRequestId: -1, Version: 0, NodeId: ed761ad59d44:45797, NodeHttpAddress: ed761ad59d44:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.23:45797 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:57,273 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000014 to attempt_1701142038763_0334_m_000001_2
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: container_1701142038763_0334_01_000012, AllocationRequestId: -1, Version: 0, NodeId: cf6e5ca2712c:46101, NodeHttpAddress: cf6e5ca2712c:8042, Resource: <memory:5120, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 192.161.20.5:46101 }, ExecutionType: GUARANTEED, ] to fast fail map
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned from earlierFailedMaps
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1701142038763_0334_01_000012 to attempt_1701142038763_0334_m_000000_3
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:7168, vCores:20>
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2023-11-29 00:39:57,274 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:7 ScheduledReds:0 AssignedMaps:3 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:12 ContRel:9 HostLocal:4 RackLocal:0
+2023-11-29 00:39:57,278 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:57,282 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_2 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:57,286 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_3 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000014 taskAttempt attempt_1701142038763_0334_m_000001_2
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000012 taskAttempt attempt_1701142038763_0334_m_000000_3
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000001_2
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000000_3
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #9] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1701142038763_0334_01_000013 taskAttempt attempt_1701142038763_0334_m_000003_1
+2023-11-29 00:39:57,287 INFO [ContainerLauncher #9] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1701142038763_0334_m_000003_1
+2023-11-29 00:39:57,288 ERROR [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000014 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,288 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000001_2: Container launch failed for container_1701142038763_0334_01_000014 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,288 ERROR [ContainerLauncher #9] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000013 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,288 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000001_2] using containerId: [container_1701142038763_0334_01_000014 on NM: [ed761ad59d44:45797]
+2023-11-29 00:39:57,289 ERROR [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Container launch failed for container_1701142038763_0334_01_000012 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,290 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_2 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=ed761ad59d44:45797
+2023-11-29 00:39:57,290 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000003_1: Container launch failed for container_1701142038763_0334_01_000013 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,290 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000003_1] using containerId: [container_1701142038763_0334_01_000013 on NM: [2f08f873c798:37279]
+2023-11-29 00:39:57,290 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_1 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=2f08f873c798:37279
+2023-11-29 00:39:57,290 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,291 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1701142038763_0334_m_000000_3: Container launch failed for container_1701142038763_0334_01_000012 : java.lang.IllegalArgumentException: Invalid Configuration. yarn.client.nodemanager-connect.retry-interval-msshould be a positive value.
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:144)
+	at org.apache.hadoop.yarn.client.ServerProxy.createRetryPolicy(ServerProxy.java:60)
+	at org.apache.hadoop.yarn.client.NMProxy.createNMProxy(NMProxy.java:41)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.newProxy(ContainerManagementProtocolProxy.java:270)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy$ContainerManagementProtocolProxyData.<init>(ContainerManagementProtocolProxy.java:244)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy.getProxy(ContainerManagementProtocolProxy.java:133)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl.getCMProxy(ContainerLauncherImpl.java:433)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:146)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:394)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2023-11-29 00:39:57,291 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1701142038763_0334_m_000000_3] using containerId: [container_1701142038763_0334_01_000012 on NM: [cf6e5ca2712c:46101]
+2023-11-29 00:39:57,291 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000000_3 transitioned from state ASSIGNED to FAILED, event type is TA_CONTAINER_LAUNCH_FAILED and nodeId=cf6e5ca2712c:46101
+2023-11-29 00:39:57,291 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,293 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_3 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:57,294 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,296 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000000 Task Transitioned from SCHEDULED to FAILED
+2023-11-29 00:39:57,297 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_2 TaskAttempt Transitioned from NEW to UNASSIGNED
+2023-11-29 00:39:57,297 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 1
+2023-11-29 00:39:57,297 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000001_3 to list of failed maps
+2023-11-29 00:39:57,297 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Job failed as tasks failed. failedMaps:1 failedReduces:0 killedMaps:0 killedReduces: 0
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from RUNNING to FAIL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000001 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1701142038763_0334_m_000003_2 to list of failed maps
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000002 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000003 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000004 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000005 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000006 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,299 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000007 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000008 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000009 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_r_000000 Task Transitioned from SCHEDULED to KILL_WAIT
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000001_3 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000002_3 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000003_2 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,300 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000004_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000005_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000006_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000007_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000008_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_m_000009_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1701142038763_0334_r_000000_0 TaskAttempt Transitioned from UNASSIGNED to KILLED
+2023-11-29 00:39:57,301 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000001 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,301 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,301 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000002 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000003 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000004 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000005 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000006 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000007 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000008 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_m_000009 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1701142038763_0334_r_000000 Task Transitioned from KILL_WAIT to KILLED
+2023-11-29 00:39:57,302 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,302 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,303 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,303 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from FAIL_WAIT to FAIL_ABORT
+2023-11-29 00:39:57,303 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,303 INFO [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+2023-11-29 00:39:57,303 ERROR [Thread-65] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Could not deallocate container for task attemptId attempt_1701142038763_0334_r_000000_0
+2023-11-29 00:39:57,304 INFO [CommitterEvent Processor #1] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_ABORT
+2023-11-29 00:39:57,319 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1701142038763_0334Job Transitioned from FAIL_ABORT to FAILED
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Job finished cleanly, recording last MRAppMaster retry
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify RMCommunicator isAMLastRetry: true
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: RMCommunicator notified that shouldUnregistered is: true
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify JHEH isAMLastRetry: true
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: JobHistoryEventHandler notified that forceJobCompletion is true
+2023-11-29 00:39:57,321 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Calling stop for all the services
+2023-11-29 00:39:57,323 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopping JobHistoryEventHandler. Size of the outstanding queue size is 13
+2023-11-29 00:39:57,325 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event MAP_ATTEMPT_KILLED
+2023-11-29 00:39:57,328 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event REDUCE_ATTEMPT_KILLED
+2023-11-29 00:39:57,329 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,331 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,332 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,333 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,335 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,336 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,337 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,339 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,340 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,342 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event TASK_FAILED
+2023-11-29 00:39:57,345 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event JOB_FAILED
+2023-11-29 00:39:57,395 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job_1701142038763_0334_1.jhist to hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334-1701189581152-root-word+count-1701189597297-0-0-FAILED-default-1701189588150.jhist_tmp
+2023-11-29 00:39:57,433 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied from: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job_1701142038763_0334_1.jhist to done location: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334-1701189581152-root-word+count-1701189597297-0-0-FAILED-default-1701189588150.jhist_tmp
+2023-11-29 00:39:57,434 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Set historyUrl to http://2f08f873c798:19888/jobhistory/job/job_1701142038763_0334
+2023-11-29 00:39:57,435 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job_1701142038763_0334_1_conf.xml to hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334_conf.xml_tmp
+2023-11-29 00:39:57,459 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied from: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334/job_1701142038763_0334_1_conf.xml to done location: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334_conf.xml_tmp
+2023-11-29 00:39:57,464 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334.summary_tmp to hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334.summary
+2023-11-29 00:39:57,466 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334_conf.xml_tmp to hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334_conf.xml
+2023-11-29 00:39:57,467 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334-1701189581152-root-word+count-1701189597297-0-0-FAILED-default-1701189588150.jhist_tmp to hdfs://2f08f873c798:9000/tmp/hadoop-yarn/staging/history/done_intermediate/root/job_1701142038763_0334-1701189581152-root-word+count-1701189597297-0-0-FAILED-default-1701189588150.jhist
+2023-11-29 00:39:57,467 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+2023-11-29 00:39:57,474 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: Setting job diagnostics to Task failed task_1701142038763_0334_m_000000
+Job failed as tasks failed. failedMaps:1 failedReduces:0 killedMaps:0 killedReduces: 0
+
+2023-11-29 00:39:57,474 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: History url is http://2f08f873c798:19888/jobhistory/job/job_1701142038763_0334
+2023-11-29 00:39:57,484 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: Waiting for application to be successfully unregistered.
+2023-11-29 00:39:58,486 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:1 ScheduledMaps:7 ScheduledReds:0 AssignedMaps:3 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:12 ContRel:9 HostLocal:4 RackLocal:0
+2023-11-29 00:39:58,491 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Deleting staging directory hdfs://2f08f873c798:9000 /tmp/hadoop-yarn/staging/root/.staging/job_1701142038763_0334
+2023-11-29 00:39:58,495 INFO [Thread-75] org.apache.hadoop.ipc.Server: Stopping server on 40431
+2023-11-29 00:39:58,498 INFO [IPC Server listener on 0] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 0
+2023-11-29 00:39:58,498 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2023-11-29 00:39:58,505 INFO [TaskHeartbeatHandler PingChecker] org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler: TaskHeartbeatHandler thread interrupted
+2023-11-29 00:39:58,507 INFO [Ping Checker for TaskAttemptFinishingMonitor] org.apache.hadoop.yarn.util.AbstractLivelinessMonitor: TaskAttemptFinishingMonitor thread interrupted
+2023-11-29 00:40:03,508 INFO [Thread-75] org.apache.hadoop.ipc.Server: Stopping server on 40273
+2023-11-29 00:40:03,509 INFO [IPC Server listener on 0] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 0
+2023-11-29 00:40:03,510 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2023-11-29 00:40:03,516 INFO [Thread-75] org.eclipse.jetty.server.handler.ContextHandler: Stopped o.e.j.w.WebAppContext@553fbe94{mapreduce,/,null,STOPPED}{jar:file:/usr/local/revisedJQF/v8/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/mapreduce}
+2023-11-29 00:40:03,525 INFO [Thread-75] org.eclipse.jetty.server.AbstractConnector: Stopped ServerConnector@56c8e6f0{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2023-11-29 00:40:03,525 INFO [Thread-75] org.eclipse.jetty.server.session: node0 Stopped scavenging
+2023-11-29 00:40:03,526 INFO [Thread-75] org.eclipse.jetty.server.handler.ContextHandler: Stopped o.e.j.s.ServletContextHandler@5be052ca{static,/static,jar:file:/usr/local/revisedJQF/v8/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/static,STOPPED}

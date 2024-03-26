@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,1970257008,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.file.close.num-committed-allowed,0,"Normally a file can only be closed with all its blocks are committed.
+    When this value is set to a positive integer N, a file can be closed
+    when N blocks are committed and the rest complete."
+2,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+3,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+4,dfs.namenode.safemode.min.datanodes,0,"Specifies the number of datanodes that must be considered alive
+    before the name node exits safemode.
+    Values less than or equal to 0 mean not to take the number of live
+    datanodes into account when deciding whether to remain in safe mode
+    during startup.
+    Values greater than the number of datanodes in the cluster
+    will make safe mode permanent."
+5,dfs.namenode.blocks.per.postponedblocks.rescan,10000,"Number of blocks to rescan for each iteration of
+    postponedMisreplicatedBlocks."
+6,yarn.router.interceptor.user.threadpool-size,5,
+7,yarn.sharedcache.store.in-memory.staleness-period-mins,10080,
+8,yarn.resourcemanager.activities-manager.cleanup-interval-ms,5000,
+9,mapreduce.jobhistory.joblist.cache.size,20000,Size of the job list cache

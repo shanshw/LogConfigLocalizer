@@ -1,0 +1,96 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-0.76789576</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "-0.76789576"
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>ipc.client.connect.max.retries.on.timeouts</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>45</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "-0.76789576"
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	on</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.file.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4096</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "-0.76789576"
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>hadoop.security.groups.negative-cache.secs</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>-0.76789576</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Exiting with status 1: java.lang.NumberFormatException: For input string: "-0.76789576"</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>ipc.client.connect.max.retries.on.timeouts</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>45</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Exiting with status 1: java.lang.NumberFormatException: For input string: "-0.76789576"</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	on</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>io.file.buffer.size</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>4096</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Exiting with status 1: java.lang.NumberFormatException: For input string: "-0.76789576"</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	io</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+    </script>
+    </body>
+    </html>
+    

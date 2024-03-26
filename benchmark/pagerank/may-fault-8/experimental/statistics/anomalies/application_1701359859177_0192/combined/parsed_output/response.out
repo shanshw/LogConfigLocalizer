@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:<1>-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value greater than 0 to avoid this error.
+
+name:mapreduce.shuffle.max.connections
+value:0
+relevant log:<1>-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'mapreduce.shuffle.max.connections' is set to 0 which might be causing issues with the shuffle operation. This configuration should be set to a value greater than 0 to allow connections for the shuffle operation.
+
+name:dfs.client.failover.max.attempts
+value:15
+relevant log:<1>-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.client.failover.max.attempts' is set to 15 which might be causing issues with the failover attempts. This configuration should be adjusted based on the system requirements and capabilities.

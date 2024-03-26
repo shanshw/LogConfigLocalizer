@@ -1,0 +1,36 @@
+2023-12-02 06:27:04,842 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2023-12-02 06:27:04,955 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-12-02 06:27:05,099 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-12-02 06:27:05,099 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2023-12-02 06:27:05,232 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens: [Kind: mapreduce.job, Service: job_1701457076904_0186, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@492691d7)]
+2023-12-02 06:27:05,281 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2023-12-02 06:27:05,515 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/hadoop3/hadoop/tmp/nm-local-dir/usercache/root/appcache/application_1701457076904_0186
+2023-12-02 06:27:05,804 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : ENOENT: No such file or directory
+	at org.apache.hadoop.io.nativeio.NativeIO$POSIX.chmodImpl(Native Method)
+	at org.apache.hadoop.io.nativeio.NativeIO$POSIX.chmod(NativeIO.java:389)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1110)
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.<init>(RawLocalFileSystem.java:452)
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.<init>(RawLocalFileSystem.java:412)
+	at org.apache.hadoop.fs.RawLocalFileSystem.createOutputStreamWithMode(RawLocalFileSystem.java:575)
+	at org.apache.hadoop.fs.RawLocalFileSystem.create(RawLocalFileSystem.java:564)
+	at org.apache.hadoop.fs.RawLocalFileSystem.create(RawLocalFileSystem.java:595)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSOutputSummer.<init>(ChecksumFileSystem.java:642)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:730)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:709)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1233)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1210)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1091)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:1078)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:745)
+	at org.apache.hadoop.mapred.YarnChild.writeLocalJobFile(YarnChild.java:373)
+	at org.apache.hadoop.mapred.YarnChild.configureTask(YarnChild.java:355)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:150)
+
+2023-12-02 06:27:05,808 INFO [main] org.apache.hadoop.mapred.Task: Running cleanup for the task
+2023-12-02 06:27:05,808 INFO [main] org.apache.hadoop.mapred.YarnChild: Exception cleaning up: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.Task.taskCleanup(Task.java:1458)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:194)
+
+2023-12-02 06:27:05,809 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping ReduceTask metrics system...
+2023-12-02 06:27:05,809 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system stopped.
+2023-12-02 06:27:05,809 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system shutdown complete.

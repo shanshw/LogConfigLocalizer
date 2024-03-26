@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:1579384764
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error. Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The value of io.bytes.per.checksum is too large, which may cause the Java heap space to run out of memory. The value should not be larger than io.file.buffer.size.
+
+name:dfs.client-write-packet-size
+value:65536
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error. Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The dfs.client-write-packet-size might be too small, causing frequent disk I/O operations and thus leading to the OutOfMemoryError. Increasing the value might help to reduce the frequency of disk I/O operations.
+
+name:yarn.resourcemanager.delegation-token-renewer.thread-count
+value:50
+relevant log:2-1-ERROR Thread Thread[eventHandlingThread,5,main] threw an Error. Shutting down now...java.lang.OutOfMemoryError: Java heap space
+explanation:The number of threads for the delegation token renewer might be too high, which could lead to high memory usage and thus cause the OutOfMemoryError. Reducing the number of threads might help to reduce memory usage.

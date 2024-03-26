@@ -1,0 +1,23 @@
+anomaly_degree,content
+0.4,"ERROR	ERROR IN CONTACTING RM.java.io.InterruptedIOException: Call interrupted
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1561)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1513)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1410)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy83.allocate(Unknown Source)
+	at org.apache.hadoop.yarn.api.impl.pb.client.ApplicationMasterProtocolPBClientImpl.allocate(ApplicationMasterProtocolPBClientImpl.java:78)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:433)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:166)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:158)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:96)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:362)
+	at com.sun.proxy.$Proxy84.allocate(Unknown Source)
+	at org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor.makeRemoteRequest(RMContainerRequestor.java:207)
+	at org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator.getResources(RMContainerAllocator.java:793)
+	at org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator.heartbeat(RMContainerAllocator.java:286)
+	at org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator$AllocatorRunnable.run(RMCommunicator.java:280)
+	at java.base/java.lang.Thread.run(Thread.java:829)"

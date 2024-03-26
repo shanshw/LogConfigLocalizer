@@ -1,0 +1,14 @@
+name:hadoop.security.dns.log-slow-lookups.threshold.ms
+value:bcyIb
+relevant log:2-1-ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "bcyIb"
+explanation:The configuration option "hadoop.security.dns.log-slow-lookups.threshold.ms" is expected to be an integer value. However, the current value "bcyIb" is not a valid integer, which causes a NumberFormatException during the system startup. This is the most likely root cause of the error.
+
+name:mapreduce.am.max-attempts
+value:2
+relevant log:2-1-ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "bcyIb"
+explanation:Although the value of "mapreduce.am.max-attempts" is a valid integer, the error occurs in the MRAppMaster, which is related to the MapReduce Application Master. This configuration option might be relevant to the error, but it is less likely than the first one.
+
+name:yarn.nodemanager.runtime.linux.runc.layer-mounts-interval-secs
+value:600
+relevant log:2-1-ERROR	Error starting MRAppMasterjava.lang.NumberFormatException: For input string: "bcyIb"
+explanation:This configuration option is related to the NodeManager, which is a component of YARN. Although the value is a valid integer, the error occurs in the MRAppMaster, which is not directly related to the NodeManager. Therefore, this configuration option is the least likely root cause among the three.

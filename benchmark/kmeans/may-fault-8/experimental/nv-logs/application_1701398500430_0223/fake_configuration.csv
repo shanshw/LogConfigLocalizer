@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,0,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,fs.ftp.timeout,0,FTP filesystem's timeout in seconds.
+2,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,
+3,ftp.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  ftp.stream-buffer-size"
+4,dfs.namenode.metrics.logger.period.seconds,600,"This setting controls how frequently the NameNode logs its metrics. The
+    logging configuration must also define one or more appenders for
+    NameNodeMetricsLog for the metrics to be logged.
+    NameNode metrics logging is disabled if this value is set to zero or
+    less than zero."
+5,hadoop.caller.context.signature.max.size,40,"The caller's signature (optional) is for offline validation. If the
+      signature exceeds the maximum allowed bytes in server, the caller context
+      will be abandoned, in which case the caller context will not be recorded
+      in audit logs."
+6,dfs.block.invalidate.limit,1000,"The maximum number of invalidate blocks sent by namenode to a datanode
+    per heartbeat deletion command. This property works with
+    ""dfs.namenode.invalidate.work.pct.per.iteration"" to throttle block
+    deletions."
+7,dfs.client.deadnode.detection.rpc.threads,20,The maximum number of threads to use for calling RPC call to recheck the liveness of dead node.
+8,hadoop.security.key.default.bitlength,128,"The length (bits) of keys we want the KeyProvider to produce. Key length
+    defines the upper-bound on an algorithm's security, ideally, it would
+    coincide with the lower-bound on an algorithm's security."
+9,mapreduce.reduce.shuffle.fetch.retry.timeout-ms,30000,"Timeout value for fetcher to retry to fetch again when some
+  non-fatal failure happens because of some events like NM restart."

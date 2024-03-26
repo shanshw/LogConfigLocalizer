@@ -1,0 +1,31 @@
+,name,value,description
+0,io.bytes.per.checksum,-1817056745,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,io.map.index.skip,0,"Number of index entries to skip between each entry.
+  Zero by default. Setting this to values larger than zero can
+  facilitate opening large MapFiles using less memory."
+2,yarn.nodemanager.elastic-memory-control.timeout-sec,5,
+3,dfs.datanode.handler.count,10,The number of server threads for the datanode.
+4,ipc.[port_number].weighted-cost.lockexclusive,100,"The weight multiplier to apply to the time spent in the
+    processing phase which holds an exclusive (write) lock.
+    This property applies to WeightedTimeCostProvider."
+5,dfs.client.socket.send.buffer.size,0,"Socket send buffer size for a write pipeline in DFSClient side.
+    This may affect TCP connection throughput.
+    If it is set to zero or negative value,
+    no buffer size will be set explicitly,
+    thus enable tcp auto-tuning on some system.
+    The default value is 0."
+6,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+7,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+8,yarn.sharedcache.store.in-memory.check-period-mins,720,
+9,dfs.client.block.write.replace-datanode-on-failure.min-replication,0,"The minimum number of replications that are needed to not to fail
+      the write pipeline if new datanodes can not be found to replace
+      failed datanodes (could be due to network failure) in the write pipeline.
+      If the number of the remaining datanodes in the write pipeline is greater
+      than or equal to this property value, continue writing to the remaining nodes.
+      Otherwise throw exception.
+
+      If this is set to 0, an exception will be thrown, when a replacement
+      can not be found.
+      See also dfs.client.block.write.replace-datanode-on-failure.policy"

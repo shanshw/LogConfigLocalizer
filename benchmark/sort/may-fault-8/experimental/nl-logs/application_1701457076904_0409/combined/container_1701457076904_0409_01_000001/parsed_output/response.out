@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:mapreduce.job.running.reduce.limit
+value:0
+relevant log:1-ERROR	Task: attempt_1701457076904_0409_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'mapreduce.job.running.reduce.limit' is set to 0 which might be causing the task to exit prematurely. This option should be set to a value greater than 0 to allow simultaneous reduce tasks per job.
+
+name:dfs.client.deadnode.detection.probe.suspectnode.threads
+value:10
+relevant log:1-INFO	1 failures on node cf6e5ca2712c
+explanation:The configuration option 'dfs.client.deadnode.detection.probe.suspectnode.threads' is set to 10. This might be causing the node failure as the number of threads for probing suspect node might be insufficient. Increasing the value might help in better detection of dead nodes.

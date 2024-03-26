@@ -1,0 +1,25 @@
+,name,value,description
+0,io.bytes.per.checksum,-1319447196,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.timeline-service.app-aggregation-interval-secs,15,
+2,mapreduce.job.reducer.unconditional-preempt.delay.sec,300,"The threshold (in seconds) after which an unsatisfied
+      mapper request triggers a forced reducer preemption irrespective of the
+      anticipated headroom. By default, it is set to 5 mins. Setting it to 0
+      leads to immediate reducer preemption. Setting to -1 disables this
+      preemption altogether."
+3,dfs.namenode.read-lock-reporting-threshold-ms,5000,"When a read lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+4,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+5,dfs.datanode.ec.reconstruct.read.bandwidthPerSec,0,"Specifies the maximum amount of bandwidth that the EC reconstruction can utilize for reading.
+      When the bandwidth value is zero, there is no limit."
+6,dfs.namenode.write-lock-reporting-threshold-ms,5000,"When a write lock is held on the namenode for a long time,
+    this will be logged as the lock is released. This sets how long the
+    lock must be held for logging to occur."
+7,mapreduce.client.submit.file.replication,10,"The replication level for submitted job files.  This
+  should be around the square root of the number of nodes."
+8,dfs.mover.retry.max.attempts,10,"The maximum number of retries before the mover consider the
+    move failed."
+9,mapreduce.shuffle.pathcache.max-weight,10485760,The maximum total weight of entries the cache may contain.

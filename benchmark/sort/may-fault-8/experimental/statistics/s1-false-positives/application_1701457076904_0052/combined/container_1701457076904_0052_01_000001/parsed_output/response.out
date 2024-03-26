@@ -1,0 +1,14 @@
+name:dfs.qjournal.new-epoch.timeout.ms
+value:-744360247
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0052_m_000009
+explanation:The negative value for the timeout in milliseconds when getting an epoch number for write access to JournalNodes could be causing issues with task speculation.
+
+name:yarn.timeline-service.app-collector.linger-period.ms
+value:60000
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0052_m_000009
+explanation:The description for this configuration is missing, which could be causing issues with the timeline service's app collector.
+
+name:yarn.nodemanager.logaggregation.threadpool-size-max
+value:100
+relevant log:1-DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0052_m_000009
+explanation:The description for this configuration is missing, which could be causing issues with the NodeManager's log aggregation.

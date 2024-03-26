@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,190319084,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.content-summary.limit,5000,"The maximum content summary counts allowed in one locking period. 0 or a negative number
+    means no limit (i.e. no yielding)."
+2,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+3,yarn.nodemanager.resource.memory.cgroups.swappiness,0,
+4,yarn.nodemanager.recovery.compaction-interval-secs,3600,
+5,hadoop.security.group.mapping.ldap.num.attempts,3,"This property is the number of attempts to be made for LDAP operations.
+    If this limit is exceeded, LdapGroupsMapping will return an empty
+    group list."
+6,yarn.client.max-cached-nodemanagers-proxies,0,
+7,dfs.namenode.missing.checkpoint.periods.before.shutdown,3,"The number of checkpoint period windows (as defined by the property
+    dfs.namenode.checkpoint.period) allowed by the Namenode to perform
+    saving the namespace before shutdown."
+8,ipc.maximum.response.length,134217728,"This indicates the maximum IPC message length (bytes) that can be
+    accepted by the client. Messages larger than this value are rejected
+    immediately to avoid possible OOMs. This setting should rarely need to be
+    changed.  Set to 0 to disable."
+9,dfs.bytes-per-checksum,512,"The number of bytes per checksum.  Must not be larger than
+  dfs.stream-buffer-size"

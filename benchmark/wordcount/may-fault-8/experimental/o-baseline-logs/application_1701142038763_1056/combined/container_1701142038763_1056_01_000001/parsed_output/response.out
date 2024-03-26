@@ -1,0 +1,14 @@
+name:dfs.client.read.shortcircuit.streams.cache.expiry.ms
+value:-867724837
+relevant log:4-3-2-1-WARN Failed to initialize filesystem hdfs://2f08f873c798:9000/efghwordsortKOoQLrJ8i1/_LdYTY: java.lang.IllegalArgumentException
+explanation:The negative value for the configuration dfs.client.read.shortcircuit.streams.cache.expiry.ms is causing the IllegalArgumentException. This configuration controls the minimum amount of time file descriptors need to sit in the client cache context before they can be closed for being inactive for too long. The value should be a positive integer.
+
+name:ipc.client.connect.max.retries
+value:10
+relevant log:ERROR Error starting MRAppMasterorg.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException
+explanation:The configuration ipc.client.connect.max.retries indicates the number of retries a client will make to establish a server connection. The log shows that the MRAppMaster service failed to initialize, which could be due to the client not being able to connect to the server. Increasing the value of this configuration might solve the issue.
+
+name:yarn.resourcemanager.admin.client.thread-count
+value:<missing>
+relevant log:INFO Exiting with status 1: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.lang.IllegalArgumentException
+explanation:The configuration yarn.resourcemanager.admin.client.thread-count is missing a value. This configuration controls the number of threads for the ResourceManager's admin client. The missing value could be causing the YarnRuntimeException. Setting a value for this configuration might solve the issue.

@@ -1,0 +1,14 @@
+name:mapreduce.map.cpu.vcores
+value:1
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0059_m_000008
+explanation: The log indicates that a speculative task is being added, which could be due to insufficient CPU resources. The configuration shows that only one virtual core is requested for each map task, which might not be enough, causing the system to speculate tasks.
+
+name:dfs.client.socketcache.capacity
+value:16
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0059_m_000008
+explanation: The log indicates that a speculative task is being added, which could be due to insufficient socket cache capacity for short-circuit reads. The configuration shows that the socket cache capacity is set to 16, which might not be enough, causing the system to speculate tasks.
+
+name:mapreduce.client.submit.file.replication
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0059_m_000008
+explanation: The log indicates that a speculative task is being added, which could be due to insufficient replication level for submitted job files. The configuration shows that the replication level is set to 10, which might not be enough, causing the system to speculate tasks.

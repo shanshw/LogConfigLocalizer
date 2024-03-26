@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration is responsible for the number of bytes per checksum and should not be set to 0.
+
+name:ipc.client.rpc-timeout.ms
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'ipc.client.rpc-timeout.ms' is set to 0 which might be causing the RPC error. This configuration is responsible for the timeout on waiting response from server and should not be set to 0.
+
+name:yarn.sharedcache.client-server.thread-count
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.sharedcache.client-server.thread-count' is missing which might be causing the thread exception. This configuration is responsible for the number of threads between the client and server in the shared cache.

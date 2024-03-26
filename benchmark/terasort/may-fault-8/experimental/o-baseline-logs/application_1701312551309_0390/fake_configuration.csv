@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-258949465,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.resourcemanager.leveldb-state-store.compaction-interval-secs,3600,
+2,hadoop.zk.retry-interval-ms,1000,Retry interval in milliseconds when connecting to ZooKeeper.
+3,dfs.namenode.replication.work.multiplier.per.iteration,2,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    parallel at a DN, for replication, when such a command list is being
+    sent over a DN heartbeat by the NN. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately for, per DN heartbeat. This number can be any positive,
+    non-zero integer."
+4,yarn.sharedcache.nm.uploader.thread-count,20,
+5,yarn.client.max-cached-nodemanagers-proxies,0,
+6,dfs.client.refresh.read-block-locations.ms,0,Refreshing LocatedBlocks period. A value of 0 disables the feature.
+7,ipc.server.listen.queue.size,256,"Indicates the length of the listen queue for servers accepting
+               client connections."
+8,mapreduce.job.encrypted-intermediate-data-key-size-bits,128,Mapreduce encrypt data key size default is 128
+9,dfs.client.retry.times.get-last-block-length,3,Number of retries for calls to fetchLocatedBlocksAndGetLastBlockLength().

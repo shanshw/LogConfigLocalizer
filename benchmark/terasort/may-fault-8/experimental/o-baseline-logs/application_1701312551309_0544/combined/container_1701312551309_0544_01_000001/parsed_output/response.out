@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This configuration should be set to a value larger than 0.
+
+name:dfs.stream-buffer-size
+value:4096
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'dfs.stream-buffer-size' is set to 4096 which might be causing buffer related issues during read and write operations. This value should be set to a multiple of hardware page size.
+
+name:yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration 'yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms' is missing a value. This could be causing issues with the deletion of cgroups in the Linux container executor.

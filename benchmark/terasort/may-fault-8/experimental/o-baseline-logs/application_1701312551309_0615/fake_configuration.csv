@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-670838799,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.block.access.key.update.interval,600,Interval in minutes at which namenode updates its access keys.
+2,seq.io.sort.mb,100,"The total amount of buffer memory to use while sorting files,
+      while using SequenceFile.Sorter, in megabytes. By default,
+      gives each merge stream 1MB, which should minimize seeks."
+3,io.file.buffer.size,4096,"The size of buffer for use in sequence files.
+  The size of this buffer should probably be a multiple of hardware
+  page size (4096 on Intel x86), and it determines how much data is
+  buffered during read and write operations."
+4,yarn.timeline-service.entity-group-fs-store.retain-seconds,604800,
+5,yarn.resourcemanager.delegation.token.renew-interval,86400000,
+6,mapreduce.input.lineinputformat.linespermap,1,"When using NLineInputFormat, the number of lines of input data
+  to include in each split."
+7,yarn.timeline-service.client.internal-timers-ttl-secs,420,
+8,dfs.balancer.getBlocks.size,2147483648,"Total size in bytes of Datanode blocks to get when fetching a source's
+    block list."
+9,dfs.blockreport.split.threshold,1000000,"If the number of blocks on the DataNode is below this
+    threshold then it will send block reports for all Storage Directories
+    in a single message.
+
+    If the number of blocks exceeds this threshold then the DataNode will
+    send block reports for each Storage Directory in separate messages.
+
+    Set to zero to always split."

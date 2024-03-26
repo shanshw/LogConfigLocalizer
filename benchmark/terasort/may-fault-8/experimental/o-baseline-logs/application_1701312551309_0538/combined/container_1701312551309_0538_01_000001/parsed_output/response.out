@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0, which is causing an Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:yarn.nodemanager.logaggregation.threadpool-size-max
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.nodemanager.logaggregation.threadpool-size-max' is missing a value. This could be causing issues with log aggregation in the NodeManager.
+
+name:yarn.client.max-cached-nodemanagers-proxies
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'yarn.client.max-cached-nodemanagers-proxies' is set to 0. This could be causing issues with the caching of NodeManager proxies in the YARN client.

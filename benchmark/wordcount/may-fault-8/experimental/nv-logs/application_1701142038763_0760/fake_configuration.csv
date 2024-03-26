@@ -1,0 +1,24 @@
+,name,value,description
+0,dfs.blocksize,0,"The default block size for new files, in bytes.
+      You can use the following suffix (case insensitive):
+      k(kilo), m(mega), g(giga), t(tera), p(peta), e(exa) to specify the size (such as 128k, 512m, 1g, etc.),
+      Or provide complete size in bytes (such as 134217728 for 128 MB)."
+1,dfs.journalnode.sync.interval,120000,"Time interval, in milliseconds, between two Journal Node syncs.
+    This configuration takes effect only if the journalnode sync is enabled
+    by setting the configuration parameter dfs.journalnode.enable.sync to true."
+2,yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,
+3,yarn.timeline-service.client.drain-entities.timeout.ms,2000,
+4,fs.trash.interval,0,"Number of minutes after which the checkpoint
+  gets deleted.  If zero, the trash feature is disabled.
+  This option may be configured both on the server and the
+  client. If trash is disabled server side then the client
+  side configuration is checked. If trash is enabled on the
+  server side then the value configured on the server is
+  used and the client configuration value is ignored."
+5,dfs.datanode.slow.io.warning.threshold.ms,300,"The threshold in milliseconds at which we will log a slow
+    io warning in a datanode. By default, this parameter is set to 300
+    milliseconds."
+6,dfs.client.refresh.read-block-locations.ms,0,Refreshing LocatedBlocks period. A value of 0 disables the feature.
+7,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+8,dfs.namenode.top.num.users,10,Number of top users returned by the top tool
+9,dfs.datanode.handler.count,10,The number of server threads for the datanode.

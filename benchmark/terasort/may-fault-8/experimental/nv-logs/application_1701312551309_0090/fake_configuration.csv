@@ -1,0 +1,22 @@
+,name,value,description
+0,hadoop.kerberos.min.seconds.before.relogin,9lG25,"The minimum time between relogin attempts for Kerberos, in
+    seconds."
+1,yarn.scheduler.maximum-allocation-vcores,4,
+2,yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,
+3,hadoop.registry.zk.session.timeout.ms,60000,Zookeeper session timeout in milliseconds
+4,dfs.namenode.decommission.backoff.monitor.pending.blocks.per.lock,1000,"When loading blocks into the replication queue, release the namenode write
+    lock after the defined number of blocks have been processed."
+5,yarn.nodemanager.resource.percentage-physical-cpu-limit,100,
+6,ipc.ping.interval,60000,"Timeout on waiting response from server, in milliseconds.
+  The client will send ping when the interval is passed without receiving bytes,
+  if ipc.client.ping is set to true."
+7,yarn.sharedcache.nested-level,3,
+8,dfs.ha.log-roll.period,120,"How often, in seconds, the StandbyNode should ask the active to
+    roll edit logs. Since the StandbyNode only reads from finalized
+    log segments, the StandbyNode will only be as up-to-date as how
+    often the logs are rolled. Note that failover triggers a log roll
+    so the StandbyNode will be up to date before it becomes active.
+    Support multiple time unit suffix(case insensitive), as described
+    in dfs.heartbeat.interval.If no time unit is specified then seconds
+    is assumed."
+9,hadoop.registry.zk.retry.interval.ms,1000,

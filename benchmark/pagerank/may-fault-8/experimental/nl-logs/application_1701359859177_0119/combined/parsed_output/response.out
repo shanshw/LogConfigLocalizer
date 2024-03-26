@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This value should be greater than 0 to ensure proper checksum calculation.
+
+name:io.file.buffer.size
+value:4096
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The 'io.file.buffer.size' configuration option is related to the buffer size used in sequence files. The error log indicates an issue with file operations, which could be due to an inappropriate buffer size. 
+
+name:yarn.resourcemanager.rm.container-allocation.expiry-interval-ms
+value:<missing>
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The 'yarn.resourcemanager.rm.container-allocation.expiry-interval-ms' configuration option is missing a value. This could potentially cause issues with resource allocation and management in the Hadoop environment.

@@ -1,0 +1,14 @@
+name:dfs.mover.retry.max.attempts
+value:10
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0381_m_000008
+explanation:The log indicates a speculative attempt on a task, which might be related to the retry attempts of the mover. If the mover fails to move the task after maximum attempts, it could lead to such speculative attempts.
+
+name:mapreduce.job.end-notification.retry.attempts
+value:0
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0381_m_000008
+explanation:The log indicates a speculative attempt on a task, which might be related to the retry attempts of the job end notification. If the notification fails to send after maximum attempts, it could lead to such speculative attempts.
+
+name:mapreduce.task.exit.timeout.check-interval-ms
+value:20000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0381_m_000008
+explanation:The log indicates a speculative attempt on a task, which might be related to the interval between checks if task attempts stay in finishing state for too long. If the interval is too long, it could lead to such speculative attempts.

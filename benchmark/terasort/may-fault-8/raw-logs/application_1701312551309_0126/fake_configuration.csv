@@ -1,0 +1,22 @@
+,name,value,description
+0,io.bytes.per.checksum,-1501145294,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.datanode.min.outlier.detection.nodes,10,Minimum number of nodes to run outlier detection.
+2,dfs.client.cached.conn.retry,3,"The number of times the HDFS client will pull a socket from the
+   cache.  Once this number is exceeded, the client will try to create a new
+   socket."
+3,yarn.resourcemanager.fs.state-store.num-retries,0,
+4,dfs.mover.moverThreads,1000,Configure the balancer's mover thread pool size.
+5,yarn.client.nodemanager-client-async.thread-pool-max-size,500,
+6,dfs.content-summary.sleep-microsec,500,"The length of time in microseconds to put the thread to sleep, between reaquiring the locks
+    in content summary computation."
+7,dfs.namenode.fs-limits.max-xattr-size,16384,"The maximum combined size of the name and value of an extended attribute
+    in bytes. It should be larger than 0, and less than or equal to maximum
+    size hard limit which is 32768.
+    Support multiple size unit suffix(case insensitive), as described in
+    dfs.blocksize."
+8,fs.permissions.umask-mode,22,"The umask used when creating files and directories.
+    Can be in octal or in symbolic. Examples are:
+    ""022"" (octal for u=rwx,g=r-x,o=r-x in symbolic),
+    or ""u=rwx,g=rwx,o="" (symbolic for 007 in octal)."
+9,yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,

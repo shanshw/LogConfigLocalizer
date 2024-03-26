@@ -1,0 +1,149 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.reduce.cpu.vcores</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>gLKTV</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Job init failedjava.lang.NumberFormatException: For input string: "gLKTV"
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.input.fileinputformat.list-status.num-threads</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	Job init failedjava.lang.NumberFormatException: For input string: "gLKTV"
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	input</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.reduce.cpu.vcores</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>gLKTV</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Setting job diagnostics to Job init failed : java.lang.NumberFormatException: For input string: "gLKTV"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+                var reportItem4 = document.createElement("div");
+                reportItem4.innerHTML = `
+                    <strong>[No.4]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.input.fileinputformat.list-status.num-threads</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>INFO	Setting job diagnostics to Job init failed : java.lang.NumberFormatException: For input string: "gLKTV"	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	input</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem4);
+            
+                var reportItem5 = document.createElement("div");
+                reportItem5.innerHTML = `
+                    <strong>[No.5]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.reduce.cpu.vcores</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>gLKTV</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	reduce</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem5);
+            
+                var reportItem6 = document.createElement("div");
+                reportItem6.innerHTML = `
+                    <strong>[No.6]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.namenode.missing.checkpoint.periods.before.shutdown</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>3</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem6);
+            
+                var reportItem7 = document.createElement("div");
+                reportItem7.innerHTML = `
+                    <strong>[No.7]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>ha.health-monitor.connect-retry-interval.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1000</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	ha</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem7);
+            
+                var reportItem8 = document.createElement("div");
+                reportItem8.innerHTML = `
+                    <strong>[No.8]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>yarn.app.mapreduce.am.job.task.listener.thread-count</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>30</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	task</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem8);
+            
+                var reportItem9 = document.createElement("div");
+                reportItem9.innerHTML = `
+                    <strong>[No.9]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.ha.log-roll.period</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>120</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>property-item-hit	ha</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem9);
+            
+                var reportItem10 = document.createElement("div");
+                reportItem10.innerHTML = `
+                    <strong>[No.10]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.input.fileinputformat.list-status.num-threads</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>1</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>WARN	IPC Server handler 0 on default port 40923, call Call#60713 Retry#0 org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB.getTaskAttemptCompletionEvents from 2f08f873c798:41020 / 192.161.20.17:41020java.lang.NullPointerException
+	</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>value-hit</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem10);
+            
+    </script>
+    </body>
+    </html>
+    

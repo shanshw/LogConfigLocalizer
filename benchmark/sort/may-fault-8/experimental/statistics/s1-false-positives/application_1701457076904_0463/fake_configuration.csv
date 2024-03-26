@@ -1,0 +1,28 @@
+,name,value,description
+0,dfs.namenode.heartbeat.recheck-interval,556030301,"This time decides the interval to check for expired datanodes.
+    With this value and dfs.heartbeat.interval, the interval of
+    deciding the datanode is stale or not is also calculated.
+    The unit of this configuration is millisecond."
+1,fs.du.interval,600000,File space usage statistics refresh interval in msec.
+2,mapreduce.job.encrypted-intermediate-data.buffer.kb,128,"Buffer size for intermediate encrypt data in kb
+  default is 128"
+3,dfs.storage.policy.satisfier.work.multiplier.per.iteration,1,"*Note*: Advanced property. Change with caution.
+    This determines the total amount of block transfers to begin in
+    one iteration, for satisfy the policy. The actual number is obtained by
+    multiplying this multiplier with the total number of live nodes in the
+    cluster. The result number is the number of blocks to begin transfers
+    immediately. This number can be any positive, non-zero integer."
+4,dfs.client.key.provider.cache.expiry,864000000,DFS client security key cache expiration in milliseconds.
+5,dfs.client.retry.interval-ms.get-last-block-length,4000,"Retry interval in milliseconds to wait between retries in getting
+    block lengths from the datanodes."
+6,yarn.nodemanager.localizer.cache.cleanup.interval-ms,600000,
+7,hadoop.registry.zk.retry.ceiling.ms,60000,"Zookeeper retry limit in milliseconds, during
+      exponential backoff.
+
+      This places a limit even
+      if the retry times and interval limit, combined
+      with the backoff policy, result in a long retry
+      period"
+8,yarn.resourcemanager.zk-max-znode-size.bytes,1048576,
+9,hadoop.http.cross-origin.max-age,1800,"The number of seconds a pre-flighted request can be cached
+    for web services needing cross-origin (CORS) support."

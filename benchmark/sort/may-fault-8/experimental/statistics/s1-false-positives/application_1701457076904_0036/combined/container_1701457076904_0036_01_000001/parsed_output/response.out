@@ -1,0 +1,14 @@
+name:mapreduce.am.max-attempts
+value:2
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0036_m_000009
+explanation: The log indicates that a task is being speculated, which could be due to the task not completing within the expected time. This could be related to the maximum number of application attempts configuration. If the number of attempts is too low, tasks may not have enough opportunities to complete successfully, leading to speculation.
+
+name:hadoop.registry.zk.retry.interval.ms
+value:W83lj
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0036_m_000009
+explanation: The value of this configuration is not a valid integer, which could cause errors in the system. This configuration is related to the retry interval for Zookeeper, which could affect the stability of the system and lead to task speculation.
+
+name:dfs.http.client.failover.max.attempts
+value:15
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0036_m_000009
+explanation: This configuration is related to the maximum number of failover attempts for the WebHDFS client. If the number of attempts is too high, it could lead to excessive failovers and instability in the system, which could cause tasks to be speculated.

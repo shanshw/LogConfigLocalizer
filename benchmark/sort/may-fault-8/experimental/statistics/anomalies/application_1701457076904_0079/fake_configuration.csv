@@ -1,0 +1,27 @@
+,name,value,description
+0,io.bytes.per.checksum,2034001868,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,hadoop.security.groups.negative-cache.secs,30,"Expiration time for entries in the the negative user-to-group mapping
+    caching, in seconds. This is useful when invalid users are retrying
+    frequently. It is suggested to set a small value for this expiration, since
+    a transient error in group lookup could temporarily lock out a legitimate
+    user.
+
+    Set this to zero or negative value to disable negative user-to-group caching."
+2,fs.s3a.retry.throttle.limit,20,Number of times to retry any throttled request.
+3,mapreduce.shuffle.pathcache.expire-after-access-minutes,5,"The length of time after an entry is last accessed that it
+    should be automatically removed."
+4,dfs.datanode.transfer.socket.send.buffer.size,0,"Socket send buffer size for DataXceiver (mirroring packets to downstream
+    in pipeline). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."
+5,dfs.namenode.checkpoint.max-retries,3,"The SecondaryNameNode retries failed checkpointing. If the 
+  failure occurs while loading fsimage or replaying edits, the number of
+  retries is limited by this variable."
+6,yarn.nodemanager.disk-health-checker.interval-ms,120000,
+7,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+8,yarn.app.mapreduce.client.max-retries,3,"The number of client retries to the RM/HS before
+    throwing exception. This is a layer above the ipc."
+9,dfs.namenode.reconstruction.pending.timeout-sec,300,"Timeout in seconds for block reconstruction.  If this value is 0 or less,
+    then it will default to 5 minutes."

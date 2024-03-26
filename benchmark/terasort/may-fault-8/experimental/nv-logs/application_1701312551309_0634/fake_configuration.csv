@@ -1,0 +1,21 @@
+,name,value,description
+0,io.bytes.per.checksum,-772320474,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,yarn.client.failover-retries,0,
+2,dfs.replication.max,512,Maximal block replication.
+3,tfile.fs.output.buffer.size,262144,Buffer size used for FSDataOutputStream in bytes.
+4,dfs.block.scanner.volume.bytes.per.second,1048576,"If this is configured less than or equal to zero, the DataNode's block scanner will be disabled.  If this
+        is positive, this is the number of bytes per second that the DataNode's
+        block scanner will try to scan from each volume."
+5,dfs.datanode.http.internal-proxy.port,0,"The datanode's internal web proxy port.
+    By default it selects a random port available in runtime."
+6,fs.df.interval,60000,Disk usage statistics refresh interval in msec.
+7,dfs.namenode.resource.du.reserved,104857600,"The amount of space to reserve/require for a NameNode storage directory
+    in bytes. The default is 100MB. Support multiple size unit
+    suffix(case insensitive), as described in dfs.blocksize."
+8,dfs.namenode.max.op.size,52428800,Maximum opcode size in bytes.
+9,dfs.datanode.transfer.socket.recv.buffer.size,0,"Socket receive buffer size for DataXceiver (receiving packets from client
+    during block writing). This may affect TCP connection throughput.
+    If it is set to zero or negative value, no buffer size will be set
+    explicitly, thus enable tcp auto-tuning on some system.
+    The default value is 0."

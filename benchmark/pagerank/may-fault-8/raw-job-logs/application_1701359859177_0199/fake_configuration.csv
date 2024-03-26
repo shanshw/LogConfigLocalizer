@@ -1,0 +1,20 @@
+,name,value,description
+0,io.bytes.per.checksum,-229054672,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.namenode.checkpoint.check.period,60,"The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions. Support multiple time unit suffix(case insensitive),
+  as described in dfs.heartbeat.interval.If no time unit is specified then
+  seconds is assumed."
+2,dfs.block.misreplication.processing.limit,10000,Maximum number of blocks to process for initializing replication queues.
+3,file.client-write-packet-size,65536,Packet size for clients to write
+4,yarn.timeline-service.client.fd-flush-interval-secs,10,
+5,yarn.resourcemanager.connect.max-wait.ms,900000,
+6,dfs.ha.zkfc.nn.http.timeout.ms,20000,"The HTTP connection and read timeout value (unit is ms ) when DFS ZKFC
+    tries to get local NN thread dump after local NN becomes
+    SERVICE_NOT_RESPONDING or SERVICE_UNHEALTHY.
+    If it is set to zero, DFS ZKFC won't get local NN thread dump."
+7,dfs.datanode.cache.revocation.polling.ms,500,"How often the DataNode should poll to see if the clients have
+    stopped using a replica that the DataNode wants to uncache."
+8,mapreduce.jobhistory.client.thread-count,10,The number of threads to handle client API requests
+9,dfs.namenode.blockreport.queue.size,1024,The queue size of BlockReportProcessingThread in BlockManager.

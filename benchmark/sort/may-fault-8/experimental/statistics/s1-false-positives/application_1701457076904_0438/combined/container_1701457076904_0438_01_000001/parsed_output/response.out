@@ -1,0 +1,14 @@
+name:yarn.resourcemanager.container.liveness-monitor.interval-ms
+value:<missing>
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0438_m_000009
+explanation:The log indicates that a task is being speculated, which is a process in YARN to handle slow tasks. The missing value for the configuration 'yarn.resourcemanager.container.liveness-monitor.interval-ms' could be causing issues as this configuration is responsible for the frequency of liveness checks on containers.
+
+name:yarn.nodemanager.container-retry-minimum-interval-ms
+value:1000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0438_m_000009
+explanation:The log indicates that a task is being speculated, which could be due to task failures. The 'yarn.nodemanager.container-retry-minimum-interval-ms' configuration determines the minimum interval between container retry attempts. If this value is too low, it could lead to excessive retries and resource consumption.
+
+name:yarn.nodemanager.node-attributes.resync-interval-ms
+value:120000
+relevant log:1-INFO	DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1701457076904_0438_m_000009
+explanation:The log indicates that a task is being speculated, which could be due to node attribute changes. The 'yarn.nodemanager.node-attributes.resync-interval-ms' configuration determines the interval for resyncing node attributes. If this value is too high, it could lead to outdated node attributes and incorrect task scheduling.

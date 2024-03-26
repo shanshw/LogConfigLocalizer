@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+                var reportItem1 = document.createElement("div");
+                reportItem1.innerHTML = `
+                    <strong>[No.1]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.mmap.retry.timeout.ms</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 0, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for 'dfs.client.mmap.retry.timeout.ms' is set to 0, which does not match the requested configuration of 300000. This mismatch could be causing the warning in the log.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem1);
+            
+                var reportItem2 = document.createElement("div");
+                reportItem2.innerHTML = `
+                    <strong>[No.2]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>dfs.client.failover.connection.retries.on.timeouts</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 0, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for 'dfs.client.failover.connection.retries.on.timeouts' is set to 0, which means no retry attempts will be made on socket timeout when establishing a server connection. This could be causing the warning in the log.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem2);
+            
+                var reportItem3 = document.createElement("div");
+                reportItem3.innerHTML = `
+                    <strong>[No.3]</strong>
+                    <ul>
+                        <li style="background-color: #FFE4C4;">option: <strong>mapreduce.shuffle.max.connections</strong>;</li>
+                        <li style="background-color: #7AC5CD;">value: <strong>0</strong>;</li>
+                        <li style="background-color: #7CCD7C;">log: <strong>1-WARN	Existing client context 'default' does not match requested configuration.  Existing: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 0, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600, Requested: shortCircuitStreamsCacheSize = 256, shortCircuitStreamsCacheExpiryMs = 300000, shortCircuitMmapCacheSize = 256, shortCircuitMmapCacheExpiryMs = 3600000, shortCircuitMmapCacheRetryTimeout = 300000, shortCircuitCacheStaleThresholdMs = 1800000, socketCacheCapacity = 16, socketCacheExpiry = 3000, shortCircuitLocalReads = false, useLegacyBlockReaderLocal = false, domainSocketDataTraffic = false, shortCircuitSharedMemoryWatcherInterruptCheckMs = 60000, keyProviderCacheExpiryMs = 864000000, domainSocketDisableIntervalSeconds = 600</strong>;</li>
+                        <li style="background-color: #87CEFF;">explanation: <strong>The configuration for 'mapreduce.shuffle.max.connections' is set to 0, which means no limit on the number of connections. This could be causing the warning in the log.</strong>;</li>
+                    </ul>
+                `;
+                reportContainer.appendChild(reportItem3);
+            
+    </script>
+    </body>
+    </html>
+    

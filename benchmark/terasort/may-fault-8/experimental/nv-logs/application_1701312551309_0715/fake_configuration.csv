@@ -1,0 +1,26 @@
+,name,value,description
+0,io.bytes.per.checksum,-1120307661,"The number of bytes per checksum.  Must not be larger than
+  io.file.buffer.size."
+1,dfs.client.deadnode.detection.probe.deadnode.threads,10,The maximum number of threads to use for probing dead node.
+2,dfs.client.deadnode.detection.probe.deadnode.interval.ms,60000,Interval time in milliseconds for probing dead node behavior.
+3,mapreduce.jobhistory.datestring.cache.size,200000,"Size of the date string cache. Effects the number of directories
+  which will be scanned to find a job."
+4,dfs.client.socket.send.buffer.size,0,"Socket send buffer size for a write pipeline in DFSClient side.
+    This may affect TCP connection throughput.
+    If it is set to zero or negative value,
+    no buffer size will be set explicitly,
+    thus enable tcp auto-tuning on some system.
+    The default value is 0."
+5,yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,
+6,dfs.disk.balancer.max.disk.throughputInMBperSec,10,"Maximum disk bandwidth used by diskbalancer
+      during read from a source disk. The unit is MB/sec."
+7,mapreduce.job.maxtaskfailures.per.tracker,3,"The number of task-failures on a node manager of a given job
+               after which new tasks of that job aren't assigned to it. It
+               MUST be less than mapreduce.map.maxattempts and
+               mapreduce.reduce.maxattempts otherwise the failed task will
+               never be tried on a different node."
+8,dfs.datanode.fileio.profiling.sampling.percentage,0,"This setting controls the percentage of file I/O events which will be
+    profiled for DataNode disk statistics. The default value of 0 disables
+    disk statistics. Set to an integer value between 1 and 100 to enable disk
+    statistics."
+9,dfs.namenode.replication.min,1,Minimal block replication.

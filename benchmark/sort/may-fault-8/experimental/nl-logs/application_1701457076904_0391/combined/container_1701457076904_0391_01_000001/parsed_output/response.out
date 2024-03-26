@@ -1,0 +1,14 @@
+name:io.bytes.per.checksum
+value:0
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'io.bytes.per.checksum' is set to 0 which is causing the Invalid checksum type error. This option should be set to a value greater than 0 to ensure proper checksum calculation.
+
+name:dfs.checksum.ec.socket-timeout
+value:3000
+relevant log:1-ERROR	Thread Thread[eventHandlingThread,5,main] threw an Exception.org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.checksum.ec.socket-timeout' might be related to the checksum error. This option sets the timeout for computing the checksum of striped blocks. If the timeout is too short, it might cause errors in checksum calculation.
+
+name:dfs.client.failover.sleep.max.millis
+value:15000
+relevant log:1-ERROR	Task: attempt_1701457076904_0391_r_000000_0 - exited : org.apache.hadoop.HadoopIllegalArgumentException: Invalid checksum type: userOpt=null, default=CRC32C:0, effective=null
+explanation:The configuration option 'dfs.client.failover.sleep.max.millis' might be related to the error. This option sets the maximum time to wait between failovers. If the value is too high, it might cause delays in the failover process, leading to errors.
