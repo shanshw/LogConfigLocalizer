@@ -1,5 +1,5 @@
 # Drain
-For the detailed information about Drain, please refer to README [https://github.com/logpai/logparser/blob/main/logparser/Drain/README.md]
+For the detailed information about Drain, please refer to [README](https://github.com/logpai/logparser/blob/main/logparser/Drain/README.md)
 
 
 # Installation
