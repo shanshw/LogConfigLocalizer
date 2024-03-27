@@ -11,6 +11,8 @@ To make use of it, please refer to [README](https://github.com/shanshw/LogConfig
 To make use of it, please refer to [README](https://github.com/shanshw/LogConfigLocalizer/blob/main/src/localizer/README.md) in src/localizer.
 
 # Reproduction
+For the experimental results, please refer to the [benchmark](benchmark/README.md). 
+
 To reporduce the results in the paper, please refer to [README](ttps://github.com/shanshw/LogConfigLocalizer/blob/main/src/scripts/README.md) in src/scripts.
 
 
