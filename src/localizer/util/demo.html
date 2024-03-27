@@ -1,0 +1,60 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Diagnosis Report</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Diagnosis Report</h1>
+        <p id="creationTime"></p>
+        <div id="reportContainer"></div>
+        <script>
+            var creationTime = new Date();
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            document.getElementById("creationTime").textContent = "Created on " + creationTime.toLocaleDateString('en-US', options);
+            var reportContainer = document.getElementById("reportContainer");
+    
+            var reportItem1 = document.createElement("div");
+            reportItem1.innerHTML = `
+                <strong>[No.1]</strong>
+                <ul>
+                    <li style="background-color: #FFE4C4;">option: <strong>mapreduce.job.reduces</strong>;</li>
+                    <li style="background-color: #7AC5CD;">value: <strong>-1437949117</strong>;</li>
+                    <li style="background-color: #7CCD7C;">log: <strong>Not uberizing job_1695607297642_3527 because: too many maps; too much input; too much RAM;INFOJob init failedjava.lang.IllegalArgumentException: Illegal Capacity: -1437949057</strong>;</li>
+                    <li style="background-color: #CD5C5C;">possibility: <strong>1</strong>;</li>
+                    <li style="background-color: #87CEFF;">explanation: <strong>The negative value for the number of reduce tasks is causing the IllegalArgumentException. This configuration option should be a positive integer.</strong>;</li>
+                </ul>
+            `;
+            reportContainer.appendChild(reportItem1);
+        
+            var reportItem2 = document.createElement("div");
+            reportItem2.innerHTML = `
+                <strong>[No.2]</strong>
+                <ul>
+                    <li style="background-color: #FFE4C4;">option: <strong>file.replication</strong>;</li>
+                    <li style="background-color: #7AC5CD;">value: <strong>-1472779319</strong>;</li>
+                    <li style="background-color: #7CCD7C;">log: <strong>Not uberizing job_1695607297642_3527 because: too many maps; too much input; too much RAM;INFOJob init failedjava.lang.IllegalArgumentException: Illegal Capacity: -1437949057</strong>;</li>
+                    <li style="background-color: #CD5C5C;">possibility: <strong>1</strong>;</li>
+                    <li style="background-color: #87CEFF;">explanation: <strong>The negative value for file replication is causing an issue. This configuration option should be a positive integer.</strong>;</li>
+                </ul>
+            `;
+            reportContainer.appendChild(reportItem2);
+        
+            var reportItem3 = document.createElement("div");
+            reportItem3.innerHTML = `
+                <strong>[No.3]</strong>
+                <ul>
+                    <li style="background-color: #FFE4C4;">option: <strong>mapreduce.jobhistory.max-age-ms</strong>;</li>
+                    <li style="background-color: #7AC5CD;">value: <strong>-883668245</strong>;</li>
+                    <li style="background-color: #7CCD7C;">log: <strong>Not uberizing job_1695607297642_3527 because: too many maps; too much input; too much RAM;INFOJob init failedjava.lang.IllegalArgumentException: Illegal Capacity: -1437949057</strong>;</li>
+                    <li style="background-color: #CD5C5C;">possibility: <strong>1</strong>;</li>
+                    <li style="background-color: #87CEFF;">explanation: <strong>The negative value for the maximum age of job history is causing an issue. This configuration option should be a positive integer.</strong>;</li>
+                </ul>
+            `;
+            reportContainer.appendChild(reportItem3);
+        
+    </script>
+    </body>
+    </html>
+    
