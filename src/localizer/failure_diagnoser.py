@@ -392,7 +392,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
     parser.add_argument("-cp",metavar ='specify the configuration file',help="configuration file path")
     parser.add_argument("-af",metavar = 'specify the anomaly log file', help="the anomaly_log file path")
-    parser.add_argument("-rej",help='do not generate a fake configuration file', action='store_false')
+    parser.add_argument("-rej",help='do not generate a fabricated configuration file', action='store_false')
     parser.add_argument("-api",help='the api key of openai to interact with GPT-4.')
     args = parser.parse_args()
     if args.cp == None or args.af == None or args.api == None:
