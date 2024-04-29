@@ -1,5 +1,5 @@
 # Introduction
-The repository shows the source code of LogConfigLocalizer proposed in the paper **Face It Yourselves: An LLM-based Two-stage Strategy to Localize Configuration Errors via Logs**.
+The repository shows the source code of LogConfigLocalizer proposed in the paper [**Face It Yourselves: An LLM-based Two-stage Strategy to Localize Configuration Errors via Logs**](https://arxiv.org/pdf/2404.00640).
 
 ![Overview](fig/overview.png)
 
