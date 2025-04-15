@@ -16,3 +16,14 @@ For the experimental results, please refer to the [benchmark](benchmark/README.m
 To reproduce the results in the paper, please refer to [README](https://github.com/shanshw/LogConfigLocalizer/blob/main/src/scripts/README.md) in src/scripts.
 
 
+# Citation
+If the released code is useful for your research, please cite the following paper:
+```
+@inproceedings{shan2024face,
+  title={Face it yourselves: An llm-based two-stage strategy to localize configuration errors via logs},
+  author={Shan, Shiwen and Huo, Yintong and Su, Yuxin and Li, Yichen and Li, Dan and Zheng, Zibin},
+  booktitle={Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis},
+  pages={13--25},
+  year={2024}
+}
+```
